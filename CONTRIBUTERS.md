@@ -94,7 +94,6 @@
 - shibatea
 - t104
 - 関哲
-- 不破 崇行
 - あつこ
 - SKEEME
 - Yamada3
