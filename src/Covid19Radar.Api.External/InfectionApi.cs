@@ -21,6 +21,7 @@ namespace Covid19Radar
     {
         private readonly ICosmos Cosmos;
         private readonly ILogger<InfectionApi> Logger;
+
         public InfectionApi(ICosmos cosmos, ILogger<InfectionApi> logger)
         {
             Cosmos = cosmos;
@@ -93,29 +94,16 @@ namespace Covid19Radar
         {
             try
             {
-                // User
-                var queryUser = new QueryDefinition("SELECT * FROM Beacon b WHERE b.UserMajor = @Major and b.UserMinor = @Minor");
-                queryUser.WithParameter("Major", user.Major);
-                queryUser.WithParameter("Minor", user.Minor);
-                var rUser = await Cosmos.Beacon.GetItemQueryIterator<BeaconModel>(queryUser).ReadNextAsync();
-                // Other
-                var queryOther = new QueryDefinition("SELECT * FROM Beacon b WHERE b.Major = @Major and b.Minor = @Minor");
-                queryOther.WithParameter("Major", user.Major);
-                queryOther.WithParameter("Minor", user.Minor);
-                var rOther = await Cosmos.Beacon.GetItemQueryIterator<BeaconModel>(queryOther).ReadNextAsync();
-                // validation
-                foreach(var u in rUser.Resource)
+                var contactedQuery = new QueryDefinition("SELECT * FROM Beacon b WHERE b.Major = @Major and b.Minor = @Minor");
+                contactedQuery.WithParameter("Major", user.Major);
+                contactedQuery.WithParameter("Minor", user.Minor);
+                var contacted = await Cosmos.Beacon.GetItemQueryIterator<BeaconModel>(contactedQuery).ReadNextAsync();
+                foreach (var c in contacted.Resource)
                 {
-                    foreach(var o in rOther.Resource)
-                    {
-                        if (u.Major == o.UserMajor && u.Minor == o.UserMinor)
-                        {
-                            // target UserUuid
-                            var id = o.GetId();
-                            await updateUserStatus(id, Common.UserStatus.Contacted);
-                        }
-                    }
+                    var id = c.GetId();
+                    await updateUserStatus(id, Common.UserStatus.Contacted);
                 }
+
                 await updateUserStatus(user.GetId(), Common.UserStatus.Infection);
                 return new OkResult();
             }
