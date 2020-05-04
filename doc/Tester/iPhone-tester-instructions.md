@@ -1,56 +1,144 @@
-# iPhone のテスターの方へ
+# iOS版アプリのテスターの方へ
 
-「COVID-19 Radar」アプリのテスターにご参加いただきありがとうございます。  
-以下、手順を記載しますので参考にされてください。
+「COVID-19 Radar」アプリのテストにご参加いただきありがとうございます。  
+本ドキュメントでは、テスターに向けてテストリリースのインストール方法をご紹介します。
 
-- iPhone のブラウザは「Safari」を利用してください。  
-- Safariは「プライベートモード」を解除してご利用ください。
+## 前提条件
+以下の手続きが完了している事を前提とします。
+- [ベータテスターへの応募](https://bit.ly/2XSuVUJ) 
+- ベータテスターへ応募した際のメールアドレスにて、  
+Microsoftアカウント、もしくはGitHubアカウントの作成
+- ブラウザは標準のSafariを使用
+- Safariは「プライベートモード」ではないこと
 
-## 1. App Center にサインイン
+## ドキュメント作成環境
+本ドキュメントでは、以下の環境にてスクリーンショットの取得・動作確認を行っております。  
+テスターの皆様の環境に応じて、適宜読み替えをお願いします。
+- Apple iPhone SE
+- Apple iPhone 7
+- iOS 13.3.1
 
-[App Center](https://appcenter.ms/sign-in) に、iPhone の Safari でアクセスします。   
+---
+## デバイスの追加方法
+新規デバイスにテストリリースをインストールする場合、デバイスの登録が必要です。  
+以下の手順に従い、デバイスの登録をお願いします。
+
+### 1. App Center にサインイン
+
+[App Center](https://appcenter.ms/sign-in) に、iOS端末 でアクセスします。  
 標準カメラアプリより、以下のQRコードをスキャンしてもアクセス可能です。  
 ![App Center QRCode](../.attachments/appcenter-qrcode.png)
 
-![App Centerにサインイン](../.attachments/001-b599dd92-5ae8-4cfe-afcd-39dab6961620.jpg)
+AppCenterのサインインページより、テスター登録時にFormに入力したメールアドレスでサインインをしてください。  
+![App Centerにサインイン](../.attachments/iOS_001_appcenter_signin.png)
 
-テスター登録時にFormに入力したメールアドレスでサインインしてください。
-
-## 2. 「プロファイル」をダウンロード
+### 2. プロファイルのインストール
+新しいデバイスへのインストールを行う際は、AppCenterへのデバイス登録、およびプロファイルのインストールを行う必要があります。
 
 My Appsの画面にAndroid版とiOS版のアプリが表示されています。
+「COVID-19 Radar」のiOSアプリをタップします。  
+![App Centerでアプリをダウンロード](../.attachments/iOS_002_appcenter_selectapps.png.png)
 
-![iOSアプリをクリック](../.attachments/002-c0bd6cac-6123-45bc-9889-ce088d42d301.jpg)
 
-「COVID-19 Radar」のiOSアプリをクリックし、次のページの「Latest release」をクリック。
+ダウンロードページへのQRコードが表示されますので、下部のリンク（赤枠部）をタップします。  
+![App Centerでアプリをダウンロード](../.attachments/iOS_003_appcenter_installpage-qr.png)
 
-![My dexicesの登録](../.attachments/003-77b8ea07-d4db-46b6-8b04-e95a4c4afe46.jpg)
+デバイスの追加についての案内が表示されますので、新規のデバイスの場合は「+Add Device」をタップします。  
+なお、すでに登録が完了しているデバイスの場合は、ボタン下部の「I'm good」をタップしてください。  
+![App Centerでデバイスを追加](../.attachments/iOS_004_appcenter_add-devices.png)
 
-iPhoneの場合「INSTALL」をクリックしてもアプリをダウンロードできません。事前に「プロファイル」を設定する必要があります。  
-上部のアイコンをクリックし「My devices」のページを表示、「＋Add new device」をクリックします。
+構成プロファイルのダウンロードが始まりますので、「許可」をタップします。  
+![App Centerでデバイスを追加](../.attachments/iOS_005_appcenter_installprofile.png)
 
-## 3. iPhoneに「プロファイル」を設定
+プロファイルがダウンロードされたら、下記の表示になりますので、「閉じる」をタップします。  
+![App Centerでデバイスを追加](../.attachments/iOS_006_appcenter_installprofile.png)
 
-![プロファイルの設定](../.attachments/004-420d3962-cbbf-49c3-9292-12f7bd9e5416.jpg)
+「設定」アプリを開くと、「プロファイルがダウンロードされました」というメッセージが表示されていますので、タップして開きます。  
+![プロファイルのインストール](../.attachments/iOS_007_ConfigApp_installprofile.png)
 
-画面にダイアログが表示されるので「許可」をクリックすると、プロファイルがダウンロードされます。
+プロファイルの詳細が表示されますので、右上の「インストール」をタップします。  
+![プロファイルのインストール](../.attachments/iOS_008_ConfigApp_installprofile.png)
 
-![iPhoneの「設定」](../.attachments/005-a7e4d71b-da91-452b-9280-65393677e755.jpg)
+デバイスに設定されたパスコード・パスワードを入力します。  
+![プロファイルのインストール](../.attachments/iOS_009_ConfigApp_installprofile.png)
 
-iPhoneの「設定」を開き、「プロファイルのインストール」を行います。  
-インストール際、iPhoneに設定したパスコードを要求される場合があります。
+インストールの確認画面が表示されますので、「インストール」をタップします。  
+![プロファイルのインストール](../.attachments/iOS_010_ConfigApp_installprofile.png)
 
-![App Centerにデバイスの登録が完了](../.attachments/006-1acdcd85-ddc3-42c5-b45e-0d3b36ed573a.jpg)
+プロファイルのインストールが成功すると、SafariでAppCenterのページが表示されます。  
+ページ下部の「Show previous versions」をタップします。
+![プロファイルのインストール](../.attachments/iOS_011_appcenter_installedprofile_page.png)
 
-App Centerにデバイスが登録されたのを確認してください。  
 
-## 4. iPhoneに「COVID-19 Radar」アプリをインストール
+テストリリースの一覧が表示されますが、AppCenterでデバイスの登録が完了するまでの間、「INSTALL」ボタンは表示されません。  
+![プロファイルのインストール](../.attachments/iOS_012_appcenter_installpage_notinstall.png)
 
-![iOSアプリをインストール](../.attachments/007-a2a39a61-b25b-4a95-843e-2319df02b5e3.jpg)
 
-以上の手順で、「Covid19Radar」のiOSアプリをインストールすることができます。
+デバイスの登録が完了するまで、最長で4時間程度掛かる場合があります。  
+お茶でも飲んでお待ちください。
 
------
+## アプリのインストール
+デバイスの登録が完了しましたら、以下の手順に従ってアプリのインストールをお願いします。
 
-「COVID-19 Radar」は現在開発中のアプリです。  
-コミットする都度、最新版の通知がメールアドレスに来ますので、最新版を都度ダウンロードいただきますよう、よろしくお願いいたします。
+### 1. App Center にサインイン
+
+[インストール画面](https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS) に、iOS端末 でアクセスします。  
+標準カメラアプリより、以下のQRコードをスキャンしてもアクセス可能です。  
+![Covid19RadarIOS QR Code](../.attachments/appcenter-install-ios.png)  
+必要に応じて、AppCenterへのサインインを行います。
+
+デバイスの登録についての画面が表示される場合がありますので、「I'm good.」をタップします。  
+![インストール画面](../.attachments/iOS_013_add-device-good.png)
+
+テストリリースのインストールについて確認が表示されますので、「OK」をタップします。  
+![インストール画面](../.attachments/iOS_014_add-device-good.png)
+
+現在リリースされているバージョンの一覧が表示されていますので、最上部の「Latest release」の「INSTALL」ボタンをタップします。  
+![ブラウザからのインストール許可](../.attachments/iOS_015_install-apps.png)
+
+アプリのインストールについて確認が表示されますので、「インストール」をタップします。  
+![App Centerでアプリをダウンロード](../.attachments/iOS_016_install-apps.png)
+
+バックグラウンドでアプリがインストールされ、ホーム画面に追加されます。  
+![App Centerでアプリをダウンロード](../.attachments/iOS_017_install-apps.png)  
+![App Centerでアプリをダウンロード](../.attachments/iOS_018_install-apps.png)
+
+
+以上で、アプリのインストールは完了です。
+
+---
+## アプリのアップデート方法
+アプリのテストビルドが終わる都度、最新版の通知が登録されたメールアドレスに届きますので、以下の手順で最新のアプリのダウンロード・インストールを行います。
+
+### 1. メールの確認
+テスト版のリリースについてはメールにて通知されておりますので、最新のアプリを手動でインストールします。  
+![メールでの通知](../.attachments/iOS_019_update-notify-mail.png)
+
+最新のリリースについて、以下のようなメールが届きますので、「Install」をタップしてAppCenterのダウンロードページを開きます。  
+![メールでの通知](../.attachments/iOS_020_update-notify-mail.png)
+
+## 2. アプリのダウンロード
+該当リリースのダウンロードページが開きますので、「INSTALL」をタップして、アプリをダウンロードします。  
+![AppCenter テストビルドのダウンロード](../.attachments/iOS_021_install-apps.png)
+
+アプリのインストールについて確認が表示されますので、「インストール」をタップします。  
+![App Centerでアプリをダウンロード](../.attachments/iOS_022_install-apps.png)  
+バックグラウンドでアプリが更新されます。
+
+以上で、アプリのアップデートは完了です。
+
+---
+## アプリの利用方法
+以下のドキュメントを参照してください。  
+[Covid19Radar(GitHub) - HOW_TO_USE for iOS](https://github.com/Covid-19Radar/Covid19Radar/blob/master/doc/How-to-use/iPhone-how-to-use.ja.md)
+
+---
+## バグを発見した場合
+バグの報告、および新機能の追加の提案をされたい場合、GitHub上リポジトリにて、Issueの作成をお願いします。  
+詳細は、リポジトリ内の「HOW_TO_CONTRIBUTE」をご覧ください。  
+[Covid19Radar(GitHub) - HOW_TO_CONTRIBUTE.md](https://github.com/Covid-19Radar/Covid19Radar/blob/master/HOW_TO_CONTRIBUTE.md)
+
+## 相談をしたい場合
+チャットアプリケーション([Discord](https://discordapp.com/))にて、コントリビューター同士のコミュニケーションを行っております。  
+下記招待リンクより参加をお願いします。  
+[Covid19Radar(Discord)](https://discord.gg/EzaYhD)
