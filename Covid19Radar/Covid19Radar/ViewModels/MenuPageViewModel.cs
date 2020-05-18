@@ -8,6 +8,7 @@ using System.Text;
 using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
@@ -28,41 +29,45 @@ namespace Covid19Radar.ViewModels
 
         public MenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
-            MenuItems = new ObservableCollection<MainMenuModel>();
-
-            MenuItems.Add(new MainMenuModel()
+            MenuItems = new ObservableCollection<MainMenuModel>
             {
-                Icon = "\uf0f3",
-                PageName = nameof(StartTutorialPage),
-                Title = "アプリの使い方"
-            });
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0f3",
-                PageName = nameof(SettingsPage),
-                Title = "追跡情報の設定"
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf2f1",
-                PageName = nameof(UpdateInfomationPage),
-                Title = "更新情報"
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf56c",
-                PageName = nameof(LicenseAgreementPage),
-                Title = "ライセンス"
-            });
-
-            MenuItems.Add(new MainMenuModel()
-            {
-                Icon = "\uf0c0",
-                PageName = nameof(ContributorsPage),
-                Title = "貢献者一覧"
-            });
+                new MainMenuModel()
+                {
+                    Icon = "\uf059",
+                    PageName = nameof(StartTutorialPage),
+                    Title = AppResources.TitleAppDescription
+                },
+                new MainMenuModel()
+                {
+                    Icon = "\uf015",
+                    PageName = nameof(HomePage),
+                    Title = AppResources.ButtonHome
+                },
+                new MainMenuModel()
+                {
+                    Icon = "\uf0f3",
+                    PageName = nameof(SettingsPage),
+                    Title = AppResources.TitleStatusSettings
+                },
+                new MainMenuModel()
+                {
+                    Icon = "\uf2f1",
+                    PageName = nameof(UpdateInfomationPage),
+                    Title = AppResources.TitleUpdateInformation
+                },
+                new MainMenuModel()
+                {
+                    Icon = "\uf56c",
+                    PageName = nameof(LicenseAgreementPage),
+                    Title = AppResources.TitleLicenseAgreement
+                },
+                new MainMenuModel()
+                {
+                    Icon = "\uf0c0",
+                    PageName = nameof(ContributorsPage),
+                    Title = AppResources.MainContributors
+                }
+            };
 
             NavigateCommand = new DelegateCommand(Navigate);
         }
