@@ -6,9 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Covid19Radar.Tests.Common
+namespace Covid19Radar.Api.Tests.Common
 {
     [TestClass]
+    [TestCategory("Common")]
     public class UuidLockTest
     {
         static Type t = typeof(UuidLock);
