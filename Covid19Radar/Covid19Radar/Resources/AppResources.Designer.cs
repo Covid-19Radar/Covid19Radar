@@ -260,7 +260,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   If you are diagnosed COVID19 positive に類似しているローカライズされた文字列を検索します。
+        ///   If you are diagnosed COVID-19 positive に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTitleTextStep3 {
             get {
@@ -766,7 +766,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Protecting our loved ones from COVID19 に類似しているローカライズされた文字列を検索します。
+        ///   Protecting our loved ones from COVID-19 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string StartTutorialPageTextProtectingOurLovedOnes {
             get {
