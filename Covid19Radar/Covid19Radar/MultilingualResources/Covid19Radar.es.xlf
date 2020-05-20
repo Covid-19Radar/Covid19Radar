@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="es" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="es" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
     </header>
@@ -57,9 +57,10 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
-          <source>Protecting our loved ones from COVID-19</source>
-          <target state="translated">Proteger a nuestros seres queridos de COVID-19</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID-19</note>
+          <source>Protecting our loved ones from COVID19</source>
+          <target state="needs-review-translation">Proteger a nuestros seres queridos de COVID-19</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Protecting our loved ones from COVID19</note>
         </trans-unit>
         <trans-unit id="TitleDeviceAccess" translate="yes" xml:space="preserve">
           <source>Device Access</source>
@@ -212,7 +213,7 @@ Por favor, compruebe su SMS.</target>
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</source>
-          <target state=translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">PrivacyPolicy</note>
         </trans-unit>
         <trans-unit id="DetectedBeaconPageTextId" translate="yes" xml:space="preserve">
@@ -508,7 +509,7 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogText" translate="yes" xml:space="preserve">
           <source>Your diagnosis cannot be verified at this time to be submitted.</source>
-          <target state="translatedn">Su diagnóstico no puede ser comprobado en este momento para ser enviado.</target>
+          <target state="translated">Su diagnóstico no puede ser comprobado en este momento para ser enviado.</target>
         </trans-unit>
         <trans-unit id="SharePositiveDiagnosisPageVerifyFailedDialogTitle" translate="yes" xml:space="preserve">
           <source>Verification Failed</source>
@@ -519,12 +520,22 @@ Seleccione 'Permitir siempre' para configurar Bluetooth.</target>
           <target state="translated">Enviar</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="translated">TextoEjemplo</target>
+          <source>When you run the app, the app will generate an anonymous ID.
+This app does not acquire any personal data (phone number,  location information and more).</source>
+          <target state="needs-review-translation">TextoEjemplo</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description2</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="translated">TextoEjemplo</target>
+          <source>While the app is running, each other's smartphone will record their anonymous ID for the past two weeks. Records older than 2 weeks will be deleted, and each other's anonymous ID will change periodically to protect privacy</source>
+          <target state="needs-review-translation">TextoEjemplo</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description2</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="new">Not Agree</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
       </group>
     </body>

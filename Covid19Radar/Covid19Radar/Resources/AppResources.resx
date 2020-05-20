@@ -522,9 +522,16 @@ Please check your SMS.</value>
     <value>Submit</value>
   </data>
   <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
-    <value>SampleText</value>
+    <value>When you run the app, the app will generate an anonymous ID.
+This app does not acquire any personal data (phone number,  location information and more).</value>
+    <comment>How it works page step 1 description2</comment>
   </data>
   <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
-    <value>SampleText</value>
+    <value>While the app is running, each other's smartphone will record their anonymous ID for the past two weeks. Records older than 2 weeks will be deleted, and each other's anonymous ID will change periodically to protect privacy</value>
+    <comment>How it works page step 2 description2</comment>
+  </data>
+  <data name="ButtonNotAgree" xml:space="preserve">
+    <value>Not Agree</value>
+    <comment>Not Agree</comment>
   </data>
 </root>

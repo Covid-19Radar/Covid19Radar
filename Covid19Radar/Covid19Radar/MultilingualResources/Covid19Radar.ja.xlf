@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="ja" original="COVID19RADAR/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-US" target-language="ja" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
     </header>
@@ -54,7 +54,7 @@
         </trans-unit>
         <trans-unit id="ButtonStart" translate="yes" xml:space="preserve">
           <source>Start</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">左端</target>
+          <target state="translated" state-qualifier="tm-suggestion">スタート</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Start</note>
         </trans-unit>
         <trans-unit id="StartTutorialPageTextProtectingOurLovedOnes" translate="yes" xml:space="preserve">
@@ -520,12 +520,20 @@ Bluetooth を設定するには、[常に許可] を選択します。</target>
           <target state="translated" state-qualifier="tm-suggestion">提出</target>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep1Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
+          <source>When you run the app, the app will generate an anonymous ID.
+This app does not acquire any personal data (phone number,  location information and more).</source>
+          <target state="translated">アプリを実行した際、各スマートフォンに匿名IDを生成して保持します。このアプリは、電話番号・位置情報など、プライバシーに関わる情報は一切取得しません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 1 description2</note>
         </trans-unit>
         <trans-unit id="DescriptionPageTextStep2Description2" translate="yes" xml:space="preserve">
-          <source>SampleText</source>
-          <target state="new">SampleText</target>
+          <source>While the app is running, each other's smartphone will record their anonymous ID for the past two weeks. Records older than 2 weeks will be deleted, and each other's anonymous ID will change periodically to protect privacy</source>
+          <target state="translated">アプリの実行中、お互いのスマートフォンでは、過去2週間の互いの匿名IDの記録が行われます。2週間を超えた記録は削除され、お互いの匿名IDはプライバシー保護の為に周期的に変わります。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">How it works page step 2 description2</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotAgree" translate="yes" xml:space="preserve">
+          <source>Not Agree</source>
+          <target state="translated">同意しない</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Not Agree</note>
         </trans-unit>
       </group>
     </body>

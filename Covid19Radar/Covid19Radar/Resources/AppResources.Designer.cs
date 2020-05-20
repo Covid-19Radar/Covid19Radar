@@ -70,15 +70,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Not Agree に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotAgree {
-            get {
-                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Agree に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonAgree {
@@ -129,6 +120,15 @@ namespace Covid19Radar.Resources {
         internal static string ButtonNext {
             get {
                 return ResourceManager.GetString("ButtonNext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Not Agree に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ButtonNotAgree {
+            get {
+                return ResourceManager.GetString("ButtonNotAgree", resourceCulture);
             }
         }
         
@@ -196,7 +196,8 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   SampleText に類似しているローカライズされた文字列を検索します。
+        ///   When you run the app, the app will generate an anonymous ID.
+        ///This app does not acquire any personal data (phone number,  location information and more). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep1Description2 {
             get {
@@ -214,7 +215,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   SampleText に類似しているローカライズされた文字列を検索します。
+        ///   While the app is running, each other&apos;s smartphone will record their anonymous ID for the past two weeks. Records older than 2 weeks will be deleted, and each other&apos;s anonymous ID will change periodically to protect privacy に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DescriptionPageTextStep2Description2 {
             get {
