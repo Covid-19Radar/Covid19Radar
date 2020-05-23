@@ -918,4 +918,7 @@
     <AndroidResource Include="Resources\drawable-mdpi\ExposureNotifications.png" />
     <AndroidResource Include="Resources\drawable-ldpi\ExposureNotifications.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
 </Project>
