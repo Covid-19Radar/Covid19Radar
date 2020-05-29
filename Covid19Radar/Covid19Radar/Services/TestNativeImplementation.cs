@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if DEBUG
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,13 @@ namespace Covid19Radar.Services
 		public async Task StopAsync()
 		{
 			await WaitRandom();
-			Preferences.Set("fake_enabled", false);
+			Preferences.Set("fake_enabled", true);
 		}
 
 		public async Task<bool> IsEnabledAsync()
 		{
 			await WaitRandom();
-			return Preferences.Get("fake_enabled", false);
+			return Preferences.Get("fake_enabled", true);
 		}
 
 		public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
@@ -44,7 +45,10 @@ namespace Covid19Radar.Services
 			return keys;
 		}
 
-		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(TemporaryExposureKeyBatches batches)
+		public Task<Status> GetStatusAsync()
+			=> Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
+
+		public Task<(ExposureDetectionSummary summary, IEnumerable<ExposureInfo> info)> DetectExposuresAsync(IEnumerable<string> files)
 		{
 			var summary = new ExposureDetectionSummary(10, 2, 5);
 
@@ -70,3 +74,4 @@ namespace Covid19Radar.Services
 		}
 	}
 }
+#endif

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Covid19Radar.Api.DataStore
@@ -15,10 +16,6 @@ namespace Covid19Radar.Api.DataStore
     public class Cosmos : ICosmos
     {
         private ILogger<ICosmos> Logger;
-
-        private string EndpointUri { get; set; }
-        // The primary key for the Azure Cosmos account.
-        private string PrimaryKey { get; set; }
         // Database Id
         private string DatabaseId { get; set; }
         // The Cosmos client instance
@@ -37,21 +34,24 @@ namespace Covid19Radar.Api.DataStore
         public Container Diagnosis { get => Database.GetContainer("Diagnosis"); }
         public Container TemporaryExposureKeyExport { get => Database.GetContainer("TemporaryExposureKeyExport"); }
         public Container Sequence { get => Database.GetContainer("Sequence"); }
+        public Container AuthorizedApp { get => Database.GetContainer("AuthorizedApp"); }
 
         /// <summary>
         /// DI Constructor
         /// </summary>
         /// <param name="config">configuration</param>
-        public Cosmos(Microsoft.Extensions.Configuration.IConfiguration config, ILogger<ICosmos> logger)
+        /// <param name="client">cosmos db client</param>
+        /// <param name="logger">logger</param>
+        public Cosmos(IConfiguration config,
+                      CosmosClient client,
+                      ILogger<ICosmos> logger)
         {
             Logger = logger;
-            EndpointUri = config.GetSection("COSMOS_ENDPOINT_URI").Value;
-            PrimaryKey = config.GetSection("COSMOS_PRIMARY_KEY").Value;
-            DatabaseId = config.GetSection("COSMOS_DATABASE_ID").Value;
-            AutoGenerate = bool.Parse(config.GetSection("COSMOS_AUTO_GENERATE").Value);
+            DatabaseId = config.CosmosDatabaseId();
+            AutoGenerate = config.CosmosAutoGenerate();
 
             // Create a new instance of the Cosmos Client
-            CosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+            CosmosClient = client;
 
             // Autogenerate
             GenerateAsync().Wait();
@@ -139,7 +139,16 @@ namespace Covid19Radar.Api.DataStore
             var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
             var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
 
-        }
+            // Container AuthorizedApp
+            Logger.LogInformation("GenerateAsync Create AuthorizedApp Container");
+            try
+            {
+                await dbResult.Database.GetContainer("AuthorizedApp").DeleteContainerAsync();
+            }
+            catch { }
+            var authorizedAppProperties = new ContainerProperties("AuthorizedApp", "/PartitionKey");
+            var authorizedAppResult = await dbResult.Database.CreateContainerIfNotExistsAsync(authorizedAppProperties);
 
+        }
     }
 }
