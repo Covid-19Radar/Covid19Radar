@@ -54,9 +54,6 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
-            Xamarin.Forms.Device.SetFlags(new string[] { "RadioButton_Experimental" });
-
             // Exposure Notification
 
 #if DEBUG
@@ -64,11 +61,11 @@ namespace Covid19Radar
             // with some fake data
             Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
+            Xamarin.ExposureNotifications.ExposureNotification.Init();
+
+
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-            await Xamarin.ExposureNotifications.ExposureNotification.Init();
-
-            // Exposure Notification
 
             LogUnobservedTaskExceptions();
 
@@ -81,26 +78,25 @@ namespace Covid19Radar
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
 
-            if (LocalStateManager.Instance.IsWelcomed)
+            if (userDataService.IsExistUserData)
             {
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                var userData = userDataService.Get();
+                if (userData.IsWelcomed)
+                {
+                    result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                }
+                else
+                {
+                    result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
+                }
             }
             else
             {
                 result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
-/*
-            if (userDataService.IsExistUserData)
-            {
-                UserDataModel _userData = userDataService.Get();
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-            }
-            else
-            {
-                //result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(StartTutorialPage));
-                result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-            }
-*/
+
+            _ = InitializeBackgroundTasks();
+
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
@@ -112,6 +108,12 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
+        }
+
+        async Task InitializeBackgroundTasks()
+        {
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -143,32 +145,28 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
             containerRegistry.RegisterForNavigation<NotifyOtherPage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
-            containerRegistry.RegisterForNavigation<SharePositiveDiagnosisPage>();
             containerRegistry.RegisterForNavigation<UpdateInformationPage>();
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
             containerRegistry.RegisterSingleton<UserDataService>();
             containerRegistry.RegisterSingleton<HttpDataService>();
+            containerRegistry.RegisterSingleton<ExposureNotificationService>();
         }
 
         protected override void OnStart()
         {
-            ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
+            OnResume();
+            //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
         }
 
         protected override void OnResume()
         {
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            base.OnResume();
 
         }
 
         protected override void OnSleep()
         {
-            //UserDataService userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
-            base.OnSleep();
         }
 
 

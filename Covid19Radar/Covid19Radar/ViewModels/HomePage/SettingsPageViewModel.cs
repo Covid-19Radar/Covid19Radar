@@ -61,32 +61,53 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public SettingsPageViewModel(INavigationService navigationService) : base(navigationService)
+        private readonly UserDataService userDataService;
+        private UserDataModel userData;
+
+        public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
             Title = AppResources.SettingsPageTitle;
             AppVer = AppConstants.AppVersion;
-            EnableExposureNotification = LocalStateManager.Instance.LastIsEnabled;
-            EnableLocalNotification = LocalStateManager.Instance.EnableNotifications;
+            this.userDataService = userDataService;
+            userData = this.userDataService.Get();
+            this.userDataService.UserDataChanged += _userDataChanged;
+
+            EnableExposureNotification = userData.IsExposureNotificationEnabled;
+            EnableLocalNotification = userData.IsNotificationEnabled;
         }
 
+        private void _userDataChanged(object sender, UserDataModel e)
+        {
+            userData = this.userDataService.Get();
+            EnableExposureNotification = userData.IsExposureNotificationEnabled;
+            EnableLocalNotification = userData.IsNotificationEnabled;
+        }
 
-        // Switch Behevior
         public ICommand OnChangeEnableExposureNotification => new Command(async () =>
         {
-            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsExposureNotificationEnabled = !EnableExposureNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeEnableNotification => new Command(async () =>
         {
-            await UserDialogs.Instance.AlertAsync("設定を保存するには、Saveをタップしてください");
+            userData.IsNotificationEnabled = !EnableLocalNotification;
+            await userDataService.SetAsync(userData);
         });
 
         public ICommand OnChangeResetData => new Command(async () =>
         {
-            var check = await UserDialogs.Instance.ConfirmAsync("本当にすべてのデータをリセットしますか?", "データの全削除", "OK", "Cancel");
+
+            var check = await UserDialogs.Instance.ConfirmAsync(
+                Resources.AppResources.SettingsPageDialogResetText,
+                Resources.AppResources.SettingsPageDialogResetTitle,
+                Resources.AppResources.ButtonOk,
+                Resources.AppResources.ButtonCancel
+            );
+
             if (check)
             {
-                UserDialogs.Instance.ShowLoading("Deleting data");
+                UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
 
                 if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 {
@@ -94,12 +115,8 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                LocalStateManager.Instance.LastIsEnabled = false;
-                LocalStateManager.Instance.IsWelcomed = false;
-                LocalStateManager.Instance.ExposureSummary = null;
-                LocalStateManager.Instance.ClearDiagnosis();
-                LocalStateManager.Instance.ServerBatchNumber = 0;
-                LocalStateManager.Save();
+                UserDataModel userData = new UserDataModel();
+                await userDataService.SetAsync(userData);
 
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync("全設定とデータを削除しました。アプリの再起動をしてください。");
@@ -111,16 +128,5 @@ namespace Covid19Radar.ViewModels
 
             }
         });
-
-
-        public Command OnSaveClick => new Command(async () =>
-        {
-            LocalStateManager.Instance.LastIsEnabled = EnableExposureNotification;
-            LocalStateManager.Instance.EnableNotifications = EnableLocalNotification;
-            LocalStateManager.Save();
-            await UserDialogs.Instance.AlertAsync("設定を保存しました。");
-        });
-
-
     }
 }
