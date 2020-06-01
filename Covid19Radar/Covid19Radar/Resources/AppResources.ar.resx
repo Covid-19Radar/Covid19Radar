@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>التالي</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>بنود الخدمة</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>لا حاجة لإدخال المعلومات الشخصية. نحن نستخدم معرف فريد، مخصص لك عند تثبيت التطبيق.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>تفاعل المستخدم مع مستخدم آخر للتطبيق لمدة تزيد عن 30 دقيقة إجمالاً ، في مسافة أقرب من 2 متر في المتوسط تسجل على أنها "جهة اتصال قريبة".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>الرجاء تغيير حالتك يدويًا إلى "إيجابي" بعد تأكيد رقم هاتفك. جريان "إيجابي" ، يجب التنسيق مع الجهات المعنية.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>يجب تشغيل البلوتوث / الإخطارات لتسجيل أي اتصال وثيق مع المستخدمين الآخرين. يرجى الانتقال إلى الصفحة التالية لتشغيله.</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>البدء</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>حماية أحبائنا من فيروس كورونا المستجد</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>صلاحيات الوصول</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>موافقة</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>الصفحة الرئيسية</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>انت جاهز</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>اكتمل الإعداد</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>اتفاقية الترخيص</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>الرجاء التحقق من اتصال الانترنت الخاص بك.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>تمكين</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ليس الان</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>يستخدم هذا التطبيق الإخطارات / البلوتوث لتحديد ما إذا كنت بالقرب من مستخدم آخر للتطبيق. اختر "السماح دائمًا" للسماح بإعداد البلوتوث.</value>
@@ -180,16 +167,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>يجب استخدام معرّف الاختبار الفريد المرفق مع اختبار فيروس كورونا المستجد للتحقق من نتيجة الاختبار الإيجابية.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>يرجى إعادة المحاولة لاحقًا.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>فشل</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>التشخيصات المقدمة</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -198,16 +185,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>معرف التشخيص المطلوب</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>يرجى تمكين إشعارات التعرض قبل تقديم التشخيص.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>تم تعطيل إشعارات التعرض</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تقديم التشخيص...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -224,39 +208,31 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>إعدادات</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>غير موافق</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>إلغاء الأمر</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>هل تريد تشغيل الإشعارات؟</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>تمكين</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>إذا تلقيت تشخيصًا إيجابيًا</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>مشاركة التطبيق</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>مشاركة</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>مشاركة المعلومات الإيجابية وإعلام مجهول للآخرين</value>
@@ -264,14 +240,86 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>إعادة تعيين</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>نهج الخصوصية</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>في انتظار التسجيل</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>هل تريد حقًا إعادة تعيين جميع البيانات؟</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>رقم الإصدار من هذا التطبيق</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>اتصالات لاسلكية قصيرة المدى</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>إرسال واستلام</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>إغلاق إعلام جهة الاتصال</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>إشعارات التطبيق في وقت الاتصال الوثيق</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>حذف البيانات</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>حذف كافة البيانات</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>معرف التشخيص غير الصالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>يرجى تقديم معرف تشخيص صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>تاريخ اختبار غير صالح</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>يرجى تقديم تاريخ اختبار صالح</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>العودة إلى التسجيل</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>التسجيل الإيجابي</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>عند تشغيل التطبيق، فإنه سيتم إنشاء وتخزين معرف مجهول على كل هاتف ذكي. لا يحصل هذا التطبيق على أي معلومات تتعلق بالخصوصية مثل رقم الهاتف ومعلومات الموقع.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>أثناء تشغيل التطبيق ، سيقوم الهاتف الذكي لكل منهما بتسجيل الـ IDs المجهولين لبعضهما البعض خلال الأسبوعين الماضيين. سيتم حذف السجلات التي يزيد عمرها عن أسبوعين وسيتم تغيير كل معرف مجهول بشكل دوري لحماية الخصوصية.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>يحصل المستخدمون الآخرون بانتظام على قائمة بـ IDs مجهولة الهوية الإيجابية. بعد الاستحواذ، سيتم مطابقة سجل جهة الاتصال المسجل على الهاتف الذكي. إذا كانت نتيجة المباراة هي اتصال كثيف، سنقوم بإخطار هاتفك الذكي وإبلاغك بالإجراءات الضرورية التي ترغب في تعاوننا معها.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>الاتصال مع المختبرين الإيجابيين في الأيام الـ 14 الماضية</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>هذا التطبيق فعال جدا أن العديد من الناس تثبيته، لذا يرجى مشاركة التطبيق مع الناس من حولك.</value>
   </data>
 </root>

@@ -18,35 +18,28 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>下一页</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>服务条款</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>您无需输入个人信息。在安装应用时，我们将会为您分配唯一ID.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>在与其他本应用使用者接触超过30分钟且平均距离少于2米时，会被记录为一次“紧密接触”。</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>在验证您的电话号码后，请将状态更改为“阳性”。我们正在与相关方面协商“阳性”的应对流程。</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>您需要启动蓝牙以记录紧密接触情况。请到下一页启动蓝牙。</value>
+    <value>您需要启动蓝牙以记录紧密接触情况。请在下一页启动蓝牙。</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>开始</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>从 COVID-19 手中保护我们的至爱</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
+    <value>让我们的挚爱远离 COVID-19 </value>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>设备权限</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>同意</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>主页</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>一切准备就绪</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>安装完毕</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>授权协议</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -113,7 +103,7 @@
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>使用该应用需要</value>
+    <value>用户须知</value>
     <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -124,17 +114,14 @@
     <value>请检查您的网络连接。</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>确定</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>启用 </value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>暂时不</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>该应用会使用暴露通知/蓝牙信号来确定您是否与其他该追踪应用的用户有所接近。
@@ -181,16 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>必须使用 COVID-19 检测附带的唯一检测标记来验证您的阳性检测结果。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>请稍后重试。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>失败</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>诊断已提交</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>完成</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>需要诊断标记</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>确定</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>请在提交诊断之前启用暴露通知。</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>已禁用暴露通知</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>正在提交诊断结果...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,54 +209,118 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>设置</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>不同意</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>取消</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>是否要打开通知？</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
-    <value>使</value>
-    <comment>Enabling</comment>
+    <value>正在启用</value>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>正在删除</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>如果您收到阳性诊断</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>共享应用</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>共享</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>与他人共享积极信息和匿名通知</value>
+    <value>登录感染信息，并向他人发送匿名通知</value>
     <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>重置</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>隐私策略</value>
-    <comment>PrivacyPolicyPage Title</comment>
+    <value>隐私条款</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>正在等待注册</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>是否确实要重置所有数据？</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>删除所有数据</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>所有设置和数据都已删除。请重新启动应用程序。</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>VERSION</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>此应用程序的版本号</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>短距离无线通信</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>发送和接收</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>联系通知</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>密切接触时的应用程序通知</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>删除数据</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>删除所有数据</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>诊断 ID 无效</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>请提供有效的诊断 ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>无效测试日期</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>请提供有效的考试日期</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>返回注册</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>正注册</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>以后要积极注册吗？</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>当您运行该应用程序时，它将在每个智能手机上生成并存储匿名 ID。此应用程序不获取与隐私相关的任何信息，如电话号码和位置信息。</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>当应用程序运行时，彼此的智能手机将记录对方的匿名的代号在过去两周。超过 2 周的记录将被删除，每个匿名 ID 将定期更改以保护隐私。</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>其他用户定期获得正数的匿名 ID 列表。收购后，智能手机上记录的接触记录将匹配。如果比赛结果是一个沉重的接触，我们将通知您的智能手机，并通知您必要的行动，您希望我们合作。</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>在过去 14 天内与阳性测试人员联系</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>如果您对新的 Corona 持乐观态度，请配合积极的注册，以保护您周围的人。</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>此应用程序是如此有效，很多人安装它，所以请与您周围的人共享应用程序。</value>
   </data>
 </root>

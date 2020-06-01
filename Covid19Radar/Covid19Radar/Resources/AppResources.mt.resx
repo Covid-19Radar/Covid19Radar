@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Li jmiss</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Termini tas-Servizz</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>M ' hemmx bżonn li tiddaħħal informazzjoni personali. Qed nużaw ID unika, allokata lilek meta tkun qed tinstalla applikazzjoni.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Kuntatt ma ' utent ieħor tal-applikazzjoni għal aktar minn 30 min b ' kollox, f ' raġġ eqreb minn 2m bħala medja jiġi rreġistrat bħala "kuntatt mill-qrib".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Jekk jogħġbok Ibdel l-istatus tiegħek manwalment għal "pożittiv" wara li tivverifika n-numru tat-telefon tiegħek. " Pożittiva tal-"fluss tax-xog Ħol, issa koordinazzjoni ma ' partijiet relatati.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Il-Bluetooth jeħtieġ li jinxtegħel biex jirreġistra kuntatt mill-qrib. Jekk jogħġbok Mur fil-Pa ġna li jmiss biex tixegħlu.</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Ibda</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Nipproteġu l-ma ħbubin tagħna minn COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Aċċess għat-tagħmir</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Aqbel</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>PAĠNA EWLENIJA</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Lest biex tmur</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Stabbilita lesta</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Ftehim tal-li ċenzja</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>Iċċekkja l-konnessjoni tan-netwerk tiegħek.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Attiva</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Din l-App tuża n-notifika tal-espo żizzjoni/is-sinjali tal-Bluetooth biex tiddetermina jekk intix ħdejn kuntatt ieħor mal-utent tal-applikazzjoni. 
@@ -181,16 +168,16 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>L-identifikatur uniku tat-test li ġie mat-test COVID-19 tiegħek għandu jintuża biex jivverifika r-ri żultat tat-test pożittiv tiegħek.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Erġa’ pprova aktar tard.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Ma rnexxiex</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Dijanjożi ppreżentata</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Lest</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Identifikatur tad-dijanjo Żi meħtieġ</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Jekk jogħġbok ixgħel in-notifiki tal-espo żizzjoni qabel ma tippreżenta dijanjożi.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Notifiki ta ' espożizzjoni diżattivati</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Qed jissottometti d-dijanjo Żi...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Issettjar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Ma jaqblux</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Ikkanċella</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Tixtieq tixgħel in-notifiki?</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Abilitanti</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tħassir</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Jekk irċevejt dijanjożi pożittiva</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ixxerja l-App</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Ixxerja</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Qsim ta ' informazzjoni pożittiva u notifika anonima lil ħaddieħor</value>
@@ -265,14 +241,86 @@ Agħżel "dejjem Ippermetti" biex tissettja Bluetooth.</value>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Irrisettja</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Politika tal-Privatezza</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Stennija għar-Reġistru</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Verament tixtieq tirrisettja d-data kollha?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>L-issettjar u d-data kollha tħassru. Irristartja l-applikazzjoni.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Verżjoni</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Numru tal-ver żjoni ta ' din l-applikazzjoni</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Komunikazzjoni mingħajr fili fuq medda qasira</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Tibgħat u tirċievi</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Notifika ta ' kuntatt mill-qrib</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Notifiki ta ' applikazzjoni fil-ħin ta ' kuntatt mill-qrib</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Tħassar data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ħassar id-data kollha</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ID ta ' dijanjożi invalida</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Jekk jogħġbok ipprovdi ID ta ' dijanjożi valida</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Data tat-test invalida</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Jekk jogħġbok ipprovdi data tat-test valida</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Ritorn għar-reġistrazzjoni</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Reġistrazzjoni pożittiva</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Tixtieq tirreġistra b ' mod pożittiv aktar tard?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Meta tmexxi l-applikazzjoni, se tiġġenera u taħżen ID anonima fuq kull smartphone. Din l-applikazzjoni ma takkwista l-ebda informazzjoni relatata mal-privatezza bħal numru tat-telefon u informazzjoni dwar il-post.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Filwaqt li l-applikazzjoni qed taħdem, smartphone ta ' xulxin se jirreġistra IDs anonimi ta ' xulxin għall-aħħar ġimgħatejn. Rekords ta ' aktar minn ġimagħtejn se jitħassru u kull ID anonima tinbidel perjodikament biex tiġi protetta l-privatezza.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Utenti oħra regolarment jiksbu lista ta ' IDs anonimi ta ' dawk pożittivi. Wara l-akkwi żizzjoni, ir-rekord ta ' kuntatt irreġistrat fuq il-smartphone se jkun imqabbel. Jekk ir-ri żultat tal-log ħba huwa kuntatt tqil, aħna se tinnotifika smartphone tiegħek u ninfurmak dwar l-azzjonijiet meħtieġa li inti tixtieq minna biex jikkooperaw ma '.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kuntatt ma ' testers pożittivi f ' dawn l-a ħħar 14-il jum</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Jekk inti pożittiv bil-corona l-ġdida, jekk jogħġbok tikkoopera mar-Re ġistrazzjoni pożittiva biex tipproteġi n-nies ta ' madwarek.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Din l-applikazzjoni hija tant effettiva li ħafna nies tinstallahom, għalhekk jekk jogħġbok jaqsmu l-applikazzjoni ma ' nies ta ' madwarek.</value>
   </data>
 </root>

@@ -1,5 +1,4 @@
-﻿#if DEBUG
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,10 +67,9 @@ namespace Covid19Radar.Services
 
 			return new TemporaryExposureKey(
 				buffer,
-				DateTimeOffset.UtcNow.AddDays(-1 * daysAgo),
-				TimeSpan.FromMinutes(random.Next(5, 120)),
+				new DateTimeOffset(DateTimeOffset.UtcNow.Date.AddDays(-1 * daysAgo), TimeSpan.Zero),
+				TimeSpan.FromMinutes(1440),
 				(RiskLevel)random.Next(1, 8));
 		}
 	}
 }
-#endif

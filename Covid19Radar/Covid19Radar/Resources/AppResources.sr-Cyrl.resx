@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Даље</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Услови коришћења услуге</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Нема потребе за уносом личних информација. Користимо јединствени ИД који вам је додељен приликом инсталирања апликације.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>Контакт са другим корисником апликације за дужи од 30 минута у збиру, у радијусу који је већи од 2 метра у просеку, записује се као "близак контакт".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ручно промените свој статус у "позитиван" након што проверите број телефона. " Позитиван "ток посла, сада координација са сродним странкама.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Блуетоотх мора бити укључен да би се забележио затвори контакт. Идите на следећу страницу да бисте је укључили.</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Почетак</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Штитећи наше најмилијије од COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Приступ уређају</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Слажем се</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ПОЧЕТАК</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Спреман си да идеш</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Конфигурисање довршено</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Уговор о лиценцирању</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>Проверите везу са мрежом.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>У реду</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Омогући</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>Не сада</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Ова апликација користи Обавијест о изложености/Блуетоотх сигналима да би утврдила да ли се налазите у близини неког другог корисника апликације "праћење контакта". 
@@ -181,16 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Јединствени идентификатор теста који сте добили уз ваш КОВИД-19 тест мора да се користи за верификацију позитивног резултата тестирања.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Покушајте поново касније.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Није успело</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Дијагноза је поднета</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Довршено</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Потребан је идентификатор дијагностике</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>У реду</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Омогућите обавештења о експозицији пре подношења дијагнозе.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Онемогућена обавештења о експозиције</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Подношење дијагнозе...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Поставке</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Не слажу се</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Откажи</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Желите ли да укључите обавештења?</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Омогућавање</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Брисање</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Ако сте добили позитивну дијагнозу</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Делите апликацију</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Дели</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Дељење позитивних информација и анонимних обавештења другима</value>
@@ -265,14 +241,86 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Поништи</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Смернице за приватност</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Чекање на регистрацију</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Желите ли заиста да успоставите почетне вредности свих података?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Избриши све податке</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Све поставке и подаци су избрисани. Поново покрените апликацију.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Верзија</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Број верзије ове апликације</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Бежична комуникација са кратким опсегом</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Слање и примање</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Затварање обавештења о контакту</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Обавештења о апликацијама у време блиског контакта</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Избриши податке</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Избриши све податке</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Неважећи ИД дијагностике</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Наведите важећи ИД дијагностике</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Неважећи датум тестирања</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Унесите важећи датум тестирања</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Врати се на регистрацију</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Позитивна регистрација</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Желите ли касније да се региструјете?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>Када покренете апликацију, она ће генерисати и ускладиштити анонимни ИД на сваком паметном телефону. Ова апликација не стиче никакве информације везане за приватност, као што су број телефона и информације о локацији.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Док је апликација покренута, смартпхоне уређај других телефона ће се у протекле две недеље снимати за анонимне ИД-ове. Записи старији од 2 недеље ће бити избрисани, а сваки анонимни ИД ће се повремено променити како би се заштитила приватност.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Други корисници редовно добијају листу анонимних идентификација позитивних. Након куповине, запис контакта снимљен на паметном телефону биће подударно. Ако је резултат утакмице тежак контакт, обавестићемо ваш паметни телефон и информисати вас о неопходним радњама са којима бисте желели да сарађујемо.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Контакт са позитивним тестерима у последњих 14 дана</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Ако сте позитивни са новом Цорона, молимо вас да сарађујете са позитивном регистрацијом како бисте заштитили људе око себе.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Ова апликација је толико ефикасна да га многи људи инсталирају, тако да можете да поделите апликацију са људима око вас.</value>
   </data>
 </root>

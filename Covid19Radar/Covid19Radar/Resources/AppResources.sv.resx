@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>Nästa post</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>Användningsvillkor</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>Du behöver inte ange personlig information. Vi använder ett unikt ID som tilldelas dig när du installerar app'en.</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>En kontakt med en annan användare under längre tid än 30 minuter och inom en radie närmare än 2 m, registreras som "Stäng kontakt".</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>Ändra din status till "Positiv" när du har verifierat ditt telefonnummer." Positivt" Arbetsflöde , Nu samordning med närstående.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>Bluetooth måste vara aktiverat för att uppfatta en kontakt. Gå till nästa sida för att slå på den.</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>Starta</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>Skydda våra nära och kära från COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>Åtkomst till enheten</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>Acceptera</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>HEM</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>Du är redo att börja</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>Konfiguration slutförd</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>Licensavtal</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>Kontrollera nätverkets anslutning.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>Ok</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>Aktivera</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow (NotNow)</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>Denna app använder Bluetooth för att avgöra om du är nära en annan kontakt. 
@@ -181,16 +168,16 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>Den unika testidentifieraren som följde med ditt COVID-19 test måste användas för att verifiera ditt positiva testresultat.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>Försök igen senare.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>Misslyckades</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>Inlämnad diagnos</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>Slutförd</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>Diagnosidentifierare krävs</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>Ok</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>Aktivera exponeringsmeddelanden innan du skickar in en diagnos.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>Exponeringsmeddelanden inaktiverade</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>Skickar in diagnos...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Inställningar</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>Inte överens</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>Avbryt</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>Vill du aktivera aviseringar?</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>Aktiveras</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>Tas bort</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>Om du fick en positiv diagnos</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Dela appen</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>Dela</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Dela positiv information och anonym anmälan till andra</value>
@@ -265,14 +241,86 @@ Välj "Tillåt alltid" för att ge tillåtelse för att appen använder Bluetoot
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Återställ</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>Sekretesspolicy</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Väntar på register</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>Vill du verkligen återställa alla data?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>Ta bort alla data</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>Alla inställningar och data har tagits bort. Starta om programmet.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>Versioner</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>Versionsnummer för det här programmet</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>Trådlös kommunikation på kort räckvidd</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>Skicka och ta emot</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>Stäng kontaktmeddelande</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>Ansökan meddelanden vid tidpunkten för nära kontakt</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>Ta bort data</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>Ta bort alla data</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>Ogiltigt diagnos-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>Ange ett giltigt diagnos-ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>Ogiltigt testdatum</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>Ange ett giltigt testdatum</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>Återgå till registrering</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>Positiv registrering</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>Vill du registrera dig positivt senare?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>När du kör programmet kommer det att generera och lagra ett anonymt ID på varje smartphone. Denna ansökan inte förvärva någon information om sekretess såsom telefonnummer och platsinformation.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>Medan programmet körs kommer varandras smartphone att spela in varandras anonyma ID under de senaste två veckorna. Poster äldre än 2 veckor kommer att raderas och varje anonymt ID ändras regelbundet för att skydda sekretessen.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>Andra användare får regelbundet en lista över anonyma ID:er av positiva. Efter förvärvet kommer kontaktposten som registrerats på smarttelefonen att matchas. Om resultatet av matchen är en tung kontakt kommer vi att meddela din smartphone och informera dig om de nödvändiga åtgärder som du vill att vi ska samarbeta med.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>Kontakt med positiva testare under de senaste 14 dagarna</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>Om du är positiv med den nya Corona, vänligen samarbeta med den positiva registreringen för att skydda människor omkring dig.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>Denna ansökan är så effektiv att många människor installerar det, så vänligen dela programmet med människor omkring dig.</value>
   </data>
 </root>

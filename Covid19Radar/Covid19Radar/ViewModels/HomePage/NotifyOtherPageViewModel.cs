@@ -44,30 +44,43 @@ namespace Covid19Radar.ViewModels
             {
                 // Check gov's positive api check here!!
 
-                await UserDialogs.Instance.AlertAsync("Please provide a valid Diagnosis ID", "Invalid Diagnosis ID", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDText,
+                    Resources.AppResources.NotifyOtherPageDialogInvalidDiagnosisIDTitle,
+                    Resources.AppResources.ButtonOk
+                );
                 return;
             }
             if (!DiagnosisTimestamp.HasValue || DiagnosisTimestamp.Value > DateTime.Now)
             {
-                await UserDialogs.Instance.AlertAsync("Please provide a valid Test Date", "Invalid Test Date", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateText,
+                    Resources.AppResources.NotifyOtherPageDialogInvalidTestDateTitle,
+                    Resources.AppResources.ButtonOk
+                );
                 return;
             }
 
             // Submit the UID
-            using var dialog = UserDialogs.Instance.Loading("Submitting Diagnosis...");
+            using var dialog = UserDialogs.Instance.Loading(Resources.AppResources.LoadingTextSubmittingDiagnosis);
             IsEnabled = false;
             try
             {
+                /*
                 var enabled = await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync();
 
                 if (!enabled)
                 {
                     dialog.Hide();
 
-                    await UserDialogs.Instance.AlertAsync("Please enable Exposure Notifications before submitting a diagnosis.", "Exposure Notifications Disabled", "OK");
+                    await UserDialogs.Instance.AlertAsync(
+                        Resources.AppResources.NotifyOtherPageDialogENDisabledText,
+                        Resources.AppResources.NotifyOtherPageDialogENDisabledTitle,
+                        Resources.AppResources.ButtonOk
+                    );
                     return;
                 }
-
+                */
                 // Set the submitted UID
                 userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DiagnosisTimestamp.Value));
                 await userDataService.SetAsync(userData);
@@ -77,7 +90,11 @@ namespace Covid19Radar.ViewModels
 
                 dialog.Hide();
 
-                await UserDialogs.Instance.AlertAsync("Diagnosis Submitted", "Complete", "OK");
+                await UserDialogs.Instance.AlertAsync(
+                    Resources.AppResources.NotifyOtherPageDialogSubmittedText,
+                    Resources.AppResources.ButtonComplete,
+                    Resources.AppResources.ButtonOk
+                );
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));
             }
             catch (Exception ex)
@@ -85,7 +102,11 @@ namespace Covid19Radar.ViewModels
                 Console.WriteLine(ex);
 
                 dialog.Hide();
-                UserDialogs.Instance.Alert("Please try again later.", "Failed", "OK");
+                UserDialogs.Instance.Alert(
+                    Resources.AppResources.NotifyOtherPageDialogExceptionText,
+                    Resources.AppResources.ButtonFailed,
+                    Resources.AppResources.ButtonOk
+                );
             }
             finally
             {
@@ -97,7 +118,12 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickAfter => (new Command(async () =>
         {
-            var check = await UserDialogs.Instance.ConfirmAsync("あとで設定しますか?", "陽性登録", "後にする", "登録へ戻る");
+            var check = await UserDialogs.Instance.ConfirmAsync(
+                Resources.AppResources.PositiveRegistrationConfirmText,
+                Resources.AppResources.PositiveRegistrationText,
+                Resources.AppResources.ButtonNotNow,
+                Resources.AppResources.ButtonReturnToRegistration
+            );
             if (check)
             {
                 await NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(HomePage));

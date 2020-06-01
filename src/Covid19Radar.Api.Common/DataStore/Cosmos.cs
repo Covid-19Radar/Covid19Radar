@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Api.Models;
 using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Scripts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -15,17 +16,17 @@ namespace Covid19Radar.Api.DataStore
     /// </summary>
     public class Cosmos : ICosmos
     {
-        private ILogger<ICosmos> Logger;
+        private readonly ILogger<ICosmos> Logger;
         // Database Id
         private string DatabaseId { get; set; }
         // The Cosmos client instance
-        private CosmosClient CosmosClient;
+        private readonly CosmosClient CosmosClient;
 
         // The database we will create
-        private Database Database;
+        private readonly Database Database;
 
         // コンテナの自動生成
-        private bool AutoGenerate;
+        private readonly bool AutoGenerate;
 
         // The container we will create.
         public Container User { get => Database.GetContainer("User"); }
@@ -53,8 +54,10 @@ namespace Covid19Radar.Api.DataStore
             // Create a new instance of the Cosmos Client
             CosmosClient = client;
 
-            // Autogenerate
+            // Autogenerate: only DEBUG
+#if DEBUG 
             GenerateAsync().Wait();
+#endif
 
             // get database
             Database = this.CosmosClient.GetDatabase(DatabaseId);
@@ -138,6 +141,32 @@ namespace Covid19Radar.Api.DataStore
             catch { }
             var sequenceProperties = new ContainerProperties("Sequence", "/PartitionKey");
             var sequenceResult = await dbResult.Database.CreateContainerIfNotExistsAsync(sequenceProperties);
+            StoredProcedureResponse storedProcedureResponse = await sequenceResult.Container.Scripts.CreateStoredProcedureAsync(new StoredProcedureProperties
+            {
+                Id = "spIncrement",
+                Body = @"
+function increment(name, initialValue, incrementValue) {
+    function upsertCallback(err, resource, options) {
+        if (err) throw err;
+        var response = getContext().getResponse();
+        response.setBody({'value': resource.value});
+    }
+    var isAccepted = __.readDocument(__.getAltLink() + '/docs/' + name, {},
+    function (err, resource, options) {
+        if (err && err.number == 404) {
+            var body = {'id': name, 'PartitionKey': name, 'value': initialValue};
+            if(!__.createDocument(__.getSelfLink(), body, {'disableAutomaticIdGeneration': true}, upsertCallback)) throw new Error('The createDocument was not accepted');
+            return;
+        }
+        if (err) throw err;
+        var body = resource;
+        body.value += incrementValue;
+        if(!__.replaceDocument(body._self, body, {'etag': body._etag }, upsertCallback)) throw new Error('The replaceDocument was not accepted');
+    });
+    if (!isAccepted) throw new Error('The filter was not accepted by the server.');
+}
+"
+            });
 
             // Container AuthorizedApp
             Logger.LogInformation("GenerateAsync Create AuthorizedApp Container");

@@ -10,6 +10,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <Copyright />
+    <PackageProjectUrl></PackageProjectUrl>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
@@ -57,8 +59,13 @@
     <None Remove="Resources\Fonts\NotoSansCJKjp-Medium.otf" />
     <None Remove="Resources\Fonts\NotoSansCJKjp-Regular.otf" />
     <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Services\ExposureNotificationHandler.cs.txt" />
+    <None Remove="settings.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="settings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Fonts\fa-brands-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-regular-400.otf" />
     <EmbeddedResource Include="Resources\Fonts\fa-solid-900.otf" />
@@ -79,7 +86,7 @@
     <PackageReference Include="Prism.Plugin.Logging.AppCenter" Version="7.2.0.1114" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.ExposureNotification" Version="0.4.0-preview" />
+    <PackageReference Include="Xamarin.ExposureNotification" Version="0.5.0-preview" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.800" />
@@ -160,7 +167,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
     <Folder Include="MultilingualResources\" />
     <Folder Include="Templates\" />
   </ItemGroup>

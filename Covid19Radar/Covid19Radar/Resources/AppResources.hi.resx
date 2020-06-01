@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>अगला</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>सेवा की शर्तें</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>व्यक्तिगत जानकारी इनपुट करने की कोई आवश्यकता नहीं है। हम एक ऐप इंस्टॉल करते समय आपको आवंटित अद्वितीय आईडी का उपयोग कर रहे हैं।</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>औसतन 2m से अधिक त्रिज्या के भीतर कुल 30 मिनट से अधिक समय तक किसी अन्य ऐप उपयोगकर्ता के साथ संपर्क "क्लोज कॉन्टैक्ट" के रूप में दर्ज किया जाता है।</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>कृपया अपने फ़ोन नंबर को सत्यापित करने के बाद अपनी स्थिति को "सकारात्मक" में बदल दें. सकारात्मक "कार्यप्रवाह, अब संबंधित दलों के साथ समन्वय।</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>ब्लूटूथ को बंद संपर्क रिकॉर्ड करने के लिए चालू करने की आवश्यकता है। कृपया इसे चालू करने के लिए अगले पृष्ठ पर जाएं।</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>प्रारंभ करें</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>COVID-19 से हमारे प्रियजनों की रक्षा</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>डिवाइस एक्सेस</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>सहमत हूँ</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>होम</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>आप जाने के लिए तैयार हैं</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>पूरी की स्थापना की</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>लायसेंस अनुबंध</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>कृपया अपने नेटवर्क कनेक्शन की जांच करें।</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>सक्षम करें</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>नॉटअब</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>यह ऐप एक्सपोजर नोटिफिकेशन/ब्लूटूथ सिग्नल ्स का इस्तेमाल करता है ताकि यह तय किया जा सके कि आप किसी अन्य कॉन्टैक्ट ट्रेसिंग ऐप यूजर के पास हैं या नहीं । 
@@ -181,16 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>आपके COVID-19 परीक्षण के साथ आए अद्वितीय परीक्षण पहचानकर्ता का उपयोग आपके सकारात्मक परीक्षण परिणाम को सत्यापित करने के लिए किया जाना चाहिए।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>कृपया बाद में पुन: प्रयास करें.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>विफल</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>निदान प्रस्तुत</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण करें</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>निदान पहचानकर्ता आवश्यक</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ठीक</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>निदान सबमिट करने से पहले एक्सपोजर नोटिफिकेशन को सक्षम करें।</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>एक्सपोजर नोटिफिकेशन अक्षम</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>निदान प्रस्तुत कर रहा है ...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्स</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>सहमत नहीं</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>रद्द करें</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>क्या आप सूचनाओं को चालू करना चाहते हैं?</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>सक्षम</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>हटा रहा है</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>यदि आपको सकारात्मक निदान मिला</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ऐप साझा करें</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>साझा करें</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>दूसरों को सकारात्मक जानकारी और गुमनाम अधिसूचना साझा करना</value>
@@ -265,14 +241,86 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>रीसेट करें</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>गोपनीयता नीति</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>रजिस्टर की प्रतीक्षा</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>क्या आप वास्तव में सभी डेटा रीसेट करना चाहते हैं?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>सभी डेटा हटाएं</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>सभी सेटिंग और डेटा हटा दिए गए हैं। कृपया आवेदन को पुनः आरंभ करें।</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>संस्करण</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>इस आवेदन का संस्करण संख्या</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>कम दूरी की वायरलेस संचार</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>भेजें और प्राप्त करें</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>संपर्क अधिसूचना बंद करें</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>करीबी संपर्क के समय आवेदन सूचनाएं</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>डेटा हटाएँ</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>सभी डेटा हटाएं</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>अमान्य निदान आईडी</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>कृपया एक वैध निदान आईडी प्रदान करें</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>अमान्य परीक्षण तिथि</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>कृपया एक वैध परीक्षण तिथि प्रदान करें</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>पंजीकरण पर वापसी</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>सकारात्मक पंजीकरण</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>क्या आप बाद में सकारात्मक पंजीकरण करना चाहेंगे?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>जब आप आवेदन चलाते हैं, तो यह प्रत्येक स्मार्टफोन पर एक गुमनाम आईडी उत्पन्न और संग्रहीत करेगा। यह एप्लिकेशन गोपनीयता से संबंधित कोई भी जानकारी प्राप्त नहीं करता है जैसे फोन नंबर और स्थान की जानकारी।</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>जहां एप्लीकेशन चल रही है, वहीं एक-दूसरे का स्मार्टफोन पिछले दो हफ्तों से एक-दूसरे की गुमनाम आईडीएस रिकॉर्ड करेगा । 2 सप्ताह से पुराने रिकॉर्ड हटा दिए जाएंगे और गोपनीयता की रक्षा के लिए प्रत्येक गुमनाम आईडी को समय-समय पर बदला जाएगा।</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>अन्य उपयोगकर्ताओं को नियमित रूप से सकारात्मक लोगों की गुमनाम आईडीएस की सूची मिलती है। अधिग्रहण के बाद स्मार्टफोन पर दर्ज कॉन्टैक्ट रिकॉर्ड का मिलान किया जाएगा। यदि मैच का परिणाम भारी संपर्क है, तो हम आपके स्मार्टफोन को सूचित करेंगे और आपको आवश्यक कार्यों के बारे में सूचित करेंगे जिन्हें आप चाहते हैं कि हम सहयोग करें।</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>पिछले 14 दिनों में सकारात्मक परीक्षकों के साथ संपर्क करें</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>यदि आप नए कोरोना के साथ सकारात्मक हैं, तो कृपया अपने आसपास के लोगों की रक्षा के लिए सकारात्मक पंजीकरण के साथ सहयोग करें।</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>यह एप्लिकेशन इतना प्रभावी है कि कई लोग इसे स्थापित करते हैं, इसलिए कृपया अपने आस-पास के लोगों के साथ आवेदन साझा करें।</value>
   </data>
 </root>

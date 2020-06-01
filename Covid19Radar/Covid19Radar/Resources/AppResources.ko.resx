@@ -18,35 +18,28 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>다음 레코드</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>서비스 약관</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
-    <value>개인 정보를 입력 할 필요가 없습니다. 앱을 설치할 때 할당된 고유 ID를 사용하고 있습니다.</value>
-    <comment>How it works page step 1 description</comment>
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
+    <value>개인 정보를 입력 할 필요가 없습니다. 앱 설치시 할당된 고유 ID를 사용하고 있습니다.</value>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
-    <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "닫기 접촉"으로 기록됩니다.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>전화번호를 확인한 후 상태를 '양수'로 수동으로 변경하십시오. 긍정적" 워크플로우, 이제 관련 당사자와의 조정.</value>
-    <comment>How it works page step 3 description</comment>
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
+    <value>평균 2m 보다 가까운 반경 내에서 총 30분 이상 다른 앱 사용자와의 접촉은 "밀접접촉"으로 기록됩니다.</value>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
-    <value>가까운 연락처를 기록하려면 블루투스를 켜야 합니다. 다음 페이지로 이동하여 켜십시오.</value>
+    <value>저장 된 가까운 접촉자를 확인하기 위해 블루투스가 필요합니다. 다음 페이지로 이동하여 블루투스를 켜십시오.</value>
     <comment>How it works page step 4 description</comment>
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>시작</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
-    <value>COVID-19로부터 사랑하는 사람을 보호</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
+    <value>COVID-19로부터 사랑하는 사람을 보호해주세요.</value>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>장치 액세스</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>찬성</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>홈</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>준비가 되었습니다.</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>완료된 설정</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>사용권 계약</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -113,7 +103,7 @@
     <comment>How it works page step 3 title</comment>
   </data>
   <data name="DescriptionPageTitleTextStep4" xml:space="preserve">
-    <value>이 응용 프로그램을 사용하는 요구 사항</value>
+    <value>이 애플리케이션의 요구 사항</value>
     <comment>How it works page step 4 title</comment>
   </data>
   <data name="TitileUserStatusSettings" xml:space="preserve">
@@ -124,21 +114,18 @@
     <value>네트워크 연결을 확인하십시오.</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>사용</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>NotNow</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
-    <value>이 응용 프로그램은 당신이 다른 연락처 추적 응용 프로그램 사용자 근처에 있는지 확인하기 위해 노출 알림 / 블루투스 신호를 사용합니다. 
-블루투스를 설정하려면 '항상 허용'을 선택합니다.</value>
+    <value>이 애플리케이션은 당신의 다른 연락처에 있는 추적 애플리케이션 사용자가 근처에 있는지 확인하기 위해 알람 및 블루투스 신호를 사용합니다. 
+블루투스를 사용을 위해 '항상 허용'을 선택합니다.</value>
     <comment>Device access page Allow Exposure Notification / Bluetooth description</comment>
   </data>
   <data name="InitSettingPageTextExposureNotification" xml:space="preserve">
@@ -162,7 +149,7 @@
     <comment>If not found exposures data</comment>
   </data>
   <data name="ExposuresPageNoExposuresInfo" xml:space="preserve">
-    <value>COVID-19 결과를 긍정적으로 보고한 사람에게 노출된 경우 알림을 받게 됩니다.</value>
+    <value>COVID-19 결과가 양성으로 보고 된 사람에게 노출된 경우 알림을 받게 됩니다.</value>
     <comment>exposures comment</comment>
   </data>
   <data name="NotifyOtherPageCodePlaceholder" xml:space="preserve">
@@ -170,7 +157,7 @@
     <comment>Notify Other Page Code Input</comment>
   </data>
   <data name="TitileSharePositiveDiagnosis" xml:space="preserve">
-    <value>긍정적인 진단 공유</value>
+    <value>양성진단 공유</value>
   </data>
   <data name="SharePositiveDiagDateText" xml:space="preserve">
     <value>테스트 날짜는 앱이 언제 전염성이 있었는지 파악하고 적절한 사람들에게 잠재적 노출을 알리는 데 도움이 됩니다.</value>
@@ -181,16 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>COVID-19 테스트와 함께 사용된 고유 테스트 식별자를 사용하여 양성 검사 결과를 확인해야 합니다.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>나중에 다시 시도하세요.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>실패</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>제출된 진단</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>완료</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>진단 식별자 필요</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>확인</value>
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
+    <value>진단을 제출하기 전에 노출알림을 활성화 하십시오.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
-    <value>진단을 제출하기 전에 노출 알림을 활성화하십시오.</value>
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
+    <value>노출알림 사용 안 함</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
-    <value>노출 알림 사용 안 함</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>진단 제출 중...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>설정</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>동의하지 않음</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>취소</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>알림을 켜시겠습니까?</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>사용하도록 설정 중</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>삭제 중</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>긍정적인 진단을 받은 경우</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>앱 공유</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>공유</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>타인에게 긍정적인 정보와 익명 알림 공유</value>
@@ -265,14 +241,86 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>다시 설정</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>개인정보취급방침</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>등록 대기 중</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>모든 데이터를 다시 설정하시겠습니까?</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>모든 데이터 삭제</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>모든 설정및데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>이 응용 프로그램의 버전 번호</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>단거리 무선 통신</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>송신 및 수신</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>연락처 알림 닫기</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>가까운 연락 시 의 응용 프로그램 알림</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>데이터 삭제</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>모든 데이터 삭제</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>잘못된 진단 ID</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>유효한 진단 ID를 제공하십시오.</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>잘못된 테스트 날짜</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>유효한 시험 날짜를 입력하십시오.</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>등록으로 돌아가기</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>긍정적 인 등록</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>나중에 긍정적으로 등록하시겠습니까?</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>응용 프로그램을 실행하면 각 스마트 폰에 익명 ID를 생성하고 저장합니다. 이 응용 프로그램은 전화 번호 및 위치 정보와 같은 개인 정보 보호와 관련된 정보를 취득하지 않습니다.</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>응용 프로그램이 실행되는 동안 서로의 스마트폰은 지난 2주 동안 서로의 익명 아이디를 기록합니다. 2주 미만의 기록은 삭제되며, 각 익명 ID는 개인 정보를 보호하기 위해 주기적으로 변경됩니다.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>다른 사용자는 정기적으로 긍정적 인 것들의 익명 의 아이디의 목록을 얻을. 획득 후 스마트폰에 기록된 연락처 레코드가 일치합니다. 경기 결과가 중대한 접촉인 경우, 당사는 귀하의 스마트폰에 통보하고 귀하가 협조하기를 원하는 필요한 조치를 귀하에게 알려드립니다.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>지난 14일 동안 양성 테스터와의 접촉</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>새로운 코로나에 긍정적 인 경우, 당신의 주위에 사람들을 보호하기 위해 긍정적 인 등록과 협력하시기 바랍니다.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>이 응용 프로그램은 많은 사람들이 그것을 설치너무 효과적이다, 그래서 당신의 주위에 사람들과 응용 프로그램을 공유하시기 바랍니다.</value>
   </data>
 </root>

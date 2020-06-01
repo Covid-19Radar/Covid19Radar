@@ -54,25 +54,26 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
             // Exposure Notification
 
 #if DEBUG
             // For debug mode, set the mock api provider to interact
             // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+            //Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
 #endif
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
-
             // Local Notification tap event listener
             NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-
             LogUnobservedTaskExceptions();
 
             Distribute.ReleaseAvailable = OnReleaseAvailable;
             Push.PushNotificationReceived += OnPushNotificationReceived;
             AppCenter.Start($"android={AppConstants.AppCenterTokensAndroid};ios={AppConstants.AppCenterTokensIOS};", typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
             Container.Resolve<ILogger>().Log("Started App Center");
+
+            _ = InitializeBackgroundTasks();
 
             INavigationResult result;
             // Check user data and skip tutorial
@@ -81,7 +82,7 @@ namespace Covid19Radar
             if (userDataService.IsExistUserData)
             {
                 var userData = userDataService.Get();
-                if (userData.IsWelcomed)
+                if (userData.IsOptined)
                 {
                     result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
                 }
@@ -95,8 +96,6 @@ namespace Covid19Radar
                 result = await NavigationService.NavigateAsync("/" + nameof(StartTutorialPage));
             }
 
-            _ = InitializeBackgroundTasks();
-
             if (!result.Success)
             {
                 MainPage = new ExceptionPage
@@ -108,12 +107,6 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
-        }
-
-        async Task InitializeBackgroundTasks()
-        {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -149,9 +142,24 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<SettingsPage>();
             containerRegistry.RegisterForNavigation<DebugPage>();
 
+            // Norij Work View
+            containerRegistry.RegisterForNavigation<TutorialPage1>();
+            containerRegistry.RegisterForNavigation<TutorialPage2>();
+            containerRegistry.RegisterForNavigation<TutorialPage3>();
+            containerRegistry.RegisterForNavigation<TutorialPage4>();
+            containerRegistry.RegisterForNavigation<TutorialPage5>();
+            containerRegistry.RegisterForNavigation<TutorialPage6>();
+
+            containerRegistry.RegisterForNavigation<HelpPage1>();
+            containerRegistry.RegisterForNavigation<HelpPage2>();
+            containerRegistry.RegisterForNavigation<HelpPage3>();
+            containerRegistry.RegisterForNavigation<HelpPage4>();
+            containerRegistry.RegisterForNavigation<HelpPage5>();
+
+            // Services
             containerRegistry.RegisterSingleton<UserDataService>();
-            containerRegistry.RegisterSingleton<HttpDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
+            containerRegistry.RegisterSingleton<HttpDataService>();
         }
 
         protected override void OnStart()
@@ -160,9 +168,14 @@ namespace Covid19Radar
             //ImageService.Instance.Config.Logger = Container.Resolve<IMiniLogger>();
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
+        }
 
+        async Task InitializeBackgroundTasks()
+        {
+            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
+            await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
 
         protected override void OnSleep()

@@ -18,23 +18,18 @@
   </data>
   <data name="ButtonNext" xml:space="preserve">
     <value>اگلا</value>
-    <comment>Next button</comment>
   </data>
   <data name="TitleConsentByUserPage" xml:space="preserve">
     <value>شرائط٘ خدمت</value>
     <comment>Consent by user page</comment>
   </data>
-  <data name="DescriptionPageTextStep1Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep1Description1" xml:space="preserve">
     <value>ان پٹ ذاتی معلومات کی ضرورت نہیں. ایپ نصب کرتے وقت ہم منفرد ID استعمال کرتے ہیں جو آپ کو مختص کرتے ہیں ۔</value>
-    <comment>How it works page step 1 description</comment>
+    <comment>How it works page step 1 description 1</comment>
   </data>
-  <data name="DescriptionPageTextStep2Description" xml:space="preserve">
+  <data name="DescriptionPageTextStep2Description1" xml:space="preserve">
     <value>کل 30 منٹ سے زیادہ کے لئے ایک دوسرے اپلی کیشن صارف کے ساتھ ایک رابطہ ، اوسط پر 2m سے قریب ایک رداس کے اندر میں "بند رابطہ" کے طور پر ریکارڈ کیا جاتا ہے.</value>
-    <comment>How it works page step 2 description</comment>
-  </data>
-  <data name="DescriptionPageTextStep3Description" xml:space="preserve">
-    <value>اپنے فون نمبر کی توثیق کے بعد دستی طور پر اپنی حیثیت کو "مثبت" میں تبدیل کریں ۔ مثبت "ورک فلو, اب متعلقہ جماعتوں کے ساتھ تعاون.</value>
-    <comment>How it works page step 3 description</comment>
+    <comment>How it works page step 2 description 1</comment>
   </data>
   <data name="DescriptionPageTextStep4Description" xml:space="preserve">
     <value>بلوٹوت کو بند رابطے ریکارڈ کرنے کے لئے تبدیل کرنے کی ضرورت ہے. براہ کرم اگلے صفحے پر جائیں اسے تبدیل کرنے کے لئے.</value>
@@ -42,11 +37,9 @@
   </data>
   <data name="ButtonStart" xml:space="preserve">
     <value>شروع کریں</value>
-    <comment>Start</comment>
   </data>
   <data name="StartTutorialPageTextProtectingOurLovedOnes" xml:space="preserve">
     <value>اپنے پیاروں کی حفاظت سے COVID-19</value>
-    <comment>Protecting our loved ones from COVID-19</comment>
   </data>
   <data name="TitleDeviceAccess" xml:space="preserve">
     <value>آلہ تک رسائی</value>
@@ -54,7 +47,6 @@
   </data>
   <data name="ButtonAgree" xml:space="preserve">
     <value>میں اتفاق کرتا ہوں</value>
-    <comment>Agree</comment>
   </data>
   <data name="HomePageTitle" xml:space="preserve">
     <value>ابتدائی صفحہ</value>
@@ -74,7 +66,6 @@
   </data>
   <data name="SetupCompletedPageTextYoureReadyToGo" xml:space="preserve">
     <value>آپ جانے کے لیے تیار ہیں</value>
-    <comment>You're ready to go</comment>
   </data>
   <data name="TitleSetupCompleted" xml:space="preserve">
     <value>مکمل سیٹ اپ</value>
@@ -86,7 +77,6 @@
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
     <value>لائسنس معاہدہ</value>
-    <comment>License Agreement</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/en/privacypolicy.html</value>
@@ -124,17 +114,14 @@
     <value>اپنے نیٹ ورک کنکشن کی پڑتال کریں ۔</value>
     <comment>Dialog message for Network connection error</comment>
   </data>
-  <data name="DialogButtonOk" xml:space="preserve">
+  <data name="ButtonOk" xml:space="preserve">
     <value>ٹھیک ہے</value>
-    <comment>OK</comment>
   </data>
   <data name="ButtonEnable" xml:space="preserve">
     <value>اہل بنائيں</value>
-    <comment>Enable Button</comment>
   </data>
   <data name="ButtonNotNow" xml:space="preserve">
     <value>نوٹناوو</value>
-    <comment>NotNow Button</comment>
   </data>
   <data name="InitSettingPageTextExposureNotificationDescription" xml:space="preserve">
     <value>اس اپلی کیشن کا تعین کرنے کے لئے نمائش کی اطلاع/بلوٹوت سگنل کا استعمال کرتا ہے اگر آپ کسی دوسرے رابطے سے متعلق اپلی کیشن صارف کے قریب ہیں. 
@@ -181,16 +168,16 @@
   <data name="SharePositiveEntryCodeText2" xml:space="preserve">
     <value>آپ کے COVID کے ساتھ آئے کہ منفرد ٹیسٹ شناخت کنندہ-19 ٹیسٹ آپ کے مثبت ٹیسٹ کے نتائج کی تصدیق کرنے کے لئے استعمال کیا جانا چاہئے.</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>برائے مہربانی بعد میں دوبارہ کوشش کریں۔</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagExceptionTitle" xml:space="preserve">
+  <data name="ButtonFailed" xml:space="preserve">
     <value>ناکام</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogSubmittedText" xml:space="preserve">
     <value>پیش تشخیص</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDiagSubmittedTitle" xml:space="preserve">
+  <data name="ButtonComplete" xml:space="preserve">
     <value>مکمل</value>
   </data>
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyText" xml:space="preserve">
@@ -199,16 +186,13 @@
   <data name="SharePositiveDiagnosisPageDiagUidIsEmptyTitle" xml:space="preserve">
     <value>تشخیص شناخت کار مطلوب</value>
   </data>
-  <data name="SharePositiveDiagnosisPageDialogButton" xml:space="preserve">
-    <value>ٹھیک ہے</value>
-  </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogText" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledText" xml:space="preserve">
     <value>تشخیص جمع کرنے سے قبل براہ کرم نمائش کی اطلاعات کو فعال کریں ۔</value>
   </data>
-  <data name="SharePositiveDiagnosisPageNotEnabledENDialogTitle" xml:space="preserve">
+  <data name="NotifyOtherPageDialogENDisabledTitle" xml:space="preserve">
     <value>نمائش اطلاعات غیر فعال</value>
   </data>
-  <data name="SharePositiveDiagnosisPageSubmittingDialog" xml:space="preserve">
+  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
     <value>تشخیص جمع کر رہا ہے...</value>
   </data>
   <data name="SharePositiveDiagnosisPageVerifyDialog" xml:space="preserve">
@@ -225,39 +209,31 @@
   </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>سیٹنگیں</value>
-    <comment>SettingsPage Title</comment>
   </data>
   <data name="ButtonNotAgree" xml:space="preserve">
     <value>متفق نہیں</value>
-    <comment>Not Agree</comment>
   </data>
-  <data name="DialogButtonCancel" xml:space="preserve">
+  <data name="ButtonCancel" xml:space="preserve">
     <value>منسوخ کریں</value>
-    <comment>Cancel</comment>
   </data>
-  <data name="InitSettingPageDialogTextExposureNotificationTitle" xml:space="preserve">
+  <data name="InitSettingPageDialogExposureNotificationTitle" xml:space="preserve">
     <value>کیا آپ نوٹیفکیشنز کو آن کرنا چاہتے ہیں ؟</value>
     <comment>Confirmation dialog</comment>
   </data>
   <data name="LoadingTextEnabling" xml:space="preserve">
     <value>کو چالو کرنے</value>
-    <comment>Enabling</comment>
   </data>
   <data name="LoadingTextDeleting" xml:space="preserve">
     <value>حذف کر رہا ہے</value>
-    <comment>Deleting</comment>
   </data>
-  <data name="HomePageSubtitle1" xml:space="preserve">
+  <data name="HomePageHeader2Title" xml:space="preserve">
     <value>اگر آپ کو ایک مثبت تشخیص موصول ہوئی ہے</value>
-    <comment>Home page subtitle 1</comment>
   </data>
-  <data name="HomePageSubtitle2" xml:space="preserve">
+  <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ایپ کا اشتراک کریں</value>
-    <comment>Home page subtitle 2</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
     <value>حصہ داری کریں</value>
-    <comment>Share</comment>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>دوسروں کو مثبت معلومات اور گمنام اطلاع کا اشتراک کرنا</value>
@@ -265,14 +241,86 @@
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>پھر سيٹ کريں</value>
-    <comment>Reset</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
     <value>نجی حیثیت پالیسی</value>
-    <comment>PrivacyPolicyPage Title</comment>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>انتظار برائے رجسٹر</value>
-    <comment>Waiting for register</comment>
+  </data>
+  <data name="SettingsPageDialogResetText" xml:space="preserve">
+    <value>کیا آپ واقعی تمام کوائف پھر سیٹ کرنا چاہتے ہیں ؟</value>
+  </data>
+  <data name="SettingsPageDialogResetTitle" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
+  <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
+    <value>تمام سیٹنگیں اور کوائف حذف کر دیے گئے ہیں ۔ اپیلی کیشن پھر شروع کریں ۔</value>
+  </data>
+  <data name="VersionText" xml:space="preserve">
+    <value>ورژن</value>
+  </data>
+  <data name="VersionDescription" xml:space="preserve">
+    <value>اس ایپلی کیشن کا ورژن نمبر</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationText" xml:space="preserve">
+    <value>مختصر رینج وائرلیس مواصلات</value>
+  </data>
+  <data name="ShortRangeWirelessCommunicationDescription" xml:space="preserve">
+    <value>بھیجیں اور وصولیں</value>
+  </data>
+  <data name="CloseContactNotificationText" xml:space="preserve">
+    <value>بند کریں رابطہ کی اطلاع</value>
+  </data>
+  <data name="CloseContactNotificationDescription" xml:space="preserve">
+    <value>قریبی رابطے کے وقت درخواست کی اطلاعات</value>
+  </data>
+  <data name="DeleteDataText" xml:space="preserve">
+    <value>کوائف حذف کریں</value>
+  </data>
+  <data name="DeleteDataDescription" xml:space="preserve">
+    <value>تمام کوائف حذف کریں</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDTitle" xml:space="preserve">
+    <value>ناجائز تشخیص شناخت</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidDiagnosisIDText" xml:space="preserve">
+    <value>ایک جائز تشخیص شناخت مہیا کریں</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateTitle" xml:space="preserve">
+    <value>ناجائز جانچ تاریخ</value>
+  </data>
+  <data name="NotifyOtherPageDialogInvalidTestDateText" xml:space="preserve">
+    <value>ایک جائز جانچ تاریخ مہیا کریں</value>
+  </data>
+  <data name="ButtonReturnToRegistration" xml:space="preserve">
+    <value>رجسٹریشن پر واپس جائیں</value>
+  </data>
+  <data name="PositiveRegistrationText" xml:space="preserve">
+    <value>مثبت رجسٹریشن</value>
+  </data>
+  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
+    <value>کیا آپ بعد میں مثبت طور پر رجسٹر کرنا چاہیں گے ؟</value>
+  </data>
+  <data name="DescriptionPageTextStep1Description2" xml:space="preserve">
+    <value>جب آپ درخواست چلاتے ہیں ، تو یہ ہر اسمارٹ فون پر ایک گمنام ID پیدا اور ذخیرہ کرے گا. اس درخواست میں فون نمبر اور مقام کی معلومات جیسے رازداری سے متعلق کوئی معلومات حاصل نہیں ہوتی ۔</value>
+    <comment>How it works page step 1 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep2Description2" xml:space="preserve">
+    <value>جب درخواست چل رہی ہے تو ، ایک دوسرے کے سمارٹ فون گزشتہ دو ہفتوں تک ایک دوسرے کی گمنام شناخت ریکارڈ کرے گا. 2 ہفتوں سے بڑی عمر کے ریکارڈ کو خارج کر دیا جائے گا اور رازداری کی حفاظت کے لئے ہر ایک گمنام ID کو تبدیل کیا جائے گا.</value>
+    <comment>How it works page step 2 description 2</comment>
+  </data>
+  <data name="DescriptionPageTextStep3Description1" xml:space="preserve">
+    <value>دوسرے صارفین کو باقاعدگی سے مثبت لوگوں کی گمنام شناخت کی ایک فہرست حاصل. حصول کے بعد ، اسمارٹ فون پر ریکارڈ کردہ رابطہ ریکارڈ مل جائے گا. میچ کے نتیجے میں ایک بھاری رابطہ ہے تو, ہم آپ کے اسمارٹ فون کو مطلع کریں گے اور آپ کے ساتھ تعاون کرنے کے لئے چاہتے ہیں کہ ضروری اعمال کے آپ کو مطلع کرے گا.</value>
+    <comment>How it works page step 3 description</comment>
+  </data>
+  <data name="HomePageHeader1Title" xml:space="preserve">
+    <value>آخری 14 دنوں میں مثبت ٹیسٹرز کے ساتھ رابطہ کریں</value>
+  </data>
+  <data name="HomePageHeader2Description" xml:space="preserve">
+    <value>اگر آپ نئے تاج کے ساتھ مثبت ہیں ، تو براہ کرم آپ کے ارد گرد لوگوں کی حفاظت کے لئے مثبت رجسٹریشن کے ساتھ تعاون کریں.</value>
+  </data>
+  <data name="HomePageHeader3Description" xml:space="preserve">
+    <value>یہ ایپلی کیشن بہت مؤثر ہے کہ بہت سے لوگوں کو اس کی تنصیب ہے ، لہذا براہ مہربانی آپ کے ارد گرد لوگوں کے ساتھ درخواست کا اشتراک کریں.</value>
   </data>
 </root>
