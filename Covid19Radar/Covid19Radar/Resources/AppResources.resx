@@ -467,4 +467,12 @@ Select 'Always Allow' to set up Bluetooth.</value>
     <value>If you contacted with a positive person</value>
     <comment>陽性者との接触があった場合</comment>
   </data>
+  <data name="HelpPage4Button" xml:space="preserve">
+    <value>Go to app settings</value>
+    <comment>アプリの設定へ</comment>
+  </data>
+  <data name="HelpPage4Description" xml:space="preserve">
+    <value>From the application settings, you can enable/disable Bluetooth, enable/disable notification, stop using the application and delete the history.</value>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+  </data>
 </root>
