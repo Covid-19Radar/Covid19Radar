@@ -412,6 +412,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Records the contact between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageDescription1 {
+            get {
+                return ResourceManager.GetString("HelpPageDescription1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can also move from the home screen to check the number of recent contacts. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageDescription2 {
+            get {
+                return ResourceManager.GetString("HelpPageDescription2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can check the list of contact dates. We will also provide you with the appropriate contact information. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageDescription3 {
+            get {
+                return ResourceManager.GetString("HelpPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   notification に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageLabel1 {
+            get {
+                return ResourceManager.GetString("HelpPageLabel1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Home に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageLabel2 {
+            get {
+                return ResourceManager.GetString("HelpPageLabel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If you contacted with a positive person に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPageLabel3 {
+            get {
+                return ResourceManager.GetString("HelpPageLabel3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Contact with positive testers in the last 14 days に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string HomePageHeader1Title {
