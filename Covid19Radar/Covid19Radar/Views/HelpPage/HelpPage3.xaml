@@ -6,7 +6,7 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
-    Title="感染していると判定されたら"
+    Title="{x:Static resources:AppResources.HelpPage3Title}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
     Style="{StaticResource DefaultPageStyle}"
@@ -39,7 +39,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="PCR検査により新型コロナウィルスの感染が確認された場合。" />
+                        Text="{x:Static resources:AppResources.HelpPage3Description1}" />
                 </Grid>
             </StackLayout>
             <StackLayout
@@ -58,7 +58,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                        Text="保健所等公的機関から登録用の「処理番号」が発行されます。" />
+                        Text="{x:Static resources:AppResources.HelpPage3Description2}" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
                         Grid.Column="1"
@@ -87,7 +87,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="本アプリを用いて処理番号の登録を行います。" />
+                        Text="{x:Static resources:AppResources.HelpPage3Description3}" />
                     <ffimageloading:CachedImage
                         Grid.Row="0"
                         Grid.Column="1"
@@ -111,7 +111,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource DefaultLabel}"
-                        Text="あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）" />
+                        Text="{x:Static resources:AppResources.HelpPage3Description4}" />
                     <ffimageloading:CachedImage
                         Grid.Row="1"
                         Grid.Column="1"
@@ -140,7 +140,7 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource DefaultLabel}"
-                        Text="通知される情報は端末のIDのみです。氏名など、個人特定につながる情報は通知されません。" />
+                        Text="{x:Static resources:AppResources.HelpPage3Description5}" />
                 </Grid>
             </StackLayout>
             <Grid Grid.Row="5">
@@ -148,7 +148,7 @@
                     AutomationId="NextButton"
                     Command="{Binding Path=OnClickNext}"
                     Style="{StaticResource DefaultButton}"
-                    Text="陽性情報の登録と他者への匿名通知へ" />
+                    Text="{x:Static resources:AppResources.HelpPage3Description6}" />
             </Grid>
         </Grid>
     </ScrollView>
