@@ -428,28 +428,19 @@ Select 'Always Allow' to set up Bluetooth.</value>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
     <value>Would you like to register positively later?</value>
   </data>
-  <data name="HelpPage2Description1" xml:space="preserve">
-    <value>Records the contact between people who set this application on a smartphone.</value>
-    <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
+  <data name="HelpMenuPageTitle" xml:space="preserve">
+    <value>How to use</value>
   </data>
-  <data name="HelpPage2Description2" xml:space="preserve">
-    <value>You can also move from the home screen to check the number of recent contacts.</value>
-    <comment>最近の接触件数の確認へはホーム画面からも移動することができます。</comment>
-  </data>
-  <data name="HelpPage2Description3" xml:space="preserve">
-    <value>You can check the list of contact dates. We will also provide you with the appropriate contact information.</value>
-    <comment>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</comment>
-  </data>
-  <data name="HelpPage2Label1" xml:space="preserve">
-    <value>Home</value>
-    <comment>ホーム画面</comment>
-  </data>
-  <data name="HelpPage2Label2" xml:space="preserve">
-    <value>If you contacted with a positive person</value>
-    <comment>陽性者との接触があった場合</comment>
+  <data name="HelpPage1Title" xml:space="preserve">
+    <value>Terminal identification</value>
   </data>
   <data name="HelpPage2Title" xml:space="preserve">
     <value>Contact confirmation method</value>
-    <comment>接触の確認方法</comment>
+  </data>
+  <data name="HelpPage3Title" xml:space="preserve">
+    <value>If determined to be infected</value>
+  </data>
+  <data name="HelpPage4Title" xml:space="preserve">
+    <value>Stop/delete recording</value>
   </data>
 </root>

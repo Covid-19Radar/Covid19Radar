@@ -367,47 +367,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Records the contact between people who set this application on a smartphone. に類似しているローカライズされた文字列を検索します。
+        ///   How to use に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HelpPage2Description1 {
+        internal static string HelpMenuPageTitle {
             get {
-                return ResourceManager.GetString("HelpPage2Description1", resourceCulture);
+                return ResourceManager.GetString("HelpMenuPageTitle", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   You can also move from the home screen to check the number of recent contacts. に類似しているローカライズされた文字列を検索します。
+        ///   Terminal identification に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string HelpPage2Description2 {
+        internal static string HelpPage1Title {
             get {
-                return ResourceManager.GetString("HelpPage2Description2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   You can check the list of contact dates. We will also provide you with the appropriate contact information. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HelpPage2Description3 {
-            get {
-                return ResourceManager.GetString("HelpPage2Description3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Home に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HelpPage2Label1 {
-            get {
-                return ResourceManager.GetString("HelpPage2Label1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   If you contacted with a positive person に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HelpPage2Label2 {
-            get {
-                return ResourceManager.GetString("HelpPage2Label2", resourceCulture);
+                return ResourceManager.GetString("HelpPage1Title", resourceCulture);
             }
         }
         
@@ -417,6 +390,24 @@ namespace Covid19Radar.Resources {
         internal static string HelpPage2Title {
             get {
                 return ResourceManager.GetString("HelpPage2Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   If determined to be infected に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage3Title {
+            get {
+                return ResourceManager.GetString("HelpPage3Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Stop/delete recording に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string HelpPage4Title {
+            get {
+                return ResourceManager.GetString("HelpPage4Title", resourceCulture);
             }
         }
         
