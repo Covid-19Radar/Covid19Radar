@@ -47,7 +47,7 @@
 - Justin Liu (Simplified Chinese Translation)
 - Michael Tsai (Simplified Chinese Translation)
 - Mikael Håkansson(Swedish Translation)
-- oyasan_ba2 (Client Android / Translate Japanese)
+- oyasan_ba2 (Client Android / Multilingual localization)
 - Alberto Diaz Martin (Spanish Translation)
 - Ali Khaled Heikal (Arabic Translation)
 - Kaminaka Rikuya (Documentation)
