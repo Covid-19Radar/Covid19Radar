@@ -59,7 +59,7 @@
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
           <source>COVID-19Radar</source>
-          <target state="translated">COVID-19Radar</target>
+          <target state="translated">接触確認アプリ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
         </trans-unit>
         <trans-unit id="TitleUpdateInformation" translate="yes" xml:space="preserve">
