@@ -1236,4 +1236,10 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\SplashImg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-ja\Strings.xml" />
+  </ItemGroup>
 </Project>
