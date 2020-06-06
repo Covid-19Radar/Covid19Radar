@@ -53,7 +53,7 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>COVID-19Radar</value>
+    <value>接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
   <data name="TitleUpdateInformation" xml:space="preserve">
