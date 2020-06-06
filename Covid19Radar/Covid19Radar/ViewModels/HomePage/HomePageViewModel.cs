@@ -91,7 +91,7 @@ namespace Covid19Radar.ViewModels
                 await Share.RequestAsync(new ShareTextRequest
                 {
                     Uri = AppConstants.GooglePlayUrl,
-                    Title = AppConstants.AppName
+                    Title = AppResources.AppName
                 });
             }
         });

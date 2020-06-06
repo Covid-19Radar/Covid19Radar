@@ -13,6 +13,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Renderers;
 using Covid19Radar.Views;
 using Xamarin.Essentials;
+using Covid19Radar.Resources;
 
 namespace Covid19Radar.ViewModels
 {
@@ -37,7 +38,7 @@ namespace Covid19Radar.ViewModels
                 await Share.RequestAsync(new ShareTextRequest
                 {
                     Uri = AppConstants.GooglePlayUrl,
-                    Title = AppConstants.AppName
+                    Title = AppResources.AppName
                 });
             }
         });
