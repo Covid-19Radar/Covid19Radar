@@ -37,11 +37,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidKeyStore>false</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\kahiro\.android\Covid19Radar.jks</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>3q4urluv</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>3q4urluv</AndroidSigningKeyPass>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\Covid19Radar\release.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>EXTRAID91!a12</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>EXTRAID91!a12</AndroidSigningKeyPass>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <MandroidI18n>CJK</MandroidI18n>
@@ -66,10 +66,10 @@
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\Covid19Radar\Covid19Radar.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>3q4urluv</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>Covid19Radar</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>3q4urluv</AndroidSigningKeyPass>
+    <AndroidSigningKeyStore>C:\Users\kazum\AppData\Local\Xamarin\Mono for Android\Keystore\release.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>EXTRAID91!a12</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>release</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>EXTRAID91!a12</AndroidSigningKeyPass>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidLinkSkip>
     </AndroidLinkSkip>
@@ -1235,5 +1235,50 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-hdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-ldpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-mdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-xhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-xxhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ja-xxxhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-ldpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-en\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-ja\Strings.xml" />
   </ItemGroup>
 </Project>
