@@ -7,7 +7,7 @@
   "androidSafetyNetApiKey": "ANDROID_SAFETYNETKEY",
   "cdnUrlBase": "https://CDN_URL_BASE/",
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
-  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
+  "appStoreUrl": "https://apps.apple.com/jp/app/id1516764458?mt=8",
   "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
   "appCenterTokensAndroid": "APPCENTER_ANDROID",
   "appCenterTokensIOS": "APPCENTER_IOS",
