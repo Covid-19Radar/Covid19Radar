@@ -65,16 +65,13 @@ namespace Covid19Radar.Droid
 
         private void RequestPermission()
         {
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
-            {
-                string[] permissions = new string[] {
+            string[] permissions = new string[] {
                     Android.Manifest.Permission.Bluetooth,
                     Android.Manifest.Permission.BluetoothPrivileged,
                     Android.Manifest.Permission.BluetoothAdmin,
                 };
 
-                RequestPermissions(permissions, 0);
-            }
+            RequestPermissions(permissions, 0);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
