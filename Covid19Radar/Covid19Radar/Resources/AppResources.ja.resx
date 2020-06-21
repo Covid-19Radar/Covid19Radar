@@ -20,7 +20,7 @@
     <comment>Home Title</comment>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>新型コロナウィルス接触確認アプリ</value>
+    <value>新型コロナウイルス接触確認アプリ</value>
     <comment>App Name</comment>
   </data>
   <data name="TitleLicenseAgreement" xml:space="preserve">
@@ -36,8 +36,8 @@
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">
-    <value>ネットワーク接続を確認してください。</value>
-    <comment>Dialog message for Network connection error</comment>
+    <value>電波状況の良い場所でもう一度お試しください。</value>
+    <comment>電波状況の良い場所でもう一度お試しください。</comment>
   </data>
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
@@ -186,8 +186,8 @@
     <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</value>
-    <comment>接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
+    <value>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</value>
+    <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
     <value>最近の接触件数の確認へはホーム画面からも移動することができます。</value>
@@ -210,8 +210,8 @@
     <comment>陽性者との接触があった場合</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
-    <value>検査により新型コロナウィルスの感染が確認された場合。</value>
-    <comment>検査により新型コロナウィルスの感染が確認された場合。</comment>
+    <value>検査により新型コロナウイルスの感染が確認された場合。</value>
+    <comment>検査により新型コロナウイルスの感染が確認された場合。</comment>
   </data>
   <data name="HelpPage3Description2" xml:space="preserve">
     <value>保健所等公的機関から登録用の「処理番号」が発行されます。</value>
@@ -242,8 +242,8 @@
     <comment>接触の有無はどのように知ることができますか？</comment>
   </data>
   <data name="HelpMenuPageLabel3" xml:space="preserve">
-    <value>新型コロナウィルスに感染していると判定されたら</value>
-    <comment>新型コロナウィルスに感染していると判定されたら</comment>
+    <value>新型コロナウイルスに感染していると判定されたら</value>
+    <comment>新型コロナウイルスに感染していると判定されたら</comment>
   </data>
   <data name="HelpMenuPageLabel4" xml:space="preserve">
     <value>接触の記録を停止／情報を削除するには</value>
@@ -334,8 +334,8 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>新型コロナウィルス感染症対策サイト</value>
-    <comment>新型コロナウィルス感染症対策サイト</comment>
+    <value>新型コロナウイルス感染症対策サイト</value>
+    <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>アプリに関するお問い合わせ</value>
@@ -350,8 +350,8 @@
     <comment>陽性者との接触を確認する(14日間)</comment>
   </data>
   <data name="HomePageDescription3" xml:space="preserve">
-    <value>新型コロナウィルス陽性と診断されたら</value>
-    <comment>新型コロナウィルス陽性と診断されたら</comment>
+    <value>新型コロナウイルス陽性と診断されたら</value>
+    <comment>新型コロナウイルス陽性と診断されたら</comment>
   </data>
   <data name="HomePageDescription4" xml:space="preserve">
     <value>陽性情報の登録</value>
@@ -442,8 +442,8 @@
     <comment>本アプリをスマートフォンに設定した人どうしの接触を記録します。</comment>
   </data>
   <data name="TutorialPage1Description2" xml:space="preserve">
-    <value>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
-    <comment>新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
+    <value>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</value>
+    <comment>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</comment>
   </data>
   <data name="TutorialPage1Description3" xml:space="preserve">
     <value>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</value>
@@ -606,5 +606,45 @@
   <data name="InqueryMailSubject" xml:space="preserve">
     <value>接触確認アプリに関するお問い合わせ</value>
     <comment>接触確認アプリに関するお問い合わせ</comment>
+  </data>
+  <data name="HomePagePastDays" xml:space="preserve">
+    <value>日間</value>
+    <comment>X日間</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
+    <value>Notification機能は許諾の状態です。</value>
+    <comment>Exposure Notification機能は許諾の状態です。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
+    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
+    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
+    <value>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</value>
+    <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
+    <value>利用規約に同意する必要があります。</value>
+    <comment>利用規約に同意する必要があります。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
+    <value>Exposure Notification機能が承認されていません。承認してください。</value>
+    <comment>Exposure Notification機能が承認されていません。承認してください。</comment>
+  </data>
+  <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
+    <value>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</value>
+    <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</comment>
+  </data>
+  <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
+    <value>通信に失敗しました。</value>
+    <comment>通信に失敗しました。</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
+    <value>Exposure Notification起動エラー</value>
+    <comment>Exposure Notification起動エラー</comment>
+  </data>
+  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
+    <value>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</value>
+    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
 </root>

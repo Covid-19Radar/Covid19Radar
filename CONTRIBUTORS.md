@@ -7,6 +7,7 @@
 - Akihiko Kodama
 - Mizuki Kubota
 - Moe Sakuraba
+- Yuki Kawanishi
 
 # COVID-19Radar Contributors
 - Kazumi Hirose (Organizer)
@@ -61,7 +62,9 @@
 - Yutaro Iino (Documentation)
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
+- Anharu (Xamarin)
 - Soichi Ikebe (Documentation)
+- Elisa Sakamoto (Italian Translation)
 - Leo Ando (Client Android)
 
 # Beta Testers

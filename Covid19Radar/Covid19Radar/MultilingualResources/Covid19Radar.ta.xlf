@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnbgprod.blob.core.windows.net/html//en/privacypolicy.html</target>
+          <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
@@ -41,7 +41,7 @@
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">தயவுகூர்ந்து உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Dialog message for Network connection error</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
@@ -249,7 +249,7 @@
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 நேர்மறையான பயனருடன் நீங்கள் நெருங்கிய தொடர்பில் இருந்தால், பயன்பாடு உங்களுக்கு த் தெரிவிக்கவேண்டும்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウィルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
           <source>You can check the number of your close contacts from the home screen.</source>
@@ -279,7 +279,7 @@
         <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
           <source>If you tested positive</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் நேர்மறை சோதனை என்றால்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">検査により新型コロナウィルスの感染が確認された場合。</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">検査により新型コロナウイルスの感染が確認された場合。</note>
         </trans-unit>
         <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
           <source>Public health authorities will issue you a "processing number".</source>
@@ -354,7 +354,7 @@
         <trans-unit id="HelpMenuPageLabel3" translate="yes" xml:space="preserve">
           <source>If you test positive for COVID-19</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 க்கு நீங்கள் நேர்மறையாக இருந்தால்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに感染していると判定されたら</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルスに感染していると判定されたら</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel4" translate="yes" xml:space="preserve">
           <source>How do I stop / delete close contact recording?</source>
@@ -469,7 +469,7 @@
         <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
           <source>COVID-19 Information and Resources</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 தகவல் மற்றும் வளங்கள்</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス感染症対策サイト</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
         </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
@@ -489,7 +489,7 @@
         <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルス陽性と診断されたら</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス陽性と診断されたら</note>
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
@@ -609,7 +609,7 @@
         <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
           <source>When tested positive for COVID-19, you can anonymously register the test result in this app.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 க்கு நேர்மறை யாக சோதிக்கப்படும் போது, இந்த பயன்பாட்டில் சோதனை முடிவை அநாமதேயாக பதிவு செய்யலாம்.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウィルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
           <source>If you have been in close contact with a user who tested positive, the app notifies you of potential infection and provides guidance to protect your health.</source>
@@ -777,8 +777,53 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="new">Days</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">நாட்கள்</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு செயலில் உள்ளது.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">புளூடூத் அணைக்கப்பட்டுள்ளது. தயவுசெய்து Bluetooth ஐ இயக்கவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு முடக்கப்பட்டுள்ளது. டெர்மினல் அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையை இயக்கவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>You must agree to the terms of use.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">நீங்கள் பயன்பாட்டு விதிமுறைகளை ஏற்க வேண்டும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is restricted. Please active.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு கட்டுப்படுத்தப்பட்டுள்ளது. தயவு செய்து செயலில்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能が承認されていません。承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@cov19.mhlw.go.jp.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு ஆதரிக்கப்படவில்லை. சமீபத்திய பதிப்பிற்கு OS ஐ புதுப்பிக்கவும். நீங்கள் இன்னும் பிரச்சினைகள் இருந்தால், appsupport@cov19.mhlw.go.jp எங்களை தொடர்பு கொள்ளவும்.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@cov19.mhlw.go.jpまでお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>Network connection error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">பிணைய இணைப்பு பிழை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification startup error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிப்பு தொடக்க பிழை</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">வெளிப்பாடு அறிவிக்கையை தொடங்க முடியவில்லை. முனைய அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையில் திரும்பி, Bluetooth -இல் திருப்பு.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
       </group>
     </body>
