@@ -5,6 +5,7 @@ using Prism;
 using Prism.Ioc;
 using Android.Runtime;
 using Android.Content;
+using Covid19Radar.Services;
 using Acr.UserDialogs;
 using Plugin.LocalNotification;
 
