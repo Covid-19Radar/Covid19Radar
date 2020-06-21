@@ -62,6 +62,7 @@
 - Kohei Ikeda(Documentation)
 - Iyotetsuya (Traditional Chinese Translation)
 - Soichi Ikebe (Documentation)
+- Leo Ando (Client Android)
 
 # Beta Testers
 - Nagahata Kenji
