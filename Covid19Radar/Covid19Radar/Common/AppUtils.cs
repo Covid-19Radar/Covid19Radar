@@ -15,23 +15,11 @@ namespace Covid19Radar.Common
         }
         public static async void PopUpShare()
         {
-            if (Device.RuntimePlatform == Device.iOS)
+            await Share.RequestAsync(new ShareTextRequest
             {
-                await Share.RequestAsync(new ShareTextRequest
-                {
-                    Uri = AppSettings.Instance.AppStoreUrl,
-                    Title = Resources.AppResources.AppName
-                });
-            }
-            else if (Device.RuntimePlatform == Device.Android)
-            {
-                await Share.RequestAsync(new ShareTextRequest
-                {
-                    Uri = AppSettings.Instance.GooglePlayUrl,
-                    Title = Resources.AppResources.AppName
-                });
-            }
-
+                Uri = AppSettings.Instance.ShareAppUrl,
+                Title = Resources.AppResources.AppName
+            });
         }
 
     }

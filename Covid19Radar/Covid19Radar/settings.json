@@ -7,7 +7,6 @@
   "androidSafetyNetApiKey": "AIzaSyDU-HjfMDUcF-rVrdGW4fJS1RAvK_L9eew",
   "cdnUrlBase": "https://covid19radar-jpn-prod.azureedge.net/",
   "licenseUrl": "https://covid19radarjpnprod.z11.web.core.windows.net/license.html",
-  "appStoreUrl": "https://itunes.apple.com/jp/app/id1516764458?mt=8",
-  "googlePlayUrl": "https://play.google.com/store/apps/details?id=jp.go.mhlw.covid19radar",
+  "shareAppUrl": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html",
   "supportEmail": "appsupport@cov19.mhlw.go.jp"
 }
