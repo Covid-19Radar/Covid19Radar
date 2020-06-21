@@ -46,32 +46,12 @@ namespace Covid19Radar.Droid
             NotificationCenter.NotifyNotificationTapped(base.Intent);
         }
 
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-
         public class AndroidInitializer : IPlatformInitializer
         {
             public void RegisterTypes(IContainerRegistry containerRegistry)
             {
                 
             }
-        }
-
-        private void RequestPermission()
-        {
-            string[] permissions = new string[] {
-                    Android.Manifest.Permission.Bluetooth,
-                    Android.Manifest.Permission.BluetoothPrivileged,
-                    Android.Manifest.Permission.BluetoothAdmin,
-                };
-
-            RequestPermissions(permissions, 0);
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
