@@ -51,6 +51,7 @@
                     <Switch
                         Grid.Row="0"
                         Grid.Column="1"
+                        HorizontalOptions="End"
                         IsToggled="{Binding UserData.IsExposureNotificationEnabled, Mode=TwoWay}">
                         <Switch.Behaviors>
                             <Behavior:SwitchBehavior Command="{Binding OnChangeExposureNotificationState}" />
@@ -91,6 +92,7 @@
                     <Switch
                         Grid.Row="0"
                         Grid.Column="1"
+                        HorizontalOptions="End"
                         IsToggled="{Binding UserData.IsNotificationEnabled, Mode=TwoWay}">
                         <Switch.Behaviors>
                             <Behavior:SwitchBehavior Command="{Binding OnChangeNotificationState}" />
