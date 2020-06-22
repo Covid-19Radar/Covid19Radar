@@ -22,6 +22,11 @@ On the macOS
 
 TBD.
 
+More info
+
+- See [Client Side Project Note](Developer-Node.md).
+
+
 # iOS
 
 **Requirments**
@@ -35,7 +40,11 @@ On the macOS
 - macOS Catalina
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) vx.x.x
   - Xamarin
-- Xcode vx.x.x
+- Xcode v11.5
+
+More info
+
+- See [Client Side Project Note](Developer-Node.md).
 
 # Server
 
@@ -43,5 +52,6 @@ TBD
 
 # References
 
+- [Client Side Project Note](Developer-Node.md)
 - [Installing Xamarin in Visual Studio 2019](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows)
 
