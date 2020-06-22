@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.ViewModels
 {
@@ -75,10 +76,10 @@ namespace Covid19Radar.ViewModels
                 var current = errorCount + 1;
                 var max = AppConstants.MaxErrorCount;
                 await UserDialogs.Instance.AlertAsync(AppResources.NotifyOtherPageDiag3Message,
-                    AppResources.NotifyOtherPageDiag3Title + "{current}/{max}",
+                    AppResources.NotifyOtherPageDiag3Title + $"{current}/{max}",
                     Resources.AppResources.ButtonOk
                     );
-                Thread.Sleep(errorCount * 5000);
+                await Task.Delay(errorCount * 5000);
             }
 
 
