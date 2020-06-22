@@ -12,7 +12,7 @@ On the Windows
 - Visual Studio 2019
   - Xamarin.Android
   - [Multilingual App Toolkit v4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-  - Hyper-V
+  - (Option) Hyper-V
 	- If you want to get a significantly improved experience of Android Emulator
 - Android Studio v4.0
   - JDK (Xamarin)
@@ -22,7 +22,7 @@ On the Windows
 
 On the macOS
 
-- macOS Catalina
+- macOS Catalina v10.15.5
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
   - Xamarin.Android
   - .NET Core SDK v3.x.xxx (maybe need)
@@ -46,7 +46,7 @@ On the Windows
 
 On the macOS
 
-- macOS Catalina
+- macOS Catalina v10.15.5
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
   - Xamarin.iOS
 - Xcode v11.5
@@ -58,10 +58,14 @@ More info
 
 # Server
 
-TBD
+**Requirments**
+
+- Windows 10
+- Visual Studio 2019
+- [Azure Cosmos Emulator (Windows only)](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator-release-notes)
 
 # References
 
 - [Client Side Project Note](Developer-Node.md)
 - [Installing Xamarin in Visual Studio 2019](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows)
-
+- [Use the Azure Cosmos Emulator for local development and testing](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
