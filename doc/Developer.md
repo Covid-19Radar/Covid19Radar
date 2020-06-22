@@ -78,6 +78,3 @@ Azure (by yourself hosting)
 - [Installing Xamarin in Visual Studio 2019](https://docs.microsoft.com/en-us/xamarin/get-started/installation/windows)
 - [Use the Azure Cosmos Emulator for local development and testing](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
 
-
-I am not catching up about Azure Cosmos Emulator.
-It may be easier to host Azure Cosmos by yourself.
