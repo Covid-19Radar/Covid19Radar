@@ -26,7 +26,11 @@ namespace Covid19Radar.ViewModels
             {
                 NotificationId = 100,
                 Title = AppResources.LocalNotificationPermittedTitle,
-                Description = AppResources.LocalNotificationPermittedDescription
+                Description = AppResources.LocalNotificationPermittedDescription,
+                Android =
+                {
+                    IconName = "logo_notification"
+                }
             };
             NotificationCenter.Current.Show(notification);
             userData.IsNotificationEnabled = true;

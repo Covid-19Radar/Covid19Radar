@@ -86,7 +86,11 @@ namespace Covid19Radar.Services
                 {
                     NotificationId = 100,
                     Title = AppResources.LocalNotificationTitle,
-                    Description = AppResources.LocalNotificationDescription
+                    Description = AppResources.LocalNotificationDescription,
+                    Android =
+                    {
+                        IconName = "logo_notification"
+                    }
                 };
 
                 NotificationCenter.Current.Show(notification);
