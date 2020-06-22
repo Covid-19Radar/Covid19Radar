@@ -38,8 +38,8 @@ TBD.
 On the macOS
 
 - macOS Catalina
-- [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) vx.x.x
-  - Xamarin
+- [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
+  - Xamarin.iOS
 - Xcode v11.5
 
 More info
