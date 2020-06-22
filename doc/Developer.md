@@ -16,16 +16,22 @@ On the Windows
 	- If you want to get a significantly improved experience of Android Emulator
 - Android Studio
   - JDK vx.x.x
-  - Android SDK vx.x.x
+  - Android SDK
 
 On the macOS
 
-TBD.
+- macOS Catalina
+- [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
+  - .NET Core SDK v3.x.xxx (maybe need)
+- Android Studio v4.x
+  - JDK (Xamarin)
+  - Android SDK
+	- Build Tools 29
+	- Platform 28, 29
 
 More info
 
 - See [Client Side Project Note](Developer-Node.md).
-
 
 # iOS
 
