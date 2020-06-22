@@ -53,6 +53,7 @@ On the macOS
 
 More info
 
+- Use Exposure Notification APIs. Use Exposure Notification API. Thus, provisioning profile required `com.apple.developer.exposure-notification entitlement` in it.
 - See [Client Side Project Note](Developer-Node.md).
 
 # Server
