@@ -10,7 +10,7 @@ On the Windows
 
 - Windows 10
 - Visual Studio 2019
-  - Xamarin
+  - Xamarin.Android
   - [Multilingual App Toolkit v4.0](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
   - Hyper-V
 	- If you want to get a significantly improved experience of Android Emulator
@@ -42,7 +42,7 @@ More info
 
 On the Windows
 
-TBD.
+- At writing, i didn't get the build method. Thus, I won't pen it.
 
 On the macOS
 
