@@ -60,9 +60,16 @@ More info
 
 **Requirments**
 
+Local
+
 - Windows 10
 - Visual Studio 2019
-- [Azure Cosmos Emulator (Windows only)](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator-release-notes)
+
+Azure (by yourself hosting)
+
+- Azure Functions
+- Azure Cosmos
+  - Alternative plan: [Azure Cosmos Emulator (Windows only)](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator-release-notes)
 
 # References
 
