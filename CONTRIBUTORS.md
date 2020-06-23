@@ -77,6 +77,7 @@
 - Koichi Yokota (Documentation)
 - Takashi Kishida (Documentation)
 - Yusuke Yamada (Xamarin)
+- Ryosuke Nishimura
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
