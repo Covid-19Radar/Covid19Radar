@@ -187,7 +187,7 @@
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchArch>x86_64</MtouchArch>
     <OptimizePNGs>false</OptimizePNGs>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Mock|iPhone'">
     <DebugSymbols>true</DebugSymbols>
