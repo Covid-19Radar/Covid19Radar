@@ -72,6 +72,7 @@
 - Yuki Kawanishi
 - Satoshi Iguchi
 - Kimihiro Shirase
+- Ryosuke Nishimura
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
