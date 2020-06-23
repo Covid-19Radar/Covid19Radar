@@ -63,6 +63,13 @@ namespace Covid19Radar.Services
 
             UserDataChanged?.Invoke(this, current);
         }
+
+        public async Task ClearAsync()
+        {
+            current = null;
+            Application.Current.Properties.Remove("UserData");
+            await Application.Current.SavePropertiesAsync();
+        }
     }
 
 }
