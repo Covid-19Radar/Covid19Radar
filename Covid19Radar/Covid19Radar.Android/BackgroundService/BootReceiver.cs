@@ -34,19 +34,7 @@ namespace Covid19Radar.Droid.BackgroundService
 
             //サービスを起動する
             Intent serviceIntent = new Intent(context, typeof(BackgroundService));
-
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop &&
-                Build.VERSION.SdkInt <= BuildVersionCodes.LollipopMr1)
-            {
-                // Android5 Lollipop
-                string packageName = context.PackageManager.GetPackageInfo(context.PackageName, 0).PackageName;
-                serviceIntent.SetPackage(packageName);
-                serviceIntent.SetClassName(context, packageName + ".BackgroundService");
-            }
-            else
-            {
-                serviceIntent.AddFlags(ActivityFlags.NewTask);
-            }
+            serviceIntent.AddFlags(ActivityFlags.NewTask);
 
             serviceIntent.SetPackage(context.PackageManager.GetPackageInfo(context.PackageName, 0).PackageName);
             // Android 8 Oreo
