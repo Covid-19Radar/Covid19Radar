@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>NotNow között</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Kitettségek</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Kézi</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kész</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>A diagnózis benyújtása...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Beállítások</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Az alkalmazás megosztása</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Megosztás</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Pozitív információk és névtelen értesítések megosztása másoknak</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Alaphelyzet</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Minden beállítás és adat törölve lett. Indítsa újra az alkalmazást.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Visszatérés a regisztrációhoz</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Pozitív regisztráció</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Szeretne később pozitívan regisztrálni?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ha pozitív az új Corona, kérjük, működjön együtt a pozitív regisztráció, hogy megvédje az emberek körülötted.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (kivéve hétvégén és ünnepnapokon)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Információk és források</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Támogatás</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Alkalmazás megosztása</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Kezdőlap</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Használati feltételek</value>
@@ -549,17 +515,9 @@
     <value>Hozzájárulás a pozitív regisztrációhoz</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Hozzájárulás a pozitív regisztrációhoz</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Verzió</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>A Bluetooth ki van kapcsolva. Kérem, kapcsolja be a Bluetooth-t.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Közeli partnerek listája (az elmúlt 14 napban)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Hálózati kapcsolat hibája</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Expozíciós értesítés indítási hibája</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Az expozíciós értesítés nem tudott elindító. Nyissa meg a terminál beállításokat, kapcsolja be az Expozíciós értesítést, és kapcsolja be a Bluetooth funkciót.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>A feldolgozási szám helytelen</value>

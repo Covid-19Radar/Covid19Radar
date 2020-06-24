@@ -44,19 +44,10 @@
           <source>OK</source>
           <target state="translated" state-qualifier="tm-suggestion">확인</target>
         </trans-unit>
-        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>Not Now</source>
-          <target state="translated">나중에</target>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="translated">접촉</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
-          <source>https://microsoft.com/</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://microsoft.com/</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>How to use</source>
@@ -89,10 +80,6 @@
           <source>Complete</source>
           <target state="translated" state-qualifier="mt-suggestion">완료</target>
         </trans-unit>
-        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
-          <source>Submitting Diagnosis...</source>
-          <target state="translated" state-qualifier="mt-suggestion">진단 제출 중...</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
           <target state="translated" state-qualifier="tm-suggestion">설정</target>
@@ -110,15 +97,6 @@
           <source>Ask your family and friends to participate</source>
           <target state="translated">이 앱을 널리 알립시다</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
-        </trans-unit>
-        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
-          <source>Share</source>
-          <target state="translated" state-qualifier="tm-suggestion">공유</target>
-        </trans-unit>
-        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
-          <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated">양성 판정을 등록하고 타인에게 익명으로 알리기</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
@@ -144,18 +122,6 @@
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="translated">모든 설정 및 데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</target>
-        </trans-unit>
-        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
-          <source>Return to registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">등록으로 돌아가기</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
-          <source>Positive registration</source>
-          <target state="translated">양성 판정 등록</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
-          <source>Would you like to register positively later?</source>
-          <target state="translated">나중에 양성 판정을 등록하시겠습니까?</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -450,11 +416,6 @@
           <target state="translated">9:00～17:30（토・일・축일・연말연시를 제외하고）</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
-        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">COVID-19 정보 및 리소스</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
-        </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">지원</target>
@@ -484,11 +445,6 @@
           <source>Share this app</source>
           <target state="translated">이 앱을 주변 사람에게 알리기</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
-        </trans-unit>
-        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="translated">홈</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
@@ -685,20 +641,10 @@
           <target state="translated">양성 판정 등록에 동의</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
-        <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
-          <source>Consent to positive registration</source>
-          <target state="translated">양성 판정 등록에 동의</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
-        </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
           <source>Version</source>
           <target state="translated">버전</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
-        </trans-unit>
-        <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
-          <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
-          <target state="translated">Bluetooth가 꺼져 있습니다. Bluetooth를 켜 주십시오.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
@@ -799,16 +745,6 @@
           <source>Network connection error</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">네트워크 연결 오류</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notification startup error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">노출 알림 시작 오류</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
-          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">노출 알림은 시작할 수 없습니다. 터미널 설정을 열고 노출 알림을 켜고 블루투스를 켭니다.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>

@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>확인</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>나중에</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>접촉</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>사용 방법</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>완료</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>진단 제출 중...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>설정</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>이 앱을 널리 알립시다</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>공유</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>양성 판정을 등록하고 타인에게 익명으로 알리기</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>사용 중지</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>모든 설정 및 데이터가 삭제되었습니다. 응용 프로그램을 다시 시작하십시오.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>등록으로 돌아가기</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>양성 판정 등록</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>나중에 양성 판정을 등록하시겠습니까?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>주변 사람들을 보호하기 위해 익명으로 양성 판정 등록을 부탁드립니다.</value>
@@ -361,10 +335,6 @@
     <value>9:00～17:30（토・일・축일・연말연시를 제외하고）</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 정보 및 리소스</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>지원</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>이 앱을 주변 사람에게 알리기</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>홈</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>이용 약관</value>
@@ -549,17 +515,9 @@
     <value>양성 판정 등록에 동의</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>양성 판정 등록에 동의</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>버전</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth가 꺼져 있습니다. Bluetooth를 켜 주십시오.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>과거 14일간의 접촉 목록</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>네트워크 연결 오류</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>노출 알림 시작 오류</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>노출 알림은 시작할 수 없습니다. 터미널 설정을 열고 노출 알림을 켜고 블루투스를 켭니다.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>프로세스 번호가 올바르지 않습니다.</value>

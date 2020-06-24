@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>How to use</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Complete</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Submitting Diagnosis...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>App Settings</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ask your family and friends to participate</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Share</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Sharing positive information and anonymous notification to others</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Stop</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>All settings and data have been deleted. Please restart the application.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Return to registration</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Positive registration</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Would you like to register positively later?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Help protect your family and friends by anonymously registering test results.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (except weekends and holidays)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Information and Resources</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Support</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Home</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Term of use</value>
@@ -549,17 +515,9 @@
     <value>Consent to positive registration</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Consent to positive registration</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>A list of close contacts</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Network connection error</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Exposure Notification startup error</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Process number incorrect</value>

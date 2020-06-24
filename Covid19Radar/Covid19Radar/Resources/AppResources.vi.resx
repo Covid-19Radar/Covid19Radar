@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Không phải bây giờ</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Tiếp xúc</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Thủ công</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Hoàn tất</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Đệ trình chẩn đoán...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Cài đặt</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Chia sẻ ứng dụng</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Chia sẻ</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Chia sẻ thông tin tích cực và thông báo ẩn danh cho người khác</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Đặt lại</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tất cả các cài đặt và dữ liệu đã bị xóa. Hãy khởi động lại ứng dụng.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Quay trở lại đăng ký</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Đăng ký tích cực</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Bạn có muốn đăng ký tích cực sau này?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Nếu bạn đang tích cực với Corona mới, xin vui lòng hợp tác với việc đăng ký tích cực để bảo vệ những người xung quanh bạn.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (trừ cuối tuần và ngày lễ)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 thông tin và tài nguyên</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Hỗ trợ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Chia sẻ ứng dụng này</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Trang chủ</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Điều khoản sử dụng</value>
@@ -549,17 +515,9 @@
     <value>Đồng ý với đăng ký tích cực</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Đồng ý với đăng ký tích cực</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Phiên bản</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth bị tắt. Vui lòng bật Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Danh sách liên hệ gần (14 ngày qua)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Lỗi kết nối mạng</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Lỗi khởi động thông báo phơi sáng</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Thông báo phơi sáng không thể khởi động. Mở cài đặt đầu cuối, bật thông báo phơi sáng và bật Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Quá trình số không chính xác</value>

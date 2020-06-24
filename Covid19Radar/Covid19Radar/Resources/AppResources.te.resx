@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>సరే</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>నోట్నౌ</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>ప్రత్యక్షీకరణల</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>మాన్యువల్</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>పూర్తయింది</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>రోగ నిర్ధారణ సమర్పించడం...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>సెట్టింగ్‌లు</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>అనువర్తనాన్ని పంచుకోండి</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>భాగస్వామ్యం చేయి</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>పాజిటివ్ సమాచారం మరియు అనామక నోటిఫికేషన్ ని ఇతరులకు పంచుకోవడం</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>రీసెట్ చేయి</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>అన్ని సెట్టింగ్ లు మరియు డేటా డిలీట్ చేయబడింది. దయచేసి అప్లికేషన్ ని రీస్టార్ట్ చేయండి.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>రిజిస్ట్రేషన్ కు రిటర్న్</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>పాజిటివ్ రిజిస్ట్రేషన్</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>మీరు తరువాత సానుకూలంగా రిజిస్టర్ చేసుకోవాలని అనుకుంటున్నారా?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>మీరు కొత్త కరోనా తో సానుకూలంగా ఉంటే, దయచేసి మీ చుట్టూ ఉన్న వ్యక్తులను రక్షించడానికి అనుకూల నమోదులో సహకరించండి.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (వారాంతాలు మరియు సెలవుదినాలు మినహా)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 సమాచారం మరియు వనరులు</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>మద్దతు</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>ఈ అనువర్తనాన్ని భాగస్వామ్యం చేయండి</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>హోమ్</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>ఉపయోగ కాలం</value>
@@ -549,17 +515,9 @@
     <value>పాజిటివ్ రిజిస్ట్రేషన్ కు సమ్మతి</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>పాజిటివ్ రిజిస్ట్రేషన్ కు సమ్మతి</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>సంస్కరణ</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>బ్లూటూత్ ఆఫ్ చేయబడింది. దయచేసి బ్లూటూత్ లో తిరగండి.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>సన్నిహిత పరిచయాల జాబితా (గత 14 రోజులు)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>జాలిక అనుసంధాన దోషం</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ ప్రకటన ప్రారంభ ప్రక్రియ దోషం</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>ప్రత్యక్షీకరణ ప్రకటన ప్రారంభం కాలేదు. టెర్మినల్ సెట్టింగ్ లను తెరవండి, ప్రత్యక్షీకరణ నోటిఫికేషన్ లో తిరగండి మరియు Bluetoothలో తిరగండి.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>ప్రాసెస్ నెంబరు తప్పు</value>

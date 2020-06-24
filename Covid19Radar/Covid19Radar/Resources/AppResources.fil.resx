@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Sa ngayon</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Manu-mano</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kumpleto</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Nagsusumite ng pagsusuri ...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Mga Setting</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Ibahagi ang app</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Ibahagi</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Pagbabahagi ng positibong impormasyon at di-kilalang abiso sa iba</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>I-reset</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Tinanggal na ang lahat ng setting at datos. Mangyaring muling-magsimula ng aplikasyon.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Bumalik sa pagrerehistro</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Positibong rehistrasyon</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Gusto mo bang magparehistro ng positibo mamaya?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Kung ikaw ay positibo sa bagong Corona, mangyaring makipagtulungan sa positibong pagpaparehistro upang protektahan ang mga tao sa paligid mo.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (maliban sa Sabado at pista opisyal)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 impormasyon at mga mapagkukunan</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Suporta</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Ibahagi ang app na ito</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Tahanan</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Kataga ng paggamit</value>
@@ -549,17 +515,9 @@
     <value>Pahintulot na maging positibo ang pagrerehistro</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Pahintulot na maging positibo ang pagrerehistro</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Bersyon</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Nakapatay ang Bluetooth. Mangyaring i-on ang Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Listahan ng magsara ng mga kontak (nakaraang 14 na araw)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Mali sa koneksiyong network</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Pagbukas ng pabatid sa pagsisimula error</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Hindi puwedeng mabuksan ang pabatid sa pagkalantad. Magbukas ng mga seting ng terminal, magbukas ng abiso ng pagkakalantad, at magbukas ng Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Numero ng proseso mali</value>

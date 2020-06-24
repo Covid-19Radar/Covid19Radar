@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ОК</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Впливів</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Вручну</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Завершено</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Подача діагнозу...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Настройки</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Поділіться додатком</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Поділитися</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Обмін позитивною інформацією та анонімними сповіщеннями інших користувачів</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Скинути</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Всі налаштування та дані були вилучені. Будь ласка, перезапустіть програму.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Повернутися до реєстрації</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Позитивна Реєстрація</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Ви хотіли б зареєструвати позитивно пізніше?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Якщо ви позитивні з новою коронка, будь ласка, співпрацювати з позитивною реєстрацією, щоб захистити оточуючих Вас людей.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (крім вихідних та святкових днів)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 інформація та ресурси</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Підтримка</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Надати спільний доступ до цієї програми</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Основне</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Умови використання</value>
@@ -549,17 +515,9 @@
     <value>Згода на позитивну реєстрацію</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Згода на позитивну реєстрацію</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Версія</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Вимкнув Bluetooth. Будь ласка, увімкніть Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Список близьких контактів (за останні 14 днів)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Помилка підключення до мережі</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Помилка запуску сповіщення про експозицію</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Не вдалося запуску сповіщення про експозицію. Відкрийте параметри терміналу, увімкніть сповіщення про експозицію та ввімкніть Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Неправильний процес номер</value>

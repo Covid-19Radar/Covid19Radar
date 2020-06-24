@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>あとで設定する</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposure</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>使い方</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>完了しました</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>診断を提出します。</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>アプリの設定</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>本アプリを広めましょう</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>共有する</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>陽性情報の登録と他者への匿名通知へ</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>使用中止</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>すべての設定とデータが削除されました。アプリケーションを再起動してください。</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>登録に戻る</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>陽性登録</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>後で陽性の登録をしますか？</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</value>
@@ -333,10 +307,6 @@
     <value>9:00～17:30（土・日・祝日・年末年始を除く）</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>新型コロナウイルス感染症対策サイト</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>アプリに関するお問い合わせ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -360,10 +330,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>ホーム</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>利用規約</value>
@@ -549,17 +515,9 @@
     <value>陽性登録への同意</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>陽性登録への同意</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Version</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>BluetoothがOffになっています。Bluetoothを有効にしてください。</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>過去14日間の接触一覧</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>通信に失敗しました。</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Exposure Notification起動エラー</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>アプリで入力された処理番号が違います</value>

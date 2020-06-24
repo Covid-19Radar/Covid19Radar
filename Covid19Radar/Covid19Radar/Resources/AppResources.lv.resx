@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>Labi</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Riska darījumiem</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Manuāli</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Pabeigts</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Diagnozes iesniegšana...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Iestatījumi</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Kopīgojiet lietotni</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Kopīgot</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Pozitīvas informācijas un anonīma paziņojuma koplietošana citiem</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Atiestatīt</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Visi iestatījumi un dati ir izdzēsti. Lūdzu, restartējiet lietojumprogrammu.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Atgriešanās pie reģistrācijas</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Pozitīva reģistrācija</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Vai jūs vēlētos reģistrēties pozitīvi vēlāk?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Ja jums ir pozitīvs ar New Corona, lūdzu, sadarboties ar pozitīvu reģistrāciju, lai aizsargātu cilvēkus ap jums.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (izņemot nedēļas nogales un brīvdienas)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Informācija un resursi</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Atbalsts</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Kopīgot šo programmu</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Sākums</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Lietošanas nosacījums</value>
@@ -549,17 +515,9 @@
     <value>Piekrišana pozitīvai reģistrācijai</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Piekrišana pozitīvai reģistrācijai</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versija</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth ir izslēgts. Lūdzu, ieslēdziet Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Tuvu kontaktu saraksts (pēdējās 14 dienas)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Tīkla savienojuma kļūda</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Ekspozīcijas paziņojuma startēšanas kļūda</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Ekspozīcijas paziņojumu nevarēja ievainot. Atveriet termināļa iestatījumus, ieslēdziet ekspozīcijas paziņojumu un ieslēdziet Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Nepareizs procesa numurs</value>

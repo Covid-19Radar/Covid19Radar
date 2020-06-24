@@ -47,19 +47,10 @@
           <source>OK</source>
           <target state="translated">Aceptar</target>
         </trans-unit>
-        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>Not Now</source>
-          <target state="translated">Ahora no</target>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="translated">Exposiciones</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
-          <source>https://microsoft.com/</source>
-          <target state="translated">https://microsoft.com/</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>How to use</source>
@@ -93,10 +84,6 @@
           <source>Complete</source>
           <target state="translated">Completado</target>
         </trans-unit>
-        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
-          <source>Submitting Diagnosis...</source>
-          <target state="translated">Enviando el Diagnóstico...</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Configuración</target>
@@ -116,15 +103,6 @@
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Compartir la aplicación</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
-        </trans-unit>
-        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
-          <source>Share</source>
-          <target state="translated">Compartir</target>
-        </trans-unit>
-        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
-          <source>Sharing positive information and anonymous notification to others</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Compartir información positiva y notificación anónima a otros</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
@@ -151,18 +129,6 @@
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="translated">Se han eliminado todos los ajustes y datos. Reinicie la aplicación.</target>
-        </trans-unit>
-        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
-          <source>Return to registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Volver al registro</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
-          <source>Positive registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registro positivo</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
-          <source>Would you like to register positively later?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">¿Desea registrarse positivamente más tarde?</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -466,11 +432,6 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">9:00-17:30 (excepto fines de semana y festivos)</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
-        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources</source>
-          <target state="translated">Información y recursos de COVID-19</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
-        </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
           <target state="translated">Soporte</target>
@@ -500,11 +461,6 @@
           <source>Share this app</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Compartir esta aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
-        </trans-unit>
-        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="translated">Inicio</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
@@ -701,20 +657,10 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Consentimiento para el registro positivo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
-        <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
-          <source>Consent to positive registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consentimiento para el registro positivo</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
-        </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
           <source>Version</source>
           <target state="translated">Versión</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
-        </trans-unit>
-        <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
-          <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
-          <target state="translated">Bluetooth está desactivado. Por favor, active el Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
@@ -815,16 +761,6 @@
           <source>Network connection error</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Error de conexión de red</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notification startup error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Error de inicio de la notificación de exposición</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
-          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">No se pudo iniciar la notificación de exposición. Abra la configuración del terminal, active Notificación de exposición y active Bluetooth.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>

@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ಸರಿ</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>ನೋಟನೌ</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>ಒಡ್ಡುವಿಕೆಗಳಲ್ಲಿ</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>ಕೈಪಿಡಿ</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>ಪೂರ್ಣಗೊಳಿಸು</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>ರೋಗನಿರ್ಣಯ ಸಲ್ಲಿಸುವುದು....</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>ಆ್ಯಪ್ ಶೇರ್</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>ಹಂಚು</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮಕ ಮಾಹಿತಿ ಮತ್ತು ಅನಾಮಧೇಯ ಅಧಿಸೂಚನೆಯನ್ನು ಇತರರಿಗೆ ಹಂಚಿಕೊಳ್ಳುವುದು</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>ಮರುಹೊಂದಿಸು</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>ಎಲ್ಲಾ ಸೆಟ್ಟಿಂಗ್ಸ್ ಮತ್ತು ಡಾಟಾ ಡಿಲೀಟ್ ಮಾಡಲಾಗಿದೆ. ದಯವಿಟ್ಟು ಅರ್ಜಿಯನ್ನು ಪುನಃ ಆರಂಭಿಸಿ.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>ನೋಂದಣಿಗೆ ತಿರುವು</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>ಧನಾತ್ಮಕ ನೋಂದಣಿ</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>ನೀವು ಮುಂದೆ ಸಕಾರಾತ್ಮಕವಾಗಿ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಲು ಇಷ್ಟಪಡುತ್ತೀರಾ?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>ನೀವು ಹೊಸ ಕರೋನದ ಜೊತೆ ಸಕಾರಾತ್ಮಕವಾಗಿದ್ದಲ್ಲಿ, ನಿಮ್ಮ ಸುತ್ತಲಿರುವ ಜನರನ್ನು ರಕ್ಷಿಸಲು ಧನಾತ್ಮಕ ನೋಂದಣಿಗೆ ದಯವಿಟ್ಟು ಸಹಕರಿಸಿ.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (ವಾರಾಂತ್ಯಗಳು ಮತ್ತು ರಜಾದಿನಗಳನ್ನು ಹೊರತುಪಡಿಸಿ)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 ಮಾಹಿತಿ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ಬೆಂಬಲ</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>ಈ ಅಪ್ಲಿ ಹಂಚಿಕೊಳ್ಳಿ</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>ಹೋಮ್</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>ಬಳಕೆಯ ಅವಧಿ</value>
@@ -549,17 +515,9 @@
     <value>ಸಕಾರಾತ್ಮಕ ನೋಂದಣಿಗೆ ಸಮ್ಮತಿ</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>ಸಕಾರಾತ್ಮಕ ನೋಂದಣಿಗೆ ಸಮ್ಮತಿ</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>ಆವೃತ್ತಿ</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>ಬ್ಲೂಟೂತ್ ಆಫ್ ಆಗಿದೆ. ದಯವಿಟ್ಟು Bluetooth ನಲ್ಲಿ ತಿರುಗಿ.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>ನಿಕಟ ಸಂಪರ್ಕಗಳ ಒಂದು ಪಟ್ಟಿ (ಕಳೆದ 14 ದಿನಗಳು)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>ನೆಟ್ವರ್ಕ್ ಸಂಪರ್ಕ ದೋಷ</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>ಎಕ್ಸ್ ಪೋಶರ್ ನೋಟಿಫಿಕೇಶನ್ ಪ್ರಾರಂಭದೋಷ</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>ಎಕ್ಸ್ ಪೋಷರ್ ಅಧಿಸೂಚನೆ ಯನ್ನು ಪ್ರಾರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಟರ್ಮಿನಲ್ ಸೆಟ್ಟಿಂಗ್ ಗಳನ್ನು ತೆರೆಯಿರಿ, ಎಕ್ಸ್ ಪೋಷರ್ ನೋಟಿಫಿಕೇಶನ್ ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ, ಮತ್ತು Bluetooth ನಲ್ಲಿ ಟರ್ನ್ ಮಾಡಿ.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>ಪ್ರಕ್ರಿಯೆ ಸಂಖ್ಯೆ ತಪ್ಪಾಗಿದೆ</value>

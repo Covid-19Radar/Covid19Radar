@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>تأیید</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>مواجهه</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>دستی</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>کامل</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>ارسال تشخیص...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>تنظیمات</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>اشتراک گذاری برنامه</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>اشتراک‌گذاری</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>به اشتراک گذاری اطلاعات مثبت و اطلاع رسانی ناشناس به دیگران</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>‏‏بازنشانی</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>همه تنظیمات و داده ها حذف شده اند. لطفاً برنامه را راه اندازی مجدد کنید.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>بازگشت به ثبت نام</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>ثبت نام مثبت</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>آیا می خواهید به ثبت نام مثبت بعد ؟</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>اگر شما با تاج جدید مثبت هستید ، لطفا با ثبت نام مثبت برای محافظت از مردم در اطراف خود همکاری کنید.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (به جز تعطیلات آخر هفته و تعطیلات)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>اطلاعات و منابع COVID-19</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>پشتیبانی</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>این برنامه را به اشتراک بگذارید</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>صفحه اصلی</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>شرایط استفاده</value>
@@ -549,17 +515,9 @@
     <value>رضایت به ثبت نام مثبت</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>رضایت به ثبت نام مثبت</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>نسخه</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>بلوتوث خاموش است. لطفاً بلوتوث را روشن کنید.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>لیستی از مخاطبین نزدیک (14 روز گذشته)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>خطای اتصال شبکه</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>خطای راه اندازی اعلان نوردهی</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>اعلان نوردهی نتوانست راه اندازی شود. تنظیمات ترمینال را باز کنید ، اعلان نوردهی را روشن کنید و بلوتوث را روشن کنید.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>شماره پردازش نادرست است</value>

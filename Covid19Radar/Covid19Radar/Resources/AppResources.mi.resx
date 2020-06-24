@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ĀE</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Not Now</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Exposures</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Ā-ringa</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Kua oti</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>I tuku Tataritanga...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Ngā Tautuhinga</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Tiria te Taupānga</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Tiri</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Kei te tiritahi i te mōhiohio tōrunga me te whakamōhiotanga ingoamuna ki ētahi atu</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Tautuhi anō</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Kua mukua ngā tautuhinga me te raraunga katoa. Tīmata anō koa i te taupānga.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Hoki ki te rēhitatanga</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Rēhitatanga tōrunga</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Me rēhita tonu tika ā muri ake?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Mehemea kei runga koe i te Kurahauao hou, ka whakahoahoa koa ki te rēhitatanga tōrunga hei pare i te iwi.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (hāunga weekends me ngā hararei)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID ngā Mōhiohio me ngā Rauemi</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Tautoko</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Tiria tēnei taupānga</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Kāinga</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Te kupu whakamahi</value>
@@ -549,17 +515,9 @@
     <value>He whakaae ki te rēhitatanga tōrunga</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>He whakaae ki te rēhitatanga tōrunga</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Putanga</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Kua weto te Bluetooth. Whakakā i te Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>He rārangi o ngā hoapā kati (ngā rā 14 i mua)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Hapa tūhononga whatunga</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Hapa whakaoho Whakamōhiotanga mārakerake</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Kāore i taea e te Whakamōhiotanga mārakerake te whakaoho. Whakatuwheratia ngā tautuhinga kāpeka, whakakāngia te Whakamōhiotanga Mārakerake, ka whakakā i te Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Hē te tau tukanga</value>

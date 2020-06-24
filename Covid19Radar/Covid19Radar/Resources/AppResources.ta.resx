@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>சரி</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>இப்போது இல்லை</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>அம்பலப்படுத்தல்</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>கைமுறை</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>முழுமை</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>நோய் கண்டறிதல்...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>அமைப்புகள்</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>பயன்பாட்டை பகிரவும்</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>பகிர்</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>பிறருக்கு சாதகமான தகவல் மற்றும் பெயரற்ற அறிவிப்பை பகிர்தல்</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>மீட்டமை</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>அனைத்து அமைப்புகள் மற்றும் தரவு நீக்கப்பட்டுள்ளது. தயவுசெய்து பயன்பாட்டை மறுதொடக்கம் செய்யவும்.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>பதிவுக்கான திருப்பம்</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>பாசிடிவ் பதிவு</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>நீங்கள் பின்னர் நேர்மறையாக பதிவு செய்ய விரும்புகிறீர்களா?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>புதிய கோரோனா உடன் நீங்கள் நேர்மறையாக இருந்தால், உங்களைச் சுற்றியுள்ள மக்களைப் பாதுகாக்க நேர்மறையான பதிவிற்கு ஒத்துழைக்கவும்.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (வார இறுதி நாட்கள் மற்றும் விடுமுறை நாட்கள் தவிர)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 தகவல் மற்றும் வளங்கள்</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ஆதரவு</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>இந்தப் பயன்பாட்டைப் பகிர்</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>முகப்பு</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>பயன்பாட்டு கால</value>
@@ -549,17 +515,9 @@
     <value>நேர்மறை பதிவு ஒப்புதல்</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>நேர்மறை பதிவு ஒப்புதல்</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>பதிப்பு</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>புளூடூத் அணைக்கப்பட்டுள்ளது. Bluetooth இல் திரும்புக.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>நெருங்கிய தொடர்புகளின் பட்டியல் (கடந்த 14 நாட்கள்)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>பிணைய இணைப்பு பிழை</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிப்பு தொடக்க பிழை</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>வெளிப்பாடு அறிவிக்கையை தொடங்க முடியவில்லை. முனைய அமைப்புகளைத் திறந்து, எக்ஸ்போஷர் அறிவிக்கையில் திரும்பி, Bluetooth -இல் திருப்பு.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>செயல்முறை எண் தவறானது</value>

@@ -44,19 +44,10 @@
           <source>OK</source>
           <target state="translated">确定</target>
         </trans-unit>
-        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
-          <source>Not Now</source>
-          <target state="translated">暂不</target>
-        </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
           <target state="translated">暴露</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
-        </trans-unit>
-        <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
-          <source>https://microsoft.com/</source>
-          <target state="translated">https://microsoft.com/</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
           <source>How to use</source>
@@ -89,10 +80,6 @@
           <source>Complete</source>
           <target state="translated">完成</target>
         </trans-unit>
-        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
-          <source>Submitting Diagnosis...</source>
-          <target state="translated">正在提交诊断结果...</target>
-        </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
           <target state="translated">设置</target>
@@ -110,15 +97,6 @@
           <source>Ask your family and friends to participate</source>
           <target state="translated">分享此应用给家人和朋友</target>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
-        </trans-unit>
-        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
-          <source>Share</source>
-          <target state="translated">共享</target>
-        </trans-unit>
-        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
-          <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated">分享感染信息，并向他人发送匿名通知</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
@@ -144,18 +122,6 @@
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
           <target state="translated">所有设置和数据都已删除。请重新启动应用程序。</target>
-        </trans-unit>
-        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
-          <source>Return to registration</source>
-          <target state="translated">返回注册</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
-          <source>Positive registration</source>
-          <target state="translated">正注册</target>
-        </trans-unit>
-        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
-          <source>Would you like to register positively later?</source>
-          <target state="translated">以后要积极注册吗？</target>
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
@@ -447,11 +413,6 @@
           <target state="translated">9:00～17:30（节假日除外）</target>
           <note from="MultilingualBuild" annotates="source" priority="2">9:00～17:30（土・日・祝日・年末年始を除く）</note>
         </trans-unit>
-        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
-          <source>COVID-19 Information and Resources</source>
-          <target state="translated">新型冠状病毒肺炎对策网站</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症対策サイト</note>
-        </trans-unit>
         <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
           <source>Support</source>
           <target state="translated">帮助与反馈</target>
@@ -481,11 +442,6 @@
           <source>Share this app</source>
           <target state="translated">分享此APP</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
-        </trans-unit>
-        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
-          <source>Home</source>
-          <target state="translated">主页</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
@@ -682,20 +638,10 @@
           <target state="translated">同意进行阳性登记</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
-        <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
-          <source>Consent to positive registration</source>
-          <target state="translated">同意进行阳性登记</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
-        </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
           <source>Version</source>
           <target state="translated">版本</target>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
-        </trans-unit>
-        <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
-          <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
-          <target state="translated">蓝牙已关闭。请启用设备的蓝牙。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
           <source>A list of close contacts (past 14 days)</source>
@@ -796,16 +742,6 @@
           <source>Network connection error</source>
           <target state="translated" state-qualifier="mt-suggestion">网络连接错误</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
-          <source>Exposure Notification startup error</source>
-          <target state="translated" state-qualifier="mt-suggestion">暴露通知启动错误</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
-        </trans-unit>
-        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
-          <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">暴露通知无法启动。打开设置，开启暴露通知，然后打开蓝牙。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>

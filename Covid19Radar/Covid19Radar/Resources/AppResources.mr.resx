@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>ठीक</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>आता नाही</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>एक्स्पोजर</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>मॅन्युअल</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>पूर्ण</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>निदान सबमिट करत आहे...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>सेटिंग्ज</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>अॅप शेअर करा</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>सामायिक करा</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>इतरांना सकारात्मक माहिती आणि निनावी सूचना देणे</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>रिसेट करा</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>सर्व संयोजना आणि डेटा नष्ट करण्यात आले आहे. कृपया अनुप्रयोग पुन्हा सुरू करा.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>नोंदणीकडे परत</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>सकारात्मक नोंदणी</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>नंतर तुम्हाला सकारात्मक नोंदणी करायची आहे का?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>जर तुम्ही नवीन कोरोनाशी सकारात्मक असाल तर, तुमच्या आजूबाजूच्या लोकांचे संरक्षण करण्यासाठी कृपया सकारात्मक नोंदणीसह सहकार्य करा.</value>
@@ -361,10 +335,6 @@
     <value>९:००-१७:३० (शनिवार-रविवार आणि सुट्टी वगळता)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 माहिती आणि संसाधने</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>समर्थन</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>हे अॅप शेअर करा</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>होम</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>वापराची संज्ञा</value>
@@ -549,17 +515,9 @@
     <value>सकारात्मक नोंदणीसाठी संमती</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>सकारात्मक नोंदणीसाठी संमती</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>आवृत्ती</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>ब्लूटूथ बंद आहे. कृपया ब्लूटूथ मध्ये वळ.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>जवळच्या संपर्कांची यादी (मागील 14 दिवस)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>संजाळ कनेक्शन त्रुटी</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>एक्सपोजर सूचना स्टार्टअप त्रुटी</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>एक्स्पोजर सूचना स्टार्टअप करू शकत नव्हती. टर्मिनल संयोजना उघडा, एक्स्पोजर सूचना मध्ये वळा आणि ब्लूटूथमध्ये वळा.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>प्रक्रिया क्रमांक चुकीचा</value>

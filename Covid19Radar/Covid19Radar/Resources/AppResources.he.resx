@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>אישור</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>לא עכשיו</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>חשיפות</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>ידני</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>השלם</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>הגשת אבחון...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>הגדרות</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>שתף את האפליקציה</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>שתף</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>שיתוף מידע חיובי והודעה אנונימית לאחרים</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>איפוס</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>כל ההגדרות והנתונים נמחקו. נא הפעל מחדש את היישום.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>חזור להרשמה</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>הרשמה חיובית</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>האם ברצונך להירשם באופן חיובי מאוחר יותר?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>אם אתה חיובי עם קורונה חדש, בבקשה לשתף פעולה עם הרישום החיובי כדי להגן על האנשים סביבך.</value>
@@ -361,10 +335,6 @@
     <value>9:00-17:30 (למעט סופי שבוע וחגים)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 מידע ומשאבים</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>תמיכה</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>שתף אפליקציה זו</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>בית</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>תנאי שימוש</value>
@@ -549,17 +515,9 @@
     <value>הסכמה להרשמה חיובית</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>הסכמה להרשמה חיובית</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>גירסה</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>ה-Bluetooth מכובה. נא הפעל את Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>רשימה של אנשי קשר קרובים (14 ימים בעבר)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>שגיאת חיבור רשת</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>שגיאת הפעלה של דיווח חשיפה</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>הפעלת הודעת חשיפה לא הצליחה. פתח את הגדרות המסוף, הפעל את הודעת החשיפה והפעל את Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>מספר תהליך שגוי</value>

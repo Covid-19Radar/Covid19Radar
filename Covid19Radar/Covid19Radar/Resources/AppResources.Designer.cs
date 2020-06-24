@@ -106,24 +106,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Sharing positive information and anonymous notification to others に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotifyOtherPage {
-            get {
-                return ResourceManager.GetString("ButtonNotifyOtherPage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Not Now に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonNotNow {
-            get {
-                return ResourceManager.GetString("ButtonNotNow", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   OK に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ButtonOk {
@@ -138,24 +120,6 @@ namespace Covid19Radar.Resources {
         internal static string ButtonReset {
             get {
                 return ResourceManager.GetString("ButtonReset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Return to registration に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonReturnToRegistration {
-            get {
-                return ResourceManager.GetString("ButtonReturnToRegistration", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Share に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ButtonShare {
-            get {
-                return ResourceManager.GetString("ButtonShare", resourceCulture);
             }
         }
         
@@ -232,24 +196,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DialogExposureNotificationStartupError {
-            get {
-                return ResourceManager.GetString("DialogExposureNotificationStartupError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Exposure Notification startup error に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string DialogExposureNotificationStartupErrorTitle {
-            get {
-                return ResourceManager.GetString("DialogExposureNotificationStartupErrorTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Please check your network connection. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogNetworkConnectionError {
@@ -282,15 +228,6 @@ namespace Covid19Radar.Resources {
         internal static string ExposureNotificationHandler2ErrorMessage {
             get {
                 return ResourceManager.GetString("ExposureNotificationHandler2ErrorMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Bluetooth is turned off.Please turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string ExposureNotificationServiceMessage4 {
-            get {
-                return ResourceManager.GetString("ExposureNotificationServiceMessage4", resourceCulture);
             }
         }
         
@@ -745,15 +682,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Home に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HomePageTitle1 {
-            get {
-                return ResourceManager.GetString("HomePageTitle1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InqueryMailBody {
@@ -777,15 +705,6 @@ namespace Covid19Radar.Resources {
         internal static string InqueryPageDescription1 {
             get {
                 return ResourceManager.GetString("InqueryPageDescription1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   COVID-19 Information and Resources に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string InqueryPageDescription2 {
-            get {
-                return ResourceManager.GetString("InqueryPageDescription2", resourceCulture);
             }
         }
         
@@ -831,15 +750,6 @@ namespace Covid19Radar.Resources {
         internal static string LoadingTextRegistering {
             get {
                 return ResourceManager.GetString("LoadingTextRegistering", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Submitting Diagnosis... に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string LoadingTextSubmittingDiagnosis {
-            get {
-                return ResourceManager.GetString("LoadingTextSubmittingDiagnosis", resourceCulture);
             }
         }
         
@@ -1114,33 +1024,6 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   https://microsoft.com/ に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NotifyOthersLearnMoreUrl {
-            get {
-                return ResourceManager.GetString("NotifyOthersLearnMoreUrl", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Would you like to register positively later? に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string PositiveRegistrationConfirmText {
-            get {
-                return ResourceManager.GetString("PositiveRegistrationConfirmText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Positive registration に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string PositiveRegistrationText {
-            get {
-                return ResourceManager.GetString("PositiveRegistrationText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Privacy Policy に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PrivacyPolicyPageTitle {
@@ -1308,15 +1191,6 @@ namespace Covid19Radar.Resources {
         internal static string SubmitConsentPageTitle1 {
             get {
                 return ResourceManager.GetString("SubmitConsentPageTitle1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consent to positive registration に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string SubmitConsentPageTitle2 {
-            get {
-                return ResourceManager.GetString("SubmitConsentPageTitle2", resourceCulture);
             }
         }
         

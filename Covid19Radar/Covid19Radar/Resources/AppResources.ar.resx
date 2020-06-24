@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>موافق</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>ليس الان</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>تعرضات</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>ارشادات</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>مكتمل</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>تقديم التشخيص...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>إعدادات</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>مشاركة التطبيق</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>مشاركة</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>مشاركة المعلومات الإيجابية وإعلام مجهول للآخرين</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>إعادة تعيين</value>
@@ -119,15 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>تم حذف كافة الإعدادات والبيانات. الرجاء إعادة تشغيل التطبيق.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>العودة إلى التسجيل</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>التسجيل الإيجابي</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>هل ترغب في التسجيل بشكل إيجابي في وقت لاحق؟</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>إذا كنت إيجابيًا مع كورونا الجديدة ، يرجى التعاون مع التسجيل الإيجابي لحماية الأشخاص من حولك.</value>
@@ -361,10 +335,6 @@
     <value>9:00- 17:30 (باستثناء عطلات نهاية الأسبوع والعطلات)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 المعلومات والموارد</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>الدعم</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -388,10 +358,6 @@
   <data name="HomePageDescription5" xml:space="preserve">
     <value>مشاركة هذا التطبيق</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>الصفحة الرئيسية</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>شروط الاستخدام</value>
@@ -549,17 +515,9 @@
     <value>الموافقة على التسجيل الإيجابي</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>الموافقة على التسجيل الإيجابي</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>الإصدار</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>تم إيقاف تشغيل Bluetooth. يرجى تشغيل البلوتوث.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>قائمة جهات الاتصال القريبة (الأيام الـ 14 الماضية)</value>
@@ -638,14 +596,6 @@
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>خطأ في اتصال الشبكة</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>خطأ بدء تشغيل إعلام التعرض</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>تعذر بدء تشغيل إعلام التعرض. افتح إعدادات المحطة الطرفية، ثم قم بتشغيل "إعلام التعرض"، ثم قم بتشغيل Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>رقم العملية غير صحيح</value>

@@ -42,16 +42,9 @@
   <data name="ButtonOk" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="ButtonNotNow" xml:space="preserve">
-    <value>Jangan sekarang</value>
-  </data>
   <data name="MainExposures" xml:space="preserve">
     <value>Paparan</value>
     <comment>Tab Button</comment>
-  </data>
-  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
-    <value>https://microsoft.com/</value>
-    <comment>Health care jurisdiction page</comment>
   </data>
   <data name="MainTutorial" xml:space="preserve">
     <value>Cara menggunakan</value>
@@ -77,9 +70,6 @@
   <data name="ButtonComplete" xml:space="preserve">
     <value>Selesai</value>
   </data>
-  <data name="LoadingTextSubmittingDiagnosis" xml:space="preserve">
-    <value>Mengirimkan diagnosis ...</value>
-  </data>
   <data name="SettingsPageTitle" xml:space="preserve">
     <value>Pengaturan Aplikasi</value>
     <comment>アプリの設定</comment>
@@ -93,13 +83,6 @@
   <data name="HomePageHeader3Title" xml:space="preserve">
     <value>Bagikan aplikasi ke keluarga atau teman</value>
     <comment>本アプリを広めましょう</comment>
-  </data>
-  <data name="ButtonShare" xml:space="preserve">
-    <value>Bagikan</value>
-  </data>
-  <data name="ButtonNotifyOtherPage" xml:space="preserve">
-    <value>Berbagi informasi dan memberi notifikasi hasil uji positif secara anonim ke pengguna lain</value>
-    <comment>Button NotifyOtherPage</comment>
   </data>
   <data name="ButtonReset" xml:space="preserve">
     <value>Berhenti</value>
@@ -119,16 +102,6 @@
   </data>
   <data name="SettingsPageDialogResetCompletedText" xml:space="preserve">
     <value>Semua pengaturan dan data telah dihapus. Silakan matikan dan hidupkan ulang aplikasi.</value>
-  </data>
-  <data name="ButtonReturnToRegistration" xml:space="preserve">
-    <value>Kembali ke pendaftaran
-</value>
-  </data>
-  <data name="PositiveRegistrationText" xml:space="preserve">
-    <value>Pendaftaran tes positif</value>
-  </data>
-  <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Apakah anda ingin mendaftarkan hasil tes positif nanti?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Bantu lindungi keluarga dan teman anda dengan mendaftarkan hasil tes COVID-19 secara anonim.</value>
@@ -363,10 +336,6 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Jam 9:00 - 17:30 (kecuali saat akhir pekan dan hari libur)</value>
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
-  <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>Informasi dan sumber untuk COVID-19</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
-  </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Dukungan</value>
     <comment>アプリに関するお問い合わせ</comment>
@@ -390,10 +359,6 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
   <data name="HomePageDescription5" xml:space="preserve">
     <value>Bagikan aplikasi ini</value>
     <comment>アプリを周りの人に知らせる</comment>
-  </data>
-  <data name="HomePageTitle1" xml:space="preserve">
-    <value>Beranda</value>
-    <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
     <value>Syarat penggunaan</value>
@@ -551,17 +516,9 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
     <value>Persetujuan bila terdaftar sebagai pengguna yang teruji positif COVID-19</value>
     <comment>陽性登録への同意</comment>
   </data>
-  <data name="SubmitConsentPageTitle2" xml:space="preserve">
-    <value>Persetujuan bila terdaftar sebagai pengguna yang terruji positif COVID-19</value>
-    <comment>陽性登録への同意</comment>
-  </data>
   <data name="VersionText" xml:space="preserve">
     <value>Versi</value>
     <comment>バージョン</comment>
-  </data>
-  <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth tidak aktif. Silakan aktifkan Bluetooth.</value>
-    <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
     <value>Daftar kontak jarak dekat (dalam 14 hari terakhir)</value>
@@ -641,14 +598,6 @@ Catatan: kode kontak akan berubah secara berkala untuk melindungi privasi anda.<
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
     <value>Kesalahan di koneksi jaringan</value>
     <comment>通信に失敗しました。</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
-    <value>Error saat menghidupkan Notifikasi Paparan</value>
-    <comment>Exposure Notification起動エラー</comment>
-  </data>
-  <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Notifikasi Paparan tidak bisa dihidupkan. Buka menu pengaturan di perangkat, aktifkan Notifikasi Paparan, dan aktifkan Bluetooth.</value>
-    <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
     <value>Kode nomor proses tak sesuai</value>
