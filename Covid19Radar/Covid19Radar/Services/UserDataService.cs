@@ -1,6 +1,7 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
