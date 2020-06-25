@@ -361,6 +361,14 @@
     <value>アプリを周りの人に知らせる</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="HomePageDescription6" xml:space="preserve">
+    <value>接触確認の設定はすべて有効です。</value>
+    <comment>接触確認の設定はすべて有効です。</comment>
+  </data>
+  <data name="HomePageDescription7" xml:space="preserve">
+    <value>機能が無効になっています。設定ページで接触の検出と通知をONにしてください。</value>
+    <comment>機能が無効になっています。設定ページで接触の検出と通知をONにしてください。</comment>
+  </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>ホーム</value>
     <comment>ホーム</comment>

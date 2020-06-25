@@ -26,33 +26,98 @@
             Padding="15"
             BackgroundColor="#EEEEEE"
             Spacing="15">
-            <Frame
-                Padding="10"
-                CornerRadius="10"
-                HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding StartDate}" />
-                                <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
-                                <Span Text=" " />
-                                <Span Text="{Binding PastDate}" />
-                                <Span Text=" " />
-                                <Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
-                                <Span Text=" " />
-                                <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        AutomationId="ButtonExposures"
-                        Command="{Binding Path=OnClickExposures}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.HomePageDescription2}" />
 
-                </StackLayout>
-            </Frame>
+            <Grid ColumnSpacing="16" RowSpacing="0" HorizontalOptions="FillAndExpand" Margin="10,15,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" CornerRadius="21" Color="{StaticResource AvailableColor}"
+                         WidthRequest="42" HeightRequest="42" VerticalOptions="Center" HorizontalOptions="Center">
+                    <BoxView.Triggers>
+                        <DataTrigger TargetType="BoxView" Binding="{Binding IsAvailable}" Value="False">
+                            <Setter Property="Color" Value="{StaticResource WarningColor}" />
+                        </DataTrigger>
+                    </BoxView.Triggers>
+                </BoxView>
+                <BoxView Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" CornerRadius="18" Color="{StaticResource Background}"
+                         WidthRequest="36" HeightRequest="36" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" FontFamily="MaterialFontFamily" Text="{StaticResource IconCheck}"
+                       TextColor="{StaticResource AvailableColor}" FontSize="24" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Binding="{Binding IsAvailable}" Value="False">
+                            <Setter Property="TextColor" Value="{StaticResource WarningColor}" />
+                            <Setter Property="Text" Value="{StaticResource IconExclamation}" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+
+                <Label Grid.Row="0" Grid.Column="1" TextColor="{StaticResource PrimaryText}" FontSize="Body" Padding="0">
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,0,0,-10" />
+                        </OnPlatform>
+                    </Label.Margin>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding StartDate}" FontFamily="NotoSansMediumFontFamily" FontSize="Body"/>
+                            <Span Text="{x:Static resources:AppResources.HomePageDescription0}" FontFamily="NotoSansRegularFontFamily" FontSize="Body" />
+                            <Span Text=" " />
+                            <Span Text="{Binding PastDate}" FontFamily="NotoSansMediumFontFamily" FontSize="Body"/>
+                            <Span Text=" " />
+                            <Span Text="{x:Static resources:AppResources.HomePagePastDays}" FontFamily="NotoSansMediumFontFamily" FontSize="Body"/>
+                            <Span Text=" " />
+                            <Span Text="{x:Static resources:AppResources.HomePageDescription1}" FontFamily="NotoSansRegularFontFamily" FontSize="Body"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>                
+
+                <Label Grid.Row="1" Grid.Column="1" TextColor="{StaticResource AvailableColor}" Style="{StaticResource DefaultLabel}" IsVisible="{Binding IsAvailable}"
+                       Text="{x:Static resources:AppResources.HomePageDescription6}" FontSize="Body">                    
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,-10,0,0" />
+                        </OnPlatform>
+                    </Label.Margin>
+                </Label>
+
+                <Label Grid.Row="1" Grid.Column="1" Style="{StaticResource DefaultLabel}" FontSize="Body" Text="{x:Static resources:AppResources.HomePageDescription7}">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Binding="{Binding IsAvailable}" Value="True">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                    <Label.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="0,-10,0,0" />
+                        </OnPlatform>
+                    </Label.Margin>
+                </Label>
+            </Grid>
+
+            <Button
+                AutomationId="ButtonSetting"
+                Command="{prism:NavigateTo 'SettingsPage'}"
+                Style="{StaticResource DefaultButton}"
+                Text="{x:Static resources:AppResources.HelpPage4ButtonText}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsAvailable}" Value="True">
+                        <Setter Property="IsVisible" Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+                
+            <Button
+                    AutomationId="ButtonExposures"
+                    Command="{Binding Path=OnClickExposures}"
+                    Style="{StaticResource DefaultButton}"
+                    Text="{x:Static resources:AppResources.HomePageDescription2}" />
+
             <Frame
                 Padding="10"
                 CornerRadius="10"

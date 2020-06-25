@@ -26,6 +26,8 @@
             <Color x:Key="ButtonGrayedOut">#A4A4A4</Color>
             <Color x:Key="NavBarText">#000000</Color>
             <Color x:Key="NavBarBackground">#FFFFFF</Color>
+            <Color x:Key="AvailableColor">#31BA81</Color>
+            <Color x:Key="WarningColor">#E6D200</Color>
 
             <!--  Icons  -->
             <x:String x:Key="IconProfile">&#xf2bd;</x:String>
@@ -50,6 +52,8 @@
             <x:String x:Key="IconCancel">&#xf00d;</x:String>
             <x:String x:Key="IconRightArrow">&#xf35a;</x:String>
             <x:String x:Key="IconStar">&#xf005;</x:String>
+            <x:String x:Key="IconCheck">&#xf0e1e;</x:String>
+            <x:String x:Key="IconExclamation">&#xf1238;</x:String>
 
             <!--  FA-S  -->
             <x:String x:Key="IconHowToUse">&#xf51c;</x:String>
