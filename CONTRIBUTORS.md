@@ -73,6 +73,8 @@
 - Satoshi Iguchi
 - Kimihiro Shirase
 - Ryosuke Nishimura
+- Tassana Thaveeteeratham (Thai Translation)
+- Kotaro Sakamoto
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
