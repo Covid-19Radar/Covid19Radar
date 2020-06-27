@@ -33,7 +33,7 @@
           <note priority="2" annotates="source" from="MultilingualUpdate">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note priority="2" annotates="source" from="MultilingualBuild">Policy</note>
         </trans-unit>
-        <trans-unit xml:space="preserve" translate="yes" id="TitileUserStatusSettings">
+        <trans-unit xml:space="preserve" translate="yes" id="TitleUserStatusSettings">
           <source>Status Settings</source>
           <target state-qualifier="mt-suggestion" state="needs-review-translation">स्थिति सेटिंग्स</target>
           <note priority="2" annotates="source" from="MultilingualBuild">User Status Page Title</note>

@@ -9,7 +9,7 @@ namespace Covid19Radar.ViewModels
     {
         public NotContactPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = Resources.AppResources.TitileUserStatusSettings;
+            Title = Resources.AppResources.TitleUserStatusSettings;
         }
         public Command OnClickShareApp => new Command(() =>
         {
