@@ -82,3 +82,8 @@ MPLに加えて、このプロジェクトでは共著者の著作者人格権�
 ## サードパーティーソフトウェアについて
 
 This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+
+## 厚生労働省のシンボルマークについて
+
+COVID-19Radar は厚生労働省のシンボルマークを使用しています。
+このプロジェクトを Fork する場合は厚生労働省の[シンボルマークの使用](https://www.mhlw.go.jp/kouseiroudoushou/symbol/shiyou.html)の条件に従ってください。

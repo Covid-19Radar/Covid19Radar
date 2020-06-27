@@ -82,3 +82,8 @@ Dispute or litigation by each author is not allowed.
 ## About 3rd Party Software
 
 This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+
+## About the symbol mark of MHLW of Japan
+
+COVID-19Radar uses the symbol mark of Ministry of Health, Labour and Welfare (MHLW) of Japan.
+When you fork this project, you must follow the term of [symbol mark use](https://www.mhlw.go.jp/kouseiroudoushou/symbol/shiyou.html) of MHLW of Japan.
