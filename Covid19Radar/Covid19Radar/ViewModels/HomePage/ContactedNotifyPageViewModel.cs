@@ -11,6 +11,7 @@ using Acr.UserDialogs;
 using System.Diagnostics;
 using Covid19Radar.Common;
 using System.Windows.Input;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.ViewModels
 {
@@ -36,6 +37,7 @@ namespace Covid19Radar.ViewModels
         {
             var uri = AppResources.UrlContactedForm;
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+            await Task.Delay(TimeSpan.FromMilliseconds(300));
         });
         public ICommand OnClickByPhone => new AsyncDelegateCommand(async () =>
         {
