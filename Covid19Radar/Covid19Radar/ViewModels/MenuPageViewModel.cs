@@ -210,7 +210,16 @@ namespace Covid19Radar.ViewModels
             ClearSelectedItem();
             SelectedMenuItem.IconColor = "#FFF";
             SelectedMenuItem.TextColor = "#FFF";
-            await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + SelectedMenuItem.PageName);
+
+            var pageName = SelectedMenuItem.PageName;
+            if (pageName.Equals(nameof(HomePage)))
+            {
+                await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + pageName);
+            }
+            else
+            {
+                await NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + nameof(HomePage) + "/" + pageName);
+            }
             return;
         }
 
