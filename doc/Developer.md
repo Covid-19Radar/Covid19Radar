@@ -24,15 +24,8 @@ On the macOS
 
 - macOS Catalina v10.15.5
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
-  - .NET Core SDK v3.1.301
   - Xamarin.Android
-
-  NOTE: You can also use [homebrew cask](https://github.com/Homebrew/homebrew-cask) to install these packages.
-
-  ```
-  brew cask install visual-studio dotnet-sdk xamarin-android
-  ```
-
+  - .NET Core SDK v3.x.xxx (maybe need)
 - Android Studio v4.0
   - JDK (Xamarin)
   - Android SDK
@@ -54,16 +47,9 @@ On the Windows
 On the macOS
 
 - macOS Catalina v10.15.5
-- Xcode v11.5
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/ja/vs/mac/xamarin/) v8.6.4
-  - .NET Core SDK v3.1.301
   - Xamarin.iOS
-
-  NOTE: You can also use [homebrew cask](https://github.com/Homebrew/homebrew-cask) to install these packages.
-
-  ```
-  brew cask install visual-studio dotnet-sdk xamarin-ios
-  ```
+- Xcode v11.5
 
 More info
 

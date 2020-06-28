@@ -72,7 +72,8 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                await userDataService.ResetAllDataAsync();
+                UserDataModel userData = new UserDataModel();
+                await userDataService.SetAsync(userData);
 
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);

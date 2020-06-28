@@ -491,10 +491,7 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        /// <summary>
-        ///   From app settings, you can stop using the app and delete user data. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string HelpPage4Description {
+        internal static string NotContactPageDescription1 {
             get {
                 return ResourceManager.GetString("NotContactPageDescription1", resourceCulture);
             }
@@ -1106,10 +1103,7 @@ namespace Covid19Radar.Resources {
             }
         }
         
-        /// <summary>
-        ///   https://covid19radarjpnprod.z11.web.core.windows.net/phone.json に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string UrlContactedPhone {
+        internal static string NotifyOtherPageDiag6Message {
             get {
                 return ResourceManager.GetString("NotifyOtherPageDiag6Message", resourceCulture);
             }

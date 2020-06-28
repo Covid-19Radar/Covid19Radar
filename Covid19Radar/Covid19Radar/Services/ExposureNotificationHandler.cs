@@ -11,7 +11,7 @@ using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
-//using Plugin.LocalNotification;
+using Plugin.LocalNotification;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -31,7 +31,6 @@ namespace Covid19Radar.Services
             this.httpDataService = Xamarin.Forms.DependencyService.Resolve<IHttpDataService>();
             this.userDataService = Xamarin.Forms.DependencyService.Resolve<UserDataService>();
             userData = this.userDataService.Get();
-            userDataService.UserDataChanged += (s, e) => userData = userDataService.Get();
         }
 
         // this string should be localized
@@ -75,12 +74,11 @@ namespace Covid19Radar.Services
             var exposureInfo = await getExposureInfo();
 
             // Add these on main thread in case the UI is visible so it can update
+
             await Device.InvokeOnMainThreadAsync(() =>
             {
                 foreach (var exposure in exposureInfo)
                 {
-                    Console.WriteLine($"COCOA found exposure {exposure.Timestamp}");
-
                     UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                     userData.ExposureInformation.Add(userExposureInfo);
                 }
@@ -88,17 +86,17 @@ namespace Covid19Radar.Services
             await userDataService.SetAsync(userData);
 
             // If Enabled Local Notifications
-            //if (userData.IsNotificationEnabled)
-            //{
-            //    var notification = new NotificationRequest
-            //    {
-            //        NotificationId = 100,
-            //        Title = AppResources.LocalNotificationTitle,
-            //        Description = AppResources.LocalNotificationDescription
-            //    };
+            if (userData.IsNotificationEnabled)
+            {
+                var notification = new NotificationRequest
+                {
+                    NotificationId = 100,
+                    Title = AppResources.LocalNotificationTitle,
+                    Description = AppResources.LocalNotificationDescription
+                };
 
-            //    NotificationCenter.Current.Show(notification);
-            //}
+                NotificationCenter.Current.Show(notification);
+            }
         }
 
         // this will be called when they keys need to be collected from the server
@@ -121,7 +119,6 @@ namespace Covid19Radar.Services
 
                     if (downloadedFiles.Count > 0)
                     {
-                        Console.WriteLine("COCOA Submit Batches");
                         await submitBatches(downloadedFiles);
 
                         // delete all temporary files
@@ -142,7 +139,7 @@ namespace Covid19Radar.Services
             catch (Exception ex)
             {
                 // any expections, bail out and wait for the next time
-                Debug.WriteLine(ex);
+                Console.WriteLine(ex);
             }
         }
 
@@ -171,7 +168,7 @@ namespace Covid19Radar.Services
             {
                 return (batchNumber, downloadedFiles);
             }
-            Debug.WriteLine("COCOA Fetch Exposure Key");
+            Console.WriteLine("Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -190,8 +187,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
-                    Debug.WriteLine(tmpFile);
+                    Console.WriteLine(Utils.SerializeToJson(tekItem));
+                    Console.WriteLine(tmpFile);
 
                     using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
                     using (var fileStream = File.Create(tmpFile))
@@ -208,12 +205,11 @@ namespace Covid19Radar.Services
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
-                    Console.WriteLine($"COCOA FETCH DIAGKEY {tmpFile}");
                     batchNumber++;
                 }
             }
-            Debug.WriteLine($"COCOA batchnumber {batchNumber}");
-            Debug.WriteLine($"COCOA downloadfiles {downloadedFiles.Count()}");
+            Console.WriteLine(batchNumber.ToString());
+            Console.WriteLine(downloadedFiles.Count());
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);

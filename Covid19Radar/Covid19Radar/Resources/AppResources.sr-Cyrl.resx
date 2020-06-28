@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Из поставки апликација можете да омогућите/онемогућите Блуетоотх и обавештења, престанете да користите апликацију и избришете блиску историју контаката.</value>
-    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
+    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Апликација ће вас обавестити ако сте били блиски контакт са ЦОВИД-19 позитивним корисником.</value>
@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>Могуће је да сте близу близине кориснику који је био позитиван тестиран за КОВИД-19.  Додирните за више детаља.</value>
