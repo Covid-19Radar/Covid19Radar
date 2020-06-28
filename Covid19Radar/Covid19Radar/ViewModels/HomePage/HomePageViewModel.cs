@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
@@ -55,7 +56,7 @@ namespace Covid19Radar.ViewModels
             }
         }
 
-        public Command OnClickExposures => new Command(async () =>
+        public ICommand OnClickExposures => new AsyncDelegateCommand(async () =>
         {
             var count = exposureNotificationService.GetExposureCount();
             if (count > 0)

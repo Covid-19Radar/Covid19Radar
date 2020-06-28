@@ -6,6 +6,9 @@ using Covid19Radar.Model;
 using Covid19Radar.Views;
 using System.Diagnostics;
 using Xamarin.Forms.Internals;
+using System.Windows.Input;
+using Covid19Radar.Common;
+using System.Threading.Tasks;
 
 namespace Covid19Radar.ViewModels
 {
@@ -20,7 +23,7 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref selectedMenuItem, value);
         }
 
-        public DelegateCommand NavigateCommand { get; private set; }
+        public ICommand NavigateCommand { get; private set; }
 
         public MenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
@@ -202,10 +205,10 @@ namespace Covid19Radar.ViewModels
             });
 #endif
             */
-            NavigateCommand = new DelegateCommand(Navigate);
+            NavigateCommand = new AsyncDelegateCommand(Navigate);
         }
 
-        async void Navigate()
+        async Task Navigate()
         {
             ClearSelectedItem();
             SelectedMenuItem.IconColor = "#FFF";

@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using Acr.UserDialogs;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
@@ -37,18 +38,18 @@ namespace Covid19Radar.ViewModels
         }
 
 
-        public ICommand OnChangeExposureNotificationState => new Command(async () =>
+        public ICommand OnChangeExposureNotificationState => new AsyncDelegateCommand(async () =>
         {
             await userDataService.SetAsync(_UserData);
         });
 
 
-        public ICommand OnChangeNotificationState => new Command(async () =>
+        public ICommand OnChangeNotificationState => new AsyncDelegateCommand(async () =>
         {
             await userDataService.SetAsync(_UserData);
         });
 
-        public ICommand OnChangeResetData => new Command(async () =>
+        public ICommand OnChangeResetData => new AsyncDelegateCommand(async () =>
         {
             var check = await UserDialogs.Instance.ConfirmAsync(
                 Resources.AppResources.SettingsPageDialogResetText,

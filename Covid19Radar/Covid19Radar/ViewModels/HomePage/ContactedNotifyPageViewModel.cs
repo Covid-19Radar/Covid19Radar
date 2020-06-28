@@ -8,6 +8,8 @@ using System.Net.Http;
 using System;
 using ImTools;
 using Acr.UserDialogs;
+using Covid19Radar.Common;
+using System.Windows.Input;
 
 namespace Covid19Radar.ViewModels
 {
@@ -29,12 +31,12 @@ namespace Covid19Radar.ViewModels
             this.exposureNotificationService = exposureNotificationService;
             ExposureCount = exposureNotificationService.GetExposureCount().ToString();
         }
-        public Command OnClickByForm => new Command(async () =>
+        public ICommand OnClickByForm => new AsyncDelegateCommand(async () =>
         {
             var uri = AppResources.UrlContactedForm;
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
-        public Command OnClickByPhone => new Command(async () =>
+        public ICommand OnClickByPhone => new AsyncDelegateCommand(async () =>
         {
             var uri = AppResources.UrlContactedPhone;
             using (var client = new HttpClient())

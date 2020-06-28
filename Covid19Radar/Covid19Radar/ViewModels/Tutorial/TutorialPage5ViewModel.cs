@@ -1,4 +1,6 @@
-﻿using Covid19Radar.Model;
+﻿using System.Windows.Input;
+using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
@@ -20,7 +22,7 @@ namespace Covid19Radar.ViewModels
 
         }
 
-        public Command OnClickEnable => new Command(async () =>
+        public ICommand OnClickEnable => new AsyncDelegateCommand(async () =>
         {
             //var notification = new NotificationRequest
             //{
@@ -33,7 +35,7 @@ namespace Covid19Radar.ViewModels
             await userDataService.SetAsync(userData);
             await NavigationService.NavigateAsync(nameof(TutorialPage6));
         });
-        public Command OnClickDisable => new Command(async () =>
+        public ICommand OnClickDisable => new AsyncDelegateCommand(async () =>
         {
             userData.IsNotificationEnabled = false;
             await userDataService.SetAsync(userData);
