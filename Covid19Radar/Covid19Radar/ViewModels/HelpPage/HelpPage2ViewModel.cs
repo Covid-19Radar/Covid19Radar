@@ -1,4 +1,6 @@
-﻿using Covid19Radar.Views;
+﻿using System.Windows.Input;
+using Covid19Radar.Common;
+using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -11,7 +13,7 @@ namespace Covid19Radar.ViewModels
             Title = Resources.AppResources.HelpPage2Title;
         }
 
-        public Command OnClickNext => new Command(async () =>
+        public ICommand OnClickNext => new AsyncDelegateCommand(async () =>
         {
             await NavigationService.NavigateAsync(nameof(HelpPage4));
         });
