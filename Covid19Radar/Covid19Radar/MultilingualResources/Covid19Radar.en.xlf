@@ -482,6 +482,16 @@
           <target state="translated">Share this app</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
         </trans-unit>
+        <trans-unit id="HomePageDescription6" translate="yes" xml:space="preserve">
+          <source>Contact confirmation settings are all enabled.</source>
+          <target state="translated">Contact confirmation settings are all enabled.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認の設定はすべて有効です。</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription7" translate="yes" xml:space="preserve">
+          <source>Contact confirmation settings are disabled. Please turn on notifications and recording on the SettingsPage.</source>
+          <target state="translated">Contact confirmation settings are disabled. Please turn on notifications and recording on the SettingsPage.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">機能が無効になっています。設定ページで接触の検出と通知をONにしてください。</note>
+        </trans-unit>
         <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
           <source>Home</source>
           <target state="translated">Home</target>
