@@ -156,8 +156,8 @@
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>在“设置”中您可以设定蓝牙和通知的开启/关闭、停用应用和删除记录等。</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <value>您可以在应用设置中选择停止使用该应用并删除用户数据。</value>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</value>
@@ -535,7 +535,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/zh-hans/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>您有可能与潜在的 COVID-19 阳性患者有近距离接触。点击了解详情。</value>

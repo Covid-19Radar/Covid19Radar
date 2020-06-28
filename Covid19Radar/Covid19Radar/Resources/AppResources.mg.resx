@@ -157,7 +157,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Azonao atao ny mampiasa ny hanakana Bluetooth sy ny fampilazana amin' ny alalan' ny fampiasana ny application ary fafao ny tantara akaiky.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Ampandreneso anao ny application, raha toa ianao ka mifandray akaiky amin' ny mpampiasa COVID-19.</value>
@@ -535,7 +535,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>Azo tanterahina ny akaiky akaiky ny mpampiasa iray izay nosedraina tsara ho an' ny COVID-19.  Kasiho ireo antsipirian-javatra fanampiny.</value>

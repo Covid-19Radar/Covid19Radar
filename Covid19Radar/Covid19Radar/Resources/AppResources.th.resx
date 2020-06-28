@@ -157,7 +157,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>ในการตั้งค่าแอป คุณสามารถเปิด/ปิดบลูทูธ เปิด/ปิดการแจ้งเตือน หยุดใช้งานแอปพลิเคชัน และลบประวัติการพบปะใกล้ชิด</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>แอปพลิเคชันจะแจ้งเตือนหากคุณเคยมีการพบปะใกล้ชิดกับผู้ที่มีผลตรวจ COVID-19 เป็นบวก</value>
@@ -535,7 +535,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>มีความเป็นไปได้ที่คุณมีการพบปะใกล้ชิดกับผู้ที่ติดเชื้อ COVID-19 แตะเพื่อเพิ่มเติม</value>
