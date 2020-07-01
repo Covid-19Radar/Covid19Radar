@@ -699,4 +699,7 @@
     <value>登録エラー</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="ExposureCountUnit" xml:space="preserve">
+    <value>件</value>
+  </data>
 </root>
