@@ -52,7 +52,7 @@ On the Windows
 - macOS Catalina v10.15.5
 - Xcode v11.5
 You can remote build from windows with mac.However, if you have a Mac, it's better to build it there.
-[Installing Xamarin.iOS on Windows](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/)connecting-to-mac/
+[Installing Xamarin.iOS on Windows](https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/connecting-to-mac/)
 
 On the macOS
 
