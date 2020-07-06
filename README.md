@@ -54,7 +54,7 @@ Permission to use the following functions of the device is required.
 
 After the setup is complete, the contact log between the people who have installed this app is automatically recorded.
 
-For more information on setting up a development environment, please refer to [this document](doc/Developer.md).
+For more information on setting up a development environment, please refer to [this document](doc/Developer-Note.md).
 
 # About the design
 
