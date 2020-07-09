@@ -652,7 +652,7 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
           <source>The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter "management system").</source>
-          <target state="translated">Once you contract the virus, an 8-digit processing code will be sent to the phone number or email address that you registered in the Covid-19 Information and Management System (hereinafter "management system").</target>
+          <target state="translated">Once you contract the virus, an 8-digit processing code will be sent to the phone number or email address that you registered in the COVID-19 Information and Management System (hereinafter "management system").</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
