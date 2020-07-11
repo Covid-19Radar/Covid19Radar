@@ -489,7 +489,7 @@
         </trans-unit>
         <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
           <source>Term of use</source>
-          <target state="translated">Term of use</target>
+          <target state="translated">Terms of use</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
