@@ -764,33 +764,32 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Days</target>
+          <target state="translated" state-qualifier="mt-suggestion">Days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
           <source>Exposure Notification is active.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exposure Notification is active.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is active.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bluetooth is turned off. Please turn on Bluetooth.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Bluetooth is turned off. Please turn on Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
           <source>You must agree to the terms of use.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">You must agree to the terms of use.</target>
+          <target state="translated" state-qualifier="mt-suggestion">You must agree to the terms of use.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
           <source>COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exposure Notification is restricted. Please active.</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">COVID-19 Contact notification feature is not approved. Please approve it from the Operating System or re-approve after reinstalling the application.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
@@ -800,82 +799,82 @@
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Network connection error</target>
+          <target state="translated" state-qualifier="mt-suggestion">Network connection error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notification startup error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exposure Notification startup error</target>
+          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification startup error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
           <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</target>
+          <target state="translated">Exposure Notification could not startup. Open the terminal settings, turn on Exposure Notification feature and turn on Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Process number incorrect</target>
+          <target state="translated">Processing number incorrect</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cannot connect to registration center</target>
+          <target state="translated" state-qualifier="mt-suggestion">Cannot connect to registration center</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
           <source>Do you want to register positive information?</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Do you want to register positive information?</target>
+          <target state="translated">Do you want to register a positive test result?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Register</target>
+          <target state="translated" state-qualifier="mt-suggestion">Register</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
           <source>Canceled</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Canceled</target>
+          <target state="translated" state-qualifier="mt-suggestion">Canceled</target>
           <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
           <source>Please wait for a while until registration starts</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Please wait for a while until registration starts</target>
+          <target state="translated" state-qualifier="mt-suggestion">Please wait for a while until registration starts</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Awaiting registration</target>
+          <target state="translated" state-qualifier="mt-suggestion">Awaiting registration</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
           <source>No processing number entered</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">No processing number entered</target>
+          <target state="translated" state-qualifier="mt-suggestion">No processing number entered</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
           <source>Processing number format does not match</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Processing number format does not match</target>
+          <target state="translated" state-qualifier="mt-suggestion">Processing number format does not match</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
           <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</target>
+          <target state="translated">In order to register as tested positive, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
           <source>Enable COVID-19 contact logging</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enable COVID-19 contact logging</target>
+          <target state="translated" state-qualifier="mt-suggestion">Enable COVID-19 contact logging</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
           <source>The number of registrations has reached the upper limit. Exit application</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">The number of registrations has reached the upper limit. Exit application</target>
+          <target state="translated">The number of registrations reached the upper limit. Application will exit.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
           <source>Registration error</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Registration error</target>
+          <target state="translated" state-qualifier="mt-suggestion">Registration error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
