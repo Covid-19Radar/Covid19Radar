@@ -108,6 +108,7 @@
     <MtouchFloat32>true</MtouchFloat32>
     <BuildIpa>false</BuildIpa>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -513,7 +514,7 @@
       <Name>Covid19Radar</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin.ExposureNotification\Xamarin.ExposureNotification.csproj">
-      <Project>{58e47288-fe26-4402-97a1-ede546f1d849}</Project>
+      <Project>{83af4c2e-22f8-4dab-b993-be6abb3e56a1}</Project>
       <Name>Xamarin.ExposureNotification</Name>
     </ProjectReference>
   </ItemGroup>

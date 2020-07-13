@@ -11,6 +11,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.IO;
 
 namespace Covid19Radar.ViewModels
 {
@@ -145,6 +146,15 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonOk
                 );
                 await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+            }
+            catch (InvalidDataException ex)
+            {
+                errorCount++;
+                UserDialogs.Instance.Alert(
+                    Resources.AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFound,
+                    Resources.AppResources.NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle,
+                    Resources.AppResources.ButtonOk
+                );
             }
             catch (Exception ex)
             {
