@@ -40,7 +40,7 @@
         </StackLayout>
         <Button
             Grid.Row="2"
-            AutomationId="NextButton"
+            AutomationId="{x:Static resources:AppResources.TutorialPage3ButtonText}"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.TutorialPage3ButtonText}" />
