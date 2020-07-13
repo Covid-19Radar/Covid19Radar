@@ -29,7 +29,7 @@
             Style="{StaticResource DefaultWebView}" />
         <Button
             Grid.Row="2"
-            AutomationId="ButtonAgree"
+            AutomationId="{x:Static resources:AppResources.ButtonAgree}"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonAgree}" />
