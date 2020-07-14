@@ -27,7 +27,7 @@
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="OnClickSetting"
+                    AutomationId="{x:Static resources:AppResources.HelpPage4ButtonText}"
                     Command="{Binding Path=OnClickSetting}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.HelpPage4ButtonText}" />
