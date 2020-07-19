@@ -47,6 +47,8 @@
                     </Label>
                     <Button
                         AutomationId="ButtonExposures"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription2}"
                         Command="{Binding Path=OnClickExposures}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription2}" />
@@ -81,6 +83,8 @@
                     </Grid>
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription4}"
                         Command="{prism:NavigateTo 'SubmitConsentPage'}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription4}" />
@@ -113,6 +117,8 @@
                             VerticalTextAlignment="Center" />
                     </Grid>
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription5}"
                         Command="{Binding Path=OnClickShareApp}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.HomePageDescription5}" />

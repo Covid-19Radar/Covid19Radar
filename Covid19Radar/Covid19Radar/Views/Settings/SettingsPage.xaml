@@ -179,6 +179,8 @@
                     <Button
                         Grid.Row="0"
                         Grid.Column="1"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.ButtonReset}"
                         Command="{Binding OnChangeResetData}"
                         HorizontalOptions="End"
                         Style="{StaticResource DefaultButtonSmall}"
