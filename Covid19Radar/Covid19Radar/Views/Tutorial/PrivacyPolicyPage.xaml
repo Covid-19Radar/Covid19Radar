@@ -29,7 +29,9 @@
             Style="{StaticResource DefaultWebView}" />
         <Button
             Grid.Row="2"
-            AutomationId="{x:Static resources:AppResources.ButtonAgree}"
+            AutomationId="ButtonAgree"
+            AutomationProperties.IsInAccessibleTree="true"
+            AutomationProperties.Name="{x:Static resources:AppResources.ButtonAgree}"
             Command="{Binding Path=OnClickAgree}"
             Style="{StaticResource DefaultButton}"
             Text="{x:Static resources:AppResources.ButtonAgree}" />

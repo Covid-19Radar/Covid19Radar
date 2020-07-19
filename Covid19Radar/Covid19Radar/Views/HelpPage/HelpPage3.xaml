@@ -125,7 +125,9 @@
             </StackLayout>
             <Grid Grid.Row="1">
                 <Button
-                    AutomationId="{x:Static resources:AppResources.HelpPage3Description6}"
+                    AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.Name="{x:Static resources:AppResources.HelpPage3Description6}"
                     Command="{Binding Path=OnClickNotifyOtherPage}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.HelpPage3Description6}" />
