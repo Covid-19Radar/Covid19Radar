@@ -47,6 +47,8 @@
             <Grid Grid.Row="1">
                 <Button
                     AutomationId="OnClickShareApp"
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.Name="{x:Static resources:AppResources.NotContactPageButtonText}"
                     Command="{Binding Path=OnClickShareApp}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.NotContactPageButtonText}" />

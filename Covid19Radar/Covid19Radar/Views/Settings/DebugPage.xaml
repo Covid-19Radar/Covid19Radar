@@ -76,24 +76,32 @@
                     </StackLayout>
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="利用規約リセット"
                         Command="{Binding ToggleWelcome}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="利用規約リセット" />
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Reset Last Enabled State"
                         Command="{Binding ResetEnabled}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Last Enabled State" />
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Update Status"
                         Command="{Binding UpdateStatus}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Update Status" />
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="EN状態トグル"
                         Command="{Binding ToggleEn}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
@@ -108,6 +116,8 @@
                         Text="通知トグル" />
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Reset Self Diagnosis"
                         Command="{Binding ResetSelfDiagnosis}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
@@ -120,11 +130,15 @@
                         Style="{StaticResource DefaultLabelSmallColor}"
                         Text="Exposures" />
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Reset Exposures"
                         Command="{Binding ResetExposures}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Exposures" />
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Add Exposures"
                         Command="{Binding AddExposures}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
@@ -146,12 +160,16 @@
                     </StackLayout>
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Reset Batch File Index"
                         Command="{Binding ResetBatchFileIndex}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
                         Text="Reset Batch File Index" />
 
                     <Button
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="Trigger Key Fetch"
                         Command="{Binding ManualTriggerKeyFetch}"
                         HorizontalOptions="CenterAndExpand"
                         Style="{StaticResource DefaultButton}"
