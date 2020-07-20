@@ -26,5 +26,7 @@
 
         public const string positiveRegex = @"\b[0-9]{8}\b";
 
+        public const string PropertyStore = ".config/.isolated-storage/PropertyStore.forms";
+
     }
 }
