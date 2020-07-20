@@ -13,6 +13,9 @@ Both are likely to fit within the free tier.
 
 ![Folder](images/DevArchitecture.png)
 
+First, build in the local environment.
+[HOW_TO_BUILD_SERVER_SIDE](HOW_TO_BUILD_SERVER_SIDE.md)
+
 ### Functions (REST API)
 Azure Functions is used as a REST API.
 In addition, the batch operation of schedule execution is also performed.
