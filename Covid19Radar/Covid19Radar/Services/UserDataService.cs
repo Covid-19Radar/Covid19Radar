@@ -67,9 +67,9 @@ namespace Covid19Radar.Services
 
         public async Task ResetAllDataAsync()
         {
-            Application.Current.Properties.Remove("UserData");
             current = null;
-            await Application.Current.SavePropertiesAsync();
+            SecureStorage.Remove(AppConstants.StorageKey.UserData);
+            SecureStorage.Remove(AppConstants.StorageKey.Secret);
         }
     }
 
