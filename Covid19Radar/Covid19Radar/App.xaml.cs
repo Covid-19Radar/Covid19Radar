@@ -22,6 +22,7 @@ using System.Text;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
+using Xamarin.Essentials;
 //using Plugin.LocalNotification;
 
 /*
@@ -157,6 +158,11 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
+            if (VersionTracking.IsFirstLaunchEver)
+            {
+                SecureStorage.Remove(AppConstants.StorageKey.UserData);
+                SecureStorage.Remove(AppConstants.StorageKey.Secret);
+            }
         }
 
         protected override void OnResume()
