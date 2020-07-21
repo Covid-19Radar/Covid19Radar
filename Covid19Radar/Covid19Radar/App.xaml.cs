@@ -60,6 +60,9 @@ namespace Covid19Radar
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
+            // Migrate userData
+            await UserDataMigrationService.Migrate();
+
             // ignore backup
             Xamarin.Forms.DependencyService.Get<ISkipBackup>().skipBackup(AppConstants.PropertyStore);
 
