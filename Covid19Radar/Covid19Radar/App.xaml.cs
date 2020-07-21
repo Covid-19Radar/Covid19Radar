@@ -99,7 +99,7 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
-
+            _ = InitializeBackgroundTasks();
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -169,13 +169,12 @@ namespace Covid19Radar
         {
         }
 
-        /*
-         public async Task InitializeBackgroundTasks()
+        public async Task InitializeBackgroundTasks()
         {
             if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
-        */
+
         protected override void OnSleep()
         {
         }
