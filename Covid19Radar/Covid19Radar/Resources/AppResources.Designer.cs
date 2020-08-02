@@ -934,6 +934,42 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Search News on Google に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowPage {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Anti-Coronavirus Dashboard に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowStopCOVID19JP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowStopCOVID19JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   News に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageTitle {
+            get {
+                return ResourceManager.GetString("NewsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageUrl {
+            get {
+                return ResourceManager.GetString("NewsPageUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageButtonText {
@@ -1290,6 +1326,15 @@ namespace Covid19Radar.Resources {
         internal static string SettingsPageTitle {
             get {
                 return ResourceManager.GetString("SettingsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://www.stopcovid19.jp/#en に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string StopCOVID19JPUrl {
+            get {
+                return ResourceManager.GetString("StopCOVID19JPUrl", resourceCulture);
             }
         }
         
