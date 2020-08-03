@@ -48,11 +48,6 @@
 					<Frame Style="{StaticResource ForegroundFrame}">
 						<StackLayout Style="{StaticResource DefaultStackLayout}">
 							<!-- TODO: ここに統計情報を取得して表示するコードを追加 -->
-							<!-- TODO: 以下のラベルは削除する -->
-							<Label Text="Error: could not load statistics." />
-							<Label Text="Error: could not draw graphs." />
-							<Label Text="エラー：統計情報を読み込めません。" />
-							<Label Text="エラー：グラフを描画できません。" />
 						</StackLayout>
 					</Frame>
 					<Frame Style="{StaticResource ForegroundFrame}">
