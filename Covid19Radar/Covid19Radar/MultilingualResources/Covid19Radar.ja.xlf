@@ -901,6 +901,31 @@
           <target state="translated">接触記録データに問題があります</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
+        <trans-unit id="NewsPageTitle" translate="yes" xml:space="preserve">
+          <source>News</source>
+          <target state="translated">最新情報</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageUrl" translate="yes" xml:space="preserve">
+          <source>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</source>
+          <target state="translated">https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページで表示するWebページ (暫定的にGoogle)</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowPage" translate="yes" xml:space="preserve">
+          <source>Search News on Google</source>
+          <target state="translated">最新情報をGoogleで検索</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="StopCOVID19JPUrl" translate="yes" xml:space="preserve">
+          <source>https://www.stopcovid19.jp/#en</source>
+          <target state="translated">https://www.stopcovid19.jp/#ja</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
+          <source>Anti-Coronavirus Dashboard</source>
+          <target state="translated">対策ダッシュボード</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
       </group>
     </body>
   </file>
