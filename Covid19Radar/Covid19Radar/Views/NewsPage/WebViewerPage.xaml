@@ -16,13 +16,11 @@
 	Visual="Material">
 	<ContentPage.Content>
 		<Grid Style="{StaticResource DefaultGridLayout}">
-			<ScrollView>
-				<StackLayout Style="{StaticResource DefaultStackLayout}">
-					<views:NavigatePopoverWebView
-						Source="{Binding Url}"
-						Style="{StaticResource DefaultWebView}" />
-				</StackLayout>
-			</ScrollView>
+			<StackLayout Style="{StaticResource DefaultStackLayout}">
+				<views:NavigatePopoverWebView
+					Source="{Binding Url}"
+					Style="{StaticResource DefaultWebView}" />
+			</StackLayout>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

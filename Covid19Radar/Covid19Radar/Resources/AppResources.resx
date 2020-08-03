@@ -831,11 +831,11 @@
     <value>News</value>
     <comment>最新情報ページ</comment>
   </data>
-  <data name="NewsPageUrl" xml:space="preserve">
+  <data name="GoogleSearchUrl" xml:space="preserve">
     <value>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</value>
-    <comment>最新情報ページで表示するWebページ (暫定的にGoogle)</comment>
+    <comment>最新情報ページで表示するGoogle検索</comment>
   </data>
-  <data name="NewsPageButton_ShowPage" xml:space="preserve">
+  <data name="NewsPageButton_ShowGoogle" xml:space="preserve">
     <value>Search News on Google</value>
     <comment></comment>
   </data>
@@ -846,5 +846,21 @@
   <data name="NewsPageButton_ShowStopCOVID19JP" xml:space="preserve">
     <value>Anti-Coronavirus Dashboard</value>
     <comment></comment>
+  </data>
+  <data name="CoronaGoJPUrl" xml:space="preserve">
+    <value>https://corona.go.jp/en/</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageButton_ShowCoronaGoJP" xml:space="preserve">
+    <value>Data by Cabinet Secretariat</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageLabel_Links" xml:space="preserve">
+    <value>Links</value>
+    <comment>リンク集</comment>
+  </data>
+  <data name="NewsPageLabel_LinksDescription" xml:space="preserve">
+    <value>You can search information about new corona.</value>
+    <comment>新型コロナに関する情報を調べる事ができます。</comment>
   </data>
 </root>

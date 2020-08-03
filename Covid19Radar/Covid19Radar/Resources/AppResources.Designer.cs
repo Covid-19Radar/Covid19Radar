@@ -250,6 +250,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   https://corona.go.jp/en/ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CoronaGoJPUrl {
+            get {
+                return ResourceManager.GetString("CoronaGoJPUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogExposureNotificationStartupError {
@@ -408,6 +417,15 @@ namespace Covid19Radar.Resources {
         internal static string ExposuresPageTitle {
             get {
                 return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string GoogleSearchUrl {
+            get {
+                return ResourceManager.GetString("GoogleSearchUrl", resourceCulture);
             }
         }
         
@@ -934,11 +952,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Data by Cabinet Secretariat に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowCoronaGoJP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowCoronaGoJP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Search News on Google に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string NewsPageButton_ShowPage {
+        internal static string NewsPageButton_ShowGoogle {
             get {
-                return ResourceManager.GetString("NewsPageButton_ShowPage", resourceCulture);
+                return ResourceManager.GetString("NewsPageButton_ShowGoogle", resourceCulture);
             }
         }
         
@@ -952,20 +979,29 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Links に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_Links {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_Links", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can search information about new corona. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_LinksDescription {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_LinksDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   News に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NewsPageTitle {
             get {
                 return ResourceManager.GetString("NewsPageTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019 に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string NewsPageUrl {
-            get {
-                return ResourceManager.GetString("NewsPageUrl", resourceCulture);
             }
         }
         

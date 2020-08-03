@@ -907,12 +907,12 @@
           <target state="translated">News</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページ</note>
         </trans-unit>
-        <trans-unit id="NewsPageUrl" translate="yes" xml:space="preserve">
+        <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
           <source>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</source>
           <target state="translated">https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページで表示するWebページ (暫定的にGoogle)</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページで表示するGoogle検索</note>
         </trans-unit>
-        <trans-unit id="NewsPageButton_ShowPage" translate="yes" xml:space="preserve">
+        <trans-unit id="NewsPageButton_ShowGoogle" translate="yes" xml:space="preserve">
           <source>Search News on Google</source>
           <target state="translated">Search News on Google</target>
           <note from="MultilingualBuild" annotates="source" priority="2"></note>
@@ -926,6 +926,26 @@
           <source>Anti-Coronavirus Dashboard</source>
           <target state="translated">Anti-Coronavirus Dashboard</target>
           <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="CoronaGoJPUrl" translate="yes" xml:space="preserve">
+          <source>https://corona.go.jp/en/</source>
+          <target state="translated">https://corona.go.jp/en/</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowCoronaGoJP" translate="yes" xml:space="preserve">
+          <source>Data by Cabinet Secretariat</source>
+          <target state="translated">Data by Cabinet Secretariat</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Links" translate="yes" xml:space="preserve">
+          <source>Links</source>
+          <target state="translated">Links</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">リンク集</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_LinksDescription" translate="yes" xml:space="preserve">
+          <source>You can search information about new corona.</source>
+          <target state="translated">You can search information about new corona.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナに関する情報を調べる事ができます。</note>
         </trans-unit>
       </group>
     </body>
