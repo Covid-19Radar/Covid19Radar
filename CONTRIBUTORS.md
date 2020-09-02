@@ -75,6 +75,7 @@
 - Tassana Thaveeteeratham (Thai Translation)
 - Kotaro Sakamoto
 - Koichi Yokota (Documentation)
+- Yuto Takano
 - Jean-Noël Ribelles (French/English Translation)
 - Takashi Kishida (Documentation)
 - Yusuke Yamada (Xamarin)
