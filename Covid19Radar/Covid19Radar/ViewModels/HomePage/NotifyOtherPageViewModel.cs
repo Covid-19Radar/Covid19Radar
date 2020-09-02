@@ -40,7 +40,7 @@ namespace Covid19Radar.ViewModels
 
         public NotifyOtherPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = Resources.AppResources.TitileUserStatusSettings;
+            Title = Resources.AppResources.TitleUserStatusSettings;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             errorCount = 0;
@@ -52,11 +52,6 @@ namespace Covid19Radar.ViewModels
             var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonAgree, AppResources.ButtonCancel);
             if (!result)
             {
-                await UserDialogs.Instance.AlertAsync(
-                    AppResources.NotifyOtherPageDiag2Message,
-                    "",
-                    Resources.AppResources.ButtonOk
-                    );
                 return;
             }
 

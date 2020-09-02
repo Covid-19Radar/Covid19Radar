@@ -36,7 +36,13 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
-
+            MenuItems.Add(new MainMenuModel() {
+                Icon = "\uf0c0", //"\ue85c", //"\ud83d\udcf0",
+                PageName = nameof(NewsPage),
+                Title = Resources.AppResources.NewsPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf013",
@@ -45,7 +51,6 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0e0",
@@ -204,8 +209,8 @@ namespace Covid19Radar.ViewModels
                 Title = nameof(SubmitConsentPage)
             });
 #endif
-            */
             NavigateCommand = new AsyncDelegateCommand(Navigate);
+            // NavigateCommand = new DelegateCommand(Navigate);
         }
 
         async Task Navigate()

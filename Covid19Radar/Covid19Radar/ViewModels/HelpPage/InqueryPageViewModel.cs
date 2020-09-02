@@ -6,6 +6,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
@@ -39,6 +40,20 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnClickEmail => new AsyncDelegateCommand(async () =>
         {
+            // Device Model (SMG-950U, iPhone10,6)
+            var device = DeviceInfo.Model;
+
+            // Manufacturer (Samsung)
+            var manufacturer = DeviceInfo.Manufacturer;
+
+            // Operating System Version Number (7.0)
+            var version = DeviceInfo.VersionString;
+
+            // Platform (Android)
+            var platform = DeviceInfo.Platform;
+
+            var device_info = "DEVICE_INFO : " + AppSettings.Instance.AppVersion + "," + device + "("+ manufacturer + ")," + platform + "," + version;
+            Debug.WriteLine("DEVICE_INFO : " + device_info);
 
             try
             {
@@ -47,7 +62,7 @@ namespace Covid19Radar.ViewModels
                 var message = new EmailMessage
                 {
                     Subject = AppResources.InqueryMailSubject,
-                    Body = AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
+                    Body = device_info + "\r\n" + AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
                     To = recipients
                 };
                 await Email.ComposeAsync(message);

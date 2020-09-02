@@ -86,6 +86,21 @@ namespace Covid19Radar.Services
                 }
             });
             await userDataService.SetAsync(userData);
+            // If Enabled Local Notifications
+            /*
+            if (userData.IsNotificationEnabled)
+            {
+                var notification = new NotificationRequest
+                {
+                    NotificationId = 100,
+                    Title = AppResources.LocalNotificationTitle,
+                    Description = AppResources.LocalNotificationDescription,
+                    Android =
+                    {
+                        IconName = "logo_notification"
+                    }
+                };
+                */
 
             // If Enabled Local Notifications
             //if (userData.IsNotificationEnabled)

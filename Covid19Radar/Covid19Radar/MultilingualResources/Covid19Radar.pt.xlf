@@ -33,9 +33,9 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Configurações de Status</target>
+          <target state="translated" state-qualifier="tm-suggestion">Configurações de Status</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
@@ -139,7 +139,7 @@
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
-          <target state="translated">Esperando o registro</target>
+          <target state="translated">Esperando o registo</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
@@ -155,11 +155,11 @@
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
-          <target state="translated">Voltar ao registro</target>
+          <target state="translated">Voltar ao registo</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
           <source>Positive registration</source>
-          <target state="translated">Registro positivo</target>
+          <target state="translated">Registo positivo</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
@@ -167,7 +167,7 @@
         </trans-unit>
         <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
           <source>Help protect your family and friends by anonymously registering test results.</source>
-          <target state="translated">Ajude a proteger a sua família e amigos através do registro anónimo de resultados de testes.</target>
+          <target state="translated">Ajude a proteger a sua família e amigos através do registo anónimo de resultados de testes.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
         </trans-unit>
@@ -341,7 +341,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
           <source>Stop using and delete close contact records</source>
-          <target state="translated">Pare de usar e exclua registros de contato próximos</target>
+          <target state="translated">Pare de usar e exclua registos de contato próximos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
         </trans-unit>
         <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
@@ -391,7 +391,7 @@
         </trans-unit>
         <trans-unit id="ThankYouNotifyOtherPageDescription1" translate="yes" xml:space="preserve">
           <source>Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="translated">O registro é anônimo. Você não precisa inserir seu nome ou qualquer outra informação pessoal. Não são registradas informações sobre a localização do contato próximo.</target>
+          <target state="translated">O registo é anônimo. Você não precisa inserir seu nome ou qualquer outra informação pessoal. Não são registradas informações sobre a localização do contato próximo.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
@@ -436,7 +436,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
           <source>Tell your symptoms by phone Consultation Center</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Informe seus sintomas por telefone do Centro de Consultas</target>
+          <target state="translated" state-qualifier="mt-suggestion">Informe os seus sintomas por telefone do Centro de Consultas</target>
           <note from="MultilingualBuild" annotates="source" priority="2">帰国者・接触者外来に電話</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
@@ -586,7 +586,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
           <source>Users who were in close contact with you within the past 14 days will be notified. Registration is anonymous. You do not have to enter your name or any other personal information. No information regarding location of close contact is recorded.</source>
-          <target state="translated">Os usuários que estiveram em contato próximo com você nos últimos 14 dias serão notificados. O registro é anônimo. Você não precisa inserir seu nome ou qualquer outra informação pessoal. Não são registradas informações sobre a localização do contato próximo.</target>
+          <target state="translated">Os usuários que estiveram em contato próximo com você nos últimos 14 dias serão notificados. O registo é anônimo. Você não precisa inserir seu nome ou qualquer outra informação pessoal. Não são registradas informações sobre a localização do contato próximo.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
@@ -703,12 +703,12 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageTitle1" translate="yes" xml:space="preserve">
           <source>Consent to positive registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consentimento para registro positivo</target>
+          <target state="translated" state-qualifier="mt-suggestion">Consentimento para registo positivo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
           <source>Consent to positive registration</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consentimento para registro positivo</target>
+          <target state="translated" state-qualifier="mt-suggestion">Consentimento para registo positivo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
@@ -779,7 +779,7 @@
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
           <source>Inquiries about contact confirmation app</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consultas sobre o aplicativo de confirmação de contatos</target>
+          <target state="translated" state-qualifier="mt-suggestion">Consultas sobre o aplicativo de confirmação de contatos</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
@@ -841,7 +841,7 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="translated">Não é possível conectar-se ao centro de registro</target>
+          <target state="translated">Não é possível conectar-se ao centro de registo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
@@ -866,7 +866,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="translated">Aguardando registro</target>
+          <target state="translated">Aguardando registo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
@@ -881,32 +881,32 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
           <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
-          <target state="translated">Para registrar registros positivos, é necessário habilitar a gravação de registro de contato COVID-19, habilitá-lo a partir das configurações do aplicativo ou do sistema operacional.</target>
+          <target state="translated">Para registrar registos positivos, é necessário habilitar a gravação de registo de contato COVID-19, habilitá-lo a partir das configurações do aplicativo ou do sistema operacional.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
           <source>Enable COVID-19 contact logging</source>
-          <target state="translated">Habilite o registro de contatos do COVID-19</target>
+          <target state="translated">Habilite o registo de contatos do COVID-19</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
           <source>The number of registrations has reached the upper limit. Exit application</source>
-          <target state="translated">O número de registros atingiu o limite máximo. Sair do aplicativo</target>
+          <target state="translated">O número de registos atingiu o limite máximo. Sair do aplicativo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
           <source>Registration error</source>
-          <target state="translated">Erro de registro</target>
+          <target state="translated">Erro de registo</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
           <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">O registro de contato correspondente à submissão não pôde ser confirmado. Não há necessidade de se submeter.</target>
+          <target state="translated" state-qualifier="mt-suggestion">O registo de contato correspondente à submissão não pôde ser confirmado. Não há necessidade de submeter.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
           <source>No applicable contact</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nenhum contato aplicável</target>
+          <target state="translated" state-qualifier="mt-suggestion">Nenhum contato aplicável</target>
           <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
         </trans-unit>
         <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
@@ -915,17 +915,17 @@
         </trans-unit>
         <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
           <source>A new version of the app is available. Please update to the latest version.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uma nova versão do aplicativo está disponível. Por favor, atualize a versão mais recente.</target>
+          <target state="translated" state-qualifier="mt-suggestion">Uma nova versão do aplicativo está disponível. Por favor, atualize para versão mais recente.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
         </trans-unit>
         <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
           <source>Update to latest version</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atualização para a versão mais recente</target>
+          <target state="translated" state-qualifier="mt-suggestion">Atualização para a versão mais recente</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
           <source>There is a problem with the contact record data</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Há um problema com os dados de registro de contato</target>
+          <target state="translated" state-qualifier="mt-suggestion">Há um problema com os dados de registo de contato</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
       </group>

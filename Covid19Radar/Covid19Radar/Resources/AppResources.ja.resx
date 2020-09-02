@@ -31,7 +31,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>ステータス設定</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -699,6 +699,10 @@
     <value>登録エラー</value>
     <comment>登録エラー</comment>
   </data>
+  <data name="ExposureCountUnit" xml:space="preserve">
+    <value>件</value>
+    <comment>件</comment>
+  </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
     <value>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</value>
     <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
@@ -721,5 +725,41 @@
   <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
     <value>連絡先レコードデータに問題があります</value>
     <comment>接触記録データに問題があります</comment>
+  </data>
+  <data name="NewsPageTitle" xml:space="preserve">
+    <value>最新情報</value>
+    <comment>最新情報ページ</comment>
+  </data>
+  <data name="GoogleSearchUrl" xml:space="preserve">
+    <value>https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</value>
+    <comment>最新情報ページで表示するGoogle検索</comment>
+  </data>
+  <data name="NewsPageButton_ShowGoogle" xml:space="preserve">
+    <value>最新情報をGoogleで検索</value>
+    <comment></comment>
+  </data>
+	<data name="StopCOVID19JPUrl" xml:space="preserve">
+    <value>https://www.stopcovid19.jp/#ja</value>
+    <comment></comment>
+  </data>
+	<data name="NewsPageButton_ShowStopCOVID19JP" xml:space="preserve">
+    <value>対策ダッシュボード</value>
+    <comment></comment>
+  </data>
+  <data name="CoronaGoJPUrl" xml:space="preserve">
+    <value>https://corona.go.jp/dashboard/</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageButton_ShowCoronaGoJP" xml:space="preserve">
+    <value>内閣官房のデータ</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageLabel_Links" xml:space="preserve">
+    <value>リンク集</value>
+    <comment>リンク集</comment>
+  </data>
+  <data name="NewsPageLabel_LinksDescription" xml:space="preserve">
+    <value>新型コロナに関する情報を調べる事ができます。</value>
+    <comment>新型コロナに関する情報を調べる事ができます。</comment>
   </data>
 </root>

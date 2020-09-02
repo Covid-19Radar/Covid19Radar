@@ -24,6 +24,18 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnClickEnable => new AsyncDelegateCommand(async () =>
         {
+            var notification = new NotificationRequest
+            {
+                NotificationId = 100,
+                Title = AppResources.LocalNotificationPermittedTitle,
+                Description = AppResources.LocalNotificationPermittedDescription,
+                Android =
+                {
+                    IconName = "logo_notification"
+                }
+            };
+            NotificationCenter.Current.Show(notification);
+            */
             //var notification = new NotificationRequest
             //{
             //    NotificationId = 100,

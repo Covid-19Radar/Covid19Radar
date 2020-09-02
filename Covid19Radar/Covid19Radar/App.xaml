@@ -323,6 +323,30 @@
                 </Style.Triggers>
             </Style>
 
+            <Style x:Key="DefaultButtonSmall" TargetType="Button">
+                <Setter Property="Visual" Value="Default" />
+                <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BorderColor" Value="{StaticResource ButtonBorder}" />
+                <Setter Property="BorderWidth" Value="4" />
+                <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="Padding" Value="20,0" />
+                <Setter Property="Margin" Value="0,10,0,5" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="True">
+                        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackground}" />
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsEnabled" Value="False">
+                        <Setter Property="BackgroundColor" Value="{StaticResource Disabled}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
             <Style x:Key="DefaultButtonGrayedOut" TargetType="Button">
                 <Setter Property="Visual" Value="Default" />
                 <Setter Property="FontFamily" Value="NotoSansMediumFontFamily" />
