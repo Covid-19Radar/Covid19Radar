@@ -1,7 +1,7 @@
 # Client Side Project Note
 
 ## Android
-- Google Google SafetynetのAPIキーが必要です。 settings.json
+- Google SafetynetのAPIキーが必要です。 settings.json
 - 現在、xamarin.exposurenotificationのNUGET版は、バックグラウンド動作でExceptionが出ます。直接プロジェクトを参照しています。
 - Linker動作の変更が必要です。
 
@@ -11,7 +11,7 @@
 
 ### Exposure Notification
 - プロビジョニングプロファイルの適用は手動のみが対象です。
--　SDKバージョンは13.5以上（最新のXcodeを入れてください）
+- SDKバージョンは13.5以上（最新のXcodeを入れてください）
 - Linker動作の変更が必要です。
 
 ![image.png](.attachments/image-b9670ee1-20cc-4588-9671-901fbaa433cb.png)

@@ -116,6 +116,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
+    <PackageReference Include="Xamarin.iOS.ExposureNotification" Version="1.1.0-beta1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">

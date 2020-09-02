@@ -22,6 +22,7 @@ using System.Text;
 using FFImageLoading.Helpers;
 using FFImageLoading;
 using Xamarin.ExposureNotifications;
+using Xamarin.Essentials;
 //using Plugin.LocalNotification;
 
 /*
@@ -60,6 +61,12 @@ namespace Covid19Radar
             //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
+            // Migrate userData
+            await UserDataMigrationService.Migrate();
+
+            // ignore backup
+            Xamarin.Forms.DependencyService.Get<ISkipBackup>().skipBackup(AppConstants.PropertyStore);
+
             INavigationResult result;
             // Check user data and skip tutorial
             UserDataService userDataService = Container.Resolve<UserDataService>();
@@ -92,7 +99,7 @@ namespace Covid19Radar
                 };
                 System.Diagnostics.Debugger.Break();
             }
-
+            _ = InitializeBackgroundTasks();
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -151,19 +158,23 @@ namespace Covid19Radar
 
         protected override void OnStart()
         {
+            if (VersionTracking.IsFirstLaunchEver)
+            {
+                SecureStorage.Remove(AppConstants.StorageKey.UserData);
+                SecureStorage.Remove(AppConstants.StorageKey.Secret);
+            }
         }
 
         protected override void OnResume()
         {
         }
 
-        /*
-         public async Task InitializeBackgroundTasks()
+        public async Task InitializeBackgroundTasks()
         {
             if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
                 await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
         }
-        */
+
         protected override void OnSleep()
         {
         }

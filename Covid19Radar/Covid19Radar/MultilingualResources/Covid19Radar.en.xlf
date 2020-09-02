@@ -719,6 +719,7 @@
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
           <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
@@ -758,22 +759,22 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="translated" state-qualifier="mt-suggestion">Days</target>
+          <target state="translated">Days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
           <source>Exposure Notification is active.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is active.</target>
+          <target state="translated">Exposure Notification is active.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Bluetooth is turned off. Please turn on Bluetooth.</target>
+          <target state="translated">Bluetooth is turned off. Please turn on Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
+          <target state="translated">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
@@ -798,12 +799,12 @@
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notification startup error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification startup error</target>
+          <target state="translated">Exposure Notification startup error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
           <source>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</source>
-          <target state="translated">Exposure Notification could not startup. Open the terminal settings, turn on Exposure Notification feature and turn on Bluetooth.</target>
+          <target state="translated">Exposure Notification could not be startup. Open your device's settings, turn on Exposure Notification, and turn on Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
@@ -813,37 +814,37 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="translated" state-qualifier="mt-suggestion">Cannot connect to registration center</target>
+          <target state="translated">Cannot connect to registration center</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
           <source>Do you want to register positive information?</source>
-          <target state="translated">Do you want to register a positive test result?</target>
+          <target state="translated">Do you want to register positive information?</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="translated" state-qualifier="mt-suggestion">Register</target>
+          <target state="translated">Register</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
           <source>Canceled</source>
-          <target state="translated" state-qualifier="mt-suggestion">Canceled</target>
+          <target state="translated">Canceled</target>
           <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
           <source>Please wait for a while until registration starts</source>
-          <target state="translated" state-qualifier="mt-suggestion">Please wait for a while until registration starts</target>
+          <target state="translated">Please wait for a while until registration opens.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Awaiting registration</target>
+          <target state="translated">Awaiting registration</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
           <source>No processing number entered</source>
-          <target state="translated" state-qualifier="mt-suggestion">No processing number entered</target>
+          <target state="translated">No processing number is entered</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
@@ -853,12 +854,12 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
           <source>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</source>
-          <target state="translated">In order to register as tested positive, it is necessary to enable COVID-19 contact log recording, please enable it from the application or Operating System settings.</target>
+          <target state="translated">In order to register positive records, it is necessary to enable COVID-19 contact log recording. Please enable it from the application or Operating System settings.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
           <source>Enable COVID-19 contact logging</source>
-          <target state="translated" state-qualifier="mt-suggestion">Enable COVID-19 contact logging</target>
+          <target state="translated">Enable COVID-19 contact logging</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
@@ -868,8 +869,37 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
           <source>Registration error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Registration error</target>
+          <target state="translated">Registration error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
+          <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
+          <target state="translated">The contact record corresponding to the submission could not be confirmed. No need to submit.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
+          <source>No applicable contact</source>
+          <target state="translated">No appropriate contact</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="translated">A new version of the app is available. Please update to the latest version.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="translated">Update to latest version</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
+          <source>There is a problem with the contact record data</source>
+          <target state="translated">There is a problem with the contact record data</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
       </group>
     </body>
