@@ -1,4 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
 using Prism.Commands;
@@ -17,7 +20,7 @@ namespace Covid19Radar.ViewModels
             set => SetProperty(ref selectedMenuItem, value);
         }
 
-        public DelegateCommand NavigateCommand { get; private set; }
+        public ICommand NavigateCommand { get; private set; }
 
         public HelpMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
@@ -48,13 +51,16 @@ namespace Covid19Radar.ViewModels
                 Title = Resources.AppResources.HelpMenuPageLabel4
             });
 
-            NavigateCommand = new DelegateCommand(Navigate);
+            NavigateCommand = new AsyncDelegateCommand(Navigate);
         }
 
-        async void Navigate()
+        async Task Navigate()
         {
-            await NavigationService.NavigateAsync(SelectedMenuItem.PageName);
-            SelectedMenuItem = null;
+            if(SelectedMenuItem != null)
+            {
+                await NavigationService.NavigateAsync(SelectedMenuItem.PageName);
+                SelectedMenuItem = null;
+            }            
             return;
         }
     }

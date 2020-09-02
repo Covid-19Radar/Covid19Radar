@@ -31,7 +31,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
                 <ListView.Behaviors>
-                    <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemTapped" />
+                    <prism:EventToCommandBehavior Command="{Binding NavigateCommand}" EventName="ItemSelected" />
                 </ListView.Behaviors>
             </ListView>
         </StackLayout>

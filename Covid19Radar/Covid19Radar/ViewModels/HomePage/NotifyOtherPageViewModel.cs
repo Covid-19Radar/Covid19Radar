@@ -10,6 +10,7 @@ using System.Threading;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.IO;
 
 namespace Covid19Radar.ViewModels
@@ -46,7 +47,7 @@ namespace Covid19Radar.ViewModels
             DiagnosisUid = "";
         }
 
-        public Command OnClickRegister => (new Command(async () =>
+        public ICommand OnClickRegister => (new AsyncDelegateCommand(async () =>
         {
             var result = await UserDialogs.Instance.ConfirmAsync(AppResources.NotifyOtherPageDiag1Message, AppResources.NotifyOtherPageDiag1Title, AppResources.ButtonAgree, AppResources.ButtonCancel);
             if (!result)

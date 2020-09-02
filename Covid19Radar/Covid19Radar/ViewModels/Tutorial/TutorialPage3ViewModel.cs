@@ -1,4 +1,6 @@
-﻿using Acr.UserDialogs;
+﻿using System.Windows.Input;
+using Acr.UserDialogs;
+using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
@@ -24,7 +26,7 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
         }
-        public Command OnClickAgree => new Command(async () =>
+        public ICommand OnClickAgree => new AsyncDelegateCommand(async () =>
         {
 
             UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);

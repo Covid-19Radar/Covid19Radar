@@ -5,6 +5,8 @@ using System.Linq;
 using Xamarin.Forms;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
+using Covid19Radar.Common;
+using System.Windows.Input;
 
 namespace Covid19Radar.ViewModels
 {
@@ -53,8 +55,8 @@ namespace Covid19Radar.ViewModels
         public string CurrentBatchFileIndex
             => string.Join(", ", _UserData.ServerBatchNumbers.Select(p => $"{p.Key}={p.Value}"));
 
-        public Command ResetSelfDiagnosis
-            => new Command(async () =>
+        public ICommand ResetSelfDiagnosis
+            => new AsyncDelegateCommand(async () =>
             {
                 _UserData.ClearDiagnosis();
                 await userDataService.SetAsync(_UserData);
@@ -62,8 +64,8 @@ namespace Covid19Radar.ViewModels
             });
 
 
-        public Command ResetExposures
-            => new Command(async () =>
+        public ICommand ResetExposures
+            => new AsyncDelegateCommand(async () =>
             {
                 await Device.InvokeOnMainThreadAsync(() => _UserData.ExposureInformation.Clear());
                 _UserData.ExposureSummary = null;
@@ -71,8 +73,8 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync("Exposures Cleared!");
             });
 
-        public Command AddExposures
-            => new Command(async () =>
+        public ICommand AddExposures
+            => new AsyncDelegateCommand(async () =>
             {
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
@@ -95,7 +97,7 @@ namespace Covid19Radar.ViewModels
                 });
             });
 
-        public Command UpdateStatus => new Command(async () =>
+        public ICommand UpdateStatus => new AsyncDelegateCommand(async () =>
         {
             _UserData = this.userDataService.Get();
             _ = await exposureNotificationService.UpdateStatusMessageAsync();
@@ -103,21 +105,21 @@ namespace Covid19Radar.ViewModels
         });
 
 
-        public Command ToggleWelcome => new Command(async () =>
+        public ICommand ToggleWelcome => new AsyncDelegateCommand(async () =>
         {
             _UserData.IsOptined = !_UserData.IsOptined;
             await userDataService.SetAsync(_UserData);
         });
 
-        public Command ToggleEn => new Command(async () =>
+        public ICommand ToggleEn => new AsyncDelegateCommand(async () =>
         {
             _UserData.IsExposureNotificationEnabled = !_UserData.IsExposureNotificationEnabled;
             await userDataService.SetAsync(_UserData);
         });
 
 
-        public Command ResetEnabled
-            => new Command(async () =>
+        public ICommand ResetEnabled
+            => new AsyncDelegateCommand(async () =>
             {
                 using (UserDialogs.Instance.Loading(string.Empty))
                 {
@@ -130,8 +132,8 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync("Last known enabled state reset!");
             });
 
-        public Command ResetBatchFileIndex
-            => new Command(async () =>
+        public ICommand ResetBatchFileIndex
+            => new AsyncDelegateCommand(async () =>
             {
                 _UserData.ServerBatchNumbers = AppSettings.Instance.GetDefaultBatch();
                 await userDataService.SetAsync(_UserData);
@@ -139,8 +141,8 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync("Reset Batch file index!");
             });
 
-        public Command ManualTriggerKeyFetch
-            => new Command(async () =>
+        public ICommand ManualTriggerKeyFetch
+            => new AsyncDelegateCommand(async () =>
             {
                 using (UserDialogs.Instance.Loading("Fetching..."))
                 {

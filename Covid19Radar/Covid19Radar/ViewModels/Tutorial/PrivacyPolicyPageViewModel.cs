@@ -1,4 +1,6 @@
-﻿using Covid19Radar.Model;
+﻿using System.Windows.Input;
+using Covid19Radar.Common;
+using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Views;
@@ -30,7 +32,7 @@ namespace Covid19Radar.ViewModels
 
         }
 
-        public Command OnClickAgree => new Command(async () =>
+        public ICommand OnClickAgree => new AsyncDelegateCommand(async () =>
         {
             userData.IsPolicyAccepted = true;
             await userDataService.SetAsync(userData);
