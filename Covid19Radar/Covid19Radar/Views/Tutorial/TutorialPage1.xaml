@@ -93,6 +93,8 @@
                 <Button
                     Grid.Row="1"
                     AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage1Button}"
                     Command="{prism:NavigateTo 'TutorialPage2'}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.TutorialPage1Button}" />

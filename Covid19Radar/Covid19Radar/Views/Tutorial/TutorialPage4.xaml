@@ -42,6 +42,8 @@
                     <StackLayout>
                         <Button
                         AutomationId="EnableButton"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage4Button1}"
                         Command="{Binding Path=OnClickEnable}"
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.TutorialPage4Button1}" />
@@ -49,6 +51,8 @@
                         <Button
                         Margin="0,10,0,0"
                         AutomationId="DisableButton"
+                        AutomationProperties.IsInAccessibleTree="true"
+                        AutomationProperties.Name="{x:Static resources:AppResources.TutorialPage4Button2}"
                         Command="{Binding Path=OnClickDisable}"
                         Style="{StaticResource DefaultButtonGrayedOut}"
                         Text="{x:Static resources:AppResources.TutorialPage4Button2}" />
