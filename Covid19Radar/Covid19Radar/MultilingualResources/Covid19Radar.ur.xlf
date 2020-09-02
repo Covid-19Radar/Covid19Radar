@@ -33,7 +33,7 @@
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">حالت سیٹنگیں</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
@@ -892,6 +892,35 @@
           <source>Registration error</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">رجسٹریشن نقص</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
+          <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">جمع کرانے کے متعلقہ رابطہ ریکارڈ کی تصدیق نہیں کی جا سکتی ۔ جمع کرنے کی ضرورت نہیں.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
+          <source>No applicable contact</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">قابل اطلاق رابطہ فرد</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ایپ کا ایک نیا ورژن دستیاب ہے ۔ براہ مہربانی تازہ ترین ورژن کی تازہ کاری کریں ۔</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">تازہ ترین ورژن کی تازہ کاری کریں</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
+          <source>There is a problem with the contact record data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">رابطہ ریکارڈ کوائف کے ساتھ کوئی مسئلہ ہے</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
       </group>
     </body>

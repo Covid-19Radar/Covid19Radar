@@ -22,7 +22,7 @@ namespace Covid19Radar.ViewModels
 
         public SharePositiveDiagnosisPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
         {
-            Title = Resources.AppResources.TitileSharePositiveDiagnosis;
+            Title = Resources.AppResources.TitleSharePositiveDiagnosis;
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
         }
