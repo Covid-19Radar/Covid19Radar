@@ -31,7 +31,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>Configuració d'estat</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Des de la configuració de l'aplicació, podeu activar/desactivar el Bluetooth i les notificacions, deixar d'utilitzar l'aplicació i suprimir l'Historial de contactes proper.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>L'app li notificarà, si estava en contacte estret amb COVID-19 usuari positiu.</value>
@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>És possible que hagi estat en estreta proximitat a un usuari que va provar positiu per COVID-19.  Toqueu per obtenir-ne més detalls.</value>
@@ -698,5 +698,28 @@
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
     <value>Error de registre</value>
     <comment>登録エラー</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>No s'ha pogut confirmar el registre de contacte corresponent a la tramesa. No hi ha necessitat de presentar.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Sense contacte aplicable</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>Hi ha disponible una nova versió de l'aplicació. Si us plau actualitzi a la versió més recent.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Actualitza-la a la darrera versió</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>Hi ha un problema amb les dades del registre de contacte</value>
+    <comment>接触記録データに問題があります</comment>
   </data>
 </root>

@@ -144,7 +144,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>Status Settings</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -359,8 +359,8 @@
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <value>From app settings, you can stop using the app and delete user data.</value>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage3Description1" xml:space="preserve">
     <value>If you tested positive</value>
@@ -682,7 +682,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</value>
@@ -803,5 +803,64 @@
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
     <value>Registration error</value>
     <comment>登録エラー</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>The contact record corresponding to the submission could not be confirmed. No need to submit.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>No applicable contact</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>A new version of the app is available. Please update to the latest version.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Update to latest version</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>There is a problem with the contact record data</value>
+    <comment>接触記録データに問題があります</comment>
+  </data>
+  <data name="NewsPageTitle" xml:space="preserve">
+    <value>News</value>
+    <comment>最新情報ページ</comment>
+  </data>
+  <data name="GoogleSearchUrl" xml:space="preserve">
+    <value>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</value>
+    <comment>最新情報ページで表示するGoogle検索</comment>
+  </data>
+  <data name="NewsPageButton_ShowGoogle" xml:space="preserve">
+    <value>Search News on Google</value>
+    <comment></comment>
+  </data>
+  <data name="StopCOVID19JPUrl" xml:space="preserve">
+    <value>https://www.stopcovid19.jp/#en</value>
+    <comment></comment>
+  </data>
+  <data name="NewsPageButton_ShowStopCOVID19JP" xml:space="preserve">
+    <value>Anti-Coronavirus Dashboard</value>
+    <comment></comment>
+  </data>
+  <data name="CoronaGoJPUrl" xml:space="preserve">
+    <value>https://corona.go.jp/en/</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageButton_ShowCoronaGoJP" xml:space="preserve">
+    <value>Data by Cabinet Secretariat</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageLabel_Links" xml:space="preserve">
+    <value>Links</value>
+    <comment>リンク集</comment>
+  </data>
+  <data name="NewsPageLabel_LinksDescription" xml:space="preserve">
+    <value>You can search information about new corona.</value>
+    <comment>新型コロナに関する情報を調べる事ができます。</comment>
   </data>
 </root>

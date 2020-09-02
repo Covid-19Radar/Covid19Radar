@@ -5,6 +5,7 @@ using ImTools;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
@@ -43,9 +44,9 @@ namespace Covid19Radar.Services
             _downloadTimer.TimeOutEvent += OnTimerInvoked;
         }
 
-        private async void OnTimerInvoked(EventArgs e)
+        private void OnTimerInvoked(EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
+            Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
             //await FetchExposureKeyAsync();
         }
 
@@ -66,10 +67,10 @@ namespace Covid19Radar.Services
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {
-            Console.WriteLine("User Data has Changed!!!");
+            Debug.WriteLine("User Data has Changed!!!");
             this.userData = userDataService.Get();
-            Console.WriteLine(Utils.SerializeToJson(userData));
-            await UpdateStatusMessage();
+            Debug.WriteLine(Utils.SerializeToJson(userData));
+            await UpdateStatusMessageAsync();
         }
 
         public async Task FetchExposureKeyAsync()
@@ -82,24 +83,22 @@ namespace Covid19Radar.Services
             return userData.ExposureInformation.Count();
         }
 
-        public async Task<string> UpdateStatusMessage()
+        public async Task<string> UpdateStatusMessageAsync()
         {
             this.ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
-            return GetStatusMessage();
+            return await GetStatusMessageAsync();
         }
 
         private async Task DisabledAsync()
         {
             userData.IsExposureNotificationEnabled = false;
             await userDataService.SetAsync(userData);
-            await UpdateStatusMessage();
         }
 
         private async Task EnabledAsync()
         {
             userData.IsExposureNotificationEnabled = true;
             await userDataService.SetAsync(userData);
-            await UpdateStatusMessage();
         }
 
 
@@ -138,7 +137,7 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error disabling notifications: {ex}");
+                Debug.WriteLine($"Error disabling notifications: {ex}");
                 return false;
             }
             finally
@@ -147,18 +146,18 @@ namespace Covid19Radar.Services
             }
         }
 
-        public string GetStatusMessage()
+        private async Task<string> GetStatusMessageAsync()
         {
             var message = "";
 
             switch (ExposureNotificationStatus)
             {
                 case Status.Unknown:
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageUnknown, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageUnknown;
                     break;
                 case Status.Disabled:
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageDisabled, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageDisabled;
                     break;
                 case Status.Active:
@@ -166,12 +165,12 @@ namespace Covid19Radar.Services
                     break;
                 case Status.BluetoothOff:
                     // call out settings in each os
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageBluetoothOff;
                     break;
                 case Status.Restricted:
                     // call out settings in each os
-                    UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, Resources.AppResources.DialogExposureNotificationStartupErrorTitle, Resources.AppResources.ButtonOk);
+                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.ExposureNotificationStatusMessageRestricted, "", Resources.AppResources.ButtonOk);
                     message = Resources.AppResources.ExposureNotificationStatusMessageRestricted;
                     break;
                 default:
@@ -184,7 +183,7 @@ namespace Covid19Radar.Services
             }
 
             this.CurrentStatusMessage = message;
-            Console.WriteLine(message);
+            Debug.WriteLine(message);
             return message;
         }
 

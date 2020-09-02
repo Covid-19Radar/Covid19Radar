@@ -79,7 +79,8 @@
     <CrashReportingDelay>-1</CrashReportingDelay>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-    <MtouchInterpreter>-all</MtouchInterpreter>
+    <MtouchInterpreter>
+    </MtouchInterpreter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DefineConstants>DEBUG;__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
@@ -106,6 +107,8 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <MtouchFloat32>true</MtouchFloat32>
     <BuildIpa>false</BuildIpa>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -197,13 +200,14 @@
     <LangVersion>latest</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-<MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
+    <Compile Include="Services\SkipBackup.cs" />
     <None Include="appcenter-pre-build.sh" />
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">
       <Visible>false</Visible>
@@ -265,6 +269,7 @@
     <ImageAsset Include="Assets.xcassets\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <None Include="Entitlements.simulator.plist" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -473,9 +478,6 @@
     <PackageReference Include="Google.Protobuf">
       <Version>3.12.3</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.LocalNotification">
-      <Version>5.0.4</Version>
-    </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.431</Version>
     </PackageReference>
@@ -491,15 +493,18 @@
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.3.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.ExposureNotification">
+      <Version>0.12.0-preview</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.967" />
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.7.0.968</Version>
+      <Version>4.6.0.967</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.iOS.ExposureNotification">
       <Version>1.1.0-beta1</Version>

@@ -31,7 +31,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>حالت سیٹنگیں</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>ایپ کی ترتیبات سے ، آپ بلوٹوت اور اطلاعات کو فعال/غیر فعال کرسکتے ہیں ، ایپ کا استعمال بند کریں اور قریبی رابطہ کی سرگزشت حذف کریں ۔</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>اگر آپ COVID کے ساتھ قریبی رابطے میں تھے تو اپلی کیشن آپ کو مطلع کرے گا-19 مثبت صارف.</value>
@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>یہ ممکن ہے کہ آپ ایک صارف کے قریب قربت میں ہیں جنہوں نے COVID کے لئے مثبت تجربہ کیا ہے.  مزید تفصیلات کے لئے ٹیپ کریں ۔</value>
@@ -698,5 +698,28 @@
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
     <value>رجسٹریشن نقص</value>
     <comment>登録エラー</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>جمع کرانے کے متعلقہ رابطہ ریکارڈ کی تصدیق نہیں کی جا سکتی ۔ جمع کرنے کی ضرورت نہیں.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>قابل اطلاق رابطہ فرد</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>ایپ کا ایک نیا ورژن دستیاب ہے ۔ براہ مہربانی تازہ ترین ورژن کی تازہ کاری کریں ۔</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>تازہ ترین ورژن کی تازہ کاری کریں</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>رابطہ ریکارڈ کوائف کے ساتھ کوئی مسئلہ ہے</value>
+    <comment>接触記録データに問題があります</comment>
   </data>
 </root>

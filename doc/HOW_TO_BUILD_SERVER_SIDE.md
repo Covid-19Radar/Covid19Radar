@@ -1,4 +1,5 @@
-# Easy step by step for functions development
+# Step by step for server side development
+
 ## 1. Requirements
 - Visual Studio 2019 
   - feature develop Azure Function. (doc [en-us](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs) / [ja-jp](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-develop-vs))
@@ -31,3 +32,6 @@ any thing.
 ```
 
 ## 4. build and Debug
+
+Ctrl + Alt + B / F5 Key
+

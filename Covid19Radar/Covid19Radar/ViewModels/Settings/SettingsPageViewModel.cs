@@ -4,6 +4,7 @@ using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
@@ -31,7 +32,7 @@ namespace Covid19Radar.ViewModels
         public SettingsPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.SettingsPageTitle;
-            AppVer = AppSettings.Instance.AppVersion;
+            AppVer = AppInfo.VersionString;// AppSettings.Instance.AppVersion;
             this.userDataService = userDataService;
             _UserData = this.userDataService.Get();
             this.exposureNotificationService = exposureNotificationService;
@@ -39,7 +40,14 @@ namespace Covid19Radar.ViewModels
 
         public ICommand OnChangeExposureNotificationState => new Command(async () =>
         {
-            await userDataService.SetAsync(_UserData);
+            if (UserData.IsExposureNotificationEnabled)
+            {
+                await exposureNotificationService.StartExposureNotification();
+            }
+            else
+            {
+                await exposureNotificationService.StopExposureNotification();
+            }
         });
 
         public ICommand OnChangeNotificationState => new Command(async () =>
@@ -65,8 +73,7 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Reset All Data and Optout
-                UserDataModel userData = new UserDataModel();
-                await userDataService.SetAsync(userData);
+                await userDataService.ResetAllDataAsync();
 
                 UserDialogs.Instance.HideLoading();
                 await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);

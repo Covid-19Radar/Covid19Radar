@@ -12,6 +12,7 @@
 - Yasuaki Matsuda (Server side / Azure Functions)
 - Takashi Takebayashi (Multilingual localization)
 - Akihiko Kodama (UI/UX Design Adviser)
+- Atsushi Kuramochi (Xamarin / Program Debug)
 - Ben Ishiyama-Levy (Xamarin / [Xamariners](https://xamariners.com/))
 - Udara Alwis (Xamarin / [Xamariners](https://xamariners.com/))
 - Pedro Costa (Xamarin / [Xamariners](https://xamariners.com/))
@@ -33,7 +34,7 @@
 - Yuya Yoshida (Public Relations and Activity)
 - Nori Suzuki (Public Relations and Activity)
 - Rie Moriguchi (Public Relations and Activity)
-- Michiyo Hano (Public Relations and Activity)
+- Michiyo Hano (Public Relations and Documentation)
 - Ryota Nakamura (Beta Testers communication lead)
 - Takafumi Ochiai (Privacy policy development / Domestic and foreign law expert lawyer)
 - Jurika Morita (Privacy policy development / Domestic and foreign law expert lawyer)
@@ -69,8 +70,19 @@
 - Mizuki Kubota
 - Moe Sakuraba
 - Yuki Kawanishi
+- Satoshi Iguchi
+- Kimihiro Shirase
+- Tassana Thaveeteeratham (Thai Translation)
+- Kotaro Sakamoto
+- Koichi Yokota (Documentation)
+- Niccori 250k (Xamarin)
+- Yuto Takano
+- Jean-Noël Ribelles (French/English Translation)
+- Takashi Kishida (Documentation)
+- Yusuke Yamada (Xamarin)
+- Takym (News Page)
 
-# Beta Testers
+# Original Covid19Radar Beta Testers
 - Nagahata Kenji
 - Takahiro Soda
 - もくだいさん

@@ -31,7 +31,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>상태 설정</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>앱 설정에서, Bluetooth와 알림의 사용 여부, 앱 사용 중지와 내역 삭제를 할 수 있습니다.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>접촉한 사람 중 신형 코로나 바이러스 양성 판정 등록된 사람이 있는 경우, 스마트폰으로 알림이 옵니다.</value>
@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>COVID-19에 대해 양성 반응을 보인 사용자와 가까운 거리에 있을 수 있습니다.  자세한 내용을 보려면 누릅니다.</value>
@@ -698,5 +698,28 @@
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
     <value>등록 오류</value>
     <comment>登録エラー</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>제출에 해당하는 연락처 레코드를 확인할 수 없습니다. 제출할 필요가 없습니다.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>해당 연락처 없음</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>새 버전의 앱을 사용할 수 있습니다. 최신 버전으로 업데이트하십시오.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>최신 버전으로 업데이트</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>연락처 레코드 데이터에 문제가 있습니다.</value>
+    <comment>接触記録データに問題があります</comment>
   </data>
 </root>

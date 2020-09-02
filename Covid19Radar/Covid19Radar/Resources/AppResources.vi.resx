@@ -31,7 +31,7 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
+  <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>Cài đặt trạng thái</value>
     <comment>User Status Page Title</comment>
   </data>
@@ -183,7 +183,7 @@
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
     <value>Từ cài đặt ứng dụng, bạn có thể bật/tắt Bluetooth và thông báo, ngừng sử dụng ứng dụng và xóa lịch sử Liên hệ gần.</value>
-    <comment>アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</comment>
+    <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
     <value>Các ứng dụng sẽ thông báo cho bạn, nếu bạn đã liên lạc gần gũi với COVID-19 tích cực sử dụng.</value>
@@ -577,7 +577,7 @@
     <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</value>
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>Có thể bạn đã ở gần với một người dùng đã thử nghiệm tích cực cho COVID-19.  Nhấn để biết thêm chi tiết.</value>
@@ -698,5 +698,28 @@
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
     <value>Lỗi đăng ký</value>
     <comment>登録エラー</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
+    <value>Hồ sơ liên hệ tương ứng với việc gửi không thể được xác nhận. Không cần phải gửi.</value>
+    <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
+  </data>
+  <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
+    <value>Không có liên hệ áp dụng</value>
+    <comment>該当接触なし</comment>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+  </data>
+  <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
+    <value>Phiên bản mới của ứng dụng có sẵn. Vui lòng cập nhật lên phiên bản mới nhất.</value>
+    <comment>新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</comment>
+  </data>
+  <data name="AppUtilsGetNewVersionTitle" xml:space="preserve">
+    <value>Cập nhật lên phiên bản mới nhất</value>
+    <comment>最新版への更新</comment>
+  </data>
+  <data name="ExposureNotificationHandler3ErrorMessage" xml:space="preserve">
+    <value>Có vấn đề với dữ liệu bản ghi người liên hệ</value>
+    <comment>接触記録データに問題があります</comment>
   </data>
 </root>

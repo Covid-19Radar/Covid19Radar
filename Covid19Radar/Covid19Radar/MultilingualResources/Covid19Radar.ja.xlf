@@ -30,7 +30,7 @@
           <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/japanese_pp_00027.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="translated">ステータス設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
@@ -223,9 +223,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
-          <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</source>
-          <target state="translated">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
+          <source>From app settings, you can stop using the app and delete user data.</source>
+          <target state="translated">アプリの設定から、アプリの使用中止と利用者情報の削除を行うことができます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
@@ -717,12 +717,13 @@
           <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/index.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/chatbot4.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot4.html</target>
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</source>
+          <target state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
-          <target state="translated">新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら。</target>
+          <target state="translated">新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</target>
           <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
         </trans-unit>
         <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
@@ -870,6 +871,80 @@
           <source>Registration error</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">登録エラー</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
+          <source>The contact record corresponding to the submission could not be confirmed. No need to submit.</source>
+          <target state="translated">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
+          <source>No applicable contact</source>
+          <target state="translated">該当接触なし</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>A new version of the app is available. Please update to the latest version.</source>
+          <target state="translated" state-qualifier="mt-suggestion">新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>Update to latest version</source>
+          <target state="translated" state-qualifier="mt-suggestion">最新バージョンに更新</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
+          <source>There is a problem with the contact record data</source>
+          <target state="translated">接触記録データに問題があります</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
+        </trans-unit>
+        <trans-unit id="NewsPageTitle" translate="yes" xml:space="preserve">
+          <source>News</source>
+          <target state="translated">最新情報</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページ</note>
+        </trans-unit>
+        <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
+          <source>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</source>
+          <target state="translated">https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページで表示するGoogle検索</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowGoogle" translate="yes" xml:space="preserve">
+          <source>Search News on Google</source>
+          <target state="translated">最新情報をGoogleで検索</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="StopCOVID19JPUrl" translate="yes" xml:space="preserve">
+          <source>https://www.stopcovid19.jp/#en</source>
+          <target state="translated">https://www.stopcovid19.jp/#ja</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
+          <source>Anti-Coronavirus Dashboard</source>
+          <target state="translated">対策ダッシュボード</target>
+          <note from="MultilingualBuild" annotates="source" priority="2"></note>
+        </trans-unit>
+        <trans-unit id="CoronaGoJPUrl" translate="yes" xml:space="preserve">
+          <source>https://corona.go.jp/en/</source>
+          <target state="translated">https://corona.go.jp/dashboard/</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowCoronaGoJP" translate="yes" xml:space="preserve">
+          <source>Data by Cabinet Secretariat</source>
+          <target state="translated">内閣官房のデータ</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Links" translate="yes" xml:space="preserve">
+          <source>Links</source>
+          <target state="translated">リンク集</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">リンク集</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_LinksDescription" translate="yes" xml:space="preserve">
+          <source>You can search information about new corona.</source>
+          <target state="translated">新型コロナに関する情報を調べる事ができます。</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナに関する情報を調べる事ができます。</note>
         </trans-unit>
       </group>
     </body>

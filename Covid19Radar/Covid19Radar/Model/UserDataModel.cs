@@ -45,8 +45,8 @@ namespace Covid19Radar.Model
         {
             return UserUuid == other?.UserUuid
                 && LastNotificationTime == other?.LastNotificationTime
-                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled
-                && IsNotificationEnabled == other.IsNotificationEnabled;
+                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
+                //&& IsNotificationEnabled == other.IsNotificationEnabled;
         }
 
         /// <summary>
@@ -93,11 +93,11 @@ namespace Covid19Radar.Model
 
         public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
-        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
+        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultBatch();
 
-        public ObservableCollection<ExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<ExposureInfo>();
+        public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
 
-        public ExposureDetectionSummary ExposureSummary { get; set; }
+        public UserExposureSummary ExposureSummary { get; set; }
 
         // for mock
         public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
@@ -114,7 +114,7 @@ namespace Covid19Radar.Model
                 return;
 
             // Remove ones that were not submitted as the new one is better
-            PositiveDiagnoses.RemoveAll(d => !d.Shared);
+            PositiveDiagnoses.Clear();
 
             PositiveDiagnoses.Add(new PositiveDiagnosisState
             {
@@ -128,13 +128,6 @@ namespace Covid19Radar.Model
 
         public PositiveDiagnosisState LatestDiagnosis
             => PositiveDiagnoses
-                .Where(d => d.Shared)
-                .OrderByDescending(p => p.DiagnosisDate)
-                .FirstOrDefault();
-
-        public PositiveDiagnosisState PendingDiagnosis
-            => PositiveDiagnoses
-                .Where(d => !d.Shared)
                 .OrderByDescending(p => p.DiagnosisDate)
                 .FirstOrDefault();
 
