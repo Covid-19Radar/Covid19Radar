@@ -827,4 +827,40 @@
     <value>There is a problem with the contact record data</value>
     <comment>接触記録データに問題があります</comment>
   </data>
+  <data name="NewsPageTitle" xml:space="preserve">
+    <value>News</value>
+    <comment>最新情報ページ</comment>
+  </data>
+  <data name="GoogleSearchUrl" xml:space="preserve">
+    <value>https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019</value>
+    <comment>最新情報ページで表示するGoogle検索</comment>
+  </data>
+  <data name="NewsPageButton_ShowGoogle" xml:space="preserve">
+    <value>Search News on Google</value>
+    <comment></comment>
+  </data>
+  <data name="StopCOVID19JPUrl" xml:space="preserve">
+    <value>https://www.stopcovid19.jp/#en</value>
+    <comment></comment>
+  </data>
+  <data name="NewsPageButton_ShowStopCOVID19JP" xml:space="preserve">
+    <value>Anti-Coronavirus Dashboard</value>
+    <comment></comment>
+  </data>
+  <data name="CoronaGoJPUrl" xml:space="preserve">
+    <value>https://corona.go.jp/en/</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageButton_ShowCoronaGoJP" xml:space="preserve">
+    <value>Data by Cabinet Secretariat</value>
+    <comment>内閣官房のデータ</comment>
+  </data>
+  <data name="NewsPageLabel_Links" xml:space="preserve">
+    <value>Links</value>
+    <comment>リンク集</comment>
+  </data>
+  <data name="NewsPageLabel_LinksDescription" xml:space="preserve">
+    <value>You can search information about new corona.</value>
+    <comment>新型コロナに関する情報を調べる事ができます。</comment>
+  </data>
 </root>
