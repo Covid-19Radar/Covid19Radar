@@ -1,5 +1,9 @@
 # Client Side Project Note
 
+## 共通
+- 通信処理にMock を適用するには、Covid19Radar/App.xaml.cs の先頭に```#define USE_MOCK``` を追記してください。<br />
+→ 詳細はその設定を追加してくださった[#539](https://github.com/Covid-19Radar/Covid19Radar/issues/539) をご覧くださいませ。
+
 ## Android
 - Google SafetynetのAPIキーが必要です。 settings.json
 - 現在、xamarin.exposurenotificationのNUGET版は、バックグラウンド動作でExceptionが出ます。直接プロジェクトを参照しています。

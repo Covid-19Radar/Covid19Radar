@@ -1,4 +1,8 @@
-﻿using Acr.UserDialogs;
+﻿#if !DEBUG
+#define NDEBUG
+#endif
+
+using Acr.UserDialogs;
 using Covid19Radar.Resources;
 using Newtonsoft.Json.Linq;
 using System;
@@ -40,6 +44,7 @@ namespace Covid19Radar.Common
 
         }
 
+        [Conditional("NDEBUG")] // デバッグ時は呼び出さない
         public static async void CheckVersion()
         {
             var uri = AppResources.UrlVersion;
