@@ -74,6 +74,10 @@
 - Kimihiro Shirase
 - Tassana Thaveeteeratham (Thai Translation)
 - Kotaro Sakamoto
+- Koichi Yokota (Documentation)
+- Jean-Noël Ribelles (French/English Translation)
+- Takashi Kishida (Documentation)
+- Yusuke Yamada (Xamarin)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji

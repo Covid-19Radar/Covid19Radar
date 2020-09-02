@@ -75,11 +75,12 @@ namespace Covid19Radar.Services
             var exposureInfo = await getExposureInfo();
 
             // Add these on main thread in case the UI is visible so it can update
-
             await Device.InvokeOnMainThreadAsync(() =>
             {
                 foreach (var exposure in exposureInfo)
                 {
+                    Debug.WriteLine($"C19R found exposure {exposure.Timestamp}");
+
                     UserExposureInfo userExposureInfo = new UserExposureInfo(exposure.Timestamp, exposure.Duration, exposure.AttenuationValue, exposure.TotalRiskScore, (Covid19Radar.Model.UserRiskLevel)exposure.TransmissionRiskLevel);
                     userData.ExposureInformation.Add(userExposureInfo);
                 }
@@ -120,6 +121,7 @@ namespace Covid19Radar.Services
 
                     if (downloadedFiles.Count > 0)
                     {
+                        Debug.WriteLine("C19R Submit Batches");
                         await submitBatches(downloadedFiles);
 
                         // delete all temporary files
@@ -140,7 +142,7 @@ namespace Covid19Radar.Services
             catch (Exception ex)
             {
                 // any expections, bail out and wait for the next time
-                Console.WriteLine(ex);
+                Debug.WriteLine(ex);
             }
         }
 
@@ -163,13 +165,13 @@ namespace Covid19Radar.Services
                 return (batchNumber, downloadedFiles);
             }
 
-            long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
+            //long sinceEpochSeconds = new DateTimeOffset(DateTime.UtcNow.AddDays(-14)).ToUnixTimeSeconds();
             List<TemporaryExposureKeyExportFileModel> tekList = await httpDataService.GetTemporaryExposureKeyList(region, cancellationToken);
             if (tekList.Count == 0)
             {
                 return (batchNumber, downloadedFiles);
             }
-            Console.WriteLine("Fetch Exposure Key");
+            Debug.WriteLine("C19R Fetch Exposure Key");
 
             Dictionary<string, long> lastTekTimestamp = userData.LastProcessTekTimestamp;
 
@@ -188,8 +190,8 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Console.WriteLine(Utils.SerializeToJson(tekItem));
-                    Console.WriteLine(tmpFile);
+                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
+                    Debug.WriteLine(tmpFile);
 
                     using (Stream responseStream = await httpDataService.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
                     using (var fileStream = File.Create(tmpFile))
@@ -201,16 +203,17 @@ namespace Covid19Radar.Services
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine(ex.ToString());
+                            Debug.WriteLine(ex.ToString());
                         }
                     }
                     lastTekTimestamp[region] = tekItem.Created;
                     downloadedFiles.Add(tmpFile);
+                    Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
                     batchNumber++;
                 }
             }
-            Console.WriteLine(batchNumber.ToString());
-            Console.WriteLine(downloadedFiles.Count());
+            Debug.WriteLine($"C19R batchnumber {batchNumber}");
+            Debug.WriteLine($"C19R downloadfiles {downloadedFiles.Count()}");
             userData.LastProcessTekTimestamp = lastTekTimestamp;
             await userDataService.SetAsync(userData);
             return (batchNumber, downloadedFiles);
@@ -219,14 +222,14 @@ namespace Covid19Radar.Services
         // this will be called when the user is submitting a diagnosis and the local keys need to go to the server
         public async Task UploadSelfExposureKeysToServerAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
         {
-            var pendingDiagnosis = userData.PendingDiagnosis;
+            var latestDiagnosis = userData.LatestDiagnosis;
 
-            if (pendingDiagnosis == null || string.IsNullOrEmpty(pendingDiagnosis.DiagnosisUid))
+            if (latestDiagnosis == null || string.IsNullOrEmpty(latestDiagnosis.DiagnosisUid))
             {
                 throw new InvalidOperationException();
             }
 
-            var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, pendingDiagnosis);
+            var selfDiag = await CreateSubmissionAsync(temporaryExposureKeys, latestDiagnosis);
 
             HttpStatusCode httpStatusCode = await httpDataService.PutSelfExposureKeysAsync(selfDiag);
             if (httpStatusCode == HttpStatusCode.NotAcceptable)
@@ -245,8 +248,14 @@ namespace Covid19Radar.Services
                     Resources.AppResources.ButtonOk);
                 throw new InvalidOperationException();
             }
-            // Update pending status
-            pendingDiagnosis.Shared = true;
+            else if (httpStatusCode == HttpStatusCode.BadRequest)
+            {
+                await UserDialogs.Instance.AlertAsync(
+                    "",
+                    AppResources.ExposureNotificationHandler3ErrorMessage,
+                    Resources.AppResources.ButtonOk);
+                throw new InvalidOperationException();
+            }
             await userDataService.SetAsync(userData);
         }
 
@@ -254,7 +263,7 @@ namespace Covid19Radar.Services
         private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
         {
             // Create the network keys
-            var keys = temporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key
+            var keys = temporaryExposureKeys.Where(k => k.RollingStart > DateTimeOffset.UtcNow.Date.AddDays(AppConstants.OutOfDateDays)).Select(k => new DiagnosisSubmissionParameter.Key
             {
                 KeyData = Convert.ToBase64String(k.Key),
                 RollingStartNumber = (uint)(k.RollingStart - DateTime.UnixEpoch).TotalMinutes / 10,
@@ -262,15 +271,12 @@ namespace Covid19Radar.Services
                 TransmissionRisk = (int)k.TransmissionRiskLevel
             });
 
-            foreach (var key in keys)
-            {
-                if (!key.IsValid())
-                {
-                    throw new InvalidDataException();
-                }
-            }
+            var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
+            var afterKey = Utils.SerializeToJson(keys.ToList());
+            Debug.WriteLine($"C19R {beforeKey}");
+            Debug.WriteLine($"C19R {afterKey}");
 
-            if (keys.ToArray() == null)
+            if (keys.Count() == 0)
             {
                 throw new InvalidDataException();
             }

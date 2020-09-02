@@ -64,7 +64,7 @@ namespace Covid19Radar.Background.Services
             try
             {
                 Logger.LogInformation($"start {nameof(RunAsync)}");
-                var batchTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
                 var items = await TekRepository.GetNextAsync();
                 foreach (var kv in items.GroupBy(_ => new
                 {
@@ -73,7 +73,6 @@ namespace Covid19Radar.Background.Services
                 }))
                 {
                     var batchNum = (int)await Sequence.GetNextAsync(SequenceName, 1);
-
                     foreach (var region in Regions)
                     {
                         // Security considerations: Random Order TemporaryExposureKey
@@ -83,7 +82,6 @@ namespace Covid19Radar.Background.Services
                             (ulong)(kv.Key.RollingStartUnixTimeSeconds + kv.Key.RollingPeriodSeconds),
                             region,
                             batchNum,
-                            batchTimestamp,
                             sorted.ToArray());
                     }
 
@@ -120,7 +118,6 @@ namespace Covid19Radar.Background.Services
                                       ulong endTimestamp,
                                       string region,
                                       int batchNum,
-                                      long batchTimestamp,
                                       IEnumerable<TemporaryExposureKeyModel> keys)
         {
             Logger.LogInformation($"start {nameof(CreateAsync)}");
@@ -137,22 +134,19 @@ namespace Covid19Radar.Background.Services
                 var exportModel = new TemporaryExposureKeyExportModel();
                 exportModel.id = batchNum.ToString();
                 exportModel.PartitionKey = region;
-                // TODO: not support apple
-                //exportModel.BatchNum = batchNum;
-                exportModel.BatchNum = 1;
+                exportModel.BatchNum = batchNum;
                 exportModel.Region = region;
-                // TODO: not support apple
-                //exportModel.BatchSize = exportKeyModels.Length;
-                exportModel.BatchSize = 1;
+                exportModel.BatchSize = exportKeyModels.Length;
                 exportModel.StartTimestamp = startTimestamp;
                 exportModel.EndTimestamp = endTimestamp;
-                exportModel.TimestampSecondsSinceEpoch = batchTimestamp;
+                exportModel.TimestampSecondsSinceEpoch = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
                 exportModel = await TekExportRepository.CreateAsync(exportModel);
 
                 var bin = new TemporaryExposureKeyExport();
                 bin.Keys.AddRange(exportKeys);
-                bin.BatchNum = exportModel.BatchNum;
-                bin.BatchSize = exportModel.BatchSize;
+                // TODO: not support apple
+                bin.BatchNum = 1;
+                bin.BatchSize = 1;
                 bin.Region = exportModel.Region;
                 bin.StartTimestamp = exportModel.StartTimestamp;
                 bin.EndTimestamp = exportModel.EndTimestamp;

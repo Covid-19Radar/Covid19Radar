@@ -5,6 +5,7 @@ using ImTools;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
@@ -45,7 +46,7 @@ namespace Covid19Radar.Services
 
         private void OnTimerInvoked(EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
+            Debug.WriteLine(DateTime.Now.ToString(new CultureInfo("en-US")));
             //await FetchExposureKeyAsync();
         }
 
@@ -66,9 +67,9 @@ namespace Covid19Radar.Services
 
         private async void OnUserDataChanged(object sender, UserDataModel userData)
         {
-            Console.WriteLine("User Data has Changed!!!");
+            Debug.WriteLine("User Data has Changed!!!");
             this.userData = userDataService.Get();
-            Console.WriteLine(Utils.SerializeToJson(userData));
+            Debug.WriteLine(Utils.SerializeToJson(userData));
             await UpdateStatusMessageAsync();
         }
 
@@ -136,7 +137,7 @@ namespace Covid19Radar.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error disabling notifications: {ex}");
+                Debug.WriteLine($"Error disabling notifications: {ex}");
                 return false;
             }
             finally
@@ -182,7 +183,7 @@ namespace Covid19Radar.Services
             }
 
             this.CurrentStatusMessage = message;
-            Console.WriteLine(message);
+            Debug.WriteLine(message);
             return message;
         }
 
