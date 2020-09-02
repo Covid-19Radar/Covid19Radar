@@ -30,7 +30,7 @@
           <target state="translated">https://www.mhlw.go.jp/stf/seisakunitsuite/chinese_pp_00030.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="translated">狀態設定</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>

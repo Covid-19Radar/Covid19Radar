@@ -40,7 +40,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Күй параметрлері</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>

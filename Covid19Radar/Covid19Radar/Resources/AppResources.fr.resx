@@ -31,8 +31,8 @@
     <value>https://www.mhlw.go.jp/stf/seisakunitsuite/english_pp_00032.html</value>
     <comment>Policy</comment>
   </data>
-  <data name="TitileUserStatusSettings" xml:space="preserve">
-    <value>Paramètres d’état</value>
+  <data name="TitleUserStatusSettings" xml:space="preserve">
+    <value>Paramètres du status</value>
     <comment>User Status Page Title</comment>
   </data>
   <data name="DialogNetworkConnectionError" xml:space="preserve">

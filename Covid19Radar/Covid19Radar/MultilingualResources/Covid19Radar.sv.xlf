@@ -39,7 +39,7 @@
         </trans-unit>
         <!-- What is MajorNo? -->
         <!-- What is MinorNo? -->
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Statusinställningar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
