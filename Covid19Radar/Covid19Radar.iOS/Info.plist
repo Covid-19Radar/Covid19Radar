@@ -28,7 +28,7 @@
 	<key>CFBundleName</key>
 	<string>Covid19Radar</string>
 	<key>CFBundleDisplayName</key>
-	<string>接触確認アプリ</string>
+	<string>Covid19Radar</string>
 	<key>CFBundleIdentifier</key>
 	<string>APP_PACKAGE_NAME</string>
 	<key>CFBundleVersion</key>
