@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Lūdzu, ievadiet procesa kodu, ko jums izsniedz "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Lietotāji, kuri pēdējo 14 dienu laikā bija ar jums ciešā kontaktā, tiks informēti. Reģistrācija ir anonīma. Jums nav jāievada jūsu vārds vai cita personiska informācija. Informācija par tuva kontakta atrašanās vietu netiek ierakstīta.</value>

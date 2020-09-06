@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Унесите кôд процеса који вам је издао "систем за дељење информација у реалном времену" на "КОВИД"-19 (ХЕР-СYС).</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Корисници који су били у блиској контакту са вама у протеклих 14 дана биће обавештени. Регистрација је анонимна. Не морате да уносите своје име или било коју другу личну информацију. Информације о локацији блиских контаката се не записују.</value>

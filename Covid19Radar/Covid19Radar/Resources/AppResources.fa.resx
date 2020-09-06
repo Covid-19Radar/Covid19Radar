@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>لطفا یک کد فرآیند صادر شده به شما توسط "مرکز بهداشت و درمان زمان واقعی اطلاعات به اشتراک گذاری در COVID-19 (او-سیستم)" را وارد کنید.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>کاربرانی که در طی 14 روز گذشته در تماس نزدیک با شما بودند مطلع خواهند شد. ثبت نام ناشناس است. شما لازم نیست که نام خود و یا هر گونه اطلاعات شخصی دیگر را وارد کنید. اطلاعات مربوط به محل تماس نزدیک ثبت نشده است.</value>

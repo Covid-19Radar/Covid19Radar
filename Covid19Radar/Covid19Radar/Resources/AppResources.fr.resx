@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Veuillez entrer le code de processus qui vous est délivré par le « Health Center Real-time Information-sharing System on COVID-19 (HER-SYS) ».</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Les utilisateurs qui ont été en contact rapproché avec vous au cours des 14 derniers jours seront avisés. L’inscription est anonyme. Vous n’avez pas à entrer votre nom ou toute autre information personnelle. Aucune information concernant l’emplacement du contact rapproché n’est enregistrée.</value>

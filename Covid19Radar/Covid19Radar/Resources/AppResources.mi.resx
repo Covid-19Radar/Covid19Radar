@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Tāuru koa i tētahi waehere tukanga kua tukua ki a koe mā te "Pūnaha Hauora-Tūturu-ngā Mōhiohio tiritahi i runga i te COVID-a-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Ko ngā kaiwhakamahi i katia i te hoapā i mua i te 14 o ngā rā ka whakamōhiotia atu. He ingoamuna te rēhitatanga. Kāore i a koe te tāuru i tō ingoa, i ētahi atu mōhiohio whaiaro rānei. Kāore he mōhiohio e pā ana ki te tauwāhi kati i hopukina.</value>

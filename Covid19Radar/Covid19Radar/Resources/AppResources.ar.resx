@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>الرجاء إدخال رمز عملية صادرة لك من قبل "مركز الصحة في الوقت الحقيقي لتبادل المعلومات النظام على COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>سيتم إعلام المستخدمين الذين كانوا على اتصال وثيق معك خلال 14 يومًا الماضية. التسجيل مجهول. ليس عليك إدخال اسمك أو أي معلومات شخصية أخرى. لم يتم تسجيل أي معلومات عن مكان الاتصال القريب.</value>

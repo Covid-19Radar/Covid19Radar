@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>請輸入" COVID-19 健康中心即時資訊共享系統（HER-SYS）"發行給您的處理號碼。</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>在過去14天內與您接觸過的使用者將收到通知。登錄是匿名的。您不必輸入姓名或其他任何個人資料。不會記錄任何接觸位置相關的資訊。</value>

@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Rhowch god proses a roddwyd i chi gan "Health Center system rhannu gwybodaeth amser real ar COVID-19 (ei-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Bydd defnyddwyr a oedd mewn cysylltiad agos â chi o fewn y 14 diwrnod diwethaf yn cael eu hysbysu. Cofrestriad yn ddienw. Nid oes rhaid i chi nodi eich enw nac unrhyw wybodaeth bersonol arall. Ni chofnodir unrhyw wybodaeth ynglŷn â lleoliad cyswllt agos.</value>

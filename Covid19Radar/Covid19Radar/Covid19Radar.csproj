@@ -189,7 +189,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MultilingualResources\" />
     <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>

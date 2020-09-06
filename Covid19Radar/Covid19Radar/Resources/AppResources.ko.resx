@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>신형 코로나 바이러스 감염자 등 정보 파악・관리 지원 시스템 （HER-SYS）에서 발행된 처리 번호를 입력해 주세요.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>지난 14일 이내에 귀하와 긴밀하게 연락한 사용자에게 알림이 전송됩니다. 등록은 익명으로 입니다. 당신은 당신의 이름이나 다른 개인 정보를 입력 할 필요가 없습니다. 가까운 접촉 위치에 관한 정보는 기록되지 않습니다.</value>

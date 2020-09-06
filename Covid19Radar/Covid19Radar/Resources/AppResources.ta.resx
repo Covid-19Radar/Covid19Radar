@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>"HEAlth Center Real-time Information-sharing System on COVID-19 (HER-SYS)" மூலம் உங்களுக்கு வழங்கப்பட்ட செயல்முறைக் குறியீட்டை உள்ளிடவும்.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>கடந்த 14 நாட்களுக்குள் உங்களுடன் நெருங்கிய தொடர்பு கொண்டிருந்த பயனர்கள் அறிவிக்கப்படுவார்கள். பதிவு அநாமதேயமானது. உங்கள் பெயர் அல்லது வேறு எந்த தனிப்பட்ட தகவலையும் நீங்கள் உள்ளிட வேண்டியதில்லை. நெருங்கிய தொடர்பு இடம் பற்றிய எந்த தகவலும் பதிவு செய்யப்படவில்லை.</value>

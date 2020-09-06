@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>कृपया "स्वास्थ्य केंद्र वास्तविक समय सूचना-COVID-19 (HER-SYS) पर साझा प्रणाली द्वारा आप के लिए जारी एक प्रक्रिया कोड दर्ज करें" ।</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>जो उपयोगकर्ता पिछले 14 दिनों के भीतर आपके साथ निकट संपर्क में थे, उन्हें अधिसूचित किया जाएगा। पंजीकरण गुमनाम है। इसके लिए आपको अपना नाम या कोई अन्य व्यक्तिगत जानकारी दर्ज नहीं करनी होगी। निकट संपर्क के स्थान के बारे में कोई जानकारी दर्ज नहीं की गई है।</value>

@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Pakipasok ng isang code na ibinigay sa iyo ng "health center real-time na impormasyon-pagbabahagi ng sistema sa COVID-19 (ang kanyang mga ' SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Ang mga user na malapit nang makipag-ugnayan sa iyo sa loob ng nakalipas na 14 na araw ay Ipababatid. Hindi kilala ang pagrerehistro. Hindi mo kailangang ipasok ang iyong pangalan o anumang iba pang personal na impormasyon. Walang impormasyon tungkol sa lokasyon ng malapit na kontak ang nakatala.</value>

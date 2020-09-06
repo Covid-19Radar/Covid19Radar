@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Vnesite šifro procesa, ki vam jo je izdala "zdravstveni center v realnem času informacijski sistem za izmenjavo informacij o COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Uporabniki, ki so bili v tesnem stiku z vami v zadnjih 14 dneh, bodo obveščeni. Registracija je anonimna. Ni vam treba vnesti svojega imena ali drugih osebnih podatkov. Podatki o lokaciji tesnega stika niso zabeleženi.</value>

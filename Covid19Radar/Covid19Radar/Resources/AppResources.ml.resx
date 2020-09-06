@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>"COVID-19 -ലെ (HER-SYS) എന്ന തിൽ ഹെൽത്ത് സെന്റർ തത്സമയ വിവര-പങ്കിടൽ സിസ്റ്റം" എന്ന പേരിൽ നിങ്ങൾക്ക് ഇഷ്യൂ ചെയ്ത ഒരു പ്രോസസ്സ് കോഡ് നൽകുക.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>കഴിഞ്ഞ 14 ദിവസത്തിനുള്ളിൽ നിങ്ങളുമായി അടുത്ത ബന്ധം പുലർത്തുന്ന ഉപയോക്താക്കളെ അറിയിക്കും. രജിസ്ട്രേഷൻ അജ്ഞാതമാണ്. നിങ്ങളുടെ പേരോ മറ്റേതെങ്കിലും വ്യക്തിഗത വിവരങ്ങളോ നിങ്ങൾ നൽകേണ്ടതില്ല. അടുത്ത സമ്പർക്കത്തിന്റെ സ്ഥാനം സംബന്ധിച്ച വിവരങ്ങൾ രേഖപ്പെടുത്തിയിട്ടില്ല.</value>

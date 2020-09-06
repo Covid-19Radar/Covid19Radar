@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Будь ласка, введіть код процесу, виданий вам "Центр охорони здоров'я в реальному часі-система обміну інформацією на COVID-19 (її-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Користувачі, які перебували в тісному контакті з вами протягом останніх 14 днів, будуть повідомлені. Реєстрація є анонімною. Вам не потрібно вводити своє ім'я або будь-яку іншу особисту інформацію. Інформація про місцезнаходження тісного контакту не записується.</value>

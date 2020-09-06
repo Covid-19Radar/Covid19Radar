@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Zadajte kód procesu, ktorý vám vydal "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Používatelia, ktorí boli s vami v úzkom kontakte v priebehu posledných 14 dní, budú informovaní. Registrácia je anonymná. Nemusíte zadávať svoje meno ani žiadne iné osobné údaje. Nezaznamenávajú sa žiadne informácie týkajúce sa umiestnenia blízkeho kontaktu.</value>

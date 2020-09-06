@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Daħħal kodiċi tal-proċess maħruġ lilek minn "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>L-utenti li kienu f'kuntatt mill-qrib miegħek fl-aħħar 14-il jum jiġu nnotifikati. Ir-reġistrazzjoni hija anonima. M'għandekx jkollha bżonn iddaħħal ismek jew kwalunkwe informazzjoni personali oħra. Ma ġiet irreġistrata l-ebda informazzjoni dwar il-post fejn jinsab il-kuntatt mill-qrib.</value>

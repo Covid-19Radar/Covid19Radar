@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>"ಆರೋಗ್ಯ ಕೇಂದ್ರ ರಿಯಲ್ ಟೈಮ್ ಇನ್ಫರ್ಮೇಷನ್-ಶೇರಿಂಗ್ ಸಿಸ್ಟಂ ಆನ್ COVID-19 (HER-SYS) ಮೂಲಕ ನಿಮಗೆ ನೀಡಲಾದ ಒಂದು ಪ್ರಕ್ರಿಯೆ ಕೋಡ್ ಅನ್ನು ದಯವಿಟ್ಟು ನಮೂದಿಸಿ.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನಿಮ್ಮೊಂದಿಗೆ ನಿಕಟ ಸಂಪರ್ಕ ಹೊಂದಿದ್ದ ಬಳಕೆದಾರರಿಗೆ ಸೂಚನೆ ನೀಡಲಾಗುವುದು. ನೋಂದಣಿ ಯು ಅನಾಮಧೇಯವಾಗಿದೆ. ನಿಮ್ಮ ಹೆಸರು ಅಥವಾ ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀವು ನಮೂದಿಸುವ ಅಗತ್ಯವಿಲ್ಲ. ಹತ್ತಿರದ ಸಂಪರ್ಕದ ಸ್ಥಳದ ಬಗ್ಗೆ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ದಾಖಲಿಸುವುದಿಲ್ಲ.</value>

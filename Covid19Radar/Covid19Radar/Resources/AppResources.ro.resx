@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Vă rugăm să introduceți un cod de proces emis de "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Utilizatorii care au fost în contact strâns cu dumneavoastră în ultimele 14 zile vor fi notificați. Înregistrarea este anonimă. Nu trebuie să introduceți numele sau orice alte informații personale. Nu se înregistrează nicio informație privind locația contactului apropiat.</value>

@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>"COVID-19 (HER-SYS)పై ఆరోగ్య కేంద్ర రియల్ టైమ్ ఇన్ఫర్మేషన్ షేరింగ్ సిస్టమ్ ద్వారా మీకు జారీ చేయబడ్డ ప్రాసెస్ కోడ్ ని దయచేసి నమోదు చేయండి.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>గడిచిన 14 రోజుల్లోగా మీతో సన్నిహిత ంగా కాంటాక్ట్ లో ఉన్న యూజర్ లకు నోటిఫై చేయబడుతుంది. రిజిస్ట్రేషన్ అనామధేఉంది. మీరు మీ పేరు లేదా ఏదైనా ఇతర వ్యక్తిగత సమాచారాన్ని నమోదు చేయాల్సిన అవసరం లేదు. సమీప కాంటాక్ట్ యొక్క లొకేషన్ కు సంబంధించి ఎలాంటి సమాచారం రికార్డ్ చేయబడలేదు.</value>

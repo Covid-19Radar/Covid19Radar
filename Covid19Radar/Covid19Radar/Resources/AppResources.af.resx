@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Tik asseblief 'n proseskode wat aan jou uitgereik is deur die "Gesondheidsentrum intydse inligting-delingstelsel op COVID-19 (haar-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Gebruikers wat in die laaste 14 dae in noue kontak met jou was, sal in kennis gestel word. Registrasie is anoniem. Jy hoef nie jou naam of enige ander persoonlike inligting in te voer. Geen inligting rakende die ligging van noue kontak is aangeteken nie.</value>

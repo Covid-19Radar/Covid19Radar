@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Palun sisestaprotsessi kood, mille on teile väljastanud "Tervisekeskuse reaalajas teabe jagamise süsteem COVID-19-s (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Kasutajaid, kes olid teiega viimase 14 päeva jooksul lähedases kontaktis, teavitatakse. Registreerimine on anonüümne. Te ei pea sisestama oma nime ega muid isikuandmeid. Lähikontakti asukoha kohta teavet ei salvestata.</value>

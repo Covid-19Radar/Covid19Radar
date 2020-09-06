@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Въведете код на процеса, издаден от "Health Center в реално време информация за споделяне на система на COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Потребителите, които са били в близък контакт с вас в рамките на последните 14 дни, ще бъдат уведомени. Регистрацията е анонимна. Не е нужно да въвеждате вашето име или друга лична информация. Няма записана информация за местоположението на близък контакт.</value>

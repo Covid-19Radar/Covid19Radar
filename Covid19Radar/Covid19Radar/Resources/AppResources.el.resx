@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Πληκτρολογήστε έναν κωδικό διαδικασίας που σας έχει εκδοθεί από το "Κέντρο Υγείας σε πραγματικό χρόνο σύστημα ανταλλαγής πληροφοριών στο COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Οι χρήστες που ήταν σε στενή επαφή μαζί σας εντός των τελευταίων 14 ημερών θα ειδοποιηθούν. Η εγγραφή είναι ανώνυμη. Δεν χρειάζεται να εισαγάγετε το όνομά σας ή οποιαδήποτε άλλη προσωπική πληροφορία. Δεν καταγράφονται πληροφορίες σχετικά με τη θέση στενής επαφής.</value>

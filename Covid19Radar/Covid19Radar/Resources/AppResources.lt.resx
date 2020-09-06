@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Įveskite proceso kodą, išduotą "Sveikatos centras realaus laiko informacijos dalijimosi sistema COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Vartotojams, kurie buvo artimai susisiekti su jumis per pastaruosius 14 dienų, bus pranešta. Registracija yra anoniminė. Jums nereikia įvesti savo vardo ar kitos asmeninės informacijos. Neįrašoma jokia informacija apie artimo kontakto vietą.</value>

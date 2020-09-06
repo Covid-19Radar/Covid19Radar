@@ -452,7 +452,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Masukkan kode yang diberikan oleh "Health Center Real-time Information-sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Pengguna yang berada dalam jarak dekat dengan anda dalam 14 hari terakhir akan diberitahu. Pendaftaran bersifat anonim. Anda tidak perlu memasukkan nama atau informasi pribadi lainnya. Tak ada informasi lokasi kontak jarak dekat yang direkam.</value>

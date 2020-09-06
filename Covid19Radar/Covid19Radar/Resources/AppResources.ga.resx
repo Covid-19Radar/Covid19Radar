@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Cuir isteach cód próisis a d'eisigh "Ionad Sláinte Fíor-ama Córas comhroinnte faisnéise ar COVID-19 (HER-SYS)".</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Cuirfear in iúl d'úsáideoirí a bhí i ndlúth-theagmháil leat laistigh de na laethanta 14 seo caite. Tá clárú anaithnid. Ní gá duit d'ainm ná aon fhaisnéis phearsanta eile a iontráil. Ní thaifeadtar aon eolas maidir le suíomh dlúththeagmhála.</value>

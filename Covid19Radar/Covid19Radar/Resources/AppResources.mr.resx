@@ -451,7 +451,7 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>कृपया आपल्याला "कॉव्हीड-19 (HER-SYS) वरील आरोग्य केंद्र रियल टाईम माहिती-सामायिक प्रणाली द्वारे जारी केलेला एक प्रक्रिया कोड प्रविष्ट करा.</value>
-    <comment>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</comment>
+    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>गेल्या 14 दिवसांत तुमच्या जवळअसलेल्या वापरकर्त्यांना सूचित केले जाईल. नोंदणी निनावी आहे. आपल्याला आपले नाव किंवा इतर कोणतीही वैयक्तिक माहिती प्रविष्ट करण्याची गरज नाही. जवळच्या संपर्काच्या ठिकाणाबद्दल कोणतीही माहिती रेकॉर्ड केली जात नाही.</value>
