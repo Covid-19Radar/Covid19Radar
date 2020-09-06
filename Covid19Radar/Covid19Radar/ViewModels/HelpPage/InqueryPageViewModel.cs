@@ -15,19 +15,19 @@ namespace Covid19Radar.ViewModels
 
         public Command OnClickSite1 => new Command(async () =>
         {
-            var uri = "https://corona.go.jp/";
+            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 
         public Command OnClickSite2 => new Command(async () =>
         {
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html";
+            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 
         public Command OnClickSite3 => new Command(async () =>
         {
-            var uri = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html";
+            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
             await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 

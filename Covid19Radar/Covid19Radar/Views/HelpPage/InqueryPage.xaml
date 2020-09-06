@@ -26,7 +26,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span
-                                    Text="appsupport@cov19.mhlw.go.jp"
+                                    Text="appsupport@yourhealthcaredivmailaddress.org"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
@@ -48,7 +48,7 @@
                                 <Span Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html"
+                                    Text="https://github.com/Covid-19Radar/Covid19Radar"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                             </FormattedString>
@@ -68,7 +68,7 @@
                                 <Span Text="{x:Static resources:AppResources.InqueryPageDescription4}" />
                                 <Span Text="{x:Static x:Environment.NewLine}" />
                                 <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html"
+                                    Text="https://github.com/Covid-19Radar/Covid19Radar"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
                             </FormattedString>
