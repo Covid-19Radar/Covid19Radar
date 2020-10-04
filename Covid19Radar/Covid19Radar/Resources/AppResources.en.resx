@@ -127,7 +127,7 @@
     <value>Positive registration</value>
   </data>
   <data name="PositiveRegistrationConfirmText" xml:space="preserve">
-    <value>Would you like to register positively later?</value>
+    <value>Would you like to register as positive later?</value>
   </data>
   <data name="HomePageHeader2Description" xml:space="preserve">
     <value>Help protect your family and friends by anonymously registering test results.</value>
@@ -186,7 +186,7 @@
     <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
-    <value>The app will notify you, if you were in close contact with COVID-19 positive user.</value>
+    <value>The app will notify you, if you were in close contact with a COVID-19 positive user.</value>
     <comment>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</comment>
   </data>
   <data name="HelpPage2Description2" xml:space="preserve">
@@ -394,7 +394,7 @@
     <comment>ホーム</comment>
   </data>
   <data name="TermsofservicePageTitle" xml:space="preserve">
-    <value>Term of use</value>
+    <value>Terms of use</value>
     <comment>利用規約</comment>
   </data>
   <data name="TutorialPage2Description1" xml:space="preserve">
@@ -458,7 +458,7 @@
     <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
-    <value>How to receive a process code</value>
+    <value>How to receive a processing number</value>
     <comment>処理番号の取得方法</comment>
   </data>
   <data name="NotifyOtherPageTitle" xml:space="preserve">
@@ -558,7 +558,7 @@
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
-    <value>Bluetooth is turned off.Please turn in Bluetooth.</value>
+    <value>Bluetooth is turned off. Please turn on Bluetooth.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposuresPageTitle" xml:space="preserve">
@@ -628,7 +628,7 @@
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Exposure Notification is restricted. Please active.</value>
+    <value>COVID-19 Contact notification feature is not approved. Please approve it from the Operating System or re-approve after reinstalling the application.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
@@ -644,11 +644,11 @@
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth.</value>
+    <value>Exposure Notification could not startup. Open the terminal settings, turn on Exposure Notification feature and turn on Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Process number incorrect</value>
+    <value>Processing number incorrect</value>
     <comment>アプリで入力された処理番号が違います</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
@@ -656,7 +656,7 @@
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Do you want to register positive information?</value>
+    <value>Do you want to register a positive test result?</value>
     <comment>陽性情報を登録しますか?</comment>
   </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
@@ -684,7 +684,7 @@
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>In order to register positive records, it is necessary to enable COVID-19 contact log recording, please enable it from the application or OS settings.</value>
+    <value>In order to register as tested positive, it is necessary to enable COVID-19 contact log recording, please enable it from the application or Operating System settings.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
@@ -692,7 +692,7 @@
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>The number of registrations has reached the upper limit. Exit application</value>
+    <value>The number of registrations reached the upper limit. Application will exit.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
