@@ -57,7 +57,7 @@
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://github.com/Covid-19Radar/Covid19Radar</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
@@ -133,7 +133,7 @@
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
-          <target state="translated" state-qualifier="mt-suggestion">กําลังรอการลงทะเบียน</target>
+          <target state="translated">กําลังรอการลงทะเบียน</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
@@ -141,7 +141,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="translated" state-qualifier="mt-suggestion">ลบข้อมูลทั้งหมด</target>
+          <target state="translated">ลบข้อมูลทั้งหมด</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
@@ -402,7 +402,7 @@
         </trans-unit>
         <trans-unit id="HelpPage1MainTitle" translate="yes" xml:space="preserve">
           <source>Device identification</source>
-          <target state="translated" state-qualifier="mt-suggestion">การระบุอุปกรณ์</target>
+          <target state="translated">การระบุอุปกรณ์</target>
           <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton1" translate="yes" xml:space="preserve">
@@ -412,7 +412,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
           <source>Fill in your symptoms</source>
-          <target state="translated" state-qualifier="mt-suggestion">กรอกอาการของคุณ</target>
+          <target state="translated">กรอกอาการของคุณ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">症状を入力</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageButton3" translate="yes" xml:space="preserve">
@@ -422,7 +422,7 @@
         </trans-unit>
         <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
           <source>times</source>
-          <target state="translated" state-qualifier="mt-suggestion">ครั้ง</target>
+          <target state="translated">ครั้ง</target>
           <note from="MultilingualBuild" annotates="source" priority="2">件</note>
         </trans-unit>
         <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
@@ -497,7 +497,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
-          <target state="translated" state-qualifier="mt-suggestion">ความเป็นส่วนตัวของคุณได้รับการคุ้มครอง</target>
+          <target state="translated">ความเป็นส่วนตัวของคุณได้รับการคุ้มครอง</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
@@ -643,7 +643,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription0" translate="yes" xml:space="preserve">
           <source>~</source>
-          <target state="translated" state-qualifier="mt-suggestion">~</target>
+          <target state="translated">~</target>
           <note from="MultilingualBuild" annotates="source" priority="2">から</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
@@ -698,7 +698,7 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off.Please turn in Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</target>
+          <target state="translated">บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
@@ -775,7 +775,7 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</target>
+          <target state="translated">บลูทูธถูกปิดอยู่ กรุณาเปิดบลูทูธ</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
@@ -840,12 +840,12 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
           <source>Please wait for a while until registration starts</source>
-          <target state="translated" state-qualifier="mt-suggestion">กรุณารอสักพักจนกว่าการลงทะเบียนจะเริ่มต้น</target>
+          <target state="translated">กรุณารอสักพักจนกว่าการลงทะเบียนจะเริ่มต้น</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">กําลังรอการลงทะเบียน</target>
+          <target state="translated">กําลังรอการลงทะเบียน</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">

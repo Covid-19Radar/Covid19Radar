@@ -141,7 +141,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="translated" state-qualifier="mt-suggestion">Supprimer toutes les données</target>
+          <target state="translated">Supprimer toutes les données</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
@@ -149,11 +149,11 @@
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Retour à l’inscription</target>
+          <target state="translated">Retour à l’inscription</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
           <source>Positive registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Enregistrement positif</target>
+          <target state="translated">Enregistrement positif</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
@@ -301,7 +301,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
           <source>Use of Bluetooth</source>
-          <target state="translated" state-qualifier="mt-suggestion">Utilisation du Bluetooth</target>
+          <target state="translated">Utilisation du Bluetooth</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
         </trans-unit>
         <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
@@ -316,7 +316,7 @@
         </trans-unit>
         <trans-unit id="SettingsPageLabel3" translate="yes" xml:space="preserve">
           <source>Stop using the app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Arrêter d’utiliser l’application</target>
+          <target state="translated">Arrêter d’utiliser l’application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの使用中止</note>
         </trans-unit>
         <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
@@ -381,7 +381,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage3ButtonText" translate="yes" xml:space="preserve">
           <source>I accept the Terms of Use</source>
-          <target state="translated" state-qualifier="mt-suggestion">J’accepte les conditions d’utilisation</target>
+          <target state="translated">J’accepte les conditions d’utilisation</target>
           <note from="MultilingualBuild" annotates="source" priority="2">規約に同意して次へ</note>
         </trans-unit>
         <trans-unit id="TutorialPage6Label1" translate="yes" xml:space="preserve">
@@ -396,7 +396,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage6ButtonText2" translate="yes" xml:space="preserve">
           <source>How to use this app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Comment utiliser cette application</target>
+          <target state="translated">Comment utiliser cette application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">使い方を学ぶ</note>
         </trans-unit>
         <trans-unit id="HelpPage1MainTitle" translate="yes" xml:space="preserve">
@@ -476,7 +476,7 @@
         </trans-unit>
         <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
-          <target state="translated" state-qualifier="mt-suggestion">Enregistrer le résultat du test positif</target>
+          <target state="translated">Enregistrer le résultat du test positif</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
@@ -496,12 +496,12 @@
         </trans-unit>
         <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
           <source>Your privacy is protected</source>
-          <target state="translated" state-qualifier="mt-suggestion">Votre vie privée est protégée</target>
+          <target state="translated">Votre vie privée est protégée</target>
           <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
           <source>No personal information such as your name or phone number is collected. No geolocation data including GPS data is collected.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Aucune information personnelle comme votre nom ou votre numéro de téléphone n’est recueillie. Aucune donnée de géolocalisation, y compris les données GPS, n’est recueillie.</target>
+          <target state="translated">Aucune information personnelle comme votre nom ou votre numéro de téléphone n’est recueillie. Aucune donnée de géolocalisation, y compris les données GPS, n’est recueillie.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
@@ -511,7 +511,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
           <source>You can stop recording close contacts with other users anytime by changing app settings or deleting the app.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Vous pouvez arrêter d’enregistrer des contacts rapprochés avec d’autres utilisateurs à tout moment en modifiant les paramètres de l’application ou en supprimant l’application.</target>
+          <target state="translated">Vous pouvez arrêter d’enregistrer des contacts rapprochés avec d’autres utilisateurs à tout moment en modifiant les paramètres de l’application ou en supprimant l’application.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
         </trans-unit>
         <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
@@ -526,7 +526,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
           <source>Turn on notifications</source>
-          <target state="translated" state-qualifier="mt-suggestion">Activer les notifications</target>
+          <target state="translated">Activer les notifications</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
@@ -546,7 +546,7 @@
         </trans-unit>
         <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
           <source>To use notifications</source>
-          <target state="translated" state-qualifier="mt-suggestion">Pour utiliser les notifications</target>
+          <target state="translated">Pour utiliser les notifications</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
         </trans-unit>
         <trans-unit id="MenuPageTitle" translate="yes" xml:space="preserve">
@@ -572,12 +572,12 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
           <source>How to receive a process code</source>
-          <target state="translated" state-qualifier="mt-suggestion">Comment recevoir un code de processus</target>
+          <target state="translated">Comment recevoir un code de processus</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号の取得方法</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
           <source>Register positive test result</source>
-          <target state="translated" state-qualifier="mt-suggestion">Enregistrer le résultat du test positif</target>
+          <target state="translated">Enregistrer le résultat du test positif</target>
           <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
@@ -602,12 +602,12 @@
         </trans-unit>
         <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Protégez-vous avec l’application</target>
+          <target state="translated">Protégez-vous avec l’application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
           <source>Protect yourself with the app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Protégez-vous avec l’application</target>
+          <target state="translated">Protégez-vous avec l’application</target>
           <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
         </trans-unit>
         <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
@@ -657,17 +657,17 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
           <source>When you enter this processing number into the terminal, the terminal will make an inquiry via the notification server to the management system as to whether the processing number has been issued to you.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Lorsque vous entrez ce numéro de traitement dans le terminal, le terminal effectue une demande via le serveur de notification au système de gestion pour savoir si le numéro de traitement vous a été délivré.</target>
+          <target state="translated">Lorsque vous entrez ce numéro de traitement dans le terminal, le terminal effectue une demande via le serveur de notification au système de gestion pour savoir si le numéro de traitement vous a été délivré.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
           <source>The management system will respond to the notification server as to whether the transaction number referred to was issued to you.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Le système de gestion répondra au serveur de notification pour savoir si le numéro de transaction mentionné vous a été délivré.</target>
+          <target state="translated">Le système de gestion répondra au serveur de notification pour savoir si le numéro de transaction mentionné vous a été délivré.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
           <source>If you reply that the transaction number was issued to you, other users' terminals will be provided with the daily key recorded on your terminal.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Si vous répondez que le numéro de transaction vous a été émis, les terminaux d’autres utilisateurs recevront la clé quotidienne enregistrée sur votre terminal.</target>
+          <target state="translated">Si vous répondez que le numéro de transaction vous a été émis, les terminaux d’autres utilisateurs recevront la clé quotidienne enregistrée sur votre terminal.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</note>
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
@@ -738,7 +738,7 @@
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
           <source>If you want to disable it, you can change it from the app settings</source>
-          <target state="translated" state-qualifier="mt-suggestion">Si vous souhaitez le désactiver, vous pouvez le modifier à partir des paramètres de l’application</target>
+          <target state="translated">Si vous souhaitez le désactiver, vous pouvez le modifier à partir des paramètres de l’application</target>
         </trans-unit>
         <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
           <source>Notifications enabled</source>
@@ -746,7 +746,7 @@
         </trans-unit>
         <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
           <source>Information about the this app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Informations sur cette application</target>
+          <target state="translated">Informations sur cette application</target>
         </trans-unit>
         <trans-unit id="InqueryPageDescription4" translate="yes" xml:space="preserve">
           <source>Q and A for user</source>
@@ -759,7 +759,7 @@
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
           <source>Inquiries about contact confirmation app</source>
-          <target state="translated" state-qualifier="mt-suggestion">Demandes de renseignements sur l’application de confirmation de contact</target>
+          <target state="translated">Demandes de renseignements sur l’application de confirmation de contact</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
@@ -769,7 +769,7 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
           <source>Exposure Notification is active.</source>
-          <target state="translated" state-qualifier="mt-suggestion">La notification d’exposition est active.</target>
+          <target state="translated">La notification d’exposition est active.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
@@ -779,12 +779,12 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="translated" state-qualifier="mt-suggestion">La notification d’exposition est désactivée. Ouvrez les paramètres du terminal et activez la notification d’exposition.</target>
+          <target state="translated">La notification d’exposition est désactivée. Ouvrez les paramètres du terminal et activez la notification d’exposition.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
           <source>You must agree to the terms of use.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Vous devez accepter les conditions d’utilisation.</target>
+          <target state="translated">Vous devez accepter les conditions d’utilisation.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
@@ -799,7 +799,7 @@
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Erreur de connexion réseau</target>
+          <target state="translated">Erreur de connexion réseau</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
@@ -814,12 +814,12 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
           <source>Process number incorrect</source>
-          <target state="translated" state-qualifier="mt-suggestion">Numéro de processus incorrect</target>
+          <target state="translated">Numéro de processus incorrect</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="translated" state-qualifier="mt-suggestion">Impossible de se connecter au centre d’enregistrement</target>
+          <target state="translated">Impossible de se connecter au centre d’enregistrement</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
@@ -844,17 +844,17 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">En attente d’inscription</target>
+          <target state="translated">En attente d’inscription</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
           <source>No processing number entered</source>
-          <target state="translated" state-qualifier="mt-suggestion">Aucun numéro de traitement entré</target>
+          <target state="translated">Aucun numéro de traitement entré</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
           <source>Processing number format does not match</source>
-          <target state="translated" state-qualifier="mt-suggestion">Le format de numéro de traitement ne correspond pas</target>
+          <target state="translated">Le format de numéro de traitement ne correspond pas</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">

@@ -8,11 +8,11 @@
       <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>Agree</source>
-          <target state="translated" state-qualifier="mt-suggestion">Agree</target>
+          <target state="translated">Agree</target>
         </trans-unit>
         <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
           <source>HOME</source>
-          <target state="translated" state-qualifier="mt-suggestion">HOME</target>
+          <target state="translated">HOME</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
         </trans-unit>
         <trans-unit id="AppName" translate="yes" xml:space="preserve">
@@ -34,30 +34,30 @@
         </trans-unit>
         <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
-          <target state="translated" state-qualifier="mt-suggestion">Status Settings</target>
+          <target state="translated">Status Settings</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Please check your network connection.</target>
+          <target state="translated">Please check your network connection.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
           <source>OK</source>
-          <target state="translated" state-qualifier="mt-suggestion">OK</target>
+          <target state="translated">OK</target>
         </trans-unit>
         <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
           <source>Not Now</source>
-          <target state="translated" state-qualifier="mt-suggestion">Not Now</target>
+          <target state="translated">Not Now</target>
         </trans-unit>
         <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
           <source>Exposures</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposures</target>
+          <target state="translated">Exposures</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://github.com/Covid-19Radar/Covid19Radar</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
@@ -67,33 +67,33 @@
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
           <source>No known exposures</source>
-          <target state="translated" state-qualifier="mt-suggestion">No known exposures</target>
+          <target state="translated">No known exposures</target>
           <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
         </trans-unit>
         <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
           <source>You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</source>
-          <target state="translated" state-qualifier="mt-suggestion">You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</target>
+          <target state="translated">You will be notified if you have been exposed to someone who reported a positive COVID-19 result.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
           <source>Please try again later.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Please try again later.</target>
+          <target state="translated">Please try again later.</target>
         </trans-unit>
         <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
           <source>Failed</source>
-          <target state="translated" state-qualifier="mt-suggestion">Failed</target>
+          <target state="translated">Failed</target>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
           <source>Diagnosis Submitted</source>
-          <target state="translated" state-qualifier="mt-suggestion">Diagnosis Submitted</target>
+          <target state="translated">Diagnosis Submitted</target>
         </trans-unit>
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="translated" state-qualifier="mt-suggestion">Complete</target>
+          <target state="translated">Complete</target>
         </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
-          <target state="translated" state-qualifier="mt-suggestion">Submitting Diagnosis...</target>
+          <target state="translated">Submitting Diagnosis...</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -102,11 +102,11 @@
         </trans-unit>
         <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="translated" state-qualifier="mt-suggestion">Cancel</target>
+          <target state="translated">Cancel</target>
         </trans-unit>
         <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
           <source>Deleting</source>
-          <target state="translated" state-qualifier="mt-suggestion">Deleting</target>
+          <target state="translated">Deleting</target>
         </trans-unit>
         <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
           <source>Ask your family and friends to participate</source>
@@ -115,11 +115,11 @@
         </trans-unit>
         <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
           <source>Share</source>
-          <target state="translated" state-qualifier="mt-suggestion">Share</target>
+          <target state="translated">Share</target>
         </trans-unit>
         <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
           <source>Sharing positive information and anonymous notification to others</source>
-          <target state="translated" state-qualifier="mt-suggestion">Sharing positive information and anonymous notification to others</target>
+          <target state="translated">Sharing positive information and anonymous notification to others</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
@@ -129,31 +129,31 @@
         </trans-unit>
         <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
           <source>Privacy Policy</source>
-          <target state="translated" state-qualifier="mt-suggestion">Privacy Policy</target>
+          <target state="translated">Privacy Policy</target>
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
-          <target state="translated" state-qualifier="mt-suggestion">Waiting for register</target>
+          <target state="translated">Waiting for register</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
-          <target state="translated" state-qualifier="mt-suggestion">Do you really want to reset all the data?</target>
+          <target state="translated">Do you really want to reset all the data?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="translated" state-qualifier="mt-suggestion">Delete all data</target>
+          <target state="translated">Delete all data</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
-          <target state="translated" state-qualifier="mt-suggestion">All settings and data have been deleted. Please restart the application.</target>
+          <target state="translated">All settings and data have been deleted. Please restart the application.</target>
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Return to registration</target>
+          <target state="translated">Return to registration</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
           <source>Positive registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Positive registration</target>
+          <target state="translated">Positive registration</target>
         </trans-unit>
         <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
           <source>Would you like to register positively later?</source>
@@ -764,27 +764,27 @@
         </trans-unit>
         <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
           <source>Days</source>
-          <target state="translated" state-qualifier="mt-suggestion">Days</target>
+          <target state="translated">Days</target>
           <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
           <source>Exposure Notification is active.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is active.</target>
+          <target state="translated">Exposure Notification is active.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
           <source>Bluetooth is turned off. Please turn on Bluetooth.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Bluetooth is turned off. Please turn on Bluetooth.</target>
+          <target state="translated">Bluetooth is turned off. Please turn on Bluetooth.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
           <source>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
+          <target state="translated">Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
           <source>You must agree to the terms of use.</source>
-          <target state="translated" state-qualifier="mt-suggestion">You must agree to the terms of use.</target>
+          <target state="translated">You must agree to the terms of use.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
@@ -799,12 +799,12 @@
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
           <source>Network connection error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Network connection error</target>
+          <target state="translated">Network connection error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
           <source>Exposure Notification startup error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Exposure Notification startup error</target>
+          <target state="translated">Exposure Notification startup error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
         </trans-unit>
         <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
@@ -819,7 +819,7 @@
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
           <source>Cannot connect to registration center</source>
-          <target state="translated" state-qualifier="mt-suggestion">Cannot connect to registration center</target>
+          <target state="translated">Cannot connect to registration center</target>
           <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
@@ -829,32 +829,32 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
           <source>Register</source>
-          <target state="translated" state-qualifier="mt-suggestion">Register</target>
+          <target state="translated">Register</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
           <source>Canceled</source>
-          <target state="translated" state-qualifier="mt-suggestion">Canceled</target>
+          <target state="translated">Canceled</target>
           <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
           <source>Please wait for a while until registration starts</source>
-          <target state="translated" state-qualifier="mt-suggestion">Please wait for a while until registration starts</target>
+          <target state="translated">Please wait for a while until registration starts</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
           <source>Awaiting registration</source>
-          <target state="translated" state-qualifier="mt-suggestion">Awaiting registration</target>
+          <target state="translated">Awaiting registration</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
           <source>No processing number entered</source>
-          <target state="translated" state-qualifier="mt-suggestion">No processing number entered</target>
+          <target state="translated">No processing number entered</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
           <source>Processing number format does not match</source>
-          <target state="translated" state-qualifier="mt-suggestion">Processing number format does not match</target>
+          <target state="translated">Processing number format does not match</target>
           <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
@@ -864,7 +864,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
           <source>Enable COVID-19 contact logging</source>
-          <target state="translated" state-qualifier="mt-suggestion">Enable COVID-19 contact logging</target>
+          <target state="translated">Enable COVID-19 contact logging</target>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
@@ -874,7 +874,7 @@
         </trans-unit>
         <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
           <source>Registration error</source>
-          <target state="translated" state-qualifier="mt-suggestion">Registration error</target>
+          <target state="translated">Registration error</target>
           <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
         </trans-unit>
         <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">

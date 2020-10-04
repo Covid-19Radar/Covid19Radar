@@ -137,15 +137,15 @@
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
-          <target state="translated" state-qualifier="mt-suggestion">すべてのデータをリセットしますか?</target>
+          <target state="translated">すべてのデータをリセットしますか?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="translated" state-qualifier="mt-suggestion">すべてのデータを削除する</target>
+          <target state="translated">すべてのデータを削除する</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
-          <target state="translated" state-qualifier="mt-suggestion">すべての設定とデータが削除されました。アプリケーションを再起動してください。</target>
+          <target state="translated">すべての設定とデータが削除されました。アプリケーションを再起動してください。</target>
         </trans-unit>
         <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
           <source>Return to registration</source>
@@ -894,12 +894,12 @@
         </trans-unit>
         <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
           <source>A new version of the app is available. Please update to the latest version.</source>
-          <target state="translated" state-qualifier="mt-suggestion">新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</target>
+          <target state="translated">新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</target>
           <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
         </trans-unit>
         <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
           <source>Update to latest version</source>
-          <target state="translated" state-qualifier="mt-suggestion">最新バージョンに更新</target>
+          <target state="translated">最新バージョンに更新</target>
           <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
