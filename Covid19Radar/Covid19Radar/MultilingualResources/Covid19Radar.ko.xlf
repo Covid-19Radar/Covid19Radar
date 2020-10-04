@@ -39,7 +39,7 @@
         </trans-unit>
         <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
           <source>Please check your network connection.</source>
-          <target state="translated" state-qualifier="mt-suggestion">네트워크 연결을 확인하십시오.</target>
+          <target state="translated">네트워크 연결을 확인하십시오.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
         </trans-unit>
         <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
@@ -57,7 +57,7 @@
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://github.com/Covid-19Radar/Covid19Radar</source>
-          <target state="translated" state-qualifier="mt-suggestion">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
@@ -89,11 +89,11 @@
         </trans-unit>
         <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
           <source>Complete</source>
-          <target state="translated" state-qualifier="mt-suggestion">완료</target>
+          <target state="translated">완료</target>
         </trans-unit>
         <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
           <source>Submitting Diagnosis...</source>
-          <target state="translated" state-qualifier="mt-suggestion">진단 제출 중...</target>
+          <target state="translated">진단 제출 중...</target>
         </trans-unit>
         <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
           <source>App Settings</source>
@@ -133,15 +133,15 @@
         </trans-unit>
         <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
           <source>Waiting for register</source>
-          <target state="translated" state-qualifier="mt-suggestion">등록 대기 중</target>
+          <target state="translated">등록 대기 중</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
           <source>Do you really want to reset all the data?</source>
-          <target state="translated" state-qualifier="mt-suggestion">모든 데이터를 다시 설정하시겠습니까?</target>
+          <target state="translated">모든 데이터를 다시 설정하시겠습니까?</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
           <source>Delete all data</source>
-          <target state="translated" state-qualifier="mt-suggestion">모든 데이터 삭제</target>
+          <target state="translated">모든 데이터 삭제</target>
         </trans-unit>
         <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
           <source>All settings and data have been deleted. Please restart the application.</source>
