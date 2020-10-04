@@ -9,6 +9,7 @@
     xmlns:resources="clr-namespace:Covid19Radar.Resources"
     xmlns:common="clr-namespace:Covid19Radar.Common"
     xmlns:system="clr-namespace:System;assembly=netstandard"
+    xmlns:Behavior="clr-namespace:Covid19Radar.Behaviors"
     Title="{x:Static resources:AppResources.NotifyOtherPageTitle}"
     ios:Page.UseSafeArea="true"
     prism:ViewModelLocator.AutowireViewModel="True"
@@ -54,7 +55,11 @@
                                 MaxLength="{x:Static common:AppConstants.MaxDiagnosisUidCount}"
                                 Placeholder="{x:Static resources:AppResources.NotifyOtherPageLabel2}"
                                 Style="{StaticResource DefaultEntry}"
-                                Text="{Binding DiagnosisUid}" />
+                                Text="{Binding DiagnosisUid}">
+                                <Entry.Behaviors>
+                                  <Behavior:NumberOnlyBehavior />
+                                </Entry.Behaviors>
+                            </Entry>
                         </Frame>
                     </Frame>
                     <Frame
@@ -71,6 +76,8 @@
             <Grid Grid.Row="1">
                 <Button
                     AutomationId="NextButton"
+                    AutomationProperties.IsInAccessibleTree="true"
+                    AutomationProperties.Name="{x:Static resources:AppResources.NotifyOtherPageButton}"
                     Command="{Binding Path=OnClickRegister}"
                     IsEnabled="{Binding IsEnabled}"
                     Style="{StaticResource DefaultButton}"
