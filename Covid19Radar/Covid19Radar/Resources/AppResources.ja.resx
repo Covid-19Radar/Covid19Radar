@@ -722,4 +722,8 @@
     <value>接触記録データに問題があります</value>
     <comment>接触記録データに問題があります</comment>
   </data>
+  <data name="ExposureCountUnit" xml:space="preserve">
+    <value>件</value>
+    <comment>件</comment>
+  </data>
 </root>

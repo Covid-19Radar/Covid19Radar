@@ -827,4 +827,8 @@
     <value>There is a problem with the contact record data</value>
     <comment>接触記録データに問題があります</comment>
   </data>
+  <data name="ExposureCountUnit" xml:space="preserve">
+    <value>Count</value>
+    <comment>件</comment>
+  </data>
 </root>

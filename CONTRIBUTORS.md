@@ -80,6 +80,7 @@
 - Ryosuke Nishimura
 - Yuto Takano
 - Jean-Noël Ribelles (French/English Translation)
+- Niccori 250k (Xamarin)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji

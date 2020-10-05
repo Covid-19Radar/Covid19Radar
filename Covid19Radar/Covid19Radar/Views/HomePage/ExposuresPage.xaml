@@ -28,7 +28,7 @@
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="{Binding ExposureCount}" />
-                                            <Span Text="個" />
+                                            <Span Text="{x:Static resources:AppResources.ExposureCountUnit}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
