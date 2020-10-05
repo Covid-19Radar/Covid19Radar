@@ -1404,9 +1404,9 @@ namespace Covid19Radar.Resources {
         /// <summary>
         ///   Status Settings に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string TitileUserStatusSettings {
+        internal static string TitleUserStatusSettings {
             get {
-                return ResourceManager.GetString("TitileUserStatusSettings", resourceCulture);
+                return ResourceManager.GetString("TitleUserStatusSettings", resourceCulture);
             }
         }
         
