@@ -907,6 +907,11 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Il y a un problème avec les données d’enregistrement de contact</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
+        <trans-unit id="ExposureCountUnit" translate="yes" xml:space="preserve">
+          <source>Count</source>
+          <target state="new">Count</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">件</note>
+        </trans-unit>
       </group>
     </body>
   </file>

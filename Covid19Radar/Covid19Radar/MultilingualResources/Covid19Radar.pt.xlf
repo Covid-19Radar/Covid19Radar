@@ -932,6 +932,11 @@
           <target state="translated">Há um problema com os dados de registo de contato</target>
           <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
         </trans-unit>
+        <trans-unit id="ExposureCountUnit" translate="yes" xml:space="preserve">
+          <source>Count</source>
+          <target state="new">Count</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">件</note>
+        </trans-unit>
       </group>
     </body>
   </file>
