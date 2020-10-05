@@ -286,6 +286,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Count に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ExposureCountUnit {
+            get {
+                return ResourceManager.GetString("ExposureCountUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Process number incorrect に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExposureNotificationHandler1ErrorMessage {
