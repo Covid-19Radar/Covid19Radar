@@ -40,7 +40,7 @@
           <target state="translated">https://covid19radar.z11.web.core.windows.net/sample_pp.html</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>
-        <trans-unit id="TitileUserStatusSettings" translate="yes" xml:space="preserve">
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
           <source>Status Settings</source>
           <target state="translated">Statusinställningar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
