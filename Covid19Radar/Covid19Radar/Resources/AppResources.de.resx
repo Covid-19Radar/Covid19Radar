@@ -95,7 +95,7 @@
     <comment>本アプリを広めましょう</comment>
   </data>
   <data name="ButtonShare" xml:space="preserve">
-    <value>Freigeben</value>
+    <value>Teilen</value>
   </data>
   <data name="ButtonNotifyOtherPage" xml:space="preserve">
     <value>Weitergabe von positiver Tests und anonymer Benachrichtigung an Dritte</value>
@@ -106,7 +106,7 @@
     <comment>使用中止</comment>
   </data>
   <data name="PrivacyPolicyPageTitle" xml:space="preserve">
-    <value>Datenschutzrichtlinie</value>
+    <value>Datenschutzerklärung</value>
   </data>
   <data name="LoadingTextRegistering" xml:space="preserve">
     <value>Warten auf Registrierung</value>
@@ -182,7 +182,7 @@
     <comment>アプリの設定へ</comment>
   </data>
   <data name="HelpPage4Description" xml:space="preserve">
-    <value>Über die Einstellungen der App können Sie Bluetooth und Benachrichtigungen aktivieren/deaktivieren, die Verwendung der App beenden und den Verlauf der bisherigen Kontakte löschen.</value>
+    <value>Von den App-Einstellungen aus können Sie die Verwendung der App beenden und Benutzerdaten löschen.</value>
     <comment>アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</comment>
   </data>
   <data name="HelpPage2Description1" xml:space="preserve">
@@ -362,7 +362,7 @@
     <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
-    <value>COVID-19 Auskunft und Materialien</value>
+    <value>COVID-19 Informationen und Ressourcen</value>
     <comment>新型コロナウイルス感染症対策サイト</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
@@ -608,19 +608,19 @@
     <comment>接触確認アプリに関するお問い合わせ</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
-    <value>TAGE</value>
+    <value>Tagen</value>
     <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung ist aktiv.</value>
+    <value>Die Expositionsmeldung ist aktiviert.</value>
     <comment>Exposure Notification機能は許諾の状態です。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
-    <value>Bluetooth ist ausgeschaltet. Aktivieren Sie Bluetooth.</value>
+    <value>Bluetooth ist ausgeschaltet. Bitte Bluetooth einschalten.</value>
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung ist deaktiviert. Öffnen Sie die Terminaleinstellungen, und aktivieren Sie die Belichtungsbenachrichtigung.</value>
+    <value>Die Expositionsmeldung ist deaktiviert. Öffnen Sie die Terminal-Einstellungen und schalten Sie die Expositionsmeldung ein.</value>
     <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
@@ -628,7 +628,7 @@
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung ist eingeschränkt. Bitte aktiv.</value>
+    <value>Die Belichtungsbenachrichtigung ist eingeschränkt. Schalten Sie die Belichtungsbenachrichtigung ein.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
@@ -636,7 +636,7 @@
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@yourhealthcaredivmailaddress.orgまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>Netzwerkverbindungsfehler</value>
+    <value>Kommunikation fehlgeschlagen</value>
     <comment>通信に失敗しました。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
@@ -644,7 +644,7 @@
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Die Belichtungsbenachrichtigung konnte nicht gestartet werden. Öffnen Sie die Terminaleinstellungen, aktivieren Sie belichtungsbenachrichtigung und schalten Sie Bluetooth ein.</value>
+    <value>Die Expositionsmeldung konnte nicht gestartet werden. Öffnen Sie die Terminaleinstellungen, schalten Sie die Expositionsmeldung ein und schalten Sie Bluetooth ein.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
@@ -652,7 +652,7 @@
     <comment>アプリで入力された処理番号が違います</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
-    <value>Eine Verbindung zum Registrierungszentrum kann nicht hergestellt werden.</value>
+    <value>Verbindung zum Registrierungszentrum nicht möglich</value>
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
@@ -664,7 +664,7 @@
     <comment>登録</comment>
   </data>
   <data name="NotifyOtherPageDiag2Message" xml:space="preserve">
-    <value>Abgebrochen</value>
+    <value>Annulliert</value>
     <comment>キャンセルしました</comment>
   </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
@@ -684,15 +684,15 @@
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>Um positive Aufzeichnungen zu registrieren, ist es notwendig, COVID-19 Kontaktprotokollaufzeichnung zu aktivieren, aktivieren Sie es bitte aus der Anwendung oder OS-Einstellungen.</value>
+    <value>Um positive Aufzeichnungen zu registrieren, ist es notwendig, die COVID-19-Kontaktprotokollaufzeichnung zu aktivieren, bitte aktivieren Sie diese über die Anwendungs- oder Betriebssystemeinstellungen.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
-    <value>COVID-19-Kontaktprotokollierung aktivieren</value>
+    <value>Aktivieren der COVID-19-Kontaktprotokollierung</value>
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>Die Anzahl der Anmeldungen hat die Obergrenze erreicht. Exit-Anwendung</value>
+    <value>Sie haben die Registrierungsgrenze erreicht. Die Anmeldung wird geschlossen.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
@@ -700,7 +700,7 @@
     <comment>登録エラー</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" xml:space="preserve">
-    <value>Der der Einreichung entsprechende Kontaktdatensatz konnte nicht bestätigt werden. Keine Notwendigkeit zu übermitteln.</value>
+    <value>Der der Vorlage entsprechende Kontaktdatensatz konnte nicht bestätigt werden. Eine Einreichung ist nicht erforderlich.</value>
     <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
