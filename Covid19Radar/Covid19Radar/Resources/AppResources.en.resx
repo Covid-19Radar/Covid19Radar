@@ -612,7 +612,7 @@
     <comment>X日間</comment>
   </data>
   <data name="ExposureNotificationStatusMessageActive" xml:space="preserve">
-    <value>Exposure Notification is active.</value>
+    <value>Exposure Notification is enabled.</value>
     <comment>Exposure Notification機能は許諾の状態です。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageBluetoothOff" xml:space="preserve">
@@ -620,23 +620,23 @@
     <comment>BluetoothがOffになっています。Bluetoothを有効にしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageDisabled" xml:space="preserve">
-    <value>Exposure Notification is disabled. Open the terminal settings and turn on Exposure Notification.</value>
+    <value>Exposure Notification is disabled. Please open your device's settings and turn on Exposure Notification.</value>
     <comment>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageIsOptined" xml:space="preserve">
-    <value>You must agree to the terms of use.</value>
+    <value>You must agree to the Terms of Use.</value>
     <comment>利用規約に同意する必要があります。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageRestricted" xml:space="preserve">
-    <value>COVID-19 Contact notification feature is not approved. Please approve it from the Operating System or re-approve after reinstalling the application.</value>
+    <value>Exposure Notification is disabled. Please turn it on.</value>
     <comment>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</comment>
   </data>
   <data name="ExposureNotificationStatusMessageUnknown" xml:space="preserve">
-    <value>Exposure Notification is not supported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@yourhealthcaredivmailaddress.org.</value>
+    <value>Exposure Notification is unsupported. Please update the OS to the latest version. If you still have problems, please contact us at appsupport@yourhealthcaredivmailaddress.org.</value>
     <comment>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@yourhealthcaredivmailaddress.orgまでお問い合わせください。</comment>
   </data>
   <data name="DialogNetworkConnectionErrorTitle" xml:space="preserve">
-    <value>Network connection error</value>
+    <value>Communication error</value>
     <comment>通信に失敗しました。</comment>
   </data>
   <data name="DialogExposureNotificationStartupErrorTitle" xml:space="preserve">
@@ -644,11 +644,11 @@
     <comment>Exposure Notification起動エラー</comment>
   </data>
   <data name="DialogExposureNotificationStartupError" xml:space="preserve">
-    <value>Exposure Notification could not startup. Open the terminal settings, turn on Exposure Notification feature and turn on Bluetooth.</value>
+    <value>Exposure Notification could not be startup. Open your device's settings, turn on Exposure Notification, and turn on Bluetooth.</value>
     <comment>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</comment>
   </data>
   <data name="ExposureNotificationHandler1ErrorMessage" xml:space="preserve">
-    <value>Processing number incorrect</value>
+    <value>Process number incorrect</value>
     <comment>アプリで入力された処理番号が違います</comment>
   </data>
   <data name="ExposureNotificationHandler2ErrorMessage" xml:space="preserve">
@@ -656,7 +656,7 @@
     <comment>センターに接続できません</comment>
   </data>
   <data name="NotifyOtherPageDiag1Message" xml:space="preserve">
-    <value>Do you want to register a positive test result?</value>
+    <value>Do you want to register positive information?</value>
     <comment>陽性情報を登録しますか?</comment>
   </data>
   <data name="NotifyOtherPageDiag1Title" xml:space="preserve">
@@ -668,7 +668,7 @@
     <comment>キャンセルしました</comment>
   </data>
   <data name="NotifyOtherPageDiag3Message" xml:space="preserve">
-    <value>Please wait for a while until registration starts</value>
+    <value>Please wait for a while until registration opens.</value>
     <comment>登録開始までしばらくそのままでお待ちください</comment>
   </data>
   <data name="NotifyOtherPageDiag3Title" xml:space="preserve">
@@ -676,7 +676,7 @@
     <comment>登録待ち</comment>
   </data>
   <data name="NotifyOtherPageDiag4Message" xml:space="preserve">
-    <value>No processing number entered</value>
+    <value>No processing number is entered</value>
     <comment>処理番号が入力されていません</comment>
   </data>
   <data name="NotifyOtherPageDiag5Message" xml:space="preserve">
@@ -684,7 +684,7 @@
     <comment>処理番号のフォーマットが一致していません</comment>
   </data>
   <data name="NotifyOtherPageDiag6Message" xml:space="preserve">
-    <value>In order to register as tested positive, it is necessary to enable COVID-19 contact log recording, please enable it from the application or Operating System settings.</value>
+    <value>In order to register positive records, it is necessary to enable COVID-19 contact log recording. Please enable it from the application or OS settings.</value>
     <comment>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</comment>
   </data>
   <data name="NotifyOtherPageDiag6Title" xml:space="preserve">
@@ -692,7 +692,7 @@
     <comment>COVID-19接触のログ記録を有効にしてください</comment>
   </data>
   <data name="NotifyOtherPageDiagAppClose" xml:space="preserve">
-    <value>The number of registrations reached the upper limit. Application will exit.</value>
+    <value>You have reached the registration limit. The application will be closed.</value>
     <comment>登録回数上限になりました。アプリケーションを終了します</comment>
   </data>
   <data name="NotifyOtherPageDiagErrorTitle" xml:space="preserve">
@@ -704,7 +704,7 @@
     <comment>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</comment>
   </data>
   <data name="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" xml:space="preserve">
-    <value>No applicable contact</value>
+    <value>No appropriate contact</value>
     <comment>該当接触なし</comment>
   </data>
   <data name="UrlVersion" xml:space="preserve">

@@ -788,8 +788,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
-          <source>COVID-19 Contact notification feature is not approved. Please approve from each OS or re-approve after reinstalling the application.</source>
-          <target state="translated">Exposure Notification is disabled. Please turn it on.</target>
+          <source>COVID-19 Contact notification feature not approved. Please approve from each OS or re-approve after reinstalling the application.</source>
+          <target state="needs-review-translation">Exposure Notification is disabled. Please turn it on.</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
         </trans-unit>
