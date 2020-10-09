@@ -720,7 +720,7 @@
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/phone.json</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/phone.json</target>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
