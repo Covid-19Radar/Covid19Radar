@@ -58,7 +58,7 @@
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="NotifyOthersLearnMoreUrl">
           <source>https://github.com/Covid-19Radar/Covid19Radar</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="MainTutorial">
