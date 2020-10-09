@@ -65,7 +65,7 @@
         </trans-unit>
         <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
           <source>https://github.com/Covid-19Radar/Covid19Radar</source>
-          <target state="needs-review-translation">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
           <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
         </trans-unit>
@@ -716,11 +716,11 @@
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/index.html</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/index.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/phone.json</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/phone.json</target>
         </trans-unit>
         <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</source>
@@ -895,7 +895,7 @@
         </trans-unit>
         <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/version.json</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/version.json</target>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
           <source>There is a problem with the contact record data</source>

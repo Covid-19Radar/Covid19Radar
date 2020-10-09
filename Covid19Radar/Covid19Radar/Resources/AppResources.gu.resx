@@ -574,10 +574,10 @@
     <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/index.html</value>
   </data>
   <data name="UrlContactedPhone" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/phone.json</value>
+    <value>https://covid19radar.z11.web.core.windows.net/phone.json</value>
   </data>
   <data name="LocalNotificationDescription" xml:space="preserve">
     <value>શક્ય છે કે તમે કોઈ વપરાશકર્તાની નજીક હોવ કે જેમણે COVID-19 માટે પોઝિટિવ ટેસ્ટ કર્યો હોય.  વધુ વિગતો માટે ટેપ કરો.</value>
@@ -708,7 +708,7 @@
     <comment>該当接触なし</comment>
   </data>
   <data name="UrlVersion" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/version.json</value>
+    <value>https://covid19radar.z11.web.core.windows.net/version.json</value>
   </data>
   <data name="AppUtilsGetNewVersionDescription" xml:space="preserve">
     <value>એપ્લિકેશનનું નવું વર્ઝન ઉપલબ્ધ છે. કૃપા કરીને નવીનતમ આવૃત્તિમાં સુધારો.</value>

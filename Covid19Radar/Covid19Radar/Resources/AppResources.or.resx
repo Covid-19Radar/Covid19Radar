@@ -37,6 +37,10 @@
   <data name="ButtonNotNow" xml:space="preserve">
     <value>ବର୍ତ୍ତମାନ ନୁହେଁ</value>
   </data>
+  <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
+    <value>https://github.com/Covid-19Radar/Covid19Radar</value>
+    <comment>Health care jurisdiction page</comment>
+  </data>
   <data name="NotifyOtherPageDialogExceptionText" xml:space="preserve">
     <value>ଦୟାକରି ପରେ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ.</value>
   </data>
