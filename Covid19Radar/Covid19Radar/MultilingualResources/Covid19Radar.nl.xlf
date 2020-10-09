@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/sample_pp.html</source>
-          <target state="needs-review-translation">https://covid19radarjpnbgprod.blob.core.windows.net/html//nl/privacypolicy.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/sample_pp.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Policy</note>
         </trans-unit>

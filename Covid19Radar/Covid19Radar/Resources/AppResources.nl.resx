@@ -28,7 +28,7 @@
     <comment>ライセンス</comment>
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radarjpnbgprod.blob.core.windows.net/html//nl/privacypolicy.html</value>
+    <value>https://covid19radar.z11.web.core.windows.net/sample_pp.html</value>
     <comment>Policy</comment>
   </data>
   <data name="TitleUserStatusSettings" xml:space="preserve">
