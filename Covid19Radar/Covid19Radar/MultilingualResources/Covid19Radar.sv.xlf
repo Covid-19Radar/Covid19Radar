@@ -895,7 +895,7 @@
         </trans-unit>
         <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/version.json</source>
-          <target state="translated">https://covid19radarjpnprod.z11.web.core.windows.net/version.json</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/version.json</target>
         </trans-unit>
         <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
           <source>There is a problem with the contact record data</source>
