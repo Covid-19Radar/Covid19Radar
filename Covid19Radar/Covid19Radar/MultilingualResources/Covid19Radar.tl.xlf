@@ -728,7 +728,7 @@
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlTermOfUse">
           <source>https://covid19radar.z11.web.core.windows.net/sample_tu.html</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/sample_tu.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/sample_tu.html</target>
           <note priority="2" annotates="source" from="MultilingualBuild">Term of Use</note>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedForm">

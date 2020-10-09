@@ -715,7 +715,7 @@
         </trans-unit>
         <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
           <source>https://covid19radar.z11.web.core.windows.net/sample_tu.html</source>
-          <target state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/sample_tu.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/sample_tu.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
