@@ -33,7 +33,13 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
-
+            MenuItems.Add(new MainMenuModel() {
+                Icon = "\uf0c0", //"\ue85c", //"\ud83d\udcf0",
+                PageName = nameof(NewsPage),
+                Title = Resources.AppResources.NewsPageTitle,
+                IconColor = "#019AE8",
+                TextColor = "#000"
+            });
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf013",
@@ -42,7 +48,6 @@ namespace Covid19Radar.ViewModels
                 IconColor = "#019AE8",
                 TextColor = "#000"
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0e0",
@@ -75,7 +80,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(LicenseAgreementPage),
                 Title = Resources.AppResources.TitleLicenseAgreement
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -94,7 +98,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(ContactedNotifyPage),
                 Title = nameof(ContactedNotifyPage)
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -107,7 +110,6 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(PrivacyPolicyPage),
                 Title = nameof(PrivacyPolicyPage)
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf70e",
@@ -180,14 +182,12 @@ namespace Covid19Radar.ViewModels
                 PageName = nameof(HelpPage4),
                 Title = nameof(HelpPage4)
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
                 PageName = nameof(ChatbotPage),
                 Title = nameof(ChatbotPage)
             });
-
             MenuItems.Add(new MainMenuModel()
             {
                 Icon = "\uf0c0",
@@ -201,7 +201,7 @@ namespace Covid19Radar.ViewModels
                 Title = nameof(SubmitConsentPage)
             });
 #endif
-            */
+            //*/
             NavigateCommand = new DelegateCommand(Navigate);
         }
 

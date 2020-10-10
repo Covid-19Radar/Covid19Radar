@@ -81,6 +81,7 @@
 - Yuto Takano
 - Jean-Noël Ribelles (French/English Translation)
 - Niccori 250k (Xamarin)
+- Takym (News Page)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
