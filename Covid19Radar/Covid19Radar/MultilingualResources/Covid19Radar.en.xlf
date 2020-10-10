@@ -939,8 +939,8 @@
           <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
         </trans-unit>
         <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
-          <source>Links</source>
-          <target state="translated">Links</target>
+          <source>Anti-Coronavirus Dashboard</source>
+          <target state="translated">Anti-Coronavirus Dashboard</target>
           <note from="MultilingualBuild" annotates="source" priority="2">対策ダッシュボード</note>
         </trans-unit>
         <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
