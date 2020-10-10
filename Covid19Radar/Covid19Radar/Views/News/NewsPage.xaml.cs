@@ -16,7 +16,7 @@ namespace Covid19Radar.Views
 
 		private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
 		{
-			NewsPageViewModel.Url = $"{AppResources.GoogleSearchUrl}+{Uri.EscapeDataString(CovidSearchBar.Text)}";
+			NewsPageViewModel.Url     = $"{AppResources.GoogleSearchUrl}+{Uri.EscapeDataString(CovidSearchBar.Text)}";
 			NewsPageViewModel.GSearch = true;
 			GSearchButton.Command.Execute(null);
 		}
