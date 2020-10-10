@@ -250,6 +250,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   https://corona.go.jp/en/ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CoronaGoJPUrl {
+            get {
+                return ResourceManager.GetString("CoronaGoJPUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposure Notification could not startup. Open the terminal settings, turn in Exposure Notification, and turn in Bluetooth. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DialogExposureNotificationStartupError {
@@ -417,6 +426,15 @@ namespace Covid19Radar.Resources {
         internal static string ExposuresPageTitle {
             get {
                 return ResourceManager.GetString("ExposuresPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://www.google.us/search?hl=en&amp;q=Coronavirus+disease+2019 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string GoogleSearchUrl {
+            get {
+                return ResourceManager.GetString("GoogleSearchUrl", resourceCulture);
             }
         }
         
@@ -943,6 +961,60 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   Data by Cabinet Secretariat に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowCoronaGoJP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowCoronaGoJP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Search News on Google に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowGoogle {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowGoogle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Anti-Coronavirus Dashboard に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowStopCOVID19JP {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowStopCOVID19JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Links に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_Links {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_Links", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can search information about new corona. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageLabel_LinksDescription {
+            get {
+                return ResourceManager.GetString("NewsPageLabel_LinksDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   News に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageTitle {
+            get {
+                return ResourceManager.GetString("NewsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Share this app に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NotContactPageButtonText {
@@ -1303,6 +1375,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   https://www.stopcovid19.jp/#en に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string StopCOVID19JPUrl {
+            get {
+                return ResourceManager.GetString("StopCOVID19JPUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   The processing number will be notified to your mobile phone number or e-mail address registered in the new coronavirus infectious disease information and management system (hereinafter &quot;management system&quot;). に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SubmitConsentPageDescription1 {
@@ -1402,20 +1483,20 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Status Settings に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string TitleUserStatusSettings {
-            get {
-                return ResourceManager.GetString("TitleUserStatusSettings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   License に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string TitleLicenseAgreement {
             get {
                 return ResourceManager.GetString("TitleLicenseAgreement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Status Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string TitleUserStatusSettings {
+            get {
+                return ResourceManager.GetString("TitleUserStatusSettings", resourceCulture);
             }
         }
         
