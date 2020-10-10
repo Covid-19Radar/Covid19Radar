@@ -12,6 +12,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="UrlPrivacyPolicy" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/sample_pp.html</value>
+    <comment>Policy</comment>
+  </data>
   <data name="NotifyOthersLearnMoreUrl" xml:space="preserve">
     <value>https://github.com/Covid-19Radar/Covid19Radar</value>
     <comment>Health care jurisdiction page</comment>
@@ -27,5 +31,18 @@
   <data name="HomePageTitle1" xml:space="preserve">
     <value>کور</value>
     <comment>ホーム</comment>
+  </data>
+  <data name="UrlTermOfUse" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/sample_tu.html</value>
+    <comment>Term of Use</comment>
+  </data>
+  <data name="UrlContactedForm" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/index.html</value>
+  </data>
+  <data name="UrlContactedPhone" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/phone.json</value>
+  </data>
+  <data name="UrlVersion" xml:space="preserve">
+    <value>https://covid19radar.z11.web.core.windows.net/version.json</value>
   </data>
 </root>

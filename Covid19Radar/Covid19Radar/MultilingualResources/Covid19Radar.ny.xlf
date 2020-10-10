@@ -737,7 +737,7 @@
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
           <source>https://covid19radar.z11.web.core.windows.net/phone.json</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web:</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/phone.json</target>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="LocalNotificationDescription">
           <source>It is possible you have been in close proximity to a user who tested positive for COVID-19. Tap for more details.</source>
