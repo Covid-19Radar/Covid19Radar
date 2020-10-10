@@ -6,7 +6,6 @@ using System;
 using Acr.UserDialogs;
 using Covid19Radar.Views;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Covid19Radar.Common;
 using Covid19Radar.Resources;
 using System.Threading.Tasks;
@@ -141,7 +140,7 @@ namespace Covid19Radar.ViewModels
                 );
                 await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
             }
-            catch (InvalidDataException ex)
+            catch (InvalidDataException)
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(
@@ -150,7 +149,7 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonOk
                 );
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(
