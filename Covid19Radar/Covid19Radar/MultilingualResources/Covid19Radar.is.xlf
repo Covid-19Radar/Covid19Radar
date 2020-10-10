@@ -732,7 +732,7 @@
           <note from="MultilingualBuild" annotates="source" priority="2">Term of Use</note>
         </trans-unit>
         <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
-          <source>https://covid19radarjpnprod.z11.web.core.windows.net/en/index.html</source>
+          <source>https://covid19radar.z11.web.core.windows.net/index.html</source>
           <target state="translated">https://covid19radar.z11.web.core.windows.net/index.html</target>
         </trans-unit>
         <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">

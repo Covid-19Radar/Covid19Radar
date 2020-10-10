@@ -736,7 +736,7 @@
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedForm">
           <source>https://covid19radar.z11.web.core.windows.net/index.html</source>
-          <target state-qualifier="mt-suggestion" state="needs-review-translation">https://covid19radarjpnprod.z11.web.core.windows.net/hr/index.html</target>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/index.html</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit xml:space="preserve" translate="yes" id="UrlContactedPhone">
