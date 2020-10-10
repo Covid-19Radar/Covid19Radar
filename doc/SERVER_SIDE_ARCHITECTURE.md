@@ -87,7 +87,7 @@ Deployment to these is automated by the CI pipeline.
 
 ### Azure DevOps - GitHub
 
-Once registered to Master on Github, it will also sync to Repos on DevOps.
+Once registered to Master on GitHub, it will also sync to Repos on DevOps.
 The opposite is also true.
 This is a remnant of Scrum development with the core team for a while.
 
