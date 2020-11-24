@@ -777,7 +777,7 @@
         </trans-unit>
         <trans-unit id="InqueryMailBody" translate="yes" xml:space="preserve">
           <source>Name: \r\n Contact: \r\n Content of inquiry (Please select a category from the following): 1. How the app works, 2. App settings, 3. Use of the app (notification etc.) ), 4. Others \r\n Inquiry text: \r\n</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nome: \r\n Contacto: \r\n Conteúdo de consulta (Selecione uma categoria a seguir): 1. Como funciona o aplicativo, 2. Configurações do aplicativo, 3. Uso do aplicativo (notificação etc.) ), 4. Outros \r\n Texto de consulta: \r\n</target>
+          <target state="translated">Nome: \r\n Contacto: \r\n Conteúdo de consulta (Selecione uma categoria a seguir): 1. Como funciona a aplicação, 2. Configurações da aplicação, 3. Uso da aplicação (notificações etc.) ), 4. Outros \r\n Texto de consulta: \r\n</target>
           <note from="MultilingualBuild" annotates="source" priority="2">お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</note>
         </trans-unit>
         <trans-unit id="InqueryMailSubject" translate="yes" xml:space="preserve">
