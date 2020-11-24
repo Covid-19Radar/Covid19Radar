@@ -128,7 +128,7 @@
         </trans-unit>
         <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
           <source>Stop</source>
-          <target state="translated" state-qualifier="mt-suggestion">Parar</target>
+          <target state="translated">Parar</target>
           <note from="translator" priority="2">Stop is not the same as reset, the id of the trans-unit is ButtonReset the source is Stop and the translation "Restaurar" means reset. Is this correct?</note>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
