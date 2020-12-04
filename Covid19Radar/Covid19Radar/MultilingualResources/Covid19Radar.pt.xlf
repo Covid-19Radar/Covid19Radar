@@ -693,7 +693,7 @@
         </trans-unit>
         <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
           <source>If you have been in contact with you within 14 days, you will know that you may have been contacted without any information that can identify you personally.</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Se você esteve em contacto com você dentro de 14 dias, você saberá que você pode ter sido contatado sem qualquer informação que possa identificá-lo pessoalmente.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Se você esteve em contato com você dentro de 14 dias, você saberá que você pode ter sido contatado sem qualquer informação que possa identificá-lo pessoalmente.</target>
           <note from="translator" priority="2">This is wrong - "If you have been in contact with you"</note>
           <note from="MultilingualBuild" annotates="source" priority="2">14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</note>
         </trans-unit>
