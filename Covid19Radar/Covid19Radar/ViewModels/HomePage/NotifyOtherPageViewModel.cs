@@ -203,7 +203,7 @@ namespace Covid19Radar.ViewModels
                 loggerService.Info($"Successfully submit the diagnostic number.");
                 loggerService.EndMethod();
             }
-            catch (InvalidDataException)
+            catch (InvalidDataException ex)
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(
@@ -214,7 +214,7 @@ namespace Covid19Radar.ViewModels
                 loggerService.Exception("Failed to submit UID invalid data.", ex);
                 loggerService.EndMethod();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 errorCount++;
                 UserDialogs.Instance.Alert(

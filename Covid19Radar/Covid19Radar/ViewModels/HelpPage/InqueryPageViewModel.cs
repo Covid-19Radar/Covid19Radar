@@ -78,8 +78,8 @@ namespace Covid19Radar.ViewModels
                 recipients.Add(AppSettings.Instance.SupportEmail);
                 var message = new EmailMessage
                 {
-                    Subject = AppResources.InqueryMailSubject,
-                    Body = device_info + "\r\n" + AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
+                    Subject = AppResources.InquiryMailSubject,
+                    Body = device_info + "\r\n" + AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"),
                     To = recipients
                 };
                 await Email.ComposeAsync(message);
@@ -88,7 +88,7 @@ namespace Covid19Radar.ViewModels
             } finally {
                 loggerService.EndMethod();
 			}
-#else
+#elif false
             // Device Model (SMG-950U, iPhone10,6)
             var device = DeviceInfo.Model;
 

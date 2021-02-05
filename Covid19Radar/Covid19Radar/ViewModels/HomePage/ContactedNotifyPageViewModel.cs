@@ -19,7 +19,7 @@ namespace Covid19Radar.ViewModels
 
         public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
         {
-            Title = AppResources.TitileUserStatusSettings;
+            Title = AppResources.TitleUserStatusSettings;
 			//this.exposureNotificationService = exposureNotificationService;
             this.loggerService = loggerService;
             ExposureCount = exposureNotificationService.GetExposureCount().ToString();

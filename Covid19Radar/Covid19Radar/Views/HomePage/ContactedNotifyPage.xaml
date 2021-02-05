@@ -51,15 +51,6 @@
                         Style="{StaticResource DefaultButton}"
                         Text="{x:Static resources:AppResources.ContactedNotifyPageButton2}" />
 
-                    <Button
-                        Margin="0,0,0,20"
-                        AutomationId="ButtonShareApp"
-                        AutomationProperties.IsInAccessibleTree="true"
-                        AutomationProperties.Name="{x:Static resources:AppResources.ContactedNotifyPageButton3}"
-                        Command="{Binding Path=OnClickByPhone}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.ContactedNotifyPageButton3}" />
-
                     <Label
                         Margin="0"
                         HorizontalTextAlignment="Start"

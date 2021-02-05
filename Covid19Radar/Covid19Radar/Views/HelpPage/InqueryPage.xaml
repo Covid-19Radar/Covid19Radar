@@ -20,20 +20,21 @@
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
                 </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
+				<StackLayout Spacing="0">
+					<Label Style="{StaticResource DefaultLabelSmall}">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span
                                     Text="appsupport@yourhealthcaredivmailaddress.org"
                                     TextColor="{StaticResource Primary}"
                                     TextDecorations="Underline" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                <Button
+								<Span Text="{x:Static x:Environment.NewLine}" />
+								<Span Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>
+				</StackLayout>
+				<Button
                     Command="{Binding Path=OnClickQuestionCommand}"
                     Style="{StaticResource DefaultButton}"
                     Text="{x:Static resources:AppResources.InqueryPageButton1}" />

@@ -4,6 +4,7 @@ using Covid19Radar.Services.Logs;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {

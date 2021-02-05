@@ -27,10 +27,6 @@
     <value>ライセンス</value>
     <comment>ライセンス</comment>
   </data>
-  <data name="UrlPrivacyPolicy" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/sample_pp.html</value>
-    <comment>Policy</comment>
-  </data>
   <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>ステータス設定</value>
     <comment>User Status Page Title</comment>
@@ -381,14 +377,6 @@
     <value>登録する</value>
     <comment>登録する</comment>
   </data>
-  <data name="NotifyOtherPageDescription1" xml:space="preserve">
-    <value>新型コロナウイルス感染症者等情報把握・管理支援システム（HER-SYS）から発行された処理番号を入力してください。</value>
-    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
-  </data>
-  <data name="NotifyOtherPageDescription2" xml:space="preserve">
-    <value>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
-  </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>処理番号の取得方法</value>
     <comment>処理番号の取得方法</comment>
@@ -508,10 +496,6 @@
   <data name="ExposuresPageLabel1" xml:space="preserve">
     <value>以下の日に陽性者との接触が確認されました。</value>
     <comment>以下の日に陽性者との接触が確認されました。</comment>
-  </data>
-  <data name="UrlTermOfUse" xml:space="preserve">
-    <value>https://covid19radar.z11.web.core.windows.net/sample_tu.html</value>
-    <comment>Term of Use</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/index.html</value>
@@ -872,9 +856,6 @@
   <data name="SendIdMailSubject" xml:space="preserve">
     <value>COCOA 動作情報IDの送信</value>
     <comment>COCOA 動作情報IDの送信</comment>
-  </data>
-  <data name="UrlContactedForm" xml:space="preserve">
-    <value>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot2.html</value>
   </data>
   <data name="SuccessMessageToSaveOperatingInformationForAndroid2" xml:space="preserve">
     <value>
