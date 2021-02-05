@@ -10,9 +10,7 @@ namespace Covid19Radar.Common
 
         public event TimeOutHandler TimeOutEvent;
 
-        private DateTime _startDateTime;
-
-        private bool _timerRunning;
+		private bool _timerRunning;
 
         private int _timeDiffernce;
 

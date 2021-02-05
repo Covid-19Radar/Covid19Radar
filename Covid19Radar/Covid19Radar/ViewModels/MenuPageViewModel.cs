@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Covid19Radar.Model;
 using Covid19Radar.Views;
-using System.Diagnostics;
 using Xamarin.Forms.Internals;
 
 namespace Covid19Radar.ViewModels

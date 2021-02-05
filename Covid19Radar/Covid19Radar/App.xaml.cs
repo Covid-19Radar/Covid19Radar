@@ -1,4 +1,3 @@
-using System;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
@@ -6,22 +5,11 @@ using Covid19Radar.ViewModels;
 using Covid19Radar.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Prism.Mvvm;
 using DryIoc;
-using ImTools;
-using Covid19Radar.Model;
 using System.Threading.Tasks;
 using Prism.Navigation;
 using Covid19Radar.Services;
-using Prism.Services;
 using Covid19Radar.Common;
-using System.Net.Http;
-using Prism.Logging;
-using System.Collections.Generic;
-using System.Text;
-using FFImageLoading.Helpers;
-using FFImageLoading;
-using Xamarin.ExposureNotifications;
 using Xamarin.Essentials;
 //using Plugin.LocalNotification;
 
