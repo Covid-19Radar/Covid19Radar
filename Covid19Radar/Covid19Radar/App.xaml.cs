@@ -12,6 +12,7 @@ using Covid19Radar.Services;
 using Covid19Radar.Common;
 using Xamarin.Essentials;
 //using Plugin.LocalNotification;
+using Covid19Radar.Services.Logs;
 
 /*
  * Our mission...is
@@ -24,8 +25,10 @@ namespace Covid19Radar
 {
     public partial class App : PrismApplication
     {
+        private ILoggerService LoggerService;
+        private ILogFileService LogFileService;
 
-        /* 
+        /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor.
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
@@ -37,6 +40,11 @@ namespace Covid19Radar
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
+            LoggerService = Container.Resolve<ILoggerService>();
+            LoggerService.StartMethod();
+            LogFileService = Container.Resolve<ILogFileService>();
+            LogFileService.AddSkipBackupAttribute();
 
 #if USE_MOCK
             // For debug mode, set the mock api provider to interact
@@ -57,27 +65,36 @@ namespace Covid19Radar
 
             INavigationResult result;
             // Check user data and skip tutorial
-            UserDataService userDataService = Container.Resolve<UserDataService>();
+            IUserDataService userDataService = Container.Resolve<IUserDataService>();
 
             if (userDataService.IsExistUserData)
             {
+                LoggerService.Info("User data exists");
                 var userData = userDataService.Get();
+                LoggerService.Info($"userData.IsOptined: {userData.IsOptined}");
+                LoggerService.Info($"userData.IsPolicyAccepted: {userData.IsPolicyAccepted}");
                 if (userData.IsOptined && userData.IsPolicyAccepted)
                 {
-                    result = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+                    LoggerService.Info($"Transition to SplashPage");
+                    result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
                 }
                 else
                 {
+                    LoggerService.Info($"Transition to TutorialPage1");
                     result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
                 }
             }
             else
             {
+                LoggerService.Info("No user data exists");
+                LoggerService.Info($"Transition to TutorialPage1");
                 result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
             }
 
             if (!result.Success)
             {
+                LoggerService.Info($"Failed transition.");
+
                 MainPage = new ExceptionPage
                 {
                     BindingContext = new ExceptionPageViewModel()
@@ -88,6 +105,8 @@ namespace Covid19Radar
                 System.Diagnostics.Debugger.Break();
             }
             _ = InitializeBackgroundTasks();
+
+            LoggerService.EndMethod();
         }
 
         //protected void OnNotificationTapped(NotificationTappedEventArgs e)
@@ -122,6 +141,8 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<HelpPage2>();
             containerRegistry.RegisterForNavigation<HelpPage3>();
             containerRegistry.RegisterForNavigation<HelpPage4>();
+            containerRegistry.RegisterForNavigation<SendLogConfirmationPage>();
+            containerRegistry.RegisterForNavigation<SendLogCompletePage>();
 
             containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
             containerRegistry.RegisterForNavigation<InqueryPage>();
@@ -133,18 +154,32 @@ namespace Covid19Radar
             containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
             containerRegistry.RegisterForNavigation<SubmitConsentPage>();
             containerRegistry.RegisterForNavigation<ExposuresPage>();
+            containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
+            containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
+            containerRegistry.RegisterForNavigation<SplashPage>();
 
             // News
             containerRegistry.RegisterForNavigation<NewsPage>();
             containerRegistry.RegisterForNavigation<WebViewerPage>();
 
             // Services
-            containerRegistry.RegisterSingleton<UserDataService>();
+            containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
+            containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
+            containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
+            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
+            containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
+            containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
+            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
+            containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
+            containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
+            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
 #if USE_MOCK
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-#else            
+            containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();
+#else
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
+            containerRegistry.RegisterSingleton<IStorageService, StorageService>();
 #endif
         }
 
@@ -155,10 +190,16 @@ namespace Covid19Radar
                 SecureStorage.Remove(AppConstants.StorageKey.UserData);
                 SecureStorage.Remove(AppConstants.StorageKey.Secret);
             }
+            // Initialize periodic log delete service
+            var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
+            logPeriodicDeleteService.Init();
+
+            LogFileService.Rotate();
         }
 
         protected override void OnResume()
         {
+            LogFileService.Rotate();
         }
 
         public async Task InitializeBackgroundTasks()

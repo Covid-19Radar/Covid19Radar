@@ -1,25 +1,24 @@
-# COVID-19Radar (English)/([Japanese](README.ja.md))
+<!-- TODO: README 更新 -->
 
-“There is only one version of contact confirming app in app stores - the official version by the Ministry of Health, Labor and Welfare. This GitHub contains code that became the base for the official app, but it is not the same as the code for the official app itself.
-This code is maintained by the community and there is no guarantee that issues or pull requests will be reflected in the official app."
+# COVID-19 Contact-Confirming Application COCOA (English)/([Japanese](README.ja.md))
 
-We are looking for translator reviewers, Please see [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
+This is the official repository for the COVID-19 Contact-Confirming Application(COCOA).
+COCOA has been developed from [Project Covid19Radar](https://github.com/Covid-19Radar).
 
-If you use it for your own country, you may want to refer to the following. Please see [HOW_TO_USE_YOUR_COUNTRY](doc/HOW_TO_USE_YOUR_COUNTRY.md) page and  [SERVER_SIDE_ARCHITECTURE](doc/SERVER_SIDE_ARCHITECTURE.md) page
+For information on how to install COCOA, instructions, and updates, please visit the MHLW [COCOA website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html).
 
-iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
+## Q&A for COCOA Users
 
-Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
+If you have any questions about how to use COCOA, please check the MHLW [Q&A website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html).
 
-This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
-![App Description](img/explanation_en.png)
+## Regarding requests for COCOA
 
-## Thank you for Your Contribution !!! [Contributors List](CONTRIBUTORS.md)
-We welcome contributions and pull requests.
-Please check the contribution rules.
-[Contribute Rule](CONTRIBUTING.md)
+You can find the email address in the [Q&A Website](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html), so please contact us from there.
+For PullRequest and Issues, please be aware that we may not be able to respond.
 
-## How to install the app for tester
+## License.
+
+COCOA is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
 Please install the app for the test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
 
@@ -27,14 +26,14 @@ Please install the app for the test from the below link. Currently, it is not po
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
 
-Device configuration guide for a tester:  
+Device configuration guide for a tester:
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
 
 ### iOS
 
 https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
 
-Device configuration guide for a tester:  
+Device configuration guide for a tester:
 https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
 
 ## Development environment
@@ -80,5 +79,6 @@ In Addition to MPL, this project not permit exercise of moral rights of co-autho
 Dispute or litigation by each author is not allowed.
 
 ## About 3rd Party Software
+## About Third Party Software.
 
 This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).

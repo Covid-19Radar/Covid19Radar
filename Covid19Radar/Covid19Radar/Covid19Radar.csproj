@@ -80,7 +80,7 @@
   <ItemGroup>
     <EmbeddedResource Remove="Views\HomePage\SharePositiveDiagnosisPage.xaml" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Remove="Resources\Fonts\fa-brands-400.otf" />
     <None Remove="Resources\Fonts\fa-regular-400.otf" />
@@ -117,6 +117,10 @@
     <PackageReference Include="Xamarin.Forms.BehaviorValidationPack" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
     <PackageReference Include="Xamarin.iOS.ExposureNotification" Version="1.1.0-beta1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CustomDatePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
@@ -196,6 +200,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Image\" />
+    <Folder Include="Services\Logs\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Image\ic_hamburger.png">

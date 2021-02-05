@@ -1,15 +1,18 @@
-# COVID-19Radar (Japanese)/([English](README.md))
+<!-- TODO: README 更新 -->
 
-「接触確認アプリは、厚労省の公式バージョンの一つのみ存在します。  
-こちらのGitHubは、厚労省の公式アプリのコードそのものではなく、公式アプリの元になっているオープンソースコードです。こちらのコードはコミュニティによってメンテナンスされており、issueやプルリクが公式アプリに反映されるとは限りません。」
+# 新型コロナウィルス接触確認アプリ COCOA (Japanese)/([English](README.md))
 
-Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
+こちらは新型コロナウィルス接触確認アプリ（以降COCOA）の公式リポジトリです。
+COCOAは[Project Covid19Radar](https://github.com/Covid-19Radar)を元に開発されています。
 
-私たちは現在、機械翻訳結果の確認レビュアーを募集しています。詳しくは [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) をご確認ください。
+COCOAのインストール方法、説明、更新情報等については、厚生労働省の[COCOAに関するページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html)
+をご確認下さい。
 
-iOS Build status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
+## COCOA利用者向けQ&A
 
-Android Build status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
+COCOAの利用方法で不明な点につきましては、厚生労働省の[Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)をご確認ください。
+
+## COCOAへのご要望等につきまして
 
 本アプリは、Exposure Notification / Bluetooth(BLE)を利用して、お互いの接触ログを取得します。
 ![アプリの概念](img/explanation.png)
@@ -47,7 +50,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ![アプリ設定に関して](img/design00.png)
 
-デバイスの以下の機能の利用許可が必須となります。 
+デバイスの以下の機能の利用許可が必須となります。
 
 1. Exposure notification
 2. Bluetooth
@@ -70,14 +73,12 @@ https://visualstudio.microsoft.com/ja/xamarin/
 以下のURLにアクセスすると、画面遷移を確認いただけます。
 
 [プロトタイプ画面（日本語）](https://xd.adobe.com/view/8c6440d7-63a3-4622-b88f-dfed80ec175b-d937/grid)
+大変お手数ですが、 [Q&Aページ](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html)に記載がありますお問い合わせメールアドレスにご連絡いただきますようお願い致します。
+PullRequest、Issuesについては、ご回答できかねる場合がありますことをご了承下さい。
 
 ## ライセンス
 
-COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
-
-以下は、原作者の意図に応じた、このライセンスの追加項目です。
-MPLに加えて、このプロジェクトでは共著者の著作者人格権の行使を許可しません。
-各著者による論争または訴訟は一切許可されていません。
+COCOA is licensed under the Mozilla Public License Version 2.0. See [LICENSE](LICENSE.md) for the full license text.
 
 ## サードパーティーソフトウェアについて
 

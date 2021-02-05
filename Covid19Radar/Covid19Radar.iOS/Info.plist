@@ -54,6 +54,7 @@
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
 		<string>APP_PACKAGE_NAME.exposure-notification</string>
+		<string>APP_PACKAGE_NAME.delete-old-logs</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -158,5 +159,13 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>ENDeveloperRegion</key>
+	<string>JP</string>
+	<key>ENAPIVersion</key>
+	<integer>1</integer>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>
