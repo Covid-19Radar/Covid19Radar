@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="pt" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="ja-JP" target-language="pt" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX">
+      <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" datatype="resx">
         <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
           <source>同意する</source>
           <target state="needs-review-translation">Concordo</target>
@@ -735,7 +735,6 @@
         <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
           <source>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</source>
           <target state="needs-review-translation">Por favor, ligue as funções de Notificação de Exposição e o Bluetooth para começar a gravar contactos próximos com outros usuários.</target>
-          <note from="translator" priority="2"></note>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
         </trans-unit>

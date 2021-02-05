@@ -40,7 +40,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             var actualCalls = 0;
             string actualUri = default;
             BrowserLaunchMode actualLaunchMode = default;
-            unitUnderTest.BrowserOpenAsync = (uri, launchMode) =>
+            unitUnderTest.OpenBrowserAsync = (uri, launchMode) =>
             {
                 actualCalls++;
                 actualUri = uri;
@@ -121,7 +121,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             var actualCalls = 0;
             string actualUri = default;
             BrowserLaunchMode actualLaunchMode = default;
-            unitUnderTest.BrowserOpenAsync = (uri, launchMode) =>
+            unitUnderTest.OpenBrowserAsync = (uri, launchMode) =>
             {
                 actualCalls++;
                 actualUri = uri;
