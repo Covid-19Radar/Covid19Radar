@@ -34,8 +34,9 @@
 
 		public static class StorageKey
 		{
-			public const string Secret   = "Secret";
-			public const string UserData = "UserData";
+			public const string Secret    = "Secret";
+			public const string UserData  = "UserData";
+			public const string ExNConfig = "ExposureNotificationConfigration";
 		}
 	}
 }

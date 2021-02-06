@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Covid19Radar.Common;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Model
 {
@@ -38,16 +39,16 @@ namespace Covid19Radar.Model
 		/// </summary>
 		public DateTime LastNotificationTime { get; set; }
 
-		public bool                                   IsOptined                     { get; set; }
-		public bool                                   IsExposureNotificationEnabled { get; set; }
-		public bool                                   IsNotificationEnabled         { get; set; }
-		public bool                                   IsPositived                   { get; set; }
-		public bool                                   IsPolicyAccepted              { get; set; }
-		public Dictionary<string, long>               LastProcessTekTimestamp       { get; set; }
-		public Dictionary<string, ulong>              ServerBatchNumbers            { get; set; }
-		public ObservableCollection<UserExposureInfo> ExposureInformation           { get; set; }
-		public UserExposureSummary?                   ExposureSummary               { get; set; }
-		public List<PositiveDiagnosisState>           PositiveDiagnoses             { get; set; }
+		public bool                               IsOptined                     { get; set; }
+		public bool                               IsExposureNotificationEnabled { get; set; }
+		public bool                               IsNotificationEnabled         { get; set; }
+		public bool                               IsPositived                   { get; set; }
+		public bool                               IsPolicyAccepted              { get; set; }
+		public Dictionary<string, long>           LastProcessTekTimestamp       { get; set; }
+		public Dictionary<string, ulong>          ServerBatchNumbers            { get; set; }
+		public ObservableCollection<ExposureInfo> ExposureInformation           { get; set; }
+		public ExposureDetectionSummary?          ExposureSummary               { get; set; }
+		public List<PositiveDiagnosisState>       PositiveDiagnoses             { get; set; }
 
 		public PositiveDiagnosisState LatestDiagnosis => this.PositiveDiagnoses.OrderByDescending(p => p.DiagnosisDate).FirstOrDefault();
 
@@ -60,7 +61,7 @@ namespace Covid19Radar.Model
 			this.IsPolicyAccepted              = false;
 			this.LastProcessTekTimestamp       = new Dictionary<string, long>();
 			this.ServerBatchNumbers            = AppSettings.Instance.GetDefaultBatch();
-			this.ExposureInformation           = new ObservableCollection<UserExposureInfo>();
+			this.ExposureInformation           = new ObservableCollection<ExposureInfo>();
 			this.PositiveDiagnoses             = new List<PositiveDiagnosisState>(); // for mock
 		}
 
