@@ -391,13 +391,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, or really almost whatever you want.
 
-Icons ó CC BY 4.0 License
+Icons ÅECC BY 4.0 License
 In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
 
-Fonts ó SIL OFL 1.1 License
+Fonts ÅESIL OFL 1.1 License
 In the Font Awesome Free download, the SIL OLF license applies to all icons packaged as web and desktop font files.
 
-Code ó MIT License
+Code ÅEMIT License
 In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
 
 Attribution is required by MIT, SIL OLF, and CC BY licenses. Downloaded Font Awesome Free files already contain embedded comments with sufficient attribution, so you shouldn't need to do anything additional when using these files normally.
