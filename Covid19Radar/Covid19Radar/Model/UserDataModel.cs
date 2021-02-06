@@ -38,12 +38,38 @@ namespace Covid19Radar.Model
 		/// </summary>
 		public DateTime LastNotificationTime { get; set; }
 
+		public bool                                   IsOptined                     { get; set; }
+		public bool                                   IsExposureNotificationEnabled { get; set; }
+		public bool                                   IsNotificationEnabled         { get; set; }
+		public bool                                   IsPositived                   { get; set; }
+		public bool                                   IsPolicyAccepted              { get; set; }
+		public Dictionary<string, long>               LastProcessTekTimestamp       { get; set; }
+		public Dictionary<string, ulong>              ServerBatchNumbers            { get; set; }
+		public ObservableCollection<UserExposureInfo> ExposureInformation           { get; set; }
+		public UserExposureSummary?                   ExposureSummary               { get; set; }
+		public List<PositiveDiagnosisState>           PositiveDiagnoses             { get; set; }
+
+		public PositiveDiagnosisState LatestDiagnosis => this.PositiveDiagnoses.OrderByDescending(p => p.DiagnosisDate).FirstOrDefault();
+
+		public UserDataModel()
+		{
+			this.IsOptined                     = false;
+			this.IsExposureNotificationEnabled = false;
+			this.IsNotificationEnabled         = false;
+			this.IsPositived                   = false;
+			this.IsPolicyAccepted              = false;
+			this.LastProcessTekTimestamp       = new Dictionary<string, long>();
+			this.ServerBatchNumbers            = AppSettings.Instance.GetDefaultBatch();
+			this.ExposureInformation           = new ObservableCollection<UserExposureInfo>();
+			this.PositiveDiagnoses             = new List<PositiveDiagnosisState>(); // for mock
+		}
+
 		public bool Equals(UserDataModel other)
 		{
 			return this.UserUuid                      == other?.UserUuid
 				&& this.LastNotificationTime          == other?.LastNotificationTime
 				&& this.IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
-				//&& IsNotificationEnabled == other.IsNotificationEnabled;
+				// && this.IsNotificationEnabled         == other.IsNotificationEnabled;
 		}
 
 		/// <summary>
@@ -63,42 +89,18 @@ namespace Covid19Radar.Model
 
 		public string GetLocalDateString()
 		{
-			if (this.StartDateTime == DateTime.MinValue)
-			{
+			if (this.StartDateTime == DateTime.MinValue) {
 				this.StartDateTime = DateTime.UtcNow;
 			}
-
-			string cultureName = CultureInfo.CurrentUICulture.ToString();
-			if (cultureName.Contains("ar"))
-			{
+			return this.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentUICulture);
+			/*
+			if (CultureInfo.CurrentUICulture.Name.Contains("ar")) {
 				return this.StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
-			}
-			else
-			{
+			} else {
 				return this.StartDateTime.ToLocalTime().ToString("D");
 			}
+			//*/
 		}
-
-		public bool IsOptined { get; set; } = false;
-
-		public bool IsExposureNotificationEnabled { get; set; } = false;
-
-		public bool IsNotificationEnabled { get; set; } = false;
-
-		public bool IsPositived { get; set; } = false;
-
-		public bool IsPolicyAccepted { get; set; } = false;
-
-		public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
-
-		public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultBatch();
-
-		public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
-
-		public UserExposureSummary? ExposureSummary { get; set; }
-
-		// for mock
-		public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
 
 		public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
 		{
@@ -108,7 +110,7 @@ namespace Covid19Radar.Model
 			if (diagnosisUid.Length == 0) {
 				throw new ArgumentException($"The parameter \'{nameof(diagnosisUid)}\' cannot be an empty string.", nameof(diagnosisUid));
 			}
-			if (this.PositiveDiagnoses.Any(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase))) {
+			if (this.PositiveDiagnoses.Any(d => d.DiagnosisUid?.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase) ?? false)) {
 				return;
 			}
 
@@ -116,8 +118,8 @@ namespace Covid19Radar.Model
 			this.PositiveDiagnoses.Clear();
 			this.PositiveDiagnoses.Add(new PositiveDiagnosisState
 			{
-				DiagnosisDate = submissionDate,
 				DiagnosisUid  = diagnosisUid,
+				DiagnosisDate = submissionDate,
 			});
 		}
 
@@ -125,7 +127,5 @@ namespace Covid19Radar.Model
 		{
 			this.PositiveDiagnoses.Clear();
 		}
-
-		public PositiveDiagnosisState LatestDiagnosis => this.PositiveDiagnoses.OrderByDescending(p => p.DiagnosisDate).FirstOrDefault();
 	}
 }

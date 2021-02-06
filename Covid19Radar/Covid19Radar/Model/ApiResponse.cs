@@ -1,16 +1,14 @@
-﻿using System.Net;
-
-namespace Covid19Radar.Model
+﻿namespace Covid19Radar.Model
 {
-    public class ApiResponse<T>
-    {
-        public T Result { get; }
-        public int StatusCode { get; }
+	public class ApiResponse<T>
+	{
+		public T   Result     { get; }
+		public int StatusCode { get; }
 
-        public ApiResponse(int statusCode = 0, T result = default)
-        {
-            Result = result;
-            StatusCode = statusCode;
-        }
-    }
+		public ApiResponse(int statusCode = 0, T result = default)
+		{
+			this.Result     = result!;
+			this.StatusCode = statusCode;
+		}
+	}
 }

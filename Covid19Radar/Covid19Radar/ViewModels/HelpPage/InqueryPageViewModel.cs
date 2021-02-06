@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Covid19Radar.Resources;
@@ -16,7 +15,7 @@ namespace Covid19Radar.ViewModels
 		private readonly ILoggerService _logger;
 
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync  { get; set; }
-		public Func<string, string, string[], Task>  ComposeEmailAsync { get; set; }
+		public Func<EmailMessage, Task>              ComposeEmailAsync { get; set; }
 
 		public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
 		{
@@ -63,11 +62,11 @@ namespace Covid19Radar.ViewModels
 				sb.Append(", ");
 				sb.AppendLine(DeviceInfo.VersionString);
 				sb.Append(AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"));
-				await this.ComposeEmailAsync(new EmailMessage {
-					To      = new List<string>(new[] { AppSettings.Instance.SupportEmail }),
-					Subject = AppResources.InquiryMailSubject,
-					Body    = sb.ToString()
-				});
+				await this.ComposeEmailAsync(new EmailMessage(
+					AppResources.InquiryMailSubject,
+					sb.ToString(),
+					new[] { AppSettings.Instance.SupportEmail }
+				));
 			} catch (Exception ex) {
 				_logger.Exception("Exception", ex);
 			} finally {

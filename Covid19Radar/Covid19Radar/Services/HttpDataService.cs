@@ -66,7 +66,7 @@ namespace Covid19Radar.Services
                 var result = await PostAsync(url, content);
                 if (result != null)
                 {
-                    var registerResult = Utils.DeserializeFromJson<RegisterResultModel>(result);
+                    var registerResult = JsonConvert.DeserializeObject<RegisterResultModel>(result);
 
                     UserDataModel userData = new UserDataModel();
                     userData.Secret = registerResult.Secret;
@@ -91,7 +91,7 @@ namespace Covid19Radar.Services
         public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
         {
             var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
-            var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
+            var content = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
             HttpStatusCode status = await PutAsync(url, content);
             return status;
         }
@@ -107,7 +107,7 @@ namespace Covid19Radar.Services
             {
                 loggerService.Info("Success to download");
                 loggerService.EndMethod();
-                return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
+                return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
             }
             else
             {

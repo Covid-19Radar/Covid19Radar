@@ -33,7 +33,6 @@
 
   <ItemGroup>
     <Compile Remove="Behaviors\UnUsed\**" />
-    <Compile Remove="Controls\**" />
     <Compile Remove="Converters\UnUsed\**" />
     <Compile Remove="Model\UnUsed\**" />
     <Compile Remove="Services\UnUsed\**" />
@@ -45,7 +44,6 @@
     <Compile Remove="Views\Tutorial\UnUsed\**" />
     <Compile Remove="Views\UnUsed\**" />
     <EmbeddedResource Remove="Behaviors\UnUsed\**" />
-    <EmbeddedResource Remove="Controls\**" />
     <EmbeddedResource Remove="Converters\UnUsed\**" />
     <EmbeddedResource Remove="Model\UnUsed\**" />
     <EmbeddedResource Remove="Services\UnUsed\**" />
@@ -57,7 +55,6 @@
     <EmbeddedResource Remove="Views\Tutorial\UnUsed\**" />
     <EmbeddedResource Remove="Views\UnUsed\**" />
     <None Remove="Behaviors\UnUsed\**" />
-    <None Remove="Controls\**" />
     <None Remove="Converters\UnUsed\**" />
     <None Remove="Model\UnUsed\**" />
     <None Remove="Services\UnUsed\**" />
@@ -119,9 +116,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.967" />
     <PackageReference Include="Xamarin.iOS.ExposureNotification" Version="1.1.0-beta1" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.6.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Controls\CustomDatePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Templates\BeaconItemTemplate .xaml.cs">
@@ -202,7 +196,6 @@
   <ItemGroup>
     <Folder Include="Image\" />
     <Folder Include="Services\Logs\" />
-    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Image\ic_hamburger.png">

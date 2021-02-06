@@ -145,7 +145,7 @@ namespace Covid19Radar.ViewModels
                 return;
             }
 
-            Regex regex = new Regex(AppConstants.positiveRegex);
+            Regex regex = new Regex(AppConstants.PositiveRegex);
             if (!regex.IsMatch(_diagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(

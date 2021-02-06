@@ -74,9 +74,9 @@ namespace Covid19Radar.Common
 							await Browser.OpenAsync(AppSettings.Instance.GooglePlayUrl, BrowserLaunchMode.External);
 						}
 					}
-				} catch (Exception ex) {
-					Debug.WriteLine(ex.ToString());
-					loggerService?.Exception("Failed to check version.", ex);
+				} catch (Exception e) {
+					Debug.WriteLine(e.ToString());
+					loggerService?.Exception("Failed to check version.", e);
 				} finally {
 					loggerService?.EndMethod();
 				}

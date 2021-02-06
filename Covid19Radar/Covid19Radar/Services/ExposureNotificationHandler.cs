@@ -12,6 +12,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 //using Plugin.LocalNotification;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
@@ -63,7 +64,7 @@ namespace Covid19Radar.Services
                 loggerService.Info($"configuration: {configurationJson}");
 
                 loggerService.EndMethod();
-                return Task.FromResult(Utils.DeserializeFromJson<Configuration>(configurationJson));
+                return Task.FromResult(JsonConvert.DeserializeObject<Configuration>(configurationJson));
             }
 
             configuration = new Configuration
@@ -83,7 +84,7 @@ namespace Covid19Radar.Services
             loggerService.Info("Get default configuration");
 
             var defaultConfiguration = Task.FromResult(configuration);
-            loggerService.Info($"configuration: {Utils.SerializeToJson(configuration)}");
+            loggerService.Info($"configuration: {JsonConvert.SerializeObject(configuration)}");
 
             loggerService.EndMethod();
             return defaultConfiguration;
@@ -249,7 +250,7 @@ namespace Covid19Radar.Services
                 if (tekItem.Created > lastCreated || lastCreated == 0)
                 {
                     var tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-                    Debug.WriteLine(Utils.SerializeToJson(tekItem));
+                    Debug.WriteLine(JsonConvert.SerializeObject(tekItem));
                     Debug.WriteLine(tmpFile);
 
                     loggerService.Info($"Download TEK file. url: {tekItem.Url}");
@@ -362,8 +363,8 @@ namespace Covid19Radar.Services
                 TransmissionRisk = (int)k.TransmissionRiskLevel
             });
 
-            var beforeKey = Utils.SerializeToJson(temporaryExposureKeys.ToList());
-            var afterKey = Utils.SerializeToJson(keys.ToList());
+            var beforeKey = JsonConvert.SerializeObject(temporaryExposureKeys.ToList());
+            var afterKey = JsonConvert.SerializeObject(keys.ToList());
             Debug.WriteLine($"C19R {beforeKey}");
             Debug.WriteLine($"C19R {afterKey}");
 

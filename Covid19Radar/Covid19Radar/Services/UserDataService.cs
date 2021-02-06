@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Services
@@ -70,24 +71,24 @@ namespace Covid19Radar.Services
 			if (existsUserData)
 			{
 				loggerService.EndMethod();
-				return Utils.DeserializeFromJson<UserDataModel>(Application.Current.Properties[AppConstants.StorageKey.UserData].ToString());
+				return JsonConvert.DeserializeObject<UserDataModel>(Application.Current.Properties[AppConstants.StorageKey.UserData].ToString());
 			}
 
 			loggerService.EndMethod();
 			return null;
 		}
 
-		public async Task SetAsync(UserDataModel userData)
+		public Task SetAsync(UserDataModel userData)
 		{
 			loggerService.StartMethod();
 
-			string newdata     = Utils.SerializeToJson(userData);
-			string currentdata = Utils.SerializeToJson(current ?? new UserDataModel());
+			string newdata     = JsonConvert.SerializeObject(userData);
+			string currentdata = JsonConvert.SerializeObject(current);
 			if (currentdata.Equals(newdata))
 			{
 				loggerService.Info("currentdata equals newdata");
 				loggerService.EndMethod();
-				return;
+				return Task.CompletedTask;
 			}
 			//await SecureStorage.SetAsync(AppConstants.StorageKey.UserData, newdata);
 			loggerService.Info("currentdata don't equals newdata");
@@ -96,6 +97,7 @@ namespace Covid19Radar.Services
 			UserDataChanged?.Invoke(this, current);
 
 			loggerService.EndMethod();
+			return Task.CompletedTask;
 		}
 
 		public async Task ResetAllDataAsync()

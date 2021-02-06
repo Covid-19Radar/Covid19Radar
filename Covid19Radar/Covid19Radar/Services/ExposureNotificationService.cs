@@ -3,6 +3,7 @@ using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Services.Logs;
 using ImTools;
+using Newtonsoft.Json;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
@@ -70,7 +71,7 @@ namespace Covid19Radar.Services
         {
             Debug.WriteLine("User Data has Changed!!!");
             this.userData = userDataService.Get();
-            Debug.WriteLine(Utils.SerializeToJson(userData));
+            Debug.WriteLine(JsonConvert.SerializeObject(userData));
             await UpdateStatusMessageAsync();
         }
 
