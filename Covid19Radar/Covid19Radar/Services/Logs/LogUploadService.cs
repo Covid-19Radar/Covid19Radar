@@ -5,69 +5,52 @@ using System.Threading.Tasks;
 
 namespace Covid19Radar.Services.Logs
 {
-    public class LogUploadService : ILogUploadService
-    {
-        private readonly IHttpDataService httpDataService;
-        private readonly ILoggerService loggerService;
-        private readonly ILogPathService logPathService;
-        private readonly IStorageService storageService;
+	public class LogUploadService : ILogUploadService
+	{
+		private readonly ILoggerService   _logger;
+		private readonly IHttpDataService _http_data;
+		private readonly ILogPathService  _log_path;
+		private readonly IStorageService  _storage;
 
-        public LogUploadService(
-            IHttpDataService httpDataService,
-            ILoggerService loggerService,
-            ILogPathService logPathService,
-            IStorageService storageService)
-        {
-            this.httpDataService = httpDataService;
-            this.loggerService = loggerService;
-            this.logPathService = logPathService;
-            this.storageService = storageService;
-        }
+		public LogUploadService(ILoggerService logger, IHttpDataService httpData, ILogPathService logPath, IStorageService storage)
+		{
+			_logger    = logger;
+			_http_data = httpData;
+			_log_path  = logPath;
+			_storage   = storage;
+		}
 
-        public async Task<bool> UploadAsync(string zipFileName)
-        {
-            loggerService.StartMethod();
+		public async ValueTask<bool> UploadAsync(string zipFileName)
+		{
+			_logger.StartMethod();
+			try {
+				// Get the storage SAS Token for upload.
+				var response = await _http_data.GetLogStorageSas();
+				if (response.StatusCode != HttpStatusCode.OK) {
+					_logger.Error("Bad response.");
+					_logger.EndMethod();
+					return false;
+				}
+				if (string.IsNullOrEmpty(response.Result?.SasToken)) {
+					_logger.Error("The storage SAS token is null or empty.");
+					_logger.EndMethod();
+					return false;
+				}
 
-            var result = false;
-
-            try
-            {
-                // Get the storage SAS Token for upload.
-                var logStorageSasResponse = await httpDataService.GetLogStorageSas();
-                if (logStorageSasResponse.StatusCode != (int)HttpStatusCode.OK)
-                {
-                    throw new Exception("Status is error.");
-                }
-                if (string.IsNullOrEmpty(logStorageSasResponse.Result.SasToken))
-                {
-                    throw new Exception("Storage SAS Token is null or empty.");
-                }
-
-                // Upload to storage.
-                var logTmpPath = logPathService.LogUploadingTmpPath;
-                var logZipPath = Path.Combine(logTmpPath, zipFileName);
-
-                var setting = AppSettings.Instance;
-                var endpoint = setting.LogStorageEndpoint;
-                var uploadPath = setting.LogStorageContainerName;
-                var accountName = setting.LogStorageAccountName;
-                var sasToken = logStorageSasResponse.Result.SasToken;
-
-                var uploadResult = await storageService.UploadAsync(endpoint, uploadPath, accountName, sasToken, logZipPath);
-                if (!uploadResult)
-                {
-                    throw new Exception("Failed to upload to storage.");
-                }
-
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed upload.", ex);
-            }
-
-            loggerService.EndMethod();
-            return result;
-        }
-    }
+				// Upload to storage.
+				var setting = AppSettings.Instance;
+				return await _storage.UploadAsync(
+					setting.LogStorageEndpoint,
+					setting.LogStorageContainerName,
+					setting.LogStorageAccountName,
+					response.Result.SasToken, Path.Combine(_log_path.LogUploadingTmpPath, zipFileName)
+				);
+			} catch (Exception e) {
+				_logger.Exception("Failed to upload.", e);
+				return false;
+			} finally {
+				_logger.EndMethod();
+			}
+		}
+	}
 }

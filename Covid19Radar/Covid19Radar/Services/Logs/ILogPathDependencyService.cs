@@ -1,9 +1,9 @@
 ﻿namespace Covid19Radar.Services.Logs
 {
-    public interface ILogPathDependencyService
-    {
-        string LogsDirPath { get; }
-        string LogUploadingTmpPath { get; }
-        string LogUploadingPublicPath { get; }
-    }
+	public interface ILogPathDependencyService
+	{
+		public string LogsDirPath            { get; }
+		public string LogUploadingTmpPath    { get; }
+		public string LogUploadingPublicPath { get; }
+	}
 }

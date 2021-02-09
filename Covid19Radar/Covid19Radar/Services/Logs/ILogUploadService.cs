@@ -2,8 +2,8 @@
 
 namespace Covid19Radar.Services.Logs
 {
-    public interface ILogUploadService
-    {
-        Task<bool> UploadAsync(string zipFileName);
-    }
+	public interface ILogUploadService
+	{
+		public ValueTask<bool> UploadAsync(string zipFileName);
+	}
 }

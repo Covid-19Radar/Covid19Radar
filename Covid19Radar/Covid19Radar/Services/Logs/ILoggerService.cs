@@ -3,46 +3,52 @@ using System.Runtime.CompilerServices;
 
 namespace Covid19Radar.Services.Logs
 {
-    public interface ILoggerService
-    {
-        void StartMethod(
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void EndMethod(
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Verbose(
-            string message,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Debug(
-            string message,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Info(
-            string message,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Warning(
-            string message,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Error(
-            string message,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-        void Exception(
-            string message,
-            Exception ex,
-            [CallerMemberName] string method = "",
-            [CallerFilePath] string filePath = "",
-            [CallerLineNumber] int lineNumber = 0);
-    }
+	public interface ILoggerService
+	{
+		public void StartMethod(
+			[CallerMemberName()] string method    = "",
+			[CallerFilePath()]   string filePath  = "",
+			[CallerLineNumber()] int   lineNumber = 0);
+
+		public void EndMethod(
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Verbose(
+			string message,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Debug(
+			string message,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Info(
+			string message,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Warning(
+			string message,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Error(
+			string message,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+
+		public void Exception(
+			string message, Exception exception,
+			[CallerMemberName()] string method     = "",
+			[CallerFilePath()]   string filePath   = "",
+			[CallerLineNumber()] int    lineNumber = 0);
+	}
 }

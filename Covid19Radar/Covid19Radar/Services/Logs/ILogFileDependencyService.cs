@@ -1,7 +1,7 @@
 ﻿namespace Covid19Radar.Services.Logs
 {
-    public interface ILogFileDependencyService
-    {
-        void AddSkipBackupAttribute();
-    }
+	public interface ILogFileDependencyService
+	{
+		public void AddSkipBackupAttribute();
+	}
 }

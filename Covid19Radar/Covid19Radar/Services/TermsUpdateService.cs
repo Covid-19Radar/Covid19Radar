@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
@@ -9,107 +8,88 @@ using Newtonsoft.Json;
 
 namespace Covid19Radar.Services
 {
-    public enum TermsType
-    {
-        TermsOfService,
-        PrivacyPolicy
-    }
+	public enum TermsType
+	{
+		TermsOfService,
+		PrivacyPolicy
+	}
 
-    public interface ITermsUpdateService
-    {
-        Task<TermsUpdateInfoModel> GetTermsUpdateInfo();
-        bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel privacyUpdateInfo);
-        Task SaveLastUpdateDateAsync(TermsType privacyType, DateTime updateDate);
-    }
+	public interface ITermsUpdateService
+	{
+		public ValueTask<TermsUpdateInfoModel> GetTermsUpdateInfo();
 
-    public class TermsUpdateService : ITermsUpdateService
-    {
-        private readonly ILoggerService loggerService;
-        private readonly IApplicationPropertyService applicationPropertyService;
+		public bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel privacyUpdateInfo);
 
-        private static readonly string TermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
-        private static readonly string PrivacyPolicyLastUpdateDateKey = "PrivacyPolicyLastUpdateDateTime";
+		public ValueTask SaveLastUpdateDateAsync(TermsType privacyType, DateTime updateDate);
+	}
 
-        public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService)
-        {
-            this.loggerService = loggerService;
-            this.applicationPropertyService = applicationPropertyService;
-        }
+	public class TermsUpdateService : ITermsUpdateService
+	{
+		private const    string                      TermsOfServiceLastUpdateDateKey = "TermsOfServiceLastUpdateDateTime";
+		private const    string                      PrivacyPolicyLastUpdateDateKey  = "PrivacyPolicyLastUpdateDateTime";
+		private readonly ILoggerService              _logger;
+		private readonly IApplicationPropertyService _app_prop;
 
-        public async Task<TermsUpdateInfoModel> GetTermsUpdateInfo()
-        {
-            loggerService.StartMethod();
+		public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService)
+		{
+			_logger   = loggerService;
+			_app_prop = applicationPropertyService;
+		}
 
-            var uri = AppResources.UrlTermsUpdate;
-            using (var client = new HttpClient())
-            {
-                try
-                {
-                    var json = await client.GetStringAsync(uri);
-                    loggerService.Info($"uri: {uri}");
-                    loggerService.Info($"TermsUpdateInfo: {json}");
+		public async ValueTask<TermsUpdateInfoModel> GetTermsUpdateInfo()
+		{
+			_logger.StartMethod();
+			string uri = AppResources.UrlTermsUpdate;
+			using (var client = new HttpClient()) {
+				try {
+					string json = await client.GetStringAsync(uri);
+					_logger.Info($"URI: {uri}");
+					_logger.Info($"TermsUpdateInfo: {json}");
+					var obj = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
+					_logger.EndMethod();
+					return obj;
+				} catch (Exception e) {
+					_logger.Exception("Failed to get a terms update info.", e);
+					_logger.EndMethod();
+					return new TermsUpdateInfoModel();
+				}
+			}
+		}
 
-                    var deserializedJson = JsonConvert.DeserializeObject<TermsUpdateInfoModel>(json);
+		public bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel termsUpdateInfo)
+		{
+			_logger.StartMethod();
+			TermsUpdateInfoModel.Detail? info = null;
+			string                       key  = string.Empty;
+			switch (privacyType) {
+			case TermsType.TermsOfService:
+				info = termsUpdateInfo.TermsOfService;
+				key  = TermsOfServiceLastUpdateDateKey;
+				break;
+			case TermsType.PrivacyPolicy:
+				info = termsUpdateInfo.PrivacyPolicy;
+				key  = PrivacyPolicyLastUpdateDateKey;
+				break;
+			}
+			if (info is null) {
+				_logger.EndMethod();
+				return false;
+			}
+			var lastUpdate = new DateTime();
+			if (_app_prop.ContainsKey(key)) {
+				lastUpdate = ((DateTime)(_app_prop.GetProperties(key)));
+			}
+			_logger.Info($"The privacy type: {privacyType}, the last update: {lastUpdate}, the update: {info.UpdateDateTime}");
+			_logger.EndMethod();
+			return lastUpdate < info.UpdateDateTime;
+		}
 
-                    loggerService.EndMethod();
-
-                    return deserializedJson;
-                }
-                catch (Exception ex)
-                {
-                    loggerService.Exception("Failed to get terms update info.", ex);
-                    loggerService.EndMethod();
-
-                    return new TermsUpdateInfoModel();
-                }
-            }
-        }
-
-        public bool IsReAgree(TermsType privacyType, TermsUpdateInfoModel termsUpdateInfo)
-        {
-            loggerService.StartMethod();
-
-            TermsUpdateInfoModel.Detail info = null;
-            string key = null;
-
-            switch (privacyType)
-            {
-                case TermsType.TermsOfService:
-                    info = termsUpdateInfo.TermsOfService;
-                    key = TermsOfServiceLastUpdateDateKey;
-                    break;
-                case TermsType.PrivacyPolicy:
-                    info = termsUpdateInfo.PrivacyPolicy;
-                    key = PrivacyPolicyLastUpdateDateKey;
-                    break;
-            }
-
-            if (info == null)
-            {
-                loggerService.EndMethod();
-                return false;
-            }
-
-            var lastUpdateDate = new DateTime();
-            if (applicationPropertyService.ContainsKey(key))
-            {
-                lastUpdateDate = (DateTime)applicationPropertyService.GetProperties(key);
-            }
-
-            loggerService.Info($"privacyType: {privacyType}, lastUpdateDate: {lastUpdateDate}, info.UpdateDateTime: {info.UpdateDateTime}");
-            loggerService.EndMethod();
-
-            return lastUpdateDate < info.UpdateDateTime;
-        }
-
-        public async Task SaveLastUpdateDateAsync(TermsType termsType, DateTime updateDate)
-        {
-            loggerService.StartMethod();
-
-            var key = termsType == TermsType.TermsOfService ? TermsOfServiceLastUpdateDateKey : PrivacyPolicyLastUpdateDateKey;
-            await applicationPropertyService.SavePropertiesAsync(key, updateDate);
-
-            loggerService.EndMethod();
-        }
-    }
+		public async ValueTask SaveLastUpdateDateAsync(TermsType termsType, DateTime updateDate)
+		{
+			_logger.StartMethod();
+			string key = termsType == TermsType.TermsOfService ? TermsOfServiceLastUpdateDateKey : PrivacyPolicyLastUpdateDateKey;
+			await _app_prop.SavePropertiesAsync(key, updateDate);
+			_logger.EndMethod();
+		}
+	}
 }

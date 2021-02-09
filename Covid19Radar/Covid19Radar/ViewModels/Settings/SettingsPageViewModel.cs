@@ -96,7 +96,7 @@ namespace Covid19Radar.ViewModels
                 await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);
                 Application.Current.Quit();
                 // Application close
-                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().CloseApplication();
 
                 loggerService.EndMethod();
                 return;

@@ -10,7 +10,7 @@ namespace Covid19Radar.iOS.Services
 {
     public class SkipBackup : ISkipBackup
     {
-        public void skipBackup(string fileName)
+        public void SkipBackup(string fileName)
         {
             // fileName
             var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

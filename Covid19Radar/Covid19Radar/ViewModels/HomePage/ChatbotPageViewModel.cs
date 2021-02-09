@@ -87,7 +87,7 @@ namespace Covid19Radar.ViewModels
                 Application.Current.Quit();
 
                 // Application close
-                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().CloseApplication();
 
                 loggerService.EndMethod();
                 return;

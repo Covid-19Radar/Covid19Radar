@@ -6,182 +6,152 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.Services.Logs
 {
-    public class LogFileService : ILogFileService
-    {
-        #region Static Fields
+	public class LogFileService : ILogFileService
+	{
+		private readonly ILoggerService  _logger;
+		private readonly ILogPathService _log_path;
 
-        private static readonly string logUploadFilePrefix = "cocoa_log_";
-        private static readonly string logUploadFileExtension = "zip";
+		public LogFileService(ILoggerService logger, ILogPathService logPath)
+		{
+			_logger   = logger;
+			_log_path = logPath;
+		}
 
-        #endregion
+		public string CreateLogId()
+		{
+			return Guid.NewGuid().ToString();
+		}
 
-        #region Instance Fields
+		public string LogUploadingFileName(string logId)
+		{
+			return $"{LogPathService.PREFIX_UPLOADING}{logId}.{LogPathService.EXTENSION_UPLOADING}";
+		}
 
-        private readonly ILoggerService loggerService;
-        private readonly ILogPathService logPathService;
+		public bool CreateLogUploadingFileToTmpPath(string logUploadingFileName)
+		{
+			_logger.StartMethod();
+			try {
+				string   logsDirPath = _log_path.LogsDirPath;
+				string[] logFiles    = Directory.GetFiles(logsDirPath, _log_path.LogFileWildcardName);
+				if (logFiles.Length == 0) {
+					_logger.EndMethod();
+					return false;
+				}
+				ZipFile.CreateFromDirectory(logsDirPath, Path.Combine(_log_path.LogUploadingTmpPath, logUploadingFileName));
+				_logger.EndMethod();
+				return true;
+			} catch (Exception e) {
+				_logger.Exception("Failed to create the uploading file.", e);
+				_logger.EndMethod();
+				return false;
+			}
+		}
 
-        #endregion
+		public bool CopyLogUploadingFileToPublicPath(string logUploadingFileName)
+		{
+			_logger.StartMethod();
+			try {
+				string tmpPath    = _log_path.LogUploadingTmpPath;
+				string publicPath = _log_path.LogUploadingPublicPath;
+				if (string.IsNullOrEmpty(tmpPath) || string.IsNullOrEmpty(publicPath)) {
+					_logger.EndMethod();
+					return false;
+				}
+				File.Copy(Path.Combine(tmpPath, logUploadingFileName), Path.Combine(publicPath, logUploadingFileName), true);
+				_logger.EndMethod();
+				return true;
+			} catch (Exception e) {
+				_logger.Exception("Failed to copy the log file.", e);
+				_logger.EndMethod();
+				return false;
+			}
+		}
 
-        #region Constructors
+		public bool DeleteAllLogUploadingFiles()
+		{
+			_logger.StartMethod();
+			try {
+				string tmpPath = _log_path.LogUploadingTmpPath;
+				if (string.IsNullOrEmpty(tmpPath)) {
+					_logger.EndMethod();
+					return false;
+				}
+				string[] uploadingFiles = Directory.GetFiles(tmpPath, _log_path.LogUploadingFileWildcardName);
+				for (int i = 0; i < uploadingFiles.Length; ++i) {
+					File.Delete(uploadingFiles[i]);
+				}
+				/* TODO: rewrite
+				switch (uploadingFiles.Length) {
+				case 1:
+					_logger.Info($"Deleted one file.");
+					break;
+				case > 0:
+					_logger.Info($"Deleted {uploadingFiles.Length} files.");
+					break;
+				}
+				//*/
+				if (uploadingFiles.Length == 1) {
+					_logger.Info($"Deleted one file.");
+				} else if (uploadingFiles.Length > 0) {
+					_logger.Info($"Deleted {uploadingFiles.Length} files.");
+				}
+				_logger.EndMethod();
+				return true;
+			} catch (Exception e) {
+				_logger.Exception("Failed to delete uploading files", e);
+				_logger.EndMethod();
+				return false;
+			}
+		}
 
-        public LogFileService(ILoggerService loggerService, ILogPathService logPathService)
-        {
-            this.loggerService = loggerService;
-            this.logPathService = logPathService;
-        }
+		public void AddSkipBackupAttribute()
+		{
+			DependencyService.Get<ILogFileDependencyService>().AddSkipBackupAttribute();
+		}
 
-        #endregion
+		public void Rotate()
+		{
+			_logger.StartMethod();
+			try {
+				var      dateTimes   = Utils.JstDateTimes(14);
+				string   logsDirPath = _log_path.LogsDirPath;
+				string[] logFiles    = Directory.GetFiles(logsDirPath, _log_path.LogFileWildcardName);
+				for (int i = 0; i < logFiles.Length; ++i) {
+					string fname = logFiles[i];
+					if (this.ShouldDeleteFile(dateTimes, fname)) {
+						File.Delete(fname);
+						_logger.Info($"Deleted '{Path.GetFileName(fname)}'");
+					}
+				}
+			} catch (Exception e) {
+				_logger.Exception("Failed to rotate log files.", e);
+			}
+			_logger.EndMethod();
+		}
 
-        #region ILogFileService Methods
+		public bool DeleteLogsDir()
+		{
+			_logger.StartMethod();
+			try {
+				Directory.Delete(_log_path.LogsDirPath, true);
+				_logger.Info("Deleted all log files.");
+				_logger.EndMethod();
+				return true;
+			} catch (Exception e) {
+				_logger.Exception("Failed to delete all log files.", e);
+				_logger.EndMethod();
+				return false;
+			}
+		}
 
-        public string CreateLogId() => Guid.NewGuid().ToString();
-
-        public string LogUploadingFileName(string logId)
-        {
-            return logUploadFilePrefix + logId + "." + logUploadFileExtension;
-        }
-
-        public bool CreateLogUploadingFileToTmpPath(string logUploadingFileName)
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var logsDirPath = logPathService.LogsDirPath;
-                var logFiles = Directory.GetFiles(logsDirPath, logPathService.LogFileWildcardName);
-                if (logFiles.Length == 0)
-                {
-                    loggerService.EndMethod();
-                    return false;
-                }
-                ZipFile.CreateFromDirectory(logsDirPath, Path.Combine(logPathService.LogUploadingTmpPath, logUploadingFileName));
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception)
-            {
-                loggerService.Error("Failed to create uploading file");
-                loggerService.EndMethod();
-                return false;
-            }
-        }
-
-        public bool CopyLogUploadingFileToPublicPath(string logUploadingFileName)
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var tmpPath = logPathService.LogUploadingTmpPath;
-                var publicPath = logPathService.LogUploadingPublicPath;
-                if (string.IsNullOrEmpty(tmpPath) || string.IsNullOrEmpty(publicPath))
-                {
-                    loggerService.EndMethod();
-                    return false;
-                }
-                File.Copy(Path.Combine(tmpPath, logUploadingFileName), Path.Combine(publicPath, logUploadingFileName), true);
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception)
-            {
-                loggerService.Error("Failed to copy log file");
-                loggerService.EndMethod();
-                return false;
-            }
-        }
-
-        public bool DeleteAllLogUploadingFiles()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var tmpPath = logPathService.LogUploadingTmpPath;
-                if (string.IsNullOrEmpty(tmpPath))
-                {
-                    loggerService.EndMethod();
-                    return false;
-                }
-                var uploadingFiles = Directory.GetFiles(tmpPath, logPathService.LogUploadingFileWildcardName);
-                foreach (string fileName in uploadingFiles)
-                {
-                    File.Delete(fileName);
-                }
-                if (uploadingFiles.Length > 0)
-                {
-                    loggerService.Info($"Deleted {uploadingFiles.Length} file(s)");
-                }
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception)
-            {
-                loggerService.Error("Failed to delete uploading file");
-                loggerService.EndMethod();
-                return false;
-            }
-
-        }
-
-        public void AddSkipBackupAttribute() => DependencyService.Get<ILogFileDependencyService>().AddSkipBackupAttribute();
-
-        public void Rotate()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var dateTimes = Utils.JstDateTimes(14);
-                var logsDirPath = logPathService.LogsDirPath;
-                var logFiles = Directory.GetFiles(logsDirPath, logPathService.LogFileWildcardName);
-                foreach (string fileName in logFiles)
-                {
-                    if (ShouldDeleteFile(dateTimes, fileName))
-                    {
-                        File.Delete(fileName);
-                        loggerService.Info($"Deleted '{Path.GetFileName(fileName)}'");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed to log files rotate.", ex);
-            }
-            loggerService.EndMethod();
-        }
-
-        public bool DeleteLogsDir()
-        {
-            loggerService.StartMethod();
-            try
-            {
-                var logsDirPath = logPathService.LogsDirPath;
-                Directory.Delete(logsDirPath, true);
-                loggerService.Info("Deleted all log files.");
-                loggerService.EndMethod();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                loggerService.Exception("Failed to Delete all log files.", ex);
-                loggerService.EndMethod();
-                return false;
-            }
-        }
-
-        #endregion
-
-        #region Other Private Methods
-
-        private bool ShouldDeleteFile(DateTime[] dateTimes, string fileName)
-        {
-            foreach (DateTime dateTime in dateTimes)
-            {
-                if (fileName.Contains(dateTime.ToString("yyyyMMdd")))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        #endregion
-    }
+		private bool ShouldDeleteFile(DateTime[] dateTimes, string fileName)
+		{
+			for (int i = 0; i < dateTimes.Length; ++i) {
+				if (fileName.Contains(dateTimes[i].ToString("yyyyMMdd"))) {
+					return false;
+				}
+			}
+			return true;
+		}
+	}
 }

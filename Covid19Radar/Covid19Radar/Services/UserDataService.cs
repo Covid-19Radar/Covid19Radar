@@ -41,8 +41,7 @@ namespace Covid19Radar.Services
 		{
 			_logger.StartMethod();
 			var userData = await _http_data.PostRegisterUserAsync();
-			if (userData == null)
-			{
+			if (userData is null) {
 				_logger.Info("userData is null");
 				_logger.EndMethod();
 				return null;

@@ -1,15 +1,15 @@
 ﻿namespace Covid19Radar.Services
 {
-    public interface IEssentialsService
-    {
-        // DeviceInfo
-        string Platform { get; }
-        string PlatformVersion { get; }
-        string Model { get; }
-        string DeviceType { get; }
+	public interface IEssentialsService
+	{
+		// DeviceInfo
+		public string Platform        { get; }
+		public string PlatformVersion { get; }
+		public string Model           { get; }
+		public string DeviceType      { get; }
 
-        // AppInfo
-        string AppVersion { get; }
-        string BuildNumber { get; }
-    }
+		// AppInfo
+		public string AppVersion  { get; }
+		public string BuildNumber { get; }
+	}
 }

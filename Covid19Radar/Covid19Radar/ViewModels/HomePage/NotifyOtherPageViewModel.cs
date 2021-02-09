@@ -107,7 +107,7 @@ namespace Covid19Radar.ViewModels
                     Resources.AppResources.ButtonOk
                 );
                 UserDialogs.Instance.HideLoading();
-                Xamarin.Forms.DependencyService.Get<ICloseApplication>().closeApplication();
+                Xamarin.Forms.DependencyService.Get<ICloseApplication>().CloseApplication();
 
                 loggerService.Error($"Exceeded the number of trials.");
                 loggerService.EndMethod();

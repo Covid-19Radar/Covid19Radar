@@ -1,8 +1,8 @@
 ﻿namespace Covid19Radar.Services
 {
-    public interface ISkipBackup
-    {
-        // only iOS
-        void skipBackup(string fileName);
-    }
+	public interface ISkipBackup
+	{
+		/// <remarks>only iOS</remarks>
+		public void SkipBackup(string fileName);
+	}
 }

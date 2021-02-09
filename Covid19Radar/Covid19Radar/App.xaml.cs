@@ -61,7 +61,7 @@ namespace Covid19Radar
             await UserDataMigrationService.Migrate();
 
             // ignore backup
-            Xamarin.Forms.DependencyService.Get<ISkipBackup>().skipBackup(AppConstants.PropertyStore);
+            Xamarin.Forms.DependencyService.Get<ISkipBackup>().SkipBackup(AppConstants.PropertyStore);
 
             INavigationResult result;
             // Check user data and skip tutorial

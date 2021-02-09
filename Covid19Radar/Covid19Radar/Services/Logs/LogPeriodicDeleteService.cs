@@ -2,13 +2,16 @@
 
 namespace Covid19Radar.Services.Logs
 {
-    public interface ILogPeriodicDeleteService
-    {
-        void Init();
-    }
+	public interface ILogPeriodicDeleteService
+	{
+		public void Init();
+	}
 
-    public class LogPeriodicDeleteService : ILogPeriodicDeleteService
-    {
-        public void Init() => DependencyService.Get<ILogPeriodicDeleteService>().Init();
-    }
+	public class LogPeriodicDeleteService : ILogPeriodicDeleteService
+	{
+		public void Init()
+		{
+			DependencyService.Get<ILogPeriodicDeleteService>().Init();
+		}
+	}
 }
