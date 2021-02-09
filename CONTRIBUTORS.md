@@ -82,6 +82,7 @@
 - Jean-Noël Ribelles (French/English Translation)
 - Niccori 250k (Xamarin)
 - Strice ([Portuguese Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=xx-thedoctor-xx))
+- Neko7sora
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji
