@@ -195,7 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Image\" />
-    <Folder Include="Services\Logs\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Image\ic_hamburger.png">

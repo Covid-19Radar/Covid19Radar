@@ -20,11 +20,13 @@ namespace Covid19Radar.Services.Logs
 	{
 		private readonly ILogPathService    _log_path;
 		private readonly IEssentialsService _essentials;
+		private readonly ILogWriter         _writer;
 
-		public LoggerService(ILogPathService logPath, IEssentialsService essentials)
+		public LoggerService(ILogPathService logPath, IEssentialsService essentials, ILogWriter writer)
 		{
-			_log_path = logPath;
+			_log_path   = logPath;
 			_essentials = essentials;
+			_writer     = writer;
 		}
 		
 		public void StartMethod(
@@ -112,11 +114,7 @@ namespace Covid19Radar.Services.Logs
 					this.CreateLogFileIfNotExists(logFilePath);
 					string row = this.CreateLogContentRow(message, method, filePath, lineNumber, logLevel, jstNow);
 					D.WriteLine(row);
-
-					// TODO: stream pool
-					using (var sw = new StreamWriter(logFilePath, true, Encoding.UTF8)) {
-						sw.WriteLine(row);
-					}
+					_writer.WriteLine(logFilePath, row);
 				}
 			} catch (Exception e) {
 				D.WriteLine(e.ToString());
@@ -133,11 +131,7 @@ namespace Covid19Radar.Services.Logs
 		private void CreateLogFileIfNotExists(string logFilePath)
 		{
 			if (!File.Exists(logFilePath)) {
-				// TODO: stream pool
-				using (var fs = File.Create(logFilePath))
-				using (var sw = new StreamWriter(fs, Encoding.UTF8)) {
-					sw.WriteLine(this.CreateLogHeaderRow());
-				}
+				_writer.WriteLine(logFilePath, this.CreateLogHeaderRow());
 			}
 		}
 
