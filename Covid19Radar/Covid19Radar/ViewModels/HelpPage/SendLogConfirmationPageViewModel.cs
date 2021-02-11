@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -9,171 +10,139 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class SendLogConfirmationPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
-        private readonly ILogUploadService logUploadService;
-        private readonly ILogPathService logPathService;
+	public class SendLogConfirmationPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService    _logger;
+		private readonly ILogFileService   _log_file;
+		private readonly ILogUploadService _log_upload;
+		private readonly ILogPathService   _log_path;
+		private          string?           _log_id;
+		private          string?           _zip_filename;
 
-        public Action<Action> BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
-        public Func<Action, Task> TaskRun { get; set; } = Task.Run;
+		public Action<Action>     BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
+		public Func<Action, Task> TaskRun                 { get; set; } = Task.Run;
 
-        private string LogId { get; set; }
-        private string ZipFileName { get; set; }
+		public Command OnClickConfirmLogCommand => new Command(() => {
+			_logger.StartMethod();
+			this.CopyZipFileToPublicPath();
+			_logger.EndMethod();
+		});
 
-        public SendLogConfirmationPageViewModel(
-            INavigationService navigationService,
-            ILogFileService logFileService,
-            ILoggerService loggerService,
-            ILogUploadService logUploadService,
-            ILogPathService logPathService) : base(navigationService)
-        {
-            this.loggerService = loggerService;
-            this.logFileService = logFileService;
-            this.logUploadService = logUploadService;
-            this.logPathService = logPathService;
-        }
+		public Command OnClickSendLogCommand => new Command(async () => {
+			_logger.StartMethod();
+			try {
+				UserDialogs.Instance.ShowLoading(AppResources.Sending);
+				bool uploadResult = await _log_upload.UploadAsync(_zip_filename!);
+				UserDialogs.Instance.HideLoading();
+				if (!uploadResult) {
+					_logger.Warning("Failed to upload the ZIP file.");
+					await UserDialogs.Instance.AlertAsync(
+						AppResources.FailedMessageToSendOperatingInformation,
+						AppResources.SendingError,
+						AppResources.ButtonOk
+					);
+					return;
+				}
+				if (!_log_file.DeleteAllLogUploadingFiles()) {
+					_logger.Warning("Failed to delete the ZIP file.");
+				}
+				var task = this.NavigationService?.NavigateAsync(
+					$"{nameof(SendLogCompletePage)}?useModalNavigation=true/",
+					new NavigationParameters() { { "logId", _log_id } }
+				);
+				if (!(task is null)) {
+					await task;
+				}
+			} finally {
+				_logger.EndMethod();
+			}
+		});
 
-        public Command OnClickConfirmLogCommand => new Command(() =>
-        {
-            loggerService.StartMethod();
+		public SendLogConfirmationPageViewModel(
+			INavigationService navigationService,
+			ILoggerService     logger,
+			ILogFileService    logFile,
+			ILogUploadService  logUpload,
+			ILogPathService    logPath)
+			: base(navigationService)
+		{
+			_logger     = logger;
+			_log_file   = logFile;
+			_log_upload = logUpload;
+			_log_path   = logPath;
+		}
 
-            CopyZipFileToPublicPath();
+		public override void Initialize(INavigationParameters parameters)
+		{
+			_logger.StartMethod();
+			base.Initialize(parameters);
+			this.CreateZipFile();
+			_logger.EndMethod();
+		}
 
-            loggerService.EndMethod();
-        });
+		public override void Destroy()
+		{
+			_logger.StartMethod();
+			base.Destroy();
+			_log_file.DeleteAllLogUploadingFiles();
+			_logger.EndMethod();
+		}
 
-        public Command OnClickSendLogCommand => new Command(async () =>
-        {
-            loggerService.StartMethod();
-            try
-            {
-                // Upload log file.
-                UserDialogs.Instance.ShowLoading(Resources.AppResources.Sending);
+		private void CreateZipFile()
+		{
+			_log_id       = _log_file.CreateLogId();
+			_zip_filename = _log_file.LogUploadingFileName(_log_id);
+			UserDialogs.Instance.ShowLoading(AppResources.Processing);
+			this.TaskRun(() => {
+				_log_file.Rotate();
+				bool failed = !_log_file.CreateLogUploadingFileToTmpPath(_zip_filename);
+				this.BeginInvokeOnMainThread(async () => {
+					UserDialogs.Instance.HideLoading();
+					if (failed) {
+						await UserDialogs.Instance.AlertAsync(
+							AppResources.FailedMessageToGetOperatingInformation,
+							AppResources.Error,
+							AppResources.ButtonOk
+						);
+						this.NavigationService?.GoBackAsync();
+					}
+				});
+			});
+		}
 
-                var uploadResult = await logUploadService.UploadAsync(ZipFileName);
-
-                UserDialogs.Instance.HideLoading();
-
-                if (!uploadResult)
-                {
-                    // Failed to create ZIP file
-                    await UserDialogs.Instance.AlertAsync(
-                        Resources.AppResources.FailedMessageToSendOperatingInformation,
-                        Resources.AppResources.SendingError,
-                        Resources.AppResources.ButtonOk);
-                    return;
-                }
-
-                var deleteResult = logFileService.DeleteAllLogUploadingFiles();
-                if (!deleteResult)
-                {
-                    // Failed to delete ZIP file (Processing can be continued)
-                    loggerService.Warning("Failed to delete ZIP file.");
-                }
-
-                // Transition to log send completion page.
-                var parameters = new NavigationParameters
-                {
-                    { "logId", LogId }
-                };
-                _ = await NavigationService.NavigateAsync($"{nameof(SendLogCompletePage)}?useModalNavigation=true/", parameters);
-            }
-            finally
-            {
-                loggerService.EndMethod();
-            }
-        });
-
-        public override void Initialize(INavigationParameters parameters)
-        {
-            loggerService.StartMethod();
-
-            base.Initialize(parameters);
-            CreateZipFile();
-
-            loggerService.EndMethod();
-        }
-
-        public override void Destroy()
-        {
-            loggerService.StartMethod();
-            base.Destroy();
-            logFileService.DeleteAllLogUploadingFiles();
-            loggerService.EndMethod();
-        }
-
-        private void CreateZipFile()
-        {
-            LogId = logFileService.CreateLogId();
-            ZipFileName = logFileService.LogUploadingFileName(LogId);
-
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.Processing);
-
-            _ = TaskRun(() =>
-            {
-                logFileService.Rotate();
-
-                var result = logFileService.CreateLogUploadingFileToTmpPath(ZipFileName);
-
-                BeginInvokeOnMainThread(async () =>
-                {
-                    UserDialogs.Instance.HideLoading();
-
-                    if (!result)
-                    {
-                        // Failed to create ZIP file
-                        await UserDialogs.Instance.AlertAsync(
-                            Resources.AppResources.FailedMessageToGetOperatingInformation,
-                            Resources.AppResources.Error,
-                            Resources.AppResources.ButtonOk);
-
-                        _ = await NavigationService.GoBackAsync();
-                    }
-                });
-            });
-        }
-
-        private void CopyZipFileToPublicPath()
-        {
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.Saving);
-
-            _ = TaskRun(() =>
-            {
-                var result = logFileService.CopyLogUploadingFileToPublicPath(ZipFileName);
-
-                BeginInvokeOnMainThread(async () =>
-                {
-                    UserDialogs.Instance.HideLoading();
-
-                    if (!result)
-                    {
-                        await UserDialogs.Instance.AlertAsync(
-                            Resources.AppResources.FailedMessageToSaveOperatingInformation,
-                            Resources.AppResources.Error,
-                            Resources.AppResources.ButtonOk);
-                    }
-                    else
-                    {
-                        string message = null;
-                        switch (Device.RuntimePlatform)
-                        {
-                            case Device.Android:
-                                message = Resources.AppResources.SuccessMessageToSaveOperatingInformationForAndroid + logPathService.LogUploadingPublicPath + Resources.AppResources.SuccessMessageToSaveOperatingInformationForAndroid2;
-                                break;
-                            case Device.iOS:
-                                message = Resources.AppResources.SuccessMessageToSaveOperatingInformationForIOS;
-                                break;
-                        }
-
-                        await UserDialogs.Instance.AlertAsync(
-                            message,
-                            Resources.AppResources.SaveCompleted,
-                            Resources.AppResources.ButtonOk);
-                    }
-                });
-            });
-        }
-    }
+		private void CopyZipFileToPublicPath()
+		{
+			UserDialogs.Instance.ShowLoading(AppResources.Saving);
+			this.TaskRun(() => {
+				bool failed = !_log_file.CopyLogUploadingFileToPublicPath(_zip_filename!);
+				this.BeginInvokeOnMainThread(async () => {
+					UserDialogs.Instance.HideLoading();
+					if (failed) {
+						await UserDialogs.Instance.AlertAsync(
+							AppResources.FailedMessageToSaveOperatingInformation,
+							AppResources.Error,
+							AppResources.ButtonOk
+						);
+					} else {
+						string message = string.Empty;
+						switch (Device.RuntimePlatform) {
+							case Device.Android:
+								message = AppResources.SuccessMessageToSaveOperatingInformationForAndroid
+								        + _log_path.LogUploadingPublicPath
+								        + AppResources.SuccessMessageToSaveOperatingInformationForAndroid2;
+								break;
+							case Device.iOS:
+								message = AppResources.SuccessMessageToSaveOperatingInformationForIOS;
+								break;
+						}
+						await UserDialogs.Instance.AlertAsync(
+							message,
+							AppResources.SaveCompleted,
+							AppResources.ButtonOk
+						);
+					}
+				});
+			});
+		}
+	}
 }

@@ -1,108 +1,105 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Net.Http;
-using Acr.UserDialogs;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
-using Newtonsoft.Json.Linq;
 using Prism.Navigation;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HomePageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private readonly ExposureNotificationService exposureNotificationService;
-        private UserDataModel userData;
-        private string _startDate;
-        private string _pastDate;
+	public class HomePageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService   _logger;
+		private readonly IUserDataService _user_data_service;
+		private          UserDataModel?   _user_data;
+		private          string?          _start_date;
+		private          string?          _past_date;
 
-        public string StartDate
-        {
-            get { return _startDate; }
-            set { SetProperty(ref _startDate, value); }
-        }
-        public string PastDate
-        {
-            get { return _pastDate; }
-            set { SetProperty(ref _pastDate, value); }
-        }
+		public string? StartDate
+		{
+			get => _start_date;
+			set => this.SetProperty(ref _start_date, value);
+		}
 
-        public HomePageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
-        {
-            Title = AppResources.HomePageTitle;
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            this.exposureNotificationService = exposureNotificationService;
+		public string? PastDate
+		{
+			get => _past_date;
+			set => this.SetProperty(ref _past_date, value);
+		}
 
-            userData = this.userDataService.Get();
-            StartDate = userData.GetLocalDateString();
+		public Command OnClickExposures => new Command(async () => {
+			_logger.StartMethod();
+			if (this.ExposureNotificationService is null) {
+				_logger.Warning("Could not access to the exposure notification service.");
+				_logger.EndMethod();
+				return;
+			}
+			if (this.NavigationService is null) {
+				_logger.Warning("Could not access to the navigation service.");
+				_logger.EndMethod();
+				return;
+			}
+			var count = this.ExposureNotificationService.GetExposureCount();
+			_logger.Info($"The exposure count: {count}");
+			if (count > 0) {
+				await this.NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+			} else {
+				await this.NavigationService.NavigateAsync(nameof(NotContactPage));
+			}
+			_logger.EndMethod();
+		});
 
-            TimeSpan timeSpan = DateTime.UtcNow - userData.StartDateTime;
-            PastDate = timeSpan.Days.ToString();
-        }
+		public Command OnClickShareApp => new Command(async () => {
+			_logger.StartMethod();
+			await AppUtils.PopUpShare();
+			_logger.EndMethod();
+		});
 
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            loggerService.StartMethod();
+		public HomePageViewModel(
+			INavigationService          navigationService,
+			ExposureNotificationService exposureNotificationService,
+			ILoggerService              logger,
+			IUserDataService            userDataService)
+			: base(navigationService, exposureNotificationService)
+		{
+			_logger            = logger;
+			_user_data_service = userDataService;
+			_user_data         = userDataService.Get();
+			this.Title         = AppResources.HomePageTitle;
 
-            // Check Version
-            AppUtils.CheckVersion(loggerService);
-            try
-            {
-                await exposureNotificationService.StartExposureNotification();
-                await exposureNotificationService.FetchExposureKeyAsync();
+			if (_user_data is null) {
+				_logger.Warning("The user data was null.");
+			} else {
+				this.StartDate = _user_data.GetLocalDateString();
+				this.PastDate  = (DateTime.UtcNow - _user_data.StartDateTime).Days.ToString();
+			}
+		}
 
-                var statusMessage = await exposureNotificationService.UpdateStatusMessageAsync();
-                loggerService.Info($"Exposure notification status: {statusMessage}");
-
-                base.Initialize(parameters);
-
-                loggerService.EndMethod();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-
-                loggerService.Exception("Failed to exposure notification status.", ex);
-                loggerService.EndMethod();
-            }
-        }
-
-        public Command OnClickExposures => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            var count = exposureNotificationService.GetExposureCount();
-            loggerService.Info($"Exposure count: {count}");
-            if (count > 0)
-            {
-                await NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
-                loggerService.EndMethod();
-                return;
-            }
-            else
-            {
-                await NavigationService.NavigateAsync(nameof(NotContactPage));
-                loggerService.EndMethod();
-                return;
-            }
-        });
-
-        public Command OnClickShareApp => new Command(() =>
-       {
-           loggerService.StartMethod();
-
-           AppUtils.PopUpShare();
-
-           loggerService.EndMethod();
-       });
-    }
+		public override async void Initialize(INavigationParameters parameters)
+		{
+			_logger.StartMethod();
+#if !DEBUG
+			await AppUtils.CheckVersionAsync(_logger);
+#endif
+			if (this.ExposureNotificationService is null) {
+				_logger.Warning("Could not access to the exposure notification service.");
+				_logger.EndMethod();
+				return;
+			}
+			try {
+				await this.ExposureNotificationService.StartExposureNotification();
+				await this.ExposureNotificationService.FetchExposureKeyAsync();
+				_logger.Info($"The exposure notification status: {await this.ExposureNotificationService.UpdateStatusMessageAsync()}");
+				base.Initialize(parameters);
+			} catch (Exception e) {
+				_logger.Error("Could not get an exposure notification status.");
+				_logger.Exception("Failed to initialize.", e);
+			} finally {
+				_logger.EndMethod();
+			}
+		}
+	}
 }

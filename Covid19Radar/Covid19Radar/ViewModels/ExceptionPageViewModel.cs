@@ -2,13 +2,19 @@
 
 namespace Covid19Radar.ViewModels
 {
-    public class ExceptionPageViewModel : BindableBase
-    {
-        private string _message;
-        public string Message
-        {
-            get => _message;
-            set => SetProperty(ref _message, value);
-        }
-    }
+	public class ExceptionPageViewModel : BindableBase
+	{
+		private string _msg;
+
+		public string Message
+		{
+			get => _msg;
+			set => this.SetProperty(ref _msg, value ?? string.Empty);
+		}
+
+		public ExceptionPageViewModel()
+		{
+			_msg = string.Empty;
+		}
+	}
 }

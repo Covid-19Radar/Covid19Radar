@@ -1,27 +1,28 @@
-﻿using Covid19Radar.Services.Logs;
+﻿using Covid19Radar.Resources;
+using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class HelpPage2ViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
+	public class HelpPage2ViewModel : ViewModelBase
+	{
+		private readonly ILoggerService _logger;
 
-        public HelpPage2ViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
-        {
-            Title = Resources.AppResources.HelpPage2Title;
-            this.loggerService = loggerService;
-        }
+		public Command OnClickNext => new Command(async () => {
+			_logger.StartMethod();
+			var task = this.NavigationService?.NavigateAsync(nameof(HelpPage4));
+			if (!(task is null)) {
+				await task;
+			}
+			_logger.EndMethod();
+		});
 
-        public Command OnClickNext => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            await NavigationService.NavigateAsync(nameof(HelpPage4));
-
-            loggerService.EndMethod();
-        });
-    }
+		public HelpPage2ViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		{
+			_logger    = logger;
+			this.Title = AppResources.HelpPage2Title;
+		}
+	}
 }

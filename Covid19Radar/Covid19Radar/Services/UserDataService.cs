@@ -10,12 +10,11 @@ namespace Covid19Radar.Services
 {
 	public interface IUserDataService
 	{
-		public event EventHandler<UserDataModel?>? UserDataChanged;
-		public       bool                          IsExistUserData { get; }
-		public       Task<UserDataModel?>          RegisterUserAsync();
-		public       UserDataModel?                Get();
-		public       Task                          SetAsync(UserDataModel userData);
-		public       Task                          ResetAllDataAsync();
+		public event EventHandler<UserDataModel>? UserDataChanged;
+		public       ValueTask<UserDataModel?>    RegisterUserAsync();
+		public       UserDataModel?               Get();
+		public       ValueTask                    SetAsync(UserDataModel userData);
+		public       ValueTask                    ResetAllDataAsync();
 	}
 
 	/// <summary>
@@ -23,21 +22,18 @@ namespace Covid19Radar.Services
 	/// </summary>
 	public class UserDataService : IUserDataService
 	{
-		private readonly ILoggerService                _logger;
-		private readonly IHttpDataService              _http_data;
-		private          UserDataModel?                _current;
-		public  event    EventHandler<UserDataModel?>? UserDataChanged;
+		private readonly ILoggerService               _logger;
+		private readonly IHttpDataService             _http_data;
+		private          UserDataModel?               _current;
+		public  event    EventHandler<UserDataModel>? UserDataChanged;
 
 		public UserDataService(IHttpDataService httpDataService, ILoggerService logger)
 		{
 			_logger    = logger;
 			_http_data = httpDataService;
-			_current   = this.Get();
 		}
 
-		public bool IsExistUserData => _current != null;
-
-		public async Task<UserDataModel?> RegisterUserAsync()
+		public async ValueTask<UserDataModel?> RegisterUserAsync()
 		{
 			_logger.StartMethod();
 			var userData = await _http_data.PostRegisterUserAsync();
@@ -47,14 +43,13 @@ namespace Covid19Radar.Services
 				return null;
 			}
 			_logger.Info("userData is not null");
-			userData.StartDateTime = DateTime.UtcNow;
+			userData.StartDateTime                 = DateTime.UtcNow;
 			userData.IsExposureNotificationEnabled = false;
-			userData.IsNotificationEnabled = false;
-			userData.IsOptined = false;
-			userData.IsPolicyAccepted = false;
-			userData.IsPositived = false;
+			userData.IsNotificationEnabled         = false;
+			userData.IsOptined                     = false;
+			userData.IsPolicyAccepted              = false;
+			userData.IsPositived                   = false;
 			await this.SetAsync(userData);
-
 			_logger.EndMethod();
 			return userData;
 		}
@@ -62,49 +57,47 @@ namespace Covid19Radar.Services
 		public UserDataModel? Get()
 		{
 			_logger.StartMethod();
-			if (Application.Current.Properties.TryGetValue(AppConstants.StorageKey.UserData, out object config)) {
-				_logger.Info("The user data exists.");
-				_logger.EndMethod();
-				return JsonConvert.DeserializeObject<UserDataModel>(config.ToString());
+			if (_current is null) {
+				if (Application.Current.Properties.TryGetValue(AppConstants.StorageKey.UserData, out object config)) {
+					_logger.Info("The user data exists.");
+					_current = JsonConvert.DeserializeObject<UserDataModel>(config.ToString());
+				} else {
+					_logger.Warning("The user data does not exists.");
+					_logger.EndMethod();
+					return null;
+				}
 			}
-			_logger.Warning("The user data does not exists.");
 			_logger.EndMethod();
-			return null;
+			return _current;
 		}
 
-		public Task SetAsync(UserDataModel userData)
+		public async ValueTask SetAsync(UserDataModel newdata)
 		{
 			_logger.StartMethod();
-
-			string newdata     = JsonConvert.SerializeObject(userData);
-			string currentdata = JsonConvert.SerializeObject(_current);
-			if (currentdata.Equals(newdata))
-			{
-				_logger.Info("currentdata equals newdata");
-				_logger.EndMethod();
-				return Task.CompletedTask;
+			if (newdata is null) {
+				throw new ArgumentNullException(nameof(newdata));
 			}
-			//await SecureStorage.SetAsync(AppConstants.StorageKey.UserData, newdata);
-			_logger.Info("currentdata don't equals newdata");
-			Application.Current.Properties[AppConstants.StorageKey.UserData] = newdata;
-			_current = this.Get();
-			UserDataChanged?.Invoke(this, _current);
-
-			_logger.EndMethod();
-			return Task.CompletedTask;
+			string json = JsonConvert.SerializeObject(newdata);
+			if (Application.Current.Properties.TryGetValue(AppConstants.StorageKey.UserData, out object config) &&
+				json == config.ToString()) {
+				_logger.Info("The new data is equal to the current data.");
+				_logger.EndMethod();
+				return;
+			} else {
+				_logger.Info("Saving the new data...");
+				Application.Current.Properties[AppConstants.StorageKey.UserData] = json;
+				await Application.Current.SavePropertiesAsync();
+				_current = newdata;
+				this.UserDataChanged?.Invoke(this, newdata);
+				_logger.EndMethod();
+			}
 		}
 
-		public async Task ResetAllDataAsync()
+		public async ValueTask ResetAllDataAsync()
 		{
 			_logger.StartMethod();
-
 			Application.Current.Properties.Remove(AppConstants.StorageKey.UserData);
-			_current = null;
 			await Application.Current.SavePropertiesAsync();
-
-			//SecureStorage.Remove(AppConstants.StorageKey.UserData);
-			//SecureStorage.Remove(AppConstants.StorageKey.Secret);
-
 			_logger.EndMethod();
 		}
 	}

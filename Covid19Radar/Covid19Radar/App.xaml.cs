@@ -1,18 +1,17 @@
+using Covid19Radar.Common;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.ViewModels;
+using Covid19Radar.Views;
+using DryIoc;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using Covid19Radar.ViewModels;
-using Covid19Radar.Views;
+using Prism.Navigation;
+using Xamarin.Essentials;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DryIoc;
-using System.Threading.Tasks;
-using Prism.Navigation;
-using Covid19Radar.Services;
-using Covid19Radar.Common;
-using Xamarin.Essentials;
-//using Plugin.LocalNotification;
-using Covid19Radar.Services.Logs;
 
 /*
  * Our mission...is
@@ -23,202 +22,176 @@ using Covid19Radar.Services.Logs;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Covid19Radar
 {
-    public partial class App : PrismApplication
-    {
-        private ILoggerService LoggerService;
-        private ILogFileService LogFileService;
+	public partial class App : PrismApplication
+	{
+		private ILoggerService?  _logger;
+		private ILogFileService? _log_file;
 
-        /*
-         * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
-         * This imposes a limitation in which the App class must have a default constructor.
-         * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
-         */
-        public App() : this(null) { }
+		/*
+		 * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
+		 * This imposes a limitation in which the App class must have a default constructor.
+		 * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
+		 */
+		public App() : this(EmptyInitializer.Instance) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
+		public App(IPlatformInitializer initializer) : base(initializer, setFormsDependencyResolver: true) { }
 
-        protected override async void OnInitialized()
-        {
-            InitializeComponent();
+		protected override async void OnInitialized()
+		{
+			this.InitializeComponent();
 
-            LoggerService = Container.Resolve<ILoggerService>();
-            LoggerService.StartMethod();
-            LogFileService = Container.Resolve<ILogFileService>();
-            LogFileService.AddSkipBackupAttribute();
+			_logger = this.Container.Resolve<ILoggerService>();
+			_logger.StartMethod();
+			_log_file = this.Container.Resolve<ILogFileService>();
+			_log_file.AddSkipBackupAttribute();
 
 #if USE_MOCK
-            // For debug mode, set the mock api provider to interact
-            // with some fake data
-            Xamarin.ExposureNotifications.ExposureNotification.OverrideNativeImplementation(new Services.TestNativeImplementation());
+			// For debug mode, set the mock api provider to interact
+			// with some fake data
+			ExposureNotification.OverrideNativeImplementation(new TestNativeImplementation());
 #endif
-            Xamarin.ExposureNotifications.ExposureNotification.Init();
+			ExposureNotification.Init();
 
-            // Local Notification tap event listener
-            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
-            LogUnobservedTaskExceptions();
+			// Migrate userData
+			await UserDataMigrationService.Migrate();
 
-            // Migrate userData
-            await UserDataMigrationService.Migrate();
+			// ignore backup
+			DependencyService.Get<ISkipBackup>().SkipBackup(AppConstants.PropertyStore);
 
-            // ignore backup
-            Xamarin.Forms.DependencyService.Get<ISkipBackup>().SkipBackup(AppConstants.PropertyStore);
+			INavigationResult result;
 
-            INavigationResult result;
-            // Check user data and skip tutorial
-            IUserDataService userDataService = Container.Resolve<IUserDataService>();
+			// Check user data and skip tutorial
+			var userData = this.Container.Resolve<IUserDataService>().Get();
+			if (userData is null) {
+				_logger.Info("No user data found.");
+				_logger.Info("Navigating to the tutorial page...");
+				result = await this.NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
+			} else {
+				_logger.Info("The user data exists.");
+				_logger.Info($"Is optined: {userData.IsOptined}");
+				_logger.Info($"Is policy accepted: {userData.IsPolicyAccepted}");
+				if (userData.IsOptined && userData.IsPolicyAccepted) {
+					_logger.Info("Navigating to the splash page...");
+					result = await this.NavigationService.NavigateAsync("/" + nameof(SplashPage));
+				} else {
+					_logger.Info("Navigating to the tutorial page...");
+					result = await this.NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
+				}
+			}
+			if (!result.Success) {
+				_logger.Warning($"Failed to navigate.");
+				this.MainPage = new ExceptionPage() {
+					BindingContext = new ExceptionPageViewModel() {
+						Message = result.Exception.Message
+					}
+				};
+			}
+			this.InitializeBackgroundTasks();
+			_logger.EndMethod();
+		}
 
-            if (userDataService.IsExistUserData)
-            {
-                LoggerService.Info("User data exists");
-                var userData = userDataService.Get();
-                LoggerService.Info($"userData.IsOptined: {userData.IsOptined}");
-                LoggerService.Info($"userData.IsPolicyAccepted: {userData.IsPolicyAccepted}");
-                if (userData.IsOptined && userData.IsPolicyAccepted)
-                {
-                    LoggerService.Info($"Transition to SplashPage");
-                    result = await NavigationService.NavigateAsync("/" + nameof(SplashPage));
-                }
-                else
-                {
-                    LoggerService.Info($"Transition to TutorialPage1");
-                    result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-                }
-            }
-            else
-            {
-                LoggerService.Info("No user data exists");
-                LoggerService.Info($"Transition to TutorialPage1");
-                result = await NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-            }
+		private async void InitializeBackgroundTasks()
+		{
+			if (await ExposureNotification.IsEnabledAsync()) {
+				await ExposureNotification.ScheduleFetchAsync();
+			}
+		}
 
-            if (!result.Success)
-            {
-                LoggerService.Info($"Failed transition.");
+		protected override void RegisterTypes(IContainerRegistry containerRegistry)
+		{
+			// Base and Navigation
+			containerRegistry.RegisterForNavigation<NavigationPage>();
+			containerRegistry.RegisterForNavigation<MenuPage>();
+			containerRegistry.RegisterForNavigation<HomePage>();
 
-                MainPage = new ExceptionPage
-                {
-                    BindingContext = new ExceptionPageViewModel()
-                    {
-                        Message = result.Exception.Message
-                    }
-                };
-                System.Diagnostics.Debugger.Break();
-            }
-            _ = InitializeBackgroundTasks();
+			// Settings
+			containerRegistry.RegisterForNavigation<SettingsPage>();
+			containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
+			containerRegistry.RegisterForNavigation<DebugPage>();
 
-            LoggerService.EndMethod();
-        }
+			// Tutorial
+			containerRegistry.RegisterForNavigation<TutorialPage1>();
+			containerRegistry.RegisterForNavigation<TutorialPage2>();
+			containerRegistry.RegisterForNavigation<TutorialPage3>();
+			containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
+			containerRegistry.RegisterForNavigation<TutorialPage4>();
+			containerRegistry.RegisterForNavigation<TutorialPage5>();
+			containerRegistry.RegisterForNavigation<TutorialPage6>();
 
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
+			// Help
+			containerRegistry.RegisterForNavigation<HelpMenuPage>();
+			containerRegistry.RegisterForNavigation<HelpPage1>();
+			containerRegistry.RegisterForNavigation<HelpPage2>();
+			containerRegistry.RegisterForNavigation<HelpPage3>();
+			containerRegistry.RegisterForNavigation<HelpPage4>();
+			containerRegistry.RegisterForNavigation<SendLogConfirmationPage>();
+			containerRegistry.RegisterForNavigation<SendLogCompletePage>();
 
-        protected override void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            // Base and Navigation
-            containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MenuPage>();
-            containerRegistry.RegisterForNavigation<HomePage>();
+			// Pages
+			containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
+			containerRegistry.RegisterForNavigation<InqueryPage>();
+			containerRegistry.RegisterForNavigation<ChatbotPage>();
+			containerRegistry.RegisterForNavigation<TermsofservicePage>();
+			containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
+			containerRegistry.RegisterForNavigation<NotifyOtherPage>();
+			containerRegistry.RegisterForNavigation<NotContactPage>();
+			containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
+			containerRegistry.RegisterForNavigation<SubmitConsentPage>();
+			containerRegistry.RegisterForNavigation<ExposuresPage>();
+			containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
+			containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
+			containerRegistry.RegisterForNavigation<SplashPage>();
 
+			// News Page
+			containerRegistry.RegisterForNavigation<NewsPage>();
+			containerRegistry.RegisterForNavigation<WebViewerPage>();
 
-            // Settings
-            containerRegistry.RegisterForNavigation<SettingsPage>();
-            containerRegistry.RegisterForNavigation<LicenseAgreementPage>();
-            containerRegistry.RegisterForNavigation<DebugPage>();
-
-            // tutorial
-            containerRegistry.RegisterForNavigation<TutorialPage1>();
-            containerRegistry.RegisterForNavigation<TutorialPage2>();
-            containerRegistry.RegisterForNavigation<TutorialPage3>();
-            containerRegistry.RegisterForNavigation<PrivacyPolicyPage>();
-            containerRegistry.RegisterForNavigation<TutorialPage4>();
-            containerRegistry.RegisterForNavigation<TutorialPage5>();
-            containerRegistry.RegisterForNavigation<TutorialPage6>();
-            // Help
-            containerRegistry.RegisterForNavigation<HelpMenuPage>();
-            containerRegistry.RegisterForNavigation<HelpPage1>();
-            containerRegistry.RegisterForNavigation<HelpPage2>();
-            containerRegistry.RegisterForNavigation<HelpPage3>();
-            containerRegistry.RegisterForNavigation<HelpPage4>();
-            containerRegistry.RegisterForNavigation<SendLogConfirmationPage>();
-            containerRegistry.RegisterForNavigation<SendLogCompletePage>();
-
-            containerRegistry.RegisterForNavigation<PrivacyPolicyPage2>();
-            containerRegistry.RegisterForNavigation<InqueryPage>();
-            containerRegistry.RegisterForNavigation<ChatbotPage>();
-            containerRegistry.RegisterForNavigation<TermsofservicePage>();
-            containerRegistry.RegisterForNavigation<ThankYouNotifyOtherPage>();
-            containerRegistry.RegisterForNavigation<NotifyOtherPage>();
-            containerRegistry.RegisterForNavigation<NotContactPage>();
-            containerRegistry.RegisterForNavigation<ContactedNotifyPage>();
-            containerRegistry.RegisterForNavigation<SubmitConsentPage>();
-            containerRegistry.RegisterForNavigation<ExposuresPage>();
-            containerRegistry.RegisterForNavigation<ReAgreePrivacyPolicyPage>();
-            containerRegistry.RegisterForNavigation<ReAgreeTermsOfServicePage>();
-            containerRegistry.RegisterForNavigation<SplashPage>();
-
-            // News
-            containerRegistry.RegisterForNavigation<NewsPage>();
-            containerRegistry.RegisterForNavigation<WebViewerPage>();
-
-            // Services
-            containerRegistry.RegisterSingleton<ILoggerService, LoggerService>();
-            containerRegistry.RegisterSingleton<ILogWriter, LogWriter>();
-            containerRegistry.RegisterSingleton<ILogFileService, LogFileService>();
-            containerRegistry.RegisterSingleton<ILogPathService, LogPathService>();
-            containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
-            containerRegistry.RegisterSingleton<ILogUploadService, LogUploadService>();
-            containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
-            containerRegistry.RegisterSingleton<IUserDataService, UserDataService>();
-            containerRegistry.RegisterSingleton<ExposureNotificationService>();
-            containerRegistry.RegisterSingleton<ITermsUpdateService, TermsUpdateService>();
-            containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
-            containerRegistry.RegisterSingleton<IHttpClientService, HttpClientService>();
+			// Services
+			containerRegistry.RegisterSingleton<ILoggerService,            LoggerService>();
+			containerRegistry.RegisterSingleton<ILogWriter,                LogWriter>();
+			containerRegistry.RegisterSingleton<ILogFileService,           LogFileService>();
+			containerRegistry.RegisterSingleton<ILogPathService,           LogPathService>();
+			containerRegistry.RegisterSingleton<ILogPeriodicDeleteService, LogPeriodicDeleteService>();
+			containerRegistry.RegisterSingleton<ILogUploadService,         LogUploadService>();
+			containerRegistry.RegisterSingleton<IEssentialsService,        EssentialsService>();
+			containerRegistry.RegisterSingleton<IUserDataService,          UserDataService>();
+			containerRegistry.RegisterSingleton<ExposureNotificationService>();
+			containerRegistry.RegisterSingleton<ITermsUpdateService,         TermsUpdateService>();
+			containerRegistry.RegisterSingleton<IApplicationPropertyService, ApplicationPropertyService>();
+			containerRegistry.RegisterSingleton<IHttpClientService,          HttpClientService>();
 #if USE_MOCK
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageServiceMock>();
+			containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
+			containerRegistry.RegisterSingleton<IStorageService,  StorageServiceMock>();
 #else
-            containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
-            containerRegistry.RegisterSingleton<IStorageService, StorageService>();
+			containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
+			containerRegistry.RegisterSingleton<IStorageService,  StorageService>();
 #endif
-        }
+		}
 
-        protected override void OnStart()
-        {
-            if (VersionTracking.IsFirstLaunchEver)
-            {
-                SecureStorage.Remove(AppConstants.StorageKey.UserData);
-                SecureStorage.Remove(AppConstants.StorageKey.Secret);
-            }
-            // Initialize periodic log delete service
-            var logPeriodicDeleteService = Container.Resolve<ILogPeriodicDeleteService>();
-            logPeriodicDeleteService.Init();
+		protected override void OnStart()
+		{
+			base.OnStart();
+			if (VersionTracking.IsFirstLaunchEver) {
+				SecureStorage.Remove(AppConstants.StorageKey.UserData);
+				SecureStorage.Remove(AppConstants.StorageKey.Secret);
+			}
+			this.Container.Resolve<ILogPeriodicDeleteService>().Init();
+			_log_file?.Rotate();
+		}
 
-            LogFileService.Rotate();
-        }
+		protected override void OnResume()
+		{
+			base.OnResume();
+			_log_file?.Rotate();
+		}
 
-        protected override void OnResume()
-        {
-            LogFileService.Rotate();
-        }
+		private sealed class EmptyInitializer : IPlatformInitializer
+		{
+			internal static readonly EmptyInitializer Instance = new EmptyInitializer();
 
-        public async Task InitializeBackgroundTasks()
-        {
-            if (await Xamarin.ExposureNotifications.ExposureNotification.IsEnabledAsync())
-                await Xamarin.ExposureNotifications.ExposureNotification.ScheduleFetchAsync();
-        }
+			private EmptyInitializer() { }
 
-        protected override void OnSleep()
-        {
-        }
-
-        private void LogUnobservedTaskExceptions()
-        {
-            TaskScheduler.UnobservedTaskException += (sender, e) =>
-            {
-                // maybe think local only logger
-            };
-        }
-    }
+			public void RegisterTypes(IContainerRegistry containerRegistry) { }
+		}
+	}
 }

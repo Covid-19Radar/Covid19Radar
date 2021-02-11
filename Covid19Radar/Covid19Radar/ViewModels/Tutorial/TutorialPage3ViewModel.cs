@@ -1,6 +1,7 @@
 ﻿using System;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -9,58 +10,63 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage3ViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private UserDataModel userData;
-        private ITermsUpdateService termsUpdateService;
+	public class TutorialPage3ViewModel : ViewModelBase
+	{
+		private readonly ILoggerService      _logger;
+		private readonly IUserDataService    _user_data_service;
+		private          UserDataModel?      _user_data;
+		private          ITermsUpdateService _terms_update;
+		private          string?             _url;
 
-        private string _url;
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
+		public string? Url
+		{
+			get => _url;
+			set => this.SetProperty(ref _url, value);
+		}
 
-        public TutorialPage3ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ITermsUpdateService termsUpdateService) : base(navigationService)
-        {
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-            this.termsUpdateService = termsUpdateService;
-        }
-        public Command OnClickAgree => new Command(async () =>
-        {
-            loggerService.StartMethod();
+		public Command OnClickAgree => new Command(async () => {
+			_logger.StartMethod();
+			UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
+			if (_user_data is null) {
+				_logger.Warning("The user data is null. Registering user...");
+				_user_data = await _user_data_service.RegisterUserAsync();
+				if (_user_data is null) {
+					_logger.Warning("The user data is still null.");
+					UserDialogs.Instance.HideLoading();
+					await UserDialogs.Instance.AlertAsync(
+						AppResources.DialogNetworkConnectionError,
+						AppResources.DialogNetworkConnectionErrorTitle,
+						AppResources.ButtonOk
+					);
+					_logger.EndMethod();
+					return;
+				}
+			}
+			_logger.Info("The user data is not null.");
+			_user_data.IsOptined = true;
+			await _user_data_service.SetAsync(_user_data);
+			_logger.Info($"The user data property \'{nameof(_user_data.IsOptined)}\' is set to \'{_user_data.IsOptined}\'.");
+			await _terms_update.SaveLastUpdateDateAsync(TermsType.TermsOfService, DateTime.Now);
+			UserDialogs.Instance.HideLoading();
+			if (this.NavigationService is null) {
+				_logger.Warning("The navigation service is null.");
+			} else {
+				await this.NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
+			}
+			_logger.EndMethod();
+		});
 
-            UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextRegistering);
-            if (!userDataService.IsExistUserData)
-            {
-                loggerService.Info("No user data exists");
-                userData = await userDataService.RegisterUserAsync();
-                if (userData == null)
-                {
-                    loggerService.Info("userData is null");
-                    UserDialogs.Instance.HideLoading();
-                    await UserDialogs.Instance.AlertAsync(Resources.AppResources.DialogNetworkConnectionError, Resources.AppResources.DialogNetworkConnectionErrorTitle, Resources.AppResources.ButtonOk);
-                    loggerService.EndMethod();
-                    return;
-                }
-                loggerService.Info("userData is not null");
-            }
-            else
-            {
-                loggerService.Info("User data exists");
-            }
-
-            userData.IsOptined = true;
-            await userDataService.SetAsync(userData);
-            loggerService.Info($"IsOptined set to {userData.IsOptined}");
-            await termsUpdateService.SaveLastUpdateDateAsync(TermsType.TermsOfService, DateTime.Now);
-            UserDialogs.Instance.HideLoading();
-            await NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
-            loggerService.EndMethod();
-        });
-    }
+		public TutorialPage3ViewModel(
+			INavigationService  navigationService,
+			ILoggerService      logger,
+			IUserDataService    userDataService,
+			ITermsUpdateService termsUpdate)
+			: base(navigationService)
+		{
+			_logger            = logger;
+			_user_data_service = userDataService;
+			_user_data         = userDataService.Get();
+			_terms_update      = termsUpdate;
+		}
+	}
 }

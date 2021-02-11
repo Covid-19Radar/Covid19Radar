@@ -10,90 +10,72 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ChatbotPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private UserDataModel _UserData;
-        public UserDataModel UserData
-        {
-            get { return _UserData; }
-            set { SetProperty(ref _UserData, value); }
-        }
+	public class ChatbotPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService   _logger;
+		private readonly IUserDataService _user_data_service;
+		private          UserDataModel?   _user_data;
 
-        private readonly ExposureNotificationService exposureNotificationService;
+		public  UserDataModel? UserData
+		{
+			get => _user_data;
+			set => this.SetProperty(ref _user_data, value);
+		}
 
-        private readonly IUserDataService userDataService;
-        public ChatbotPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
-        {
-            Title = AppResources.SettingsPageTitle;
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            _UserData = this.userDataService.Get();
-            this.exposureNotificationService = exposureNotificationService;
-        }
+		public ICommand OnChangeExposureNotificationState => new Command(this.SaveUserData);
+		public ICommand OnChangeNotificationState         => new Command(this.SaveUserData);
 
+		public ICommand OnChangeResetData => new Command(async () => {
+			_logger.StartMethod();
+			if (await UserDialogs.Instance.ConfirmAsync(
+				AppResources.SettingsPageDialogResetText,
+				AppResources.SettingsPageDialogResetTitle,
+				AppResources.ButtonOk,
+				AppResources.ButtonCancel
+			)) {
+				_logger.Info("The user accepted.");
 
-        private void _userDataChanged(object sender, UserDataModel e)
-        {
-            _UserData = this.userDataService.Get();
-            RaisePropertyChanged();
-        }
+				UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
+				if (await ExposureNotification.IsEnabledAsync()) {
+					await ExposureNotification.StopAsync();
+				}
 
+				// Reset all data and opt-out
+				var userData = new UserDataModel();
+				await _user_data_service.SetAsync(userData);
 
-        public ICommand OnChangeExposureNotificationState => new Command(async () =>
-        {
-            loggerService.StartMethod();
+				UserDialogs.Instance.HideLoading();
+				await UserDialogs.Instance.AlertAsync(AppResources.SettingsPageDialogResetCompletedText);
+				Application.Current.Quit();
 
-            await userDataService.SetAsync(_UserData);
+				// Close the application
+				DependencyService.Get<ICloseApplication>().CloseApplication();
+			} else {
+				_logger.Info("The user did not accept.");
+			}
+			_logger.EndMethod();
+		});
 
-            loggerService.EndMethod();
-        });
+		public ChatbotPageViewModel(
+			INavigationService          navigationService,
+			ExposureNotificationService exposureNotificationService,
+			ILoggerService              logger,
+			IUserDataService            userDataService)
+			: base(navigationService, exposureNotificationService)
+		{
+			_logger            = logger;
+			_user_data_service = userDataService;
+			_user_data         = _user_data_service.Get();
+			this.Title         = AppResources.SettingsPageTitle;
+		}
 
-
-        public ICommand OnChangeNotificationState => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            await userDataService.SetAsync(_UserData);
-
-            loggerService.EndMethod();
-        });
-
-        public ICommand OnChangeResetData => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            var check = await UserDialogs.Instance.ConfirmAsync(
-                Resources.AppResources.SettingsPageDialogResetText,
-                Resources.AppResources.SettingsPageDialogResetTitle,
-                Resources.AppResources.ButtonOk,
-                Resources.AppResources.ButtonCancel
-            );
-            if (check)
-            {
-                UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
-
-                if (await ExposureNotification.IsEnabledAsync())
-                {
-                    await ExposureNotification.StopAsync();
-                }
-
-                // Reset All Data and Optout
-                UserDataModel userData = new UserDataModel();
-                await userDataService.SetAsync(userData);
-
-                UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);
-                Application.Current.Quit();
-
-                // Application close
-                Xamarin.Forms.DependencyService.Get<ICloseApplication>().CloseApplication();
-
-                loggerService.EndMethod();
-                return;
-            }
-
-            loggerService.EndMethod();
-        });
-    }
+		private async void SaveUserData()
+		{
+			_logger.StartMethod();
+			if (!(_user_data is null)) {
+				await _user_data_service.SetAsync(_user_data);
+			}
+			_logger.EndMethod();
+		}
+	}
 }

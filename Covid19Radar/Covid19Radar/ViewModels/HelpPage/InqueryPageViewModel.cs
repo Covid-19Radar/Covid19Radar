@@ -17,18 +17,10 @@ namespace Covid19Radar.ViewModels
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync  { get; set; }
 		public Func<EmailMessage, Task>              ComposeEmailAsync { get; set; }
 
-		public InqueryPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
-		{
-			_logger = loggerService;
-			this.OpenBrowserAsync  = Browser.OpenAsync;
-			this.ComposeEmailAsync = Email.ComposeAsync;
-		}
-
 		public Command OnClickQuestionCommand => new Command(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync(
 				"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html",
-				// "https://github.com/Covid-19Radar/Covid19Radar"
 				BrowserLaunchMode.SystemPreferred
 			);
 			_logger.EndMethod();
@@ -42,8 +34,10 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickSendLogCommand => new Command(async () => {
 			_logger.StartMethod();
-			//await this.OpenBrowserAsync("https://github.com/Covid-19Radar/Covid19Radar", BrowserLaunchMode.SystemPreferred);
-			await this.NavigationService.NavigateAsync(nameof(SendLogConfirmationPage));
+			var task = this.NavigationService?.NavigateAsync(nameof(SendLogConfirmationPage));
+			if (!(task is null)) {
+				await task;
+			}
 			_logger.EndMethod();
 		});
 
@@ -67,8 +61,8 @@ namespace Covid19Radar.ViewModels
 					sb.ToString(),
 					new[] { AppSettings.Instance.SupportEmail }
 				));
-			} catch (Exception ex) {
-				_logger.Exception("Exception", ex);
+			} catch (Exception e) {
+				_logger.Exception("Failed to send an email.", e);
 			} finally {
 				_logger.EndMethod();
 			}
@@ -79,5 +73,12 @@ namespace Covid19Radar.ViewModels
 			await this.OpenBrowserAsync("https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html", BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();
 		});
+
+		public InqueryPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		{
+			_logger                = logger;
+			this.OpenBrowserAsync  = Browser.OpenAsync;
+			this.ComposeEmailAsync = Email.ComposeAsync;
+		}
 	}
 }

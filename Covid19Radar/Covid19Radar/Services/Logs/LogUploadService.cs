@@ -43,7 +43,8 @@ namespace Covid19Radar.Services.Logs
 					setting.LogStorageEndpoint,
 					setting.LogStorageContainerName,
 					setting.LogStorageAccountName,
-					response.Result.SasToken, Path.Combine(_log_path.LogUploadingTmpPath, zipFileName)
+					response.Result.SasToken,
+					Path.Combine(_log_path.LogUploadingTmpPath, zipFileName)
 				);
 			} catch (Exception e) {
 				_logger.Exception("Failed to upload.", e);

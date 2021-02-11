@@ -1,4 +1,6 @@
-﻿using Covid19Radar.Resources;
+﻿using System;
+using Covid19Radar.Resources;
+using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
 using Xamarin.Forms;
@@ -7,34 +9,39 @@ namespace Covid19Radar.ViewModels
 {
 	public class NewsPageViewModel : ViewModelBase
 	{
-		private readonly INavigationService _navigationService;
+		private readonly ILoggerService _logger;
+		private          string?        _g_search;
 
-		public static string Url     { get; set; }
-		public static bool   GSearch { get; set; }
-
-		public Command OnClick_ShowGoogle => new Command(() => {
-			if (GSearch) {
-				GSearch = false;
-			} else {
-				Url = AppResources.GoogleSearchUrl;
-			}
-			_navigationService.NavigateAsync(nameof(WebViewerPage));
-		});
-
-		public Command OnClick_ShowCoronaGoJP => new Command(() => {
-			Url = AppResources.CoronaGoJPUrl;
-			_navigationService.NavigateAsync(nameof(WebViewerPage));
-		});
-
-		public Command OnClick_ShowStopCOVID19JP => new Command(() => {
-			Url = AppResources.StopCOVID19JPUrl;
-			_navigationService.NavigateAsync(nameof(WebViewerPage));
-		});
-
-		public NewsPageViewModel(INavigationService navigationService) : base(navigationService)
+		public string? GSearch
 		{
-			_navigationService = navigationService;
+			get => _g_search;
+			set => this.SetProperty(ref _g_search, value);
+		}
+
+		public Command OnSearch => new Command(() => this.ShowPage(
+			$"{AppResources.GoogleSearchUrl}+{Uri.EscapeDataString(_g_search ?? string.Empty)}"
+		));
+		public Command OnClick_ShowGoogle        => new Command(() => this.ShowPage(AppResources.GoogleSearchUrl));
+		public Command OnClick_ShowCoronaGoJP    => new Command(() => this.ShowPage(AppResources.CoronaGoJPUrl));
+		public Command OnClick_ShowStopCOVID19JP => new Command(() => this.ShowPage(AppResources.NewsPageButton_ShowStopCOVID19JP));
+
+		public NewsPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		{
+			_logger    = logger;
 			this.Title = AppResources.NewsPageTitle;
+		}
+
+		private async void ShowPage(string url)
+		{
+			_logger.StartMethod();
+			_logger.Info($"The URL: {url}");
+			var task = this.NavigationService?.NavigateAsync(nameof(WebViewerPage), new NavigationParameters() {
+				{ "url", url }
+			});
+			if (!(task is null)) {
+				await task;
+			}
+			_logger.EndMethod();
 		}
 	}
 }

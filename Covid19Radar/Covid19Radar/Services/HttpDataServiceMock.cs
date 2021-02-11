@@ -47,7 +47,7 @@ namespace Covid19Radar.Services
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
 			return new ValueTask<ApiResponse<LogStorageSas?>>(new ApiResponse<LogStorageSas?>(
-				((int)(HttpStatusCode.OK)),
+				HttpStatusCode.OK,
 				new LogStorageSas { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" }
 			));
 		}

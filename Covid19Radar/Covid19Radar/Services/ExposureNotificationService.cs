@@ -180,8 +180,10 @@ namespace Covid19Radar.Services
 				break;
 			}
 
-			// TODO: 論理否定を外すべきか？
-			if (!(_user_data_model?.IsOptined ?? false)) {
+			if (_user_data_model is null) {
+				_logger.Warning("The user data was null.");
+			} else if (!_user_data_model.IsOptined) {
+				// TODO: 下記のリソース名を ExposureNotificationStatusMessageNotOptined に変更する
 				message.Append(AppResources.ExposureNotificationStatusMessageIsOptined);
 			}
 

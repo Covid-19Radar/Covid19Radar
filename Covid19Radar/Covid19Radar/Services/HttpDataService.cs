@@ -113,13 +113,13 @@ namespace Covid19Radar.Services
 		public async ValueTask<ApiResponse<LogStorageSas?>> GetLogStorageSas()
 		{
 			_logger.StartMethod();
-			int            statusCode;
+			HttpStatusCode statusCode;
 			LogStorageSas? logStorageSas;
 			try {
 				string requestUrl = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/inquirylog";
 				var    response   = await _api.GetAsync(requestUrl);
-				statusCode = ((int)(response.StatusCode));
-				_logger.Info($"Response status: {statusCode}");
+				statusCode = response.StatusCode;
+				_logger.Info($"Response status: {statusCode} ({(int)(statusCode)})");
 				if (response.StatusCode == HttpStatusCode.OK) {
 					logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(await response.Content.ReadAsStringAsync());
 				} else {

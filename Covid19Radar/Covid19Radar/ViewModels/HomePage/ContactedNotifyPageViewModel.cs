@@ -1,38 +1,33 @@
-﻿using Covid19Radar.Services;
+﻿using Covid19Radar.Resources;
+using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Prism.Navigation;
-using Xamarin.Forms;
 using Xamarin.Essentials;
-using Covid19Radar.Resources;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ContactedNotifyPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private string _exposureCount;
-        public string ExposureCount
-        {
-            get { return _exposureCount; }
-            set { SetProperty(ref _exposureCount, value); }
-        }
+	public class ContactedNotifyPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService _logger;
+		private          string         _exposure_count;
 
-        public ContactedNotifyPageViewModel(INavigationService navigationService, ILoggerService loggerService, ExposureNotificationService exposureNotificationService) : base(navigationService, exposureNotificationService)
-        {
-            Title = AppResources.TitleUserStatusSettings;
-			//this.exposureNotificationService = exposureNotificationService;
-            this.loggerService = loggerService;
-            ExposureCount = exposureNotificationService.GetExposureCount().ToString();
-        }
+		public  string ExposureCount {
+			get => _exposure_count;
+			set => this.SetProperty(ref _exposure_count, value ?? string.Empty);
+		}
 
-        public Command OnClickByForm => new Command(async () =>
-        {
-            loggerService.StartMethod();
+		public Command OnClickByForm => new Command(async () => {
+			_logger.StartMethod();
+			await Browser.OpenAsync(AppResources.UrlContactedForm, BrowserLaunchMode.SystemPreferred);
+			_logger.EndMethod();
+		});
 
-            var uri = AppResources.UrlContactedForm;
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-
-            loggerService.EndMethod();
-        });
-    }
+		public ContactedNotifyPageViewModel(ILoggerService logger, ExposureNotificationService exposureNotificationService) : base(exposureNotificationService)
+		{
+			_logger            = logger;
+			_exposure_count    = exposureNotificationService.GetExposureCount().ToString();
+			this.Title         = AppResources.TitleUserStatusSettings;
+			this.RaisePropertyChanged(nameof(this.ExposureCount));
+		}
+	}
 }
