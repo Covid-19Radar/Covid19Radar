@@ -9,16 +9,14 @@ namespace Covid19Radar.Model
 	{
 		public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter submission)
 		{
-			return submission.GetAndroidNonceClearText().GetSha256();
-		}
-
-		private static string GetAndroidNonceClearText(this DiagnosisSubmissionParameter submission)
-		{
-			return string.Join("|",
+			string s = string.Join("|",
 				submission.AppPackageName,
 				submission.Keys   ?.GetKeyString(),
 				submission.Regions?.GetRegionString(),
 				submission.VerificationPayload);
+			using (var sha = SHA256.Create()) {
+				return sha.ComputeHash(Encoding.UTF8.GetBytes(s));
+			}
 		}
 
 		private static string GetKeyString(this IEnumerable<DiagnosisSubmissionParameter.Key> keys)
@@ -34,12 +32,6 @@ namespace Covid19Radar.Model
 		private static string GetRegionString(this IEnumerable<string> regions)
 		{
 			return string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
-		}
-
-		private static byte[] GetSha256(this string text)
-		{
-			using var sha = SHA256.Create();
-			return sha.ComputeHash(Encoding.UTF8.GetBytes(text));
 		}
 	}
 }
