@@ -7,7 +7,7 @@ namespace Covid19Radar.UnitTests
         [Fact]
         public void SettingsTests()
         {
-            var settings = new AppSettings();
+            var settings = AppSettings.Instance;
             Assert.Equal("APP_VERSION", settings.AppVersion);
             Assert.Equal("API_SECRET", settings.ApiSecret);
             Assert.Equal("API_KEY", settings.ApiKey);

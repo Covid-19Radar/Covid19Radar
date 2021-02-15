@@ -7,7 +7,7 @@ namespace Covid19Radar.Droid.Services
 {
     public class SkipBackup : ISkipBackup
     {
-        public void SkipBackup(string fileName)
+        void ISkipBackup.SkipBackup(string fileName)
         {
             // only iOS , for android see Android.manifest
         }

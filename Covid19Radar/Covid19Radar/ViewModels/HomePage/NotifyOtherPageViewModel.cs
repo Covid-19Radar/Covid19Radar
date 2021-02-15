@@ -21,14 +21,14 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private          UserDataModel?              _user_data;
+		private readonly UserDataModel?              _user_data;
 		private          string?                     _diagnosis_uid;
 		private          bool                        _is_enabled;
 		private          bool                        _is_visible_with_symptoms_layout;
 		private          bool                        _is_visible_no_symptoms_layout;
 		private          DateTime                    _diagnosis_date;
 		private          int                         _error_count;
-		private          int                         _max_error_count;
+		private readonly int                         _max_error_count;
 
 		public string? DiagnosisUid
 		{

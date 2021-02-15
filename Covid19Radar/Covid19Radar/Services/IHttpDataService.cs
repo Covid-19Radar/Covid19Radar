@@ -12,7 +12,7 @@ namespace Covid19Radar.Services
 		public ValueTask<UserDataModel?>                            PostRegisterUserAsync      ();
 		public ValueTask<HttpStatusCode>                            PutSelfExposureKeysAsync   (DiagnosisSubmissionParameter request);
 		public ValueTask<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken);
-		public ValueTask<Stream?>                                   GetTemporaryExposureKey    (string url,    CancellationToken cancellationToken);
+		public ValueTask<Stream>                                    GetTemporaryExposureKey    (string url,    CancellationToken cancellationToken);
 		public ValueTask<ApiResponse<LogStorageSas?>>               GetLogStorageSas           ();
 	}
 }

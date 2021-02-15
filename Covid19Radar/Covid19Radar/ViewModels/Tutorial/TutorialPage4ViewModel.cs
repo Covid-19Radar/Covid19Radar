@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private          UserDataModel?              _user_data;
+		private readonly UserDataModel?              _user_data;
 
 		public Command OnClickEnable => new Command(async () => {
 			_logger.StartMethod();

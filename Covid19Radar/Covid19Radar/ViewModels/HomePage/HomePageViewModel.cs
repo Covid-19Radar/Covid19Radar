@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private          UserDataModel?              _user_data;
+		private readonly UserDataModel?              _user_data;
 		private          string?                     _start_date;
 		private          string?                     _past_date;
 
@@ -34,7 +34,7 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickExposures => new Command(async () => {
 			_logger.StartMethod();
-			var count = _ens.GetExposureCount();
+			int count = _ens.GetExposureCount();
 			_logger.Info($"The exposure count: {count}");
 			if (count > 0) {
 				await _ns.NavigateAsync(nameof(ContactedNotifyPage));

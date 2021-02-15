@@ -24,8 +24,8 @@ namespace Covid19Radar.UnitTests.ViewModels
         private SendLogCompletePageViewModel CreateViewModel()
         {
             var vm = new SendLogCompletePageViewModel(
-                mockNavigationService.Object,
-                mockLoggerService.Object);
+                mockLoggerService.Object,
+                mockNavigationService.Object);
             return vm;
         }
 
@@ -41,12 +41,12 @@ namespace Covid19Radar.UnitTests.ViewModels
             string actualSubject = default;
             string actualBody = default;
             string[] actualTo = default;
-            unitUnderTest.ComposeEmailAsync = (subject, body, to) =>
+            unitUnderTest.ComposeEmailAsync = (msg) =>
             {
                 actualCalls++;
-                actualSubject = subject;
-                actualBody = body;
-                actualTo = to;
+                actualSubject = msg.Subject;
+                actualBody = msg.Body;
+                actualTo = msg.To.ToArray();
                 return Task.CompletedTask;
             };
             unitUnderTest.OnClickSendMailCommand.Execute(null);
@@ -67,7 +67,7 @@ namespace Covid19Radar.UnitTests.ViewModels
             unitUnderTest.Initialize(new NavigationParameters { { "logId", testLogId } });
 
             var actualCalls = 0;
-            unitUnderTest.ComposeEmailAsync = (subject, body, to) =>
+            unitUnderTest.ComposeEmailAsync = (msg) =>
             {
                 actualCalls++;
                 throw new Exception();

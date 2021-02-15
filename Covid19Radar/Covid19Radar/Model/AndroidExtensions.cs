@@ -9,30 +9,34 @@ namespace Covid19Radar.Model
 	{
 		public static byte[] GetAndroidNonce(this DiagnosisSubmissionParameter submission)
 		{
-			return GetSha256(GetAndroidNonceClearText(submission));
+			return submission.GetAndroidNonceClearText().GetSha256();
 		}
 
-		static string GetAndroidNonceClearText(this DiagnosisSubmissionParameter submission)
+		private static string GetAndroidNonceClearText(this DiagnosisSubmissionParameter submission)
 		{
-			return string.Join("|", submission.AppPackageName, GetKeyString(submission.Keys), GetRegionString(submission.Regions), submission.VerificationPayload);
+			return string.Join("|",
+				submission.AppPackageName,
+				submission.Keys   ?.GetKeyString(),
+				submission.Regions?.GetRegionString(),
+				submission.VerificationPayload);
 		}
 
-		static string GetKeyString(IEnumerable<DiagnosisSubmissionParameter.Key> keys)
+		private static string GetKeyString(this IEnumerable<DiagnosisSubmissionParameter.Key> keys)
 		{
-			return string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => GetKeyString(k)));
+			return string.Join(",", keys.OrderBy(k => k.KeyData).Select(k => k.GetKeyString()));
 		}
 
-		static string GetKeyString(DiagnosisSubmissionParameter.Key k)
+		private static string GetKeyString(this DiagnosisSubmissionParameter.Key k)
 		{
 			return string.Join(".", k.KeyData, k.RollingStartNumber, k.RollingPeriod, k.TransmissionRisk);
 		}
 
-		static string GetRegionString(IEnumerable<string> regions)
+		private static string GetRegionString(this IEnumerable<string> regions)
 		{
 			return string.Join(",", regions.Select(r => r.ToUpperInvariant()).OrderBy(r => r));
 		}
 
-		static byte[] GetSha256(string text)
+		private static byte[] GetSha256(this string text)
 		{
 			using var sha = SHA256.Create();
 			return sha.ComputeHash(Encoding.UTF8.GetBytes(text));

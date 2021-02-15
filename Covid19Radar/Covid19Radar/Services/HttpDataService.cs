@@ -105,9 +105,14 @@ namespace Covid19Radar.Services
 			}
 		}
 
-		public async ValueTask<Stream?> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
+		public async ValueTask<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
 		{
-			return await this.GetCdnAsync(url, async c => await c.ReadAsStreamAsync(), cancellationToken);
+			var result = await this.GetCdnAsync(url, async c => await c.ReadAsStreamAsync(), cancellationToken);
+			if (result is null) {
+				throw new NullReferenceException("The download result was null.");
+			} else {
+				return result;
+			}
 		}
 
 		public async ValueTask<ApiResponse<LogStorageSas?>> GetLogStorageSas()

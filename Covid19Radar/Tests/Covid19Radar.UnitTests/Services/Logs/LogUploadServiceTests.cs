@@ -27,8 +27,8 @@ namespace Covid19Radar.UnitTests.Services.Logs
         private LogUploadService CreateService()
         {
             var s = new LogUploadService(
-                mockHttpDataService.Object,
                 mockLoggerService.Object,
+                mockHttpDataService.Object,
                 mockLogPathService.Object,
                 mockStorageService.Object);
             return s;

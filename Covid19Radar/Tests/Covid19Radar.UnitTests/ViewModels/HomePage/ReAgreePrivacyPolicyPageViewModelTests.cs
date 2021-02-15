@@ -31,8 +31,8 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
         private ReAgreePrivacyPolicyPageViewModel CreateViewModel()
         {
             var vm = new ReAgreePrivacyPolicyPageViewModel(
-                mockNavigationService.Object,
                 mockLoggerService.Object,
+                mockNavigationService.Object,
                 mockTermsUpdateService.Object);
             return vm;
         }

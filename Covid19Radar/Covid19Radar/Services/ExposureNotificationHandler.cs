@@ -207,14 +207,14 @@ namespace Covid19Radar.Services
 						continue;
 					}
 					_logger.Info($"Downloading TEK file from: {tekItem.Url}");
-					await using (var rs = await _http_data.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
-					await using (var fs = File.Create(tmpFile)) {
-						try {
+					try {
+						await using (var rs = await _http_data.GetTemporaryExposureKey(tekItem.Url, cancellationToken))
+						await using (var fs = File.Create(tmpFile)) {
 							await rs.CopyToAsync(fs, cancellationToken);
 							fs.Flush();
-						} catch (Exception e) {
-							_logger.Exception("Failed to copy", e);
 						}
+					} catch (Exception e) {
+						_logger.Exception("Failed to copy", e);
 					}
 					lastTekTimestamp[region] = tekItem.Created;
 					downloadedFiles.Add(tmpFile);

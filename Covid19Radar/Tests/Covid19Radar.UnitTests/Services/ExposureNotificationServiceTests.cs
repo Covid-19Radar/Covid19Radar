@@ -34,11 +34,9 @@ namespace Covid19Radar.UnitTests.Services
         private ExposureNotificationService CreateService()
         {
             return new ExposureNotificationService(
-                null,
                 mockLoggerService.Object,
-                mockUserDataService.Object,
-                mockHttpDataService.Object,
-                mockHttpClientService.Object);
+                mockHttpClientService.Object,
+                mockUserDataService.Object);
         }
 
         private class MockHttpHandler : DelegatingHandler

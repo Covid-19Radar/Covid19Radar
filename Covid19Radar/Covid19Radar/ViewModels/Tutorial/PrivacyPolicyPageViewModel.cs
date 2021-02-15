@@ -15,7 +15,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService  _ns;
 		private readonly ITermsUpdateService _terms_update;
 		private readonly IUserDataService    _user_data_service;
-		private          UserDataModel?      _user_data;
+		private readonly UserDataModel?      _user_data;
 		private          string              _url;
 
 		public string Url

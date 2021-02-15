@@ -37,11 +37,11 @@ namespace Covid19Radar.UnitTests.ViewModels
         private SendLogConfirmationPageViewModel CreateViewModel()
         {
             var vm = new SendLogConfirmationPageViewModel(
-                mockNavigationService.Object,
-                mockLogFileService.Object,
                 mockLoggerService.Object,
+                mockLogFileService.Object,
                 mockLogUploadService.Object,
-                mockLogPathService.Object)
+                mockLogPathService.Object,
+                mockNavigationService.Object)
             {
                 BeginInvokeOnMainThread = new Action<Action>((a) => { a.Invoke(); }),
                 TaskRun = new Func<Action, Task>((a) => { a.Invoke(); return Task.CompletedTask; })

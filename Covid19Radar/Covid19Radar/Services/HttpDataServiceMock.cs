@@ -12,10 +12,10 @@ namespace Covid19Radar.Services
 {
 	internal class HttpDataServiceMock : IHttpDataService
 	{
-		public ValueTask<Stream?> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
+		public ValueTask<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKey)}");
-			return new ValueTask<Stream?>(new MemoryStream());
+			return new ValueTask<Stream>(new MemoryStream());
 		}
 
 		public ValueTask<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
