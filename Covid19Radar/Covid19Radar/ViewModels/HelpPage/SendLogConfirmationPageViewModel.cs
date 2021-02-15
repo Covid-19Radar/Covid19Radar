@@ -12,12 +12,13 @@ namespace Covid19Radar.ViewModels
 {
 	public class SendLogConfirmationPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService    _logger;
-		private readonly ILogFileService   _log_file;
-		private readonly ILogUploadService _log_upload;
-		private readonly ILogPathService   _log_path;
-		private          string?           _log_id;
-		private          string?           _zip_filename;
+		private readonly ILoggerService     _logger;
+		private readonly ILogFileService    _log_file;
+		private readonly ILogUploadService  _log_upload;
+		private readonly ILogPathService    _log_path;
+		private readonly INavigationService _ns;
+		private          string?            _log_id;
+		private          string?            _zip_filename;
 
 		public Action<Action>     BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
 		public Func<Action, Task> TaskRun                 { get; set; } = Task.Run;
@@ -46,30 +47,27 @@ namespace Covid19Radar.ViewModels
 				if (!_log_file.DeleteAllLogUploadingFiles()) {
 					_logger.Warning("Failed to delete the ZIP file.");
 				}
-				var task = this.NavigationService?.NavigateAsync(
+				await _ns.NavigateAsync(
 					$"{nameof(SendLogCompletePage)}?useModalNavigation=true/",
 					new NavigationParameters() { { "logId", _log_id } }
 				);
-				if (!(task is null)) {
-					await task;
-				}
 			} finally {
 				_logger.EndMethod();
 			}
 		});
 
 		public SendLogConfirmationPageViewModel(
-			INavigationService navigationService,
 			ILoggerService     logger,
 			ILogFileService    logFile,
 			ILogUploadService  logUpload,
-			ILogPathService    logPath)
-			: base(navigationService)
+			ILogPathService    logPath,
+			INavigationService navigationService)
 		{
-			_logger     = logger;
-			_log_file   = logFile;
-			_log_upload = logUpload;
-			_log_path   = logPath;
+			_logger     = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_log_file   = logFile           ?? throw new ArgumentNullException(nameof(logFile));
+			_log_upload = logUpload         ?? throw new ArgumentNullException(nameof(logUpload));
+			_log_path   = logPath           ?? throw new ArgumentNullException(nameof(logPath));
+			_ns         = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 		}
 
 		public override void Initialize(INavigationParameters parameters)
@@ -104,7 +102,7 @@ namespace Covid19Radar.ViewModels
 							AppResources.Error,
 							AppResources.ButtonOk
 						);
-						this.NavigationService?.GoBackAsync();
+						await _ns.GoBackAsync();
 					}
 				});
 			});

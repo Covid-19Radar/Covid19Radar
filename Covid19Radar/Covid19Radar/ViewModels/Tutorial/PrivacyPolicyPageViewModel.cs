@@ -12,6 +12,7 @@ namespace Covid19Radar.ViewModels
 	public class PrivacyPolicyPageViewModel : ViewModelBase
 	{
 		private readonly ILoggerService      _logger;
+		private readonly INavigationService  _ns;
 		private readonly ITermsUpdateService _terms_update;
 		private readonly IUserDataService    _user_data_service;
 		private          UserDataModel?      _user_data;
@@ -32,24 +33,21 @@ namespace Covid19Radar.ViewModels
 				await _user_data_service.SetAsync(_user_data);
 				_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
 				await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, DateTime.Now);
-				var task = this.NavigationService?.NavigateAsync(nameof(TutorialPage4));
-				if (!(task is null)) {
-					await task;
-				}
+				await _ns.NavigateAsync(nameof(TutorialPage4));
 			}
 			_logger.EndMethod();
 		});
 
 		public PrivacyPolicyPageViewModel(
-			INavigationService  navigationService,
 			ILoggerService      logger,
-			IUserDataService    userDataService,
-			ITermsUpdateService termsUpdate)
-			: base(navigationService)
+			INavigationService  navigationService,
+			ITermsUpdateService termsUpdate,
+			IUserDataService    userDataService)
 		{
-			_logger            = logger;
-			_terms_update      = termsUpdate;
-			_user_data_service = userDataService;
+			_logger            = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			_terms_update      = termsUpdate       ?? throw new ArgumentNullException(nameof(termsUpdate));
+			_user_data_service = userDataService   ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 			_url               = AppResources.UrlPrivacyPolicy;
 			this.Title         = AppResources.PrivacyPolicyPageTitle;

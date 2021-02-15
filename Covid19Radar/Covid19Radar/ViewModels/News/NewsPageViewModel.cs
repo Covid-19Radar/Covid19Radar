@@ -9,8 +9,9 @@ namespace Covid19Radar.ViewModels
 {
 	public class NewsPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService _logger;
-		private          string?        _g_search;
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
+		private          string?            _g_search;
 
 		public string? GSearch
 		{
@@ -25,9 +26,10 @@ namespace Covid19Radar.ViewModels
 		public Command OnClick_ShowCoronaGoJP    => new Command(() => this.ShowPage(AppResources.CoronaGoJPUrl));
 		public Command OnClick_ShowStopCOVID19JP => new Command(() => this.ShowPage(AppResources.NewsPageButton_ShowStopCOVID19JP));
 
-		public NewsPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public NewsPageViewModel(ILoggerService logger, INavigationService navigationService)
 		{
-			_logger    = logger;
+			_logger    = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns        = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 			this.Title = AppResources.NewsPageTitle;
 		}
 
@@ -35,12 +37,9 @@ namespace Covid19Radar.ViewModels
 		{
 			_logger.StartMethod();
 			_logger.Info($"The URL: {url}");
-			var task = this.NavigationService?.NavigateAsync(nameof(WebViewerPage), new NavigationParameters() {
+			await _ns.NavigateAsync(nameof(WebViewerPage), new NavigationParameters() {
 				{ "url", url }
 			});
-			if (!(task is null)) {
-				await task;
-			}
 			_logger.EndMethod();
 		}
 	}

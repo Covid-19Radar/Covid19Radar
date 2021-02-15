@@ -17,16 +17,18 @@ namespace Covid19Radar.ViewModels
 {
 	public class NotifyOtherPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService   _logger;
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
-		private          string?          _diagnosis_uid;
-		private          bool             _is_enabled;
-		private          bool             _is_visible_with_symptoms_layout;
-		private          bool             _is_visible_no_symptoms_layout;
-		private          DateTime         _diagnosis_date;
-		private          int              _error_count;
-		private          int              _max_error_count;
+		private readonly ILoggerService              _logger;
+		private readonly INavigationService          _ns;
+		private readonly ExposureNotificationService _ens;
+		private readonly IUserDataService            _user_data_service;
+		private          UserDataModel?              _user_data;
+		private          string?                     _diagnosis_uid;
+		private          bool                        _is_enabled;
+		private          bool                        _is_visible_with_symptoms_layout;
+		private          bool                        _is_visible_no_symptoms_layout;
+		private          DateTime                    _diagnosis_date;
+		private          int                         _error_count;
+		private          int                         _max_error_count;
 
 		public string? DiagnosisUid
 		{
@@ -159,10 +161,7 @@ namespace Covid19Radar.ViewModels
 						AppResources.ButtonOk
 					);
 					UserDialogs.Instance.HideLoading();
-					var task2 = this.NavigationService?.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-					if (!(task2 is null)) {
-						await task2;
-					}
+					await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 					_logger.Warning($"The exposure notification is disabled.");
 					_logger.EndMethod();
 					return;
@@ -179,17 +178,6 @@ namespace Covid19Radar.ViewModels
 					_logger.EndMethod();
 					return;
 				}
-				if (this.ExposureNotificationService is null) {
-					++_error_count;
-					UserDialogs.Instance.Alert(
-						AppResources.NotifyOtherPageDialogExceptionText,
-						AppResources.ButtonFailed,
-						AppResources.ButtonOk
-					);
-					_logger.Error("The exposure notification service is null.");
-					_logger.EndMethod();
-					return;
-				}
 
 				// Set the submitted UID
 				_user_data.AddDiagnosis(_diagnosis_uid, new DateTimeOffset(DateTime.Now));
@@ -198,7 +186,7 @@ namespace Covid19Radar.ViewModels
 				_logger.Info("Submitting the diagnostic number...");
 
 				// Submit our diagnosis
-				this.ExposureNotificationService.DiagnosisDate = _diagnosis_date;
+				_ens.DiagnosisDate = _diagnosis_date;
 				await ExposureNotification.SubmitSelfDiagnosisAsync();
 				UserDialogs.Instance.HideLoading();
 				await UserDialogs.Instance.AlertAsync(
@@ -206,10 +194,7 @@ namespace Covid19Radar.ViewModels
 					AppResources.ButtonComplete,
 					AppResources.ButtonOk
 				);
-				var task = this.NavigationService?.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-				if (!(task is null)) {
-					await task;
-				}
+				await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 				_logger.Info($"Submitted the diagnostic number successfully");
 			} catch (InvalidDataException ide) {
 				++_error_count;
@@ -234,14 +219,15 @@ namespace Covid19Radar.ViewModels
 		});
 
 		public NotifyOtherPageViewModel(
+			ILoggerService              logger,
 			INavigationService          navigationService,
 			ExposureNotificationService exposureNotificationService,
-			ILoggerService              logger,
 			IUserDataService            userDataService)
-			: base(navigationService, exposureNotificationService)
 		{
-			_logger            = logger;
-			_user_data_service = userDataService;
+			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService           ?? throw new ArgumentNullException(nameof(navigationService));
+			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
+			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 			_error_count       = 0;
 			_max_error_count   = AppConstants.MaxErrorCount;

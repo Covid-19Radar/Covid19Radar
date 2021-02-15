@@ -14,6 +14,7 @@ namespace Covid19Radar.ViewModels
 	public class ReAgreePrivacyPolicyPageViewModel : ViewModelBase
 	{
 		private readonly ILoggerService      _logger;
+		private readonly INavigationService  _ns;
 		private readonly ITermsUpdateService _terms_update;
 		private          DateTime            _update_dt;
 		private          string?             _update_text;
@@ -35,17 +36,18 @@ namespace Covid19Radar.ViewModels
 		public Command OnClickReAgreeCommand => new Command(async () => {
 			_logger.StartMethod();
 			await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, _update_dt);
-			var task = this.NavigationService?.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-			if (!(task is null)) {
-				await task;
-			}
+			await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 			_logger.EndMethod();
 		});
 
-		public ReAgreePrivacyPolicyPageViewModel(INavigationService navigationService, ILoggerService logger, ITermsUpdateService termsUpdate) : base(navigationService)
+		public ReAgreePrivacyPolicyPageViewModel(
+			ILoggerService      logger,
+			INavigationService  navigationService,
+			ITermsUpdateService termsUpdate)
 		{
-			_logger               = logger;
-			_terms_update         = termsUpdate;
+			_logger               = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns                   = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			_terms_update         = termsUpdate       ?? throw new ArgumentNullException(nameof(termsUpdate));
 			this.OpenBrowserAsync = Browser.OpenAsync;
 		}
 

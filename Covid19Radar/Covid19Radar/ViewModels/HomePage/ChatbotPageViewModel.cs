@@ -1,10 +1,10 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Prism.Navigation;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
 
@@ -56,16 +56,11 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public ChatbotPageViewModel(
-			INavigationService          navigationService,
-			ExposureNotificationService exposureNotificationService,
-			ILoggerService              logger,
-			IUserDataService            userDataService)
-			: base(navigationService, exposureNotificationService)
+		public ChatbotPageViewModel(ILoggerService logger, IUserDataService userDataService)
 		{
-			_logger            = logger;
-			_user_data_service = userDataService;
-			_user_data         = _user_data_service.Get();
+			_logger            = logger          ?? throw new ArgumentNullException(nameof(logger));
+			_user_data_service = userDataService ?? throw new ArgumentNullException(nameof(userDataService));
+			_user_data         = userDataService.Get();
 			this.Title         = AppResources.SettingsPageTitle;
 		}
 

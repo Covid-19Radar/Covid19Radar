@@ -1,20 +1,22 @@
-﻿using Covid19Radar.Services;
-using Prism.Navigation;
-using System;
+﻿using System;
 using System.Linq;
-using Xamarin.Forms;
+using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Xamarin.ExposureNotifications;
-using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
 	public class DebugPageViewModel : ViewModelBase
 	{
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
-		private          string           _en_message;
+		private readonly ILoggerService              _logger;
+		private readonly ExposureNotificationService _ens;
+		private readonly IUserDataService            _user_data_service;
+		private          UserDataModel?              _user_data;
+		private          string                      _en_message;
 
 		public UserDataModel? UserData
 		{
@@ -43,23 +45,28 @@ namespace Covid19Radar.ViewModels
 		}
 
 		public Command ResetSelfDiagnosis => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				_user_data.ClearDiagnosis();
 				await _user_data_service.SetAsync(_user_data);
 				await UserDialogs.Instance.AlertAsync("Cleared self-diagnosis!");
 			}
+			_logger.EndMethod();
 		});
 
 		public Command ResetExposures => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				await Device.InvokeOnMainThreadAsync(() => _user_data.ExposureInformation.Clear());
 				_user_data.ExposureSummary = null;
 				await _user_data_service.SetAsync(_user_data);
 				await UserDialogs.Instance.AlertAsync("Cleared exposures!");
 			}
+			_logger.EndMethod();
 		});
 
 		public Command AddExposures => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				await Device.InvokeOnMainThreadAsync(async () => {
 					_user_data.ExposureInformation.Add(new ExposureInfo(DateTime.UtcNow.AddDays(-14), TimeSpan.FromMinutes(5),  10, 6, RiskLevel.Lowest));
@@ -79,28 +86,36 @@ namespace Covid19Radar.ViewModels
 					await _user_data_service.SetAsync(_user_data);
 				});
 			}
+			_logger.EndMethod();
 		});
 
 		public Command UpdateStatus => new Command(async () => {
+			_logger.StartMethod();
 			_user_data = _user_data_service.Get();
 			await this.FetchEnMessage();
+			_logger.EndMethod();
 		});
 
 		public Command ToggleWelcome => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				_user_data.IsOptined = !_user_data.IsOptined;
 				await _user_data_service.SetAsync(_user_data);
 			}
+			_logger.EndMethod();
 		});
 
 		public Command ToggleEn => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				_user_data.IsExposureNotificationEnabled = !_user_data.IsExposureNotificationEnabled;
 				await _user_data_service.SetAsync(_user_data);
 			}
+			_logger.EndMethod();
 		});
 
 		public Command ResetEnabled => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				using (UserDialogs.Instance.Loading(string.Empty)) {
 					if (await ExposureNotification.IsEnabledAsync()) {
@@ -110,50 +125,55 @@ namespace Covid19Radar.ViewModels
 				}
 				await UserDialogs.Instance.AlertAsync("Cleared the enabled state!");
 			}
+			_logger.EndMethod();
 		});
 
 		public Command ResetBatchFileIndex => new Command(async () => {
+			_logger.StartMethod();
 			if (!(_user_data is null)) {
 				_user_data.ServerBatchNumbers = AppSettings.Instance.GetDefaultBatch();
 				await _user_data_service.SetAsync(_user_data);
 				this.RaisePropertyChanged(nameof(this.CurrentBatchFileIndex));
 				await UserDialogs.Instance.AlertAsync("Cleared batch file index!");
 			}
+			_logger.EndMethod();
 		});
 
 		public Command ManualTriggerKeyFetch => new Command(async () => {
+			_logger.StartMethod();
 			using (UserDialogs.Instance.Loading("Fetching...")) {
-				var task = this.ExposureNotificationService?.FetchExposureKeyAsync();
-				if (!(task is null)) {
-					await task;
-				}
+				await _ens.FetchExposureKeyAsync();
 				this.RaisePropertyChanged(nameof(this.CurrentBatchFileIndex));
 			}
+			_logger.EndMethod();
 		});
 
-		public DebugPageViewModel(INavigationService navigationService, ExposureNotificationService exposureNotificationService, IUserDataService userDataService)
-			: base(navigationService, exposureNotificationService)
+		public DebugPageViewModel(
+			ILoggerService              logger,
+			ExposureNotificationService exposureNotificationService,
+			IUserDataService            userDataService)
 		{
-			_user_data_service = userDataService;
+			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
+			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
-			_en_message        = this.ExposureNotificationService?.CurrentStatusMessage ?? string.Empty;
+			_en_message        = exposureNotificationService.CurrentStatusMessage;
 			this.Title         = "Debug";
 			_user_data_service.UserDataChanged += this.UserDataChanged;
 		}
 
 		private async void UserDataChanged(object sender, UserDataModel e)
 		{
+			_logger.StartMethod();
 			_user_data = e;
 			await this.FetchEnMessage();
+			_logger.EndMethod();
 		}
 
 		private async ValueTask FetchEnMessage()
 		{
-			var task = this.ExposureNotificationService?.UpdateStatusMessageAsync();
-			if (!(task is null)) {
-				await task;
-			}
-			this.EnMessage = this.ExposureNotificationService?.CurrentStatusMessage ?? string.Empty;
+			await _ens.UpdateStatusMessageAsync();
+			this.EnMessage = _ens.CurrentStatusMessage;
 		}
 	}
 }

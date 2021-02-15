@@ -14,6 +14,7 @@ namespace Covid19Radar.ViewModels
 	public class ReAgreeTermsOfServicePageViewModel : ViewModelBase
 	{
 		private readonly ILoggerService        _logger;
+		private readonly INavigationService    _ns;
 		private readonly ITermsUpdateService   _terms_update;
 		private          TermsUpdateInfoModel? _update_info;
 		private          DateTime              _update_dt;
@@ -39,25 +40,25 @@ namespace Covid19Radar.ViewModels
 				_logger.Warning("The view model is not initialized yet.");
 			} else {
 				await _terms_update.SaveLastUpdateDateAsync(TermsType.TermsOfService, _update_dt);
-				Task? task;
 				if (_terms_update.IsReAgree(TermsType.PrivacyPolicy, _update_info)) {
-					task = this.NavigationService?.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), new NavigationParameters() {
+					await _ns.NavigateAsync(nameof(ReAgreePrivacyPolicyPage), new NavigationParameters() {
 						{ "updatePrivacyPolicyInfo", _update_info.PrivacyPolicy }
 					});
 				} else {
-					task = this.NavigationService?.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-				}
-				if (!(task is null)) {
-					await task;
+					await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 				}
 			}
 			_logger.EndMethod();
 		});
 
-		public ReAgreeTermsOfServicePageViewModel(INavigationService navigationService, ILoggerService logger, ITermsUpdateService termsUpdate) : base(navigationService)
+		public ReAgreeTermsOfServicePageViewModel(
+			ILoggerService      logger,
+			INavigationService  navigationService,
+			ITermsUpdateService termsUpdate)
 		{
-			_logger               = logger;
-			_terms_update         = termsUpdate;
+			_logger               = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns                   = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			_terms_update         = termsUpdate       ?? throw new ArgumentNullException(nameof(termsUpdate));
 			this.OpenBrowserAsync = Browser.OpenAsync;
 		}
 

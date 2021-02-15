@@ -1,10 +1,9 @@
-﻿using Covid19Radar.Model;
-using Covid19Radar.Resources;
-using Covid19Radar.Services;
-using Prism.Navigation;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using Covid19Radar.Model;
+using Covid19Radar.Resources;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.ViewModels
 {
@@ -20,13 +19,12 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _exposures, value);
 		}
 
-		public ExposuresPageViewModel(INavigationService navigationService, IUserDataService userDataService) : base(navigationService)
+		public ExposuresPageViewModel(IUserDataService userDataService)
 		{
 			_user_data_service = userDataService;
 			_user_data         = _user_data_service.Get();
 			_exposures         = new ObservableCollection<ExposureSummary>();
 			this.Title         = AppResources.MainExposures;
-
 			if (!(_user_data is null)) {
 				foreach (var item in from x in _user_data.ExposureInformation group x by x.Timestamp) {
 					_exposures.Add(new ExposureSummary() {

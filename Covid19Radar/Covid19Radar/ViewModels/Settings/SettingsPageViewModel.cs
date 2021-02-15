@@ -1,10 +1,10 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Acr.UserDialogs;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -13,11 +13,12 @@ namespace Covid19Radar.ViewModels
 {
 	public class SettingsPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService   _logger;
-		private readonly ILogFileService  _log_file;
-		private          string           _app_version;
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
+		private readonly ILoggerService              _logger;
+		private readonly ILogFileService             _log_file;
+		private readonly ExposureNotificationService _ens;
+		private readonly IUserDataService            _user_data_service;
+		private          UserDataModel?              _user_data;
+		private          string                      _app_version;
 
 		public string AppVer
 		{
@@ -35,13 +36,11 @@ namespace Covid19Radar.ViewModels
 			_logger.StartMethod();
 			if (_user_data is null) {
 				_logger.Warning("The user data is null.");
-			} else if (this.ExposureNotificationService is null) {
-				_logger.Warning("The exposure notification service is not available.");
 			} else {
 				if (_user_data.IsExposureNotificationEnabled) {
-					await this.ExposureNotificationService.StartExposureNotification();
+					await _ens.StartExposureNotification();
 				} else {
-					await this.ExposureNotificationService.StopExposureNotification();
+					await _ens.StopExposureNotification();
 				}
 			}
 			_logger.EndMethod();
@@ -87,18 +86,17 @@ namespace Covid19Radar.ViewModels
 		});
 
 		public SettingsPageViewModel(
-			INavigationService          navigationService,
-			ExposureNotificationService exposureNotificationService,
 			ILoggerService              logger,
 			ILogFileService             logFile,
+			ExposureNotificationService exposureNotificationService,
 			IUserDataService            userDataService)
-			: base(navigationService, exposureNotificationService)
 		{
-			_logger            = logger;
-			_log_file          = logFile;
-			_app_version       = AppInfo.VersionString;
-			_user_data_service = userDataService;
+			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_log_file          = logFile                     ?? throw new ArgumentNullException(nameof(logFile));
+			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
+			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
+			_app_version       = AppInfo.VersionString;
 			this.Title         = AppResources.SettingsPageTitle;
 			this.RaisePropertyChanged(nameof(this.AppVer));
 		}

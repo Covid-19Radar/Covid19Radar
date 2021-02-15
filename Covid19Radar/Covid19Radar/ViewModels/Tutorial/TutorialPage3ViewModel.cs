@@ -13,9 +13,10 @@ namespace Covid19Radar.ViewModels
 	public class TutorialPage3ViewModel : ViewModelBase
 	{
 		private readonly ILoggerService      _logger;
+		private readonly INavigationService  _ns;
+		private          ITermsUpdateService _terms_update;
 		private readonly IUserDataService    _user_data_service;
 		private          UserDataModel?      _user_data;
-		private          ITermsUpdateService _terms_update;
 		private          string?             _url;
 
 		public string? Url
@@ -48,25 +49,21 @@ namespace Covid19Radar.ViewModels
 			_logger.Info($"The user data property \'{nameof(_user_data.IsOptined)}\' is set to \'{_user_data.IsOptined}\'.");
 			await _terms_update.SaveLastUpdateDateAsync(TermsType.TermsOfService, DateTime.Now);
 			UserDialogs.Instance.HideLoading();
-			if (this.NavigationService is null) {
-				_logger.Warning("The navigation service is null.");
-			} else {
-				await this.NavigationService.NavigateAsync(nameof(PrivacyPolicyPage));
-			}
+			await _ns.NavigateAsync(nameof(PrivacyPolicyPage));
 			_logger.EndMethod();
 		});
 
 		public TutorialPage3ViewModel(
-			INavigationService  navigationService,
 			ILoggerService      logger,
-			IUserDataService    userDataService,
-			ITermsUpdateService termsUpdate)
-			: base(navigationService)
+			INavigationService  navigationService,
+			ITermsUpdateService termsUpdate,
+			IUserDataService    userDataService)
 		{
-			_logger            = logger;
-			_user_data_service = userDataService;
+			_logger            = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			_terms_update      = termsUpdate       ?? throw new ArgumentNullException(nameof(termsUpdate));
+			_user_data_service = userDataService   ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
-			_terms_update      = termsUpdate;
 		}
 	}
 }

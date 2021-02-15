@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Resources;
+﻿using System;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
 
@@ -17,7 +18,7 @@ namespace Covid19Radar.ViewModels
 
 		public WebViewerPageViewModel(ILoggerService logger)
 		{
-			_logger    = logger;
+			_logger    = logger ?? throw new ArgumentNullException(nameof(logger));
 			this.Title = AppResources.NewsPageTitle;
 		}
 

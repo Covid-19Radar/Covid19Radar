@@ -12,7 +12,8 @@ namespace Covid19Radar.ViewModels
 {
 	public class InqueryPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService _logger;
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
 
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync  { get; set; }
 		public Func<EmailMessage, Task>              ComposeEmailAsync { get; set; }
@@ -34,10 +35,7 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickSendLogCommand => new Command(async () => {
 			_logger.StartMethod();
-			var task = this.NavigationService?.NavigateAsync(nameof(SendLogConfirmationPage));
-			if (!(task is null)) {
-				await task;
-			}
+			await _ns.NavigateAsync(nameof(SendLogConfirmationPage));
 			_logger.EndMethod();
 		});
 
@@ -74,9 +72,10 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public InqueryPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public InqueryPageViewModel(ILoggerService logger, INavigationService navigationService)
 		{
-			_logger                = logger;
+			_logger    = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns        = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 			this.OpenBrowserAsync  = Browser.OpenAsync;
 			this.ComposeEmailAsync = Email.ComposeAsync;
 		}

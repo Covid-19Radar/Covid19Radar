@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Resources;
+﻿using System;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
 using Prism.Navigation;
@@ -8,20 +9,19 @@ namespace Covid19Radar.ViewModels
 {
 	public class HelpPage3ViewModel : ViewModelBase
 	{
-		private readonly ILoggerService _logger;
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
 
 		public Command OnClickNotifyOtherPage => new Command(async () => {
 			_logger.StartMethod();
-			var task = this.NavigationService?.NavigateAsync(nameof(SubmitConsentPage));
-			if (!(task is null)) {
-				await task;
-			}
+			await _ns.NavigateAsync(nameof(SubmitConsentPage));
 			_logger.EndMethod();
 		});
 
-		public HelpPage3ViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public HelpPage3ViewModel(ILoggerService logger, INavigationService navigationService)
 		{
-			_logger    = logger;
+			_logger    = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns        = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 			this.Title = AppResources.HelpPage3Title;
 		}
 	}

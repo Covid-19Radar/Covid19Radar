@@ -12,11 +12,13 @@ namespace Covid19Radar.ViewModels
 {
 	public class HomePageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService   _logger;
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
-		private          string?          _start_date;
-		private          string?          _past_date;
+		private readonly ILoggerService              _logger;
+		private readonly INavigationService          _ns;
+		private readonly ExposureNotificationService _ens;
+		private readonly IUserDataService            _user_data_service;
+		private          UserDataModel?              _user_data;
+		private          string?                     _start_date;
+		private          string?                     _past_date;
 
 		public string? StartDate
 		{
@@ -32,22 +34,12 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickExposures => new Command(async () => {
 			_logger.StartMethod();
-			if (this.ExposureNotificationService is null) {
-				_logger.Warning("Could not access to the exposure notification service.");
-				_logger.EndMethod();
-				return;
-			}
-			if (this.NavigationService is null) {
-				_logger.Warning("Could not access to the navigation service.");
-				_logger.EndMethod();
-				return;
-			}
-			var count = this.ExposureNotificationService.GetExposureCount();
+			var count = _ens.GetExposureCount();
 			_logger.Info($"The exposure count: {count}");
 			if (count > 0) {
-				await this.NavigationService.NavigateAsync(nameof(ContactedNotifyPage));
+				await _ns.NavigateAsync(nameof(ContactedNotifyPage));
 			} else {
-				await this.NavigationService.NavigateAsync(nameof(NotContactPage));
+				await _ns.NavigateAsync(nameof(NotContactPage));
 			}
 			_logger.EndMethod();
 		});
@@ -59,14 +51,15 @@ namespace Covid19Radar.ViewModels
 		});
 
 		public HomePageViewModel(
+			ILoggerService              logger,
 			INavigationService          navigationService,
 			ExposureNotificationService exposureNotificationService,
-			ILoggerService              logger,
 			IUserDataService            userDataService)
-			: base(navigationService, exposureNotificationService)
 		{
-			_logger            = logger;
-			_user_data_service = userDataService;
+			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService           ?? throw new ArgumentNullException(nameof(navigationService));
+			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
+			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 			this.Title         = AppResources.HomePageTitle;
 
@@ -84,15 +77,10 @@ namespace Covid19Radar.ViewModels
 #if !DEBUG
 			await AppUtils.CheckVersionAsync(_logger);
 #endif
-			if (this.ExposureNotificationService is null) {
-				_logger.Warning("Could not access to the exposure notification service.");
-				_logger.EndMethod();
-				return;
-			}
 			try {
-				await this.ExposureNotificationService.StartExposureNotification();
-				await this.ExposureNotificationService.FetchExposureKeyAsync();
-				_logger.Info($"The exposure notification status: {await this.ExposureNotificationService.UpdateStatusMessageAsync()}");
+				await _ens.StartExposureNotification();
+				await _ens.FetchExposureKeyAsync();
+				_logger.Info($"The exposure notification status: {await _ens.UpdateStatusMessageAsync()}");
 				base.Initialize(parameters);
 			} catch (Exception e) {
 				_logger.Error("Could not get an exposure notification status.");

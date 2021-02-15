@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Model;
+﻿using System;
+using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Prism.Navigation;
@@ -7,14 +8,14 @@ namespace Covid19Radar.ViewModels
 {
 	public class TutorialPage6ViewModel : ViewModelBase
 	{
-		private readonly ILoggerService   _logger;
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
+		private readonly ILoggerService     _logger;
+		private readonly IUserDataService   _user_data_service;
+		private          UserDataModel?     _user_data;
 
-		public TutorialPage6ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService) : base(navigationService)
+		public TutorialPage6ViewModel(ILoggerService logger, IUserDataService userDataService)
 		{
-			_logger            = loggerService;
-			_user_data_service = userDataService;
+			_logger            = logger          ?? throw new ArgumentNullException(nameof(logger));
+			_user_data_service = userDataService ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 		}
 

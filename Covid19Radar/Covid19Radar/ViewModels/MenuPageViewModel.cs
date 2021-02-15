@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
@@ -11,8 +12,9 @@ namespace Covid19Radar.ViewModels
 {
 	public class MenuPageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService _logger;
-		private          MainMenuModel  _selected_menu_item;
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
+		private          MainMenuModel      _selected_menu_item;
 
 		public ObservableCollection<MainMenuModel> MenuItems { get; set; }
 
@@ -24,9 +26,10 @@ namespace Covid19Radar.ViewModels
 
 		public DelegateCommand NavigateCommand { get; private set; }
 
-		public MenuPageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public MenuPageViewModel(ILoggerService logger, INavigationService navigationService)
 		{
-			_logger = logger;
+			_logger = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns     = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 			_logger.StartMethod();
 			_logger.Info("Loading menu items...");
 			_selected_menu_item = new MainMenuModel() {
@@ -185,11 +188,7 @@ namespace Covid19Radar.ViewModels
 			this.ClearMenuItemsColors();
 			_selected_menu_item.IconColor = "#FFFFFF";
 			_selected_menu_item.TextColor = "#FFFFFF";
-			if (this.NavigationService is null) {
-				_logger.Warning("Could not access to the navigation service.");
-			} else {
-				await this.NavigationService.NavigateAsync(nameof(NavigationPage) + "/" + _selected_menu_item.PageName);
-			}
+			await _ns.NavigateAsync(nameof(NavigationPage) + "/" + _selected_menu_item.PageName);
 			_logger.EndMethod();
 		}
 

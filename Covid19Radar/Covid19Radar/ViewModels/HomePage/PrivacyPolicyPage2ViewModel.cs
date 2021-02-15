@@ -1,5 +1,4 @@
 ﻿using Covid19Radar.Resources;
-using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
@@ -13,7 +12,7 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _url, value);
 		}
 
-		public PrivacyPolicyPage2ViewModel(INavigationService navigationService) : base(navigationService)
+		public PrivacyPolicyPage2ViewModel()
 		{
 			_url       = AppResources.UrlPrivacyPolicy;
 			this.Title = AppResources.PrivacyPolicyPageTitle;

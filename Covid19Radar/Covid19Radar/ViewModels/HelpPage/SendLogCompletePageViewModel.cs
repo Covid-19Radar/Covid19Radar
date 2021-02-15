@@ -11,8 +11,9 @@ namespace Covid19Radar.ViewModels
 {
 	public class SendLogCompletePageViewModel : ViewModelBase
 	{
-		private readonly ILoggerService _logger;
-		private          string?        _log_id;
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
+		private          string?            _log_id;
 
 		public Func<EmailMessage, Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
@@ -34,9 +35,10 @@ namespace Covid19Radar.ViewModels
 		public Command OnClickHomeCommand         => new Command(this.NavigateToHomeAsync);
 		public Command OnBackButtonPressedCommand => new Command(this.NavigateToHomeAsync);
 
-		public SendLogCompletePageViewModel(INavigationService navigationService, ILoggerService logger) : base(navigationService)
+		public SendLogCompletePageViewModel(ILoggerService logger, INavigationService navigationService)
 		{
-			_logger = logger;
+			_logger    = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns        = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 		}
 
 		public override void Initialize(INavigationParameters parameters)
@@ -50,10 +52,7 @@ namespace Covid19Radar.ViewModels
 		private async void NavigateToHomeAsync()
 		{
 			_logger.StartMethod();
-			var task = this.NavigationService?.NavigateAsync($"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(HomePage)}");
-			if (!(task is null)) {
-				await task;
-			}
+			await _ns.NavigateAsync($"/{nameof(MenuPage)}/{nameof(NavigationPage)}/{nameof(HomePage)}");
 			_logger.EndMethod();
 		}
 	}

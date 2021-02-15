@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Model;
+﻿using System;
+using Covid19Radar.Model;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -9,21 +10,16 @@ namespace Covid19Radar.ViewModels
 {
 	public class TutorialPage4ViewModel : ViewModelBase
 	{
-		private readonly ILoggerService   _logger;
-		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
+		private readonly ILoggerService              _logger;
+		private readonly INavigationService          _ns;
+		private readonly ExposureNotificationService _ens;
+		private readonly IUserDataService            _user_data_service;
+		private          UserDataModel?              _user_data;
 
 		public Command OnClickEnable => new Command(async () => {
 			_logger.StartMethod();
-			if (this.ExposureNotificationService is null) {
-				_logger.Warning("The exposure notification service is null.");
-			} else {
-				await this.ExposureNotificationService.StartExposureNotification();
-			}
-			if (this.NavigationService is null) {
-			} else {
-				await this.NavigationService.NavigateAsync(nameof(TutorialPage6));
-			}
+			await _ens.StartExposureNotification();
+			await _ns.NavigateAsync(nameof(TutorialPage6));
 			_logger.EndMethod();
 		});
 
@@ -34,24 +30,21 @@ namespace Covid19Radar.ViewModels
 			} else {
 				_user_data.IsExposureNotificationEnabled = false;
 				await _user_data_service.SetAsync(_user_data);
-				if (this.NavigationService is null) {
-					_logger.Warning("The navigation service is null.");
-				} else {
-					await this.NavigationService.NavigateAsync(nameof(TutorialPage6));
-				}
+				await _ns.NavigateAsync(nameof(TutorialPage6));
 			}
 			_logger.EndMethod();
 		});
 
 		public TutorialPage4ViewModel(
+			ILoggerService              logger,
 			INavigationService          navigationService,
 			ExposureNotificationService exposureNotificationService,
-			ILoggerService              logger,
 			IUserDataService            userDataService)
-			: base(navigationService, exposureNotificationService)
 		{
-			_logger            = logger;
-			_user_data_service = userDataService;
+			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService           ?? throw new ArgumentNullException(nameof(navigationService));
+			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
+			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 		}
 	}

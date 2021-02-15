@@ -1,4 +1,5 @@
-﻿using Covid19Radar.Resources;
+﻿using System;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Xamarin.Essentials;
@@ -23,10 +24,11 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public ContactedNotifyPageViewModel(ILoggerService logger, ExposureNotificationService exposureNotificationService) : base(exposureNotificationService)
+		public ContactedNotifyPageViewModel(ILoggerService logger, ExposureNotificationService exposureNotificationService)
 		{
-			_logger            = logger;
-			_exposure_count    = exposureNotificationService.GetExposureCount().ToString();
+			_logger            =  logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_exposure_count    = (exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService)))
+			                   .GetExposureCount().ToString();
 			this.Title         = AppResources.TitleUserStatusSettings;
 			this.RaisePropertyChanged(nameof(this.ExposureCount));
 		}
