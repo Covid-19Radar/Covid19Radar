@@ -4,19 +4,20 @@ using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SendLogCompletePage : ContentPage
-    {
-        public SendLogCompletePage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class SendLogCompletePage : ContentPage
+	{
+		public SendLogCompletePage()
+		{
+			this.InitializeComponent();
+		}
 
-        protected override bool OnBackButtonPressed()
-        {
-            var vm = BindingContext as SendLogCompletePageViewModel;
-            vm.OnBackButtonPressedCommand.Execute(null);
-            return true;
-        }
-    }
+		protected override bool OnBackButtonPressed()
+		{
+			if (this.BindingContext is SendLogCompletePageViewModel model) {
+				model.OnBackButtonPressedCommand.Execute(null);
+			}
+			return true;
+		}
+	}
 }

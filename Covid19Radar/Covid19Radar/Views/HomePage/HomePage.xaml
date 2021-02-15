@@ -1,132 +1,127 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="Covid19Radar.Views.HomePage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    ios:Page.UseSafeArea="true"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    NavigationPage.TitleIconImageSource="HeaderLogo.png"
-    Style="{StaticResource DefaultPageStyle}"
-    Visual="Material">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            AutomationId="LabelMainTutorial"
-            AutomationProperties.IsInAccessibleTree="true"
-            AutomationProperties.Name="{x:Static resources:AppResources.MainTutorial}"
-            Command="{prism:NavigateTo 'HelpMenuPage'}"
-            Order="Primary"
-            Priority="1"
-            Text="{x:Static resources:AppResources.MainTutorial}" />
-    </ContentPage.ToolbarItems>
-
-    <ScrollView>
-        <StackLayout
-            Padding="15"
-            BackgroundColor="#EEEEEE"
-            Spacing="15">
-            <Frame
-                Padding="10"
-                CornerRadius="10"
-                HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding StartDate}" />
-                                <Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
-                                <Span Text=" " />
-                                <Span Text="{Binding PastDate}" />
-                                <Span Text=" " />
-                                <Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
-                                <Span Text=" " />
-                                <Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        AutomationId="ButtonExposures"
-                        AutomationProperties.IsInAccessibleTree="true"
-                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription2}"
-                        Command="{Binding Path=OnClickExposures}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.HomePageDescription2}" />
-
-                </StackLayout>
-            </Frame>
-            <Frame
-                Padding="10"
-                CornerRadius="10"
-                HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
-                    <Grid ColumnSpacing="15" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="0.8*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ffimageloading:CachedImage
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Aspect="AspectFit"
-                            Source="HOMEPage10.png" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Style="{StaticResource DefaultLabelSmall}"
-                            Text="{x:Static resources:AppResources.HomePageHeader2Description}"
-                            VerticalTextAlignment="Center" />
-                    </Grid>
-
-                    <Button
-                        AutomationProperties.IsInAccessibleTree="true"
-                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription4}"
-                        Command="{prism:NavigateTo 'SubmitConsentPage'}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.HomePageDescription4}" />
-                </StackLayout>
-            </Frame>
-            <Frame
-                Padding="10"
-                CornerRadius="10"
-                HasShadow="False">
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
-                    <Grid ColumnSpacing="15" RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="0.8*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <ffimageloading:CachedImage
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Aspect="AspectFit"
-                            Source="HOMEPage11.png" />
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Style="{StaticResource DefaultLabelSmall}"
-                            Text="{x:Static resources:AppResources.HomePageHeader3Description}"
-                            VerticalTextAlignment="Center" />
-                    </Grid>
-                    <Button
-                        AutomationProperties.IsInAccessibleTree="true"
-                        AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription5}"
-                        Command="{Binding Path=OnClickShareApp}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.HomePageDescription5}" />
-                </StackLayout>
-            </Frame>
-        </StackLayout>
-
-    </ScrollView>
+﻿<ContentPage
+	x:Class="Covid19Radar.Views.HomePage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+	xmlns:prism="http://prismlibrary.com"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+	ios:Page.UseSafeArea="true"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	NavigationPage.TitleIconImageSource="HeaderLogo.png"
+	Style="{StaticResource DefaultPageStyle}"
+	Visual="Material">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			AutomationId="LabelMainTutorial"
+			AutomationProperties.IsInAccessibleTree="true"
+			AutomationProperties.Name="{x:Static resources:AppResources.MainTutorial}"
+			Command="{prism:NavigateTo 'HelpMenuPage'}"
+			Order="Primary"
+			Priority="1"
+			Text="{x:Static resources:AppResources.MainTutorial}" />
+	</ContentPage.ToolbarItems>
+	<ScrollView>
+		<StackLayout
+			Padding="15"
+			BackgroundColor="#EEEEEE"
+			Spacing="15">
+			<Frame
+				Padding="10"
+				CornerRadius="10"
+				HasShadow="False">
+				<StackLayout Spacing="0">
+					<Label HorizontalTextAlignment="Center" Style="{StaticResource DefaultLabel}">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="{Binding StartDate}" />
+								<Span Text="{x:Static resources:AppResources.HomePageDescription0}" />
+								<Span Text=" " />
+								<Span Text="{Binding PastDate}" />
+								<Span Text=" " />
+								<Span Text="{x:Static resources:AppResources.HomePagePastDays}" />
+								<Span Text=" " />
+								<Span Text="{x:Static resources:AppResources.HomePageDescription1}" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>
+					<Button
+						AutomationId="ButtonExposures"
+						AutomationProperties.IsInAccessibleTree="true"
+						AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription2}"
+						Command="{Binding Path=OnClickExposures}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.HomePageDescription2}" />
+				</StackLayout>
+			</Frame>
+			<Frame
+				Padding="10"
+				CornerRadius="10"
+				HasShadow="False">
+				<StackLayout Spacing="0">
+					<Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageDescription3}" />
+					<Grid ColumnSpacing="15" RowSpacing="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.2*" />
+							<ColumnDefinition Width="0.8*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<ffimageloading:CachedImage
+							Grid.Row="0"
+							Grid.Column="0"
+							Aspect="AspectFit"
+							Source="HOMEPage10.png" />
+						<Label
+							Grid.Row="0"
+							Grid.Column="1"
+							Style="{StaticResource DefaultLabelSmall}"
+							Text="{x:Static resources:AppResources.HomePageHeader2Description}"
+							VerticalTextAlignment="Center" />
+					</Grid>
+					<Button
+						AutomationProperties.IsInAccessibleTree="true"
+						AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription4}"
+						Command="{prism:NavigateTo 'SubmitConsentPage'}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.HomePageDescription4}" />
+				</StackLayout>
+			</Frame>
+			<Frame
+				Padding="10"
+				CornerRadius="10"
+				HasShadow="False">
+				<StackLayout Spacing="0">
+					<Label Style="{StaticResource DefaultSubTitleLabel}" Text="{x:Static resources:AppResources.HomePageHeader3Title}" />
+					<Grid ColumnSpacing="15" RowSpacing="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.2*" />
+							<ColumnDefinition Width="0.8*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<ffimageloading:CachedImage
+							Grid.Row="0"
+							Grid.Column="0"
+							Aspect="AspectFit"
+							Source="HOMEPage11.png" />
+						<Label
+							Grid.Row="0"
+							Grid.Column="1"
+							Style="{StaticResource DefaultLabelSmall}"
+							Text="{x:Static resources:AppResources.HomePageHeader3Description}"
+							VerticalTextAlignment="Center" />
+					</Grid>
+					<Button
+						AutomationProperties.IsInAccessibleTree="true"
+						AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription5}"
+						Command="{Binding Path=OnClickShareApp}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.HomePageDescription5}" />
+				</StackLayout>
+			</Frame>
+		</StackLayout>
+	</ScrollView>
 </ContentPage>

@@ -11,7 +11,8 @@ namespace Covid19Radar.ViewModels
 		protected INavigationService?          NavigationService           { get; }
 		protected ExposureNotificationService? ExposureNotificationService { get; }
 
-		public  string Title {
+		public string Title
+		{
 			get => _title;
 			set => this.SetProperty(ref _title, value ?? string.Empty);
 		}

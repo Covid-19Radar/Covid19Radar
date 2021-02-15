@@ -11,98 +11,96 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class SettingsPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private string _AppVersion;
+	public class SettingsPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService   _logger;
+		private readonly ILogFileService  _log_file;
+		private          string           _app_version;
+		private readonly IUserDataService _user_data_service;
+		private          UserDataModel?   _user_data;
 
-        public string AppVer
-        {
-            get { return _AppVersion; }
-            set { SetProperty(ref _AppVersion, value); }
-        }
-        private UserDataModel _UserData;
-        public UserDataModel UserData
-        {
-            get { return _UserData; }
-            set { SetProperty(ref _UserData, value); }
-        }
+		public string AppVer
+		{
+			get => _app_version;
+			set => this.SetProperty(ref _app_version, value);
+		}
 
-        private readonly ExposureNotificationService exposureNotificationService;
+		public UserDataModel? UserData
+		{
+			get => _user_data;
+			set => this.SetProperty(ref _user_data, value);
+		}
 
-        private readonly IUserDataService userDataService;
-        private readonly ILogFileService logFileService;
-        public SettingsPageViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService, ExposureNotificationService exposureNotificationService, ILogFileService logFileService) : base(navigationService, exposureNotificationService)
-        {
-            Title = AppResources.SettingsPageTitle;
-            AppVer = AppInfo.VersionString;// AppSettings.Instance.AppVersion;
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            _UserData = this.userDataService.Get();
-            this.exposureNotificationService = exposureNotificationService;
-            this.logFileService = logFileService;
-        }
+		public ICommand OnChangeExposureNotificationState => new Command(async () => {
+			_logger.StartMethod();
+			if (_user_data is null) {
+				_logger.Warning("The user data is null.");
+			} else if (this.ExposureNotificationService is null) {
+				_logger.Warning("The exposure notification service is not available.");
+			} else {
+				if (_user_data.IsExposureNotificationEnabled) {
+					await this.ExposureNotificationService.StartExposureNotification();
+				} else {
+					await this.ExposureNotificationService.StopExposureNotification();
+				}
+			}
+			_logger.EndMethod();
+		});
 
-        public ICommand OnChangeExposureNotificationState => new Command(async () =>
-        {
-            loggerService.StartMethod();
+		public ICommand OnChangeNotificationState => new Command(async () =>
+		{
+			_logger.StartMethod();
+			if (_user_data is null) {
+				_logger.Warning("The user data is null.");
+			} else {
+				await _user_data_service.SetAsync(_user_data);
+			}
+			_logger.EndMethod();
+		});
 
-            if (UserData.IsExposureNotificationEnabled)
-            {
-                await exposureNotificationService.StartExposureNotification();
-            }
-            else
-            {
-                await exposureNotificationService.StopExposureNotification();
-            }
+		public ICommand OnChangeResetData => new Command(async () =>
+		{
+			_logger.StartMethod();
+			if (await UserDialogs.Instance.ConfirmAsync(
+				AppResources.SettingsPageDialogResetText,
+				AppResources.SettingsPageDialogResetTitle,
+				AppResources.ButtonOk,
+				AppResources.ButtonCancel))
+			{
+				UserDialogs.Instance.ShowLoading(AppResources.LoadingTextDeleting);
+				if (await ExposureNotification.IsEnabledAsync()) {
+					await ExposureNotification.StopAsync();
+				}
 
-            loggerService.EndMethod();
-        });
+				// Reset all data and Optout
+				await _user_data_service.ResetAllDataAsync();
+				_log_file.DeleteLogsDir();
 
-        public ICommand OnChangeNotificationState => new Command(async () =>
-        {
-            loggerService.StartMethod();
+				UserDialogs.Instance.HideLoading();
+				await UserDialogs.Instance.AlertAsync(AppResources.SettingsPageDialogResetCompletedText);
+				Application.Current.Quit();
 
-            await userDataService.SetAsync(_UserData);
+				// Close the application
+				DependencyService.Get<ICloseApplication>().CloseApplication();
+			}
+			_logger.EndMethod();
+		});
 
-            loggerService.EndMethod();
-        });
-
-        public ICommand OnChangeResetData => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            var check = await UserDialogs.Instance.ConfirmAsync(
-                Resources.AppResources.SettingsPageDialogResetText,
-                Resources.AppResources.SettingsPageDialogResetTitle,
-                Resources.AppResources.ButtonOk,
-                Resources.AppResources.ButtonCancel
-            );
-            if (check)
-            {
-                UserDialogs.Instance.ShowLoading(Resources.AppResources.LoadingTextDeleting);
-
-                if (await ExposureNotification.IsEnabledAsync())
-                {
-                    await ExposureNotification.StopAsync();
-                }
-
-                // Reset All Data and Optout
-                await userDataService.ResetAllDataAsync();
-
-                _ = logFileService.DeleteLogsDir();
-
-                UserDialogs.Instance.HideLoading();
-                await UserDialogs.Instance.AlertAsync(Resources.AppResources.SettingsPageDialogResetCompletedText);
-                Application.Current.Quit();
-                // Application close
-                Xamarin.Forms.DependencyService.Get<ICloseApplication>().CloseApplication();
-
-                loggerService.EndMethod();
-                return;
-            }
-
-            loggerService.EndMethod();
-        });
-    }
+		public SettingsPageViewModel(
+			INavigationService          navigationService,
+			ExposureNotificationService exposureNotificationService,
+			ILoggerService              logger,
+			ILogFileService             logFile,
+			IUserDataService            userDataService)
+			: base(navigationService, exposureNotificationService)
+		{
+			_logger            = logger;
+			_log_file          = logFile;
+			_app_version       = AppInfo.VersionString;
+			_user_data_service = userDataService;
+			_user_data         = userDataService.Get();
+			this.Title         = AppResources.SettingsPageTitle;
+			this.RaisePropertyChanged(nameof(this.AppVer));
+		}
+	}
 }

@@ -11,7 +11,8 @@ namespace Covid19Radar.ViewModels
 		private readonly ILoggerService _logger;
 		private          string         _exposure_count;
 
-		public  string ExposureCount {
+		public string ExposureCount
+		{
 			get => _exposure_count;
 			set => this.SetProperty(ref _exposure_count, value ?? string.Empty);
 		}

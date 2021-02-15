@@ -64,7 +64,7 @@ namespace Covid19Radar.UnitTests.ViewModels.HomePage
             var actualCalls = 0;
             string actualUri = default;
             BrowserLaunchMode actualLaunchMode = default;
-            reAgreePrivacyPolicyPageViewModel.BrowserOpenAsync = (uri, launchMode) =>
+            reAgreePrivacyPolicyPageViewModel.OpenBrowserAsync = (uri, launchMode) =>
             {
                 actualCalls++;
                 actualUri = uri;

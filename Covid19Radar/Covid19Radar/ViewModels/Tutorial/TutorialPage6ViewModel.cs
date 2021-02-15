@@ -1,38 +1,35 @@
 ﻿using Covid19Radar.Model;
-using Prism.Navigation;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
-using System.Threading.Tasks;
+using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage6ViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private readonly IUserDataService userDataService;
-        private UserDataModel userData;
+	public class TutorialPage6ViewModel : ViewModelBase
+	{
+		private readonly ILoggerService   _logger;
+		private readonly IUserDataService _user_data_service;
+		private          UserDataModel?   _user_data;
 
-        public TutorialPage6ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService) : base(navigationService)
-        {
-            this.loggerService = loggerService;
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-        }
+		public TutorialPage6ViewModel(INavigationService navigationService, ILoggerService loggerService, IUserDataService userDataService) : base(navigationService)
+		{
+			_logger            = loggerService;
+			_user_data_service = userDataService;
+			_user_data         = userDataService.Get();
+		}
 
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            loggerService.StartMethod();
-
-            await TutorialCompleteAsync();
-            base.Initialize(parameters);
-
-            loggerService.EndMethod();
-        }
-        private async Task TutorialCompleteAsync()
-        {
-            userData.IsPolicyAccepted = true;
-            await userDataService.SetAsync(userData);
-            loggerService.Info($"IsPolicyAccepted set to {userData.IsPolicyAccepted}");
-        }
-    }
+		public override async void Initialize(INavigationParameters parameters)
+		{
+			_logger.StartMethod();
+			base.Initialize(parameters);
+			if (_user_data is null) {
+				_logger.Warning("The user data is null.");
+			} else {
+				_user_data.IsPolicyAccepted = true;
+				await _user_data_service.SetAsync(_user_data);
+				_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
+			}
+			_logger.EndMethod();
+		}
+	}
 }

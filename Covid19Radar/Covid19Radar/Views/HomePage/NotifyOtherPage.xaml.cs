@@ -4,21 +4,19 @@ using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NotifyOtherPage : ContentPage
-    {
-        public NotifyOtherPage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class NotifyOtherPage : ContentPage
+	{
+		public NotifyOtherPage()
+		{
+			this.InitializeComponent();
+		}
 
-        void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            var button = (RadioButton)sender;
-            if (button.IsChecked)
-            {
-                (BindingContext as NotifyOtherPageViewModel).OnClickRadioButtonIsTrueCommand(button.Text);
-            }
-        }
-    }
+		private void OnRadioButtonCheckedChanged(object sender, CheckedChangedEventArgs e)
+		{
+			if (sender is RadioButton rb && this.BindingContext is NotifyOtherPageViewModel vm) {
+				vm.OnClickRadioButtonIsTrueCommand(rb.Text);
+			}
+		}
+	}
 }

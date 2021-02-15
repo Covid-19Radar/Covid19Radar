@@ -1,30 +1,23 @@
-﻿using Covid19Radar.Model;
-using Covid19Radar.Resources;
-using Covid19Radar.Services;
+﻿using Covid19Radar.Resources;
 using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class PrivacyPolicyPage2ViewModel : ViewModelBase
-    {
-        private readonly IUserDataService userDataService;
-        private UserDataModel userData;
+	public class PrivacyPolicyPage2ViewModel : ViewModelBase
+	{
+		private string _url;
 
+		public string Url
+		{
+			get => _url;
+			set => this.SetProperty(ref _url, value);
+		}
 
-        private string _url;
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
-        public PrivacyPolicyPage2ViewModel(INavigationService navigationService, IUserDataService userDataService) : base(navigationService)
-        {
-            Title = AppResources.PrivacyPolicyPageTitle;
-            Url = Resources.AppResources.UrlPrivacyPolicy;
-
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-        }
-    }
+		public PrivacyPolicyPage2ViewModel(INavigationService navigationService) : base(navigationService)
+		{
+			_url       = AppResources.UrlPrivacyPolicy;
+			this.Title = AppResources.PrivacyPolicyPageTitle;
+			this.RaisePropertyChanged(nameof(this.Url));
+		}
+	}
 }

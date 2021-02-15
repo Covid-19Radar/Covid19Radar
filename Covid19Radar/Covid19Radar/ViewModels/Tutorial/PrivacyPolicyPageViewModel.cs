@@ -9,44 +9,51 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class PrivacyPolicyPageViewModel : ViewModelBase
-    {
-        private readonly IUserDataService userDataService;
-        private readonly ILoggerService loggerService;
-        private readonly ITermsUpdateService termsUpdateService;
+	public class PrivacyPolicyPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService      _logger;
+		private readonly ITermsUpdateService _terms_update;
+		private readonly IUserDataService    _user_data_service;
+		private          UserDataModel?      _user_data;
+		private          string              _url;
 
-        private UserDataModel userData;
+		public string Url
+		{
+			get => _url;
+			set => this.SetProperty(ref _url, value);
+		}
 
+		public Command OnClickAgree => new Command(async () => {
+			_logger.StartMethod();
+			if (_user_data is null) {
+				_logger.Warning("The user data is null.");
+			} else {
+				_user_data.IsPolicyAccepted = true;
+				await _user_data_service.SetAsync(_user_data);
+				_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
+				await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, DateTime.Now);
+				var task = this.NavigationService?.NavigateAsync(nameof(TutorialPage4));
+				if (!(task is null)) {
+					await task;
+				}
+			}
+			_logger.EndMethod();
+		});
 
-        private string _url;
-        public string Url
-        {
-            get { return _url; }
-            set { SetProperty(ref _url, value); }
-        }
-
-        public PrivacyPolicyPageViewModel(INavigationService navigationService, IUserDataService userDataService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
-        {
-            Title = AppResources.PrivacyPolicyPageTitle;
-            Url = Resources.AppResources.UrlPrivacyPolicy;
-
-            this.userDataService = userDataService;
-            this.loggerService = loggerService;
-            userData = this.userDataService.Get();
-            this.termsUpdateService = termsUpdateService;
-        }
-
-        public Command OnClickAgree => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            userData.IsPolicyAccepted = true;
-            await userDataService.SetAsync(userData);
-            loggerService.Info($"IsPolicyAccepted set to {userData.IsPolicyAccepted}");
-            await termsUpdateService.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, DateTime.Now);
-            await NavigationService.NavigateAsync(nameof(TutorialPage4));
-
-            loggerService.EndMethod();
-        });
-    }
+		public PrivacyPolicyPageViewModel(
+			INavigationService  navigationService,
+			ILoggerService      logger,
+			IUserDataService    userDataService,
+			ITermsUpdateService termsUpdate)
+			: base(navigationService)
+		{
+			_logger            = logger;
+			_terms_update      = termsUpdate;
+			_user_data_service = userDataService;
+			_user_data         = userDataService.Get();
+			_url               = AppResources.UrlPrivacyPolicy;
+			this.Title         = AppResources.PrivacyPolicyPageTitle;
+			this.RaisePropertyChanged(nameof(this.Url));
+		}
+	}
 }

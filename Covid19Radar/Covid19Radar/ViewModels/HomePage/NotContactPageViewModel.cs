@@ -9,16 +9,16 @@ namespace Covid19Radar.ViewModels
 	{
 		private readonly ILoggerService _logger;
 
-		public NotContactPageViewModel(ILoggerService logger)
-		{
-			_logger    = logger;
-			this.Title = AppResources.TitleUserStatusSettings;
-		}
-
 		public Command OnClickShareApp => new Command(async () => {
 			_logger.StartMethod();
 			await AppUtils.PopUpShare();
 			_logger.EndMethod();
 		});
+
+		public NotContactPageViewModel(ILoggerService logger)
+		{
+			_logger    = logger;
+			this.Title = AppResources.TitleUserStatusSettings;
+		}
 	}
 }

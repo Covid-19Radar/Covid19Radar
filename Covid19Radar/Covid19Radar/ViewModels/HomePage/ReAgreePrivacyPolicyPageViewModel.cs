@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Covid19Radar.Model;
+using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
@@ -10,57 +11,52 @@ using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ReAgreePrivacyPolicyPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
-        private ITermsUpdateService _termsUpdateService;
+	public class ReAgreePrivacyPolicyPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService      _logger;
+		private readonly ITermsUpdateService _terms_update;
+		private          DateTime            _update_dt;
+		private          string?             _update_text;
 
-        private DateTime UpdateDateTime { get; set; }
-        private string _updateText;
-        public string UpdateText
-        {
-            get { return _updateText; }
-            set { SetProperty(ref _updateText, value); }
-        }
+		public string? UpdateText
+		{
+			get => _update_text;
+			set => this.SetProperty(ref _update_text, value);
+		}
 
-        public Func<string, BrowserLaunchMode, Task> BrowserOpenAsync = Browser.OpenAsync;
+		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync { get; set; }
 
-        public ReAgreePrivacyPolicyPageViewModel(INavigationService navigationService, ILoggerService loggerService, ITermsUpdateService termsUpdateService) : base(navigationService)
-        {
-            _termsUpdateService = termsUpdateService;
-            this.loggerService = loggerService;
-        }
+		public Command OpenWebView => new Command(async () => {
+			_logger.StartMethod();
+			await this.OpenBrowserAsync(AppResources.UrlPrivacyPolicy, BrowserLaunchMode.SystemPreferred);
+			_logger.EndMethod();
+		});
 
-        public Command OpenWebView => new Command(async () =>
-        {
-            loggerService.StartMethod();
+		public Command OnClickReAgreeCommand => new Command(async () => {
+			_logger.StartMethod();
+			await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, _update_dt);
+			var task = this.NavigationService?.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+			if (!(task is null)) {
+				await task;
+			}
+			_logger.EndMethod();
+		});
 
-            var url = Resources.AppResources.UrlPrivacyPolicy;
-            await BrowserOpenAsync(url, BrowserLaunchMode.SystemPreferred);
+		public ReAgreePrivacyPolicyPageViewModel(INavigationService navigationService, ILoggerService logger, ITermsUpdateService termsUpdate) : base(navigationService)
+		{
+			_logger               = logger;
+			_terms_update         = termsUpdate;
+			this.OpenBrowserAsync = Browser.OpenAsync;
+		}
 
-            loggerService.EndMethod();
-        });
-
-        public Command OnClickReAgreeCommand => new Command(async () =>
-        {
-            loggerService.StartMethod();
-
-            await _termsUpdateService.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, UpdateDateTime);
-            _ = await NavigationService.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-
-            loggerService.EndMethod();
-        });
-
-        public override void Initialize(INavigationParameters parameters)
-        {
-            loggerService.StartMethod();
-
-            base.Initialize(parameters);
-            TermsUpdateInfoModel.Detail updateInfo = (TermsUpdateInfoModel.Detail) parameters["updatePrivacyPolicyInfo"];
-            UpdateDateTime = updateInfo.UpdateDateTime;
-            UpdateText = updateInfo.Text;
-
-            loggerService.EndMethod();
-        }
-    }
+		public override void Initialize(INavigationParameters parameters)
+		{
+			_logger.StartMethod();
+			base.Initialize(parameters);
+			var updateInfo  = ((TermsUpdateInfoModel.Detail)(parameters["updatePrivacyPolicyInfo"]));
+			_update_dt      = updateInfo.UpdateDateTime;
+			this.UpdateText = updateInfo.Text;
+			_logger.EndMethod();
+		}
+	}
 }

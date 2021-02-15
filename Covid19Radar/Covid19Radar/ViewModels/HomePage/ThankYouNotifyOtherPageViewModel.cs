@@ -1,28 +1,24 @@
 ﻿using Covid19Radar.Common;
-using Covid19Radar.Services;
+using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
-using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ThankYouNotifyOtherPageViewModel : ViewModelBase
-    {
-        private readonly ILoggerService loggerService;
+	public class ThankYouNotifyOtherPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService _logger;
 
-        public ThankYouNotifyOtherPageViewModel(INavigationService navigationService, ILoggerService loggerService) : base(navigationService)
-        {
-            Title = Resources.AppResources.TitleUserStatusSettings;
-            this.loggerService = loggerService;
-        }
-        public Command OnClickShareApp => new Command(() =>
-        {
-            loggerService.StartMethod();
+		public Command OnClickShareApp => new Command(async () => {
+			_logger.StartMethod();
+			await AppUtils.PopUpShare();
+			_logger.EndMethod();
+		});
 
-            AppUtils.PopUpShare();
-
-            loggerService.EndMethod();
-        });
-
-    }
+		public ThankYouNotifyOtherPageViewModel(ILoggerService logger) : base()
+		{
+			_logger    = logger;
+			this.Title = AppResources.TitleUserStatusSettings;
+		}
+	}
 }

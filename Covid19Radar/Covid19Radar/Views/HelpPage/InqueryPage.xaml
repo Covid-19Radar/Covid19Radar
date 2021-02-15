@@ -1,97 +1,96 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="Covid19Radar.Views.InqueryPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{x:Static resources:AppResources.InqueryPageTitle}"
-    ios:Page.UseSafeArea="true"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    Style="{StaticResource DefaultPageStyle}"
-    Visual="Material">
-    <ScrollView>
-        <StackLayout
-            Padding="10"
-            BackgroundColor="{StaticResource Background}"
-            Spacing="0">
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
-                </Frame.GestureRecognizers>
+﻿<ContentPage
+	x:Class="Covid19Radar.Views.InqueryPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+	xmlns:prism="http://prismlibrary.com"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+	Title="{x:Static resources:AppResources.InqueryPageTitle}"
+	ios:Page.UseSafeArea="true"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	Style="{StaticResource DefaultPageStyle}"
+	Visual="Material">
+	<ScrollView>
+		<StackLayout
+			Padding="10"
+			BackgroundColor="{StaticResource Background}"
+			Spacing="0">
+			<Frame Padding="10" HasShadow="False">
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding Path=OnClickEmail}" />
+				</Frame.GestureRecognizers>
 				<StackLayout Spacing="0">
 					<Label Style="{StaticResource DefaultLabelSmall}">
 						<Label.FormattedText>
 							<FormattedString>
 								<Span
-                                    Text="appsupport@yourhealthcaredivmailaddress.org"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
+									Text="appsupport@yourhealthcaredivmailaddress.org"
+									TextColor="{StaticResource Primary}"
+									TextDecorations="Underline" />
 								<Span Text="{x:Static x:Environment.NewLine}" />
 								<Span Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
 							</FormattedString>
 						</Label.FormattedText>
 					</Label>
+					<Button
+						Command="{Binding Path=OnClickQuestionCommand}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.InqueryPageButton1}" />
 				</StackLayout>
-				<Button
-                    Command="{Binding Path=OnClickQuestionCommand}"
-                    Style="{StaticResource DefaultButton}"
-                    Text="{x:Static resources:AppResources.InqueryPageButton1}" />
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <StackLayout Spacing="10">
-                    <Button
-                        Command="{Binding Path=OnClickEmailCommand}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.InqueryPageButton2}" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <StackLayout Spacing="10">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline"
-                                    FontAttributes="Bold"
-                                    FontSize="Small"
-                                    Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        Command="{Binding Path=OnClickSendLogCommand}"
-                        Style="{StaticResource DefaultButton}"
-                        Text="{x:Static resources:AppResources.InqueryPageButton3}" />
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-            <Frame Padding="10" HasShadow="False">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
-                </Frame.GestureRecognizers>
-                <StackLayout Spacing="0">
-                    <Label Style="{StaticResource DefaultLabelSmall}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
-                                <Span Text="{x:Static x:Environment.NewLine}" />
-                                <Span
-                                    Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html"
-                                    TextColor="{StaticResource Primary}"
-                                    TextDecorations="Underline" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </Frame>
-            <BoxView Style="{StaticResource DefaultLineStyle}" />
-        </StackLayout>
-    </ScrollView>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+			<Frame Padding="10" HasShadow="False">
+				<StackLayout Spacing="10">
+					<Button
+						Command="{Binding Path=OnClickEmailCommand}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.InqueryPageButton2}" />
+				</StackLayout>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+			<Frame Padding="10" HasShadow="False">
+				<StackLayout Spacing="10">
+					<Label Style="{StaticResource DefaultLabelSmall}">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span
+									TextColor="{StaticResource Primary}"
+									TextDecorations="Underline"
+									FontAttributes="Bold"
+									FontSize="Small"
+									Text="{x:Static resources:AppResources.InqueryPageDescription1}" />
+								<Span Text="{x:Static x:Environment.NewLine}" />
+								<Span Text="{x:Static resources:AppResources.InqueryPageDescription2}" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>
+					<Button
+						Command="{Binding Path=OnClickSendLogCommand}"
+						Style="{StaticResource DefaultButton}"
+						Text="{x:Static resources:AppResources.InqueryPageButton3}" />
+				</StackLayout>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+			<Frame Padding="10" HasShadow="False">
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding Path=OnClickAboutAppCommand}" />
+				</Frame.GestureRecognizers>
+				<StackLayout Spacing="0">
+					<Label Style="{StaticResource DefaultLabelSmall}">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="{x:Static resources:AppResources.InqueryPageDescription3}" />
+								<Span Text="{x:Static x:Environment.NewLine}" />
+								<Span
+									Text="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html"
+									TextColor="{StaticResource Primary}"
+									TextDecorations="Underline" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>
+				</StackLayout>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
