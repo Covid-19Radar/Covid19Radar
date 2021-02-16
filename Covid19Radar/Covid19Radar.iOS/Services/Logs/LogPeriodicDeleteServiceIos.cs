@@ -1,4 +1,5 @@
-﻿using BackgroundTasks;
+﻿using System;
+using BackgroundTasks;
 using Covid19Radar.iOS.Services.Logs;
 using Covid19Radar.Services.Logs;
 using Foundation;
@@ -6,150 +7,93 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(LogPeriodicDeleteServiceIos))]
+
 namespace Covid19Radar.iOS.Services.Logs
 {
-    public class LogPeriodicDeleteServiceIos : ILogPeriodicDeleteService
-    {
-        #region Static Fields
+	public class LogPeriodicDeleteServiceIos : ILogPeriodicDeleteService
+	{
+		private static readonly string          _identifier = AppInfo.PackageName + ".delete-old-logs";
+		private        readonly ILoggerService  _logger;
+		private        readonly ILogFileService _log_file;
 
-        private static readonly string identifier = AppInfo.PackageName + ".delete-old-logs";
+		public LogPeriodicDeleteServiceIos()
+		{
+			_logger   = DependencyService.Resolve<ILoggerService>();
+			_log_file = DependencyService.Resolve<ILogFileService>();
+		}
 
-        #endregion
+		public void Init()
+		{
+			_logger.StartMethod();
+			BGTaskScheduler.Shared.Register(_identifier, null, task => {
+				this.HandleAppRefresh((BGAppRefreshTask)(task));
+			});
+			this.ScheduleAppRefresh();
+			_logger.EndMethod();
+		}
 
-        #region Instance Fields
+		private void HandleAppRefresh(BGAppRefreshTask task)
+		{
+			_logger.StartMethod();
+			try {
+				this.ScheduleAppRefresh();
+				var queue = new NSOperationQueue();
+				queue.MaxConcurrentOperationCount = 1;
+				task.ExpirationHandler = () => {
+					_logger.Info("The task was expired.");
+					queue.CancelAllOperations();
+				};
+				var operation = new DeleteOldLogsOperation(_logger, _log_file);
+				operation.CompletionBlock = () => {
+					_logger.Info($"Operation completed. Is cancelled? {operation.IsCancelled}");
+					task.SetTaskCompleted(!operation.IsCancelled);
+				};
+				queue.AddOperation(operation);
+			} catch (Exception e) {
+				_logger.Exception("Failed.", e);
+			} finally {
+				_logger.EndMethod();
+			}
+		}
 
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
+		private void ScheduleAppRefresh()
+		{
+			_logger.StartMethod();
+			int oneDay = 1 * 24 * 60 * 60;
+			var request = new BGAppRefreshTaskRequest(_identifier);
+			request.EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(oneDay); // Fetch no earlier than 1 day from now
+			_logger.Info($"The request earliest begin date: {request.EarliestBeginDate}");
+			BGTaskScheduler.Shared.Submit(request, out var error);
+			if (error != null) {
+				_logger.Error($"Could not schedule app refresh. Error: {error}");
+			}
+			_logger.EndMethod();
+		}
+	}
 
-        #endregion
+	internal class DeleteOldLogsOperation : NSOperation
+	{
+		private readonly ILoggerService  _logger;
+		private readonly ILogFileService _log_file;
 
-        #region Constructors
+		public DeleteOldLogsOperation(ILoggerService logger, ILogFileService logFile)
+		{
+			_logger   = logger;
+			_log_file = logFile;
+		}
 
-        public LogPeriodicDeleteServiceIos()
-        {
-            loggerService = DependencyService.Resolve<ILoggerService>();
-            logFileService = DependencyService.Resolve<ILogFileService>();
-        }
-
-        #endregion
-
-        #region ILogPeriodicDeleteService Methods
-
-        public void Init()
-        {
-            loggerService.StartMethod();
-
-            _ = BGTaskScheduler.Shared.Register(identifier, null, task =>
-              {
-                  HandleAppRefresh((BGAppRefreshTask)task);
-              });
-
-            ScheduleAppRefresh();
-
-            loggerService.EndMethod();
-        }
-
-        #endregion
-
-        #region Other Private Methods
-
-        private void HandleAppRefresh(BGAppRefreshTask task)
-        {
-            try
-            {
-                loggerService.StartMethod();
-
-                ScheduleAppRefresh();
-
-                var queue = new NSOperationQueue();
-                queue.MaxConcurrentOperationCount = 1;
-
-                task.ExpirationHandler = () =>
-                {
-                    loggerService.Info("Task expired.");
-                    queue.CancelAllOperations();
-                };
-
-                var operation = new DeleteOldLogsOperation(loggerService, logFileService);
-                operation.CompletionBlock = () =>
-                {
-                    loggerService.Info($"Operation completed. operation.IsCancelled: {operation.IsCancelled}");
-                    task.SetTaskCompleted(!operation.IsCancelled);
-                };
-
-                queue.AddOperation(operation);
-
-                loggerService.EndMethod();
-            }
-            catch
-            {
-                // do nothing
-            }
-        }
-
-        private void ScheduleAppRefresh()
-        {
-            loggerService.StartMethod();
-
-            var oneDay = 1 * 24 * 60 * 60;
-            var request = new BGAppRefreshTaskRequest(identifier);
-            request.EarliestBeginDate = NSDate.FromTimeIntervalSinceNow(oneDay); // Fetch no earlier than 1 day from now
-
-            loggerService.Info($"request.EarliestBeginDate: {request.EarliestBeginDate}");
-
-            _ = BGTaskScheduler.Shared.Submit(request, out var error);
-
-            if (error != null)
-            {
-                loggerService.Error($"Could not schedule app refresh. Error: {error}");
-            }
-
-            loggerService.EndMethod();
-        }
-
-        #endregion
-    }
-
-    class DeleteOldLogsOperation : NSOperation
-    {
-        #region Instance Fields
-
-        private readonly ILoggerService loggerService;
-        private readonly ILogFileService logFileService;
-
-        #endregion
-
-        #region Constructors
-
-        public DeleteOldLogsOperation(ILoggerService loggerService, ILogFileService logFileService)
-        {
-            this.loggerService = loggerService;
-            this.logFileService = logFileService;
-        }
-
-        #endregion
-
-        #region NSOperation Methods
-
-        public override void Main()
-        {
-            base.Main();
-
-            try
-            {
-                loggerService.StartMethod();
-
-                logFileService.Rotate();
-
-                loggerService.Info("Periodic deletion of old logs.");
-                loggerService.EndMethod();
-            }
-            catch
-            {
-                // do nothing
-            }
-        }
-
-        #endregion
-    }
+		public override void Main()
+		{
+			_logger.StartMethod();
+			base.Main();
+			try {
+				_log_file.Rotate();
+				_logger.Info("Periodic deletion of old logs.");
+			} catch (Exception e) {
+				_logger.Exception("Failed.", e);
+			} finally {
+				_logger.EndMethod();
+			}
+		}
+	}
 }

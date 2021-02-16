@@ -1,98 +1,74 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Prism;
-using Prism.Ioc;
 using Android.Runtime;
-using Android.Content;
-using Covid19Radar.Model;
-using System.Collections.Generic;
-using System.Linq;
-using System;
-using Covid19Radar.Common;
 using Covid19Radar.Droid.Services.Logs;
 using Covid19Radar.Services.Logs;
-using System.Threading.Tasks;
+using FFImageLoading;
+using FFImageLoading.Forms.Platform;
+using Prism;
+using Prism.Ioc;
+using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
-using Acr.UserDialogs;
-using Covid19Radar.Renderers;
-//using Plugin.LocalNotification;
+using Xamarin.Forms.Platform.Android;
+using FFImageConfig = FFImageLoading.Config.Configuration;
+using Platform = Xamarin.Essentials.Platform;
 
 namespace Covid19Radar.Droid
 {
-    [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme.Splash", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-    {
-        public static object dataLock = new object();
+	[Activity(
+		Label                = "@string/app_name",
+		Icon                 = "@mipmap/ic_launcher",
+		Theme                = "@style/MainTheme.Splash",
+		MainLauncher         = true,
+		LaunchMode           = LaunchMode.SingleTop,
+		ScreenOrientation    = ScreenOrientation.Portrait,
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
+	)]
+	public class MainActivity : FormsAppCompatActivity
+	{
+		public static object dataLock = new object();
 
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-            base.SetTheme(Resource.Style.MainTheme);
-            base.OnCreate(savedInstanceState);
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+			TabLayoutResource = Resource.Layout.Tabbar;
+			ToolbarResource   = Resource.Layout.Toolbar;
+			base.SetTheme(Resource.Style.MainTheme);
+			base.OnCreate(savedInstanceState);
 
-            Xamarin.Forms.Forms.SetFlags("RadioButton_Experimental");
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
+			Forms.SetFlags("RadioButton_Experimental");
+			Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+			Forms.Init(this, savedInstanceState);
+			FormsMaterial.Init(this, savedInstanceState);
 
-            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
-            global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration());
+			CachedImageRenderer.Init(enableFastRenderer: true);
+			ImageService.Instance.Initialize(new FFImageConfig());
 
-            UserDialogs.Init(this);
+			UserDialogs.Init(this);
+			this.LoadApplication(new App(new AndroidInitializer()));
+		}
 
-            //NotificationCenter.CreateNotificationChannel();
-            LoadApplication(new App(new AndroidInitializer()));
-            //NotificationCenter.NotifyNotificationTapped(base.Intent);
-        }
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum()] Permission[] grantResults)
+		{
+			Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
 
+		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+		{
+			base.OnActivityResult(requestCode, resultCode, data);
+			ExposureNotification.OnActivityResult(requestCode, resultCode, data);
+		}
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-
-        public class AndroidInitializer : IPlatformInitializer
-        {
-            public void RegisterTypes(IContainerRegistry containerRegistry)
-            {
-                // Services
-                containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
-            }
-        }
-
-        private void RequestPermission()
-        {
-            if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
-            {
-                string[] permissions = new string[] {
-                    Android.Manifest.Permission.Bluetooth,
-                    Android.Manifest.Permission.BluetoothPrivileged,
-                    Android.Manifest.Permission.BluetoothAdmin,
-                };
-
-                RequestPermissions(permissions, 0);
-            }
-        }
-
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            base.OnActivityResult(requestCode, resultCode, data);
-
-            Xamarin.ExposureNotifications.ExposureNotification.OnActivityResult(requestCode, resultCode, data);
-        }
-
-        //protected override void OnNewIntent(Intent intent)
-        //{
-        //    NotificationCenter.NotifyNotificationTapped(intent);
-
-        //    base.OnNewIntent(intent);
-        //}
-
-    }
+		public class AndroidInitializer : IPlatformInitializer
+		{
+			public void RegisterTypes(IContainerRegistry containerRegistry)
+			{
+				// Services
+				containerRegistry.RegisterSingleton<ILogPathDependencyService, LogPathServiceAndroid>();
+			}
+		}
+	}
 }
-

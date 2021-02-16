@@ -1,27 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Covid19Radar.Droid.Services;
+﻿using Covid19Radar.Droid.Services;
 using Covid19Radar.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(CloseApplication))]
 namespace Covid19Radar.Droid.Services
 {
-    public class CloseApplication : ICloseApplication
-    {
-        void ICloseApplication.CloseApplication()
-        {
-            var activity = Xamarin.Essentials.Platform.CurrentActivity;
-            activity.FinishAffinity();
-        }
-    }
+	public class CloseApplication : ICloseApplication
+	{
+		void ICloseApplication.CloseApplication()
+		{
+			var activity = Platform.CurrentActivity;
+			activity.FinishAffinity();
+		}
+	}
 }
