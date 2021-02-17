@@ -143,6 +143,8 @@
 					</Button>
 					<Button
 						AutomationId="ButtonExposures"
+						AutomationProperties.IsInAccessibleTree="true"	
+						AutomationProperties.Name="{x:Static resources:AppResources.HomePageDescription2}"
 						Command="{Binding Path=OnClickExposures}"
 						Style="{StaticResource DefaultButton}"
 						Text="{x:Static resources:AppResources.HomePageDescription2}" />
