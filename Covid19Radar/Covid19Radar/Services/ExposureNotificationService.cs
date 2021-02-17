@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Covid19Radar.Common;
@@ -189,12 +190,18 @@ namespace Covid19Radar.Services
 			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
 			} else if (!_user_data.IsOptined) {
-				// TODO: 下記のリソース名を ExposureNotificationStatusMessageNotOptined に変更する
-				message.Append(AppResources.ExposureNotificationStatusMessageIsOptined);
+				message.Append(ExposureNotificationStatusMessageNotOptined());
 			}
 
 			this.CurrentStatusMessage = message;
 			return message;
+		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		private static string ExposureNotificationStatusMessageNotOptined()
+		{
+			// 互換性のため
+			return AppResources.ExposureNotificationStatusMessageIsOptined;
 		}
 
 		public IEnumerable<TemporaryExposureKey> FliterTemporaryExposureKeys(IEnumerable<TemporaryExposureKey> temporaryExposureKeys)
