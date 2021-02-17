@@ -352,6 +352,12 @@
     <value>Share this app</value>
     <comment>アプリを周りの人に知らせる</comment>
   </data>
+  <data name="HomePageDescription6" xml:space="preserve">
+    <value>The exposure notifications are all enabled.</value>
+  </data>
+  <data name="HomePageDescription7" xml:space="preserve">
+    <value>The exposure notifications are disabled. Please turn it ON in the settings.</value>
+  </data>
   <data name="HomePageTitle1" xml:space="preserve">
     <value>Home</value>
     <comment>ホーム</comment>

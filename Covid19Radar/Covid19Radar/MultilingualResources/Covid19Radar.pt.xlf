@@ -1532,6 +1532,14 @@
           <source>次回起動時にチュートリアルを表示します。</source>
           <target state="new">次回起動時にチュートリアルを表示します。</target>
         </trans-unit>
+        <trans-unit id="HomePageDescription6" translate="yes" xml:space="preserve">
+          <source>接触通知は全て有効です。</source>
+          <target state="new">接触通知は全て有効です。</target>
+        </trans-unit>
+        <trans-unit id="HomePageDescription7" translate="yes" xml:space="preserve">
+          <source>接触通知が無効になっています。設定ページで接触通知をオンにしてください。</source>
+          <target state="new">接触通知が無効になっています。設定ページで接触通知をオンにしてください。</target>
+        </trans-unit>
       </group>
     </body>
   </file>
