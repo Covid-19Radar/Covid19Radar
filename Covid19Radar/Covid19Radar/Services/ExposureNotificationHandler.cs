@@ -23,10 +23,10 @@ namespace Covid19Radar.Services
 	public class ExposureNotificationHandler : IExposureNotificationHandler
 	{
 		private readonly ILoggerService              _logger;
+		private readonly ExposureNotificationService _ens;
 		private readonly IHttpDataService            _http_data;
 		private readonly IUserDataService            _user_data_service;
-		private readonly ExposureNotificationService _ens;
-		private          UserDataModel?              _user_data;
+		private          UserDataModel               _user_data;
 
 		// this string should be localized
 		public string UserExplanation => AppResources.LocalNotificationDescription;
@@ -34,16 +34,14 @@ namespace Covid19Radar.Services
 		public ExposureNotificationHandler()
 		{
 			_logger            = DependencyService.Resolve<ILoggerService>();
+			_ens               = DependencyService.Resolve<ExposureNotificationService>();
 			_http_data         = DependencyService.Resolve<IHttpDataService>();
 			_user_data_service = DependencyService.Resolve<IUserDataService>();
-			_ens               = DependencyService.Resolve<ExposureNotificationService>();
-
-			_user_data = _user_data_service.Get();
+			_user_data         = _user_data_service.Get();
 			_user_data_service.UserDataChanged += (s, e) => {
 				_user_data = _user_data_service.Get();
 				_logger.Info("Updated the user data.");
 			};
-			_logger.Info($"the user data is {(_user_data is null ? "null" : "set")}.");
 		}
 
 		// this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
@@ -80,12 +78,6 @@ namespace Covid19Radar.Services
 		public async Task ExposureDetectedAsync(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getExposureInfo)
 		{
 			_logger.StartMethod();
-
-			if (_user_data is null) {
-				_logger.Warning("the user data was null!");
-				_logger.EndMethod();
-				return;
-			}
 
 			_user_data.ExposureSummary = summary;
 			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.MatchedKeyCount      )}: {summary.MatchedKeyCount}");
@@ -163,12 +155,6 @@ namespace Covid19Radar.Services
 			var    downloadedFiles = new List<string>();
 			string tmpDir          = Path.Combine(FileSystem.CacheDirectory, region);
 
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-				_logger.EndMethod();
-				return (batchNumber, downloadedFiles);
-			}
-
 			try {
 				if (!Directory.Exists(tmpDir)) {
 					Directory.CreateDirectory(tmpDir);
@@ -243,12 +229,6 @@ namespace Covid19Radar.Services
 				_logger.Info($"{nameof(item.RollingDuration      )}: {item.RollingDuration}");
 				_logger.Info($"{nameof(item.TransmissionRiskLevel)}: {item.TransmissionRiskLevel}");
 				_logger.Info("========");
-			}
-
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-				_logger.EndMethod();
-				return;
 			}
 
 			var latestDiagnosis = _user_data.LatestDiagnosis;

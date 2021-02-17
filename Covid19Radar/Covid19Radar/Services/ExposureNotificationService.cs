@@ -22,7 +22,7 @@ namespace Covid19Radar.Services
 		private readonly ILoggerService     _logger;
 		private readonly IHttpClientService _http_client;
 		private readonly IUserDataService   _user_data_service;
-		private          UserDataModel?     _user_data;
+		private          UserDataModel      _user_data;
 
 		public string CurrentStatusMessage       { get; set; }
 		public Status ExposureNotificationStatus { get; set; }
@@ -104,20 +104,12 @@ namespace Covid19Radar.Services
 
 		private async ValueTask DisabledAsync()
 		{
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-				return;
-			}
 			_user_data.IsExposureNotificationEnabled = false;
 			await _user_data_service.SetAsync(_user_data);
 		}
 
 		private async ValueTask EnabledAsync()
 		{
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-				return;
-			}
 			_user_data.IsExposureNotificationEnabled = true;
 			await _user_data_service.SetAsync(_user_data);
 		}
@@ -186,10 +178,8 @@ namespace Covid19Radar.Services
 			default:
 				break;
 			}
-
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-			} else if (!_user_data.IsOptined) {
+			
+			if (!_user_data.IsOptined) {
 				message.Append(ExposureNotificationStatusMessageNotOptined());
 			}
 

@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private readonly UserDataModel?              _user_data;
+		private readonly UserDataModel               _user_data;
 
 		public Command OnClickEnable => new(async () => {
 			_logger.StartMethod();
@@ -25,13 +25,9 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickDisable => new(async () => {
 			_logger.StartMethod();
-			if (_user_data is null) {
-				_logger.Warning("The user data is null.");
-			} else {
-				_user_data.IsExposureNotificationEnabled = false;
-				await _user_data_service.SetAsync(_user_data);
-				await _ns.NavigateAsync(nameof(TutorialPage6));
-			}
+			_user_data.IsExposureNotificationEnabled = false;
+			await _user_data_service.SetAsync(_user_data);
+			await _ns.NavigateAsync(nameof(TutorialPage6));
 			_logger.EndMethod();
 		});
 

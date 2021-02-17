@@ -21,7 +21,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private readonly UserDataModel?              _user_data;
+		private readonly UserDataModel               _user_data;
 		private          string?                     _diagnosis_uid;
 		private          bool                        _is_enabled;
 		private          bool                        _is_visible_with_symptoms_layout;
@@ -121,11 +121,7 @@ namespace Covid19Radar.ViewModels
 					AppResources.ButtonOk
 				);
 				++_error_count;
-				if (_user_data is null) {
-					_logger.Warning("The user data is null.");
-				} else {
-					await _user_data_service.SetAsync(_user_data);
-				}
+				await _user_data_service.SetAsync(_user_data);
 				UserDialogs.Instance.HideLoading();
 				_logger.Error($"No diagnostic number entered.");
 				_logger.EndMethod();
@@ -140,11 +136,7 @@ namespace Covid19Radar.ViewModels
 					AppResources.ButtonOk
 				);
 				++_error_count;
-				if (_user_data is null) {
-					_logger.Warning("The user data is null.");
-				} else {
-					await _user_data_service.SetAsync(_user_data);
-				}
+				await _user_data_service.SetAsync(_user_data);
 				UserDialogs.Instance.HideLoading();
 				_logger.Error("The entered diagnostic number does not match the format.");
 				_logger.EndMethod();
@@ -163,18 +155,6 @@ namespace Covid19Radar.ViewModels
 					UserDialogs.Instance.HideLoading();
 					await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
 					_logger.Warning($"The exposure notification is disabled.");
-					_logger.EndMethod();
-					return;
-				}
-
-				if (_user_data is null) {
-					++_error_count;
-					UserDialogs.Instance.Alert(
-						AppResources.NotifyOtherPageDialogExceptionText,
-						AppResources.ButtonFailed,
-						AppResources.ButtonOk
-					);
-					_logger.Error("The user data is null!");
 					_logger.EndMethod();
 					return;
 				}

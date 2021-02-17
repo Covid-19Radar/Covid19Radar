@@ -37,9 +37,7 @@ namespace Covid19Radar.Services
 		{
 			_logger.StartMethod();
 			if (userData is null) {
-				_logger.Warning("The user data is null.");
-				_logger.EndMethod();
-				return false;
+				throw new ArgumentNullException(nameof(userData));
 			}
 			_logger.Info("The user data is not null.");
 			if (await _http_data.PostRegisterUserAsync(userData)) {

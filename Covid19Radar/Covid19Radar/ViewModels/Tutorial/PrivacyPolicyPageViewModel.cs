@@ -15,7 +15,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService  _ns;
 		private readonly ITermsUpdateService _terms_update;
 		private readonly IUserDataService    _user_data_service;
-		private readonly UserDataModel?      _user_data;
+		private readonly UserDataModel       _user_data;
 		private          string              _url;
 
 		public string Url
@@ -26,15 +26,11 @@ namespace Covid19Radar.ViewModels
 
 		public Command OnClickAgree => new(async () => {
 			_logger.StartMethod();
-			if (_user_data is null) {
-				_logger.Warning("The user data is null.");
-			} else {
-				_user_data.IsPolicyAccepted = true;
-				await _user_data_service.SetAsync(_user_data);
-				_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
-				await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, DateTime.Now);
-				await _ns.NavigateAsync(nameof(TutorialPage4));
-			}
+			_user_data.IsPolicyAccepted = true;
+			await _user_data_service.SetAsync(_user_data);
+			_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
+			await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, DateTime.Now);
+			await _ns.NavigateAsync(nameof(TutorialPage4));
 			_logger.EndMethod();
 		});
 

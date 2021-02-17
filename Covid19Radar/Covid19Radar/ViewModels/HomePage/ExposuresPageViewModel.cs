@@ -10,7 +10,6 @@ namespace Covid19Radar.ViewModels
 	public class ExposuresPageViewModel : ViewModelBase
 	{
 		private readonly IUserDataService                      _user_data_service;
-		private readonly UserDataModel?                        _user_data;
 		public           ObservableCollection<ExposureSummary> _exposures;
 
 		public ObservableCollection<ExposureSummary> Exposures
@@ -22,16 +21,15 @@ namespace Covid19Radar.ViewModels
 		public ExposuresPageViewModel(IUserDataService userDataService)
 		{
 			_user_data_service = userDataService;
-			_user_data         = _user_data_service.Get();
 			_exposures         = new ObservableCollection<ExposureSummary>();
 			this.Title         = AppResources.MainExposures;
-			if (!(_user_data is null)) {
-				foreach (var item in from x in _user_data.ExposureInformation group x by x.Timestamp) {
-					_exposures.Add(new() {
-						ExposureDate  = item.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
-						ExposureCount = item.Count().ToString()
-					});
-				}
+
+			var userData = _user_data_service.Get();
+			foreach (var item in from x in userData.ExposureInformation group x by x.Timestamp) {
+				_exposures.Add(new() {
+					ExposureDate  = item.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+					ExposureCount = item.Count().ToString()
+				});
 			}
 		}
 	}

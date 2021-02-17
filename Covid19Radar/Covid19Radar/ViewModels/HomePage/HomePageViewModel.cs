@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private readonly UserDataModel?              _user_data;
+		private readonly UserDataModel               _user_data;
 		private          string?                     _start_date;
 		private          string?                     _past_date;
 
@@ -62,13 +62,8 @@ namespace Covid19Radar.ViewModels
 			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();
 			this.Title         = AppResources.HomePageTitle;
-
-			if (_user_data is null) {
-				_logger.Warning("The user data was null.");
-			} else {
-				this.StartDate = _user_data.GetLocalDateString();
-				this.PastDate  = (DateTime.UtcNow - _user_data.StartDateTime).Days.ToString();
-			}
+			this.StartDate     = _user_data.GetLocalDateString();
+			this.PastDate      = (DateTime.UtcNow - _user_data.StartDateTime).Days.ToString();
 		}
 
 		public override async void Initialize(INavigationParameters parameters)

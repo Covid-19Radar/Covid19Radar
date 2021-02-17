@@ -14,9 +14,9 @@ namespace Covid19Radar.ViewModels
 	{
 		private readonly ILoggerService   _logger;
 		private readonly IUserDataService _user_data_service;
-		private          UserDataModel?   _user_data;
+		private          UserDataModel    _user_data;
 
-		public  UserDataModel? UserData
+		public  UserDataModel UserData
 		{
 			get => _user_data;
 			set => this.SetProperty(ref _user_data, value);
@@ -67,9 +67,7 @@ namespace Covid19Radar.ViewModels
 		private async void SaveUserData()
 		{
 			_logger.StartMethod();
-			if (_user_data is not null) {
-				await _user_data_service.SetAsync(_user_data);
-			}
+			await _user_data_service.SetAsync(_user_data);
 			_logger.EndMethod();
 		}
 	}

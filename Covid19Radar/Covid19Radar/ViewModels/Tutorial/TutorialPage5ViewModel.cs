@@ -14,7 +14,7 @@ namespace Covid19Radar.ViewModels
 		private readonly ILoggerService     _logger;
 		private readonly INavigationService _ns;
 		private readonly IUserDataService   _user_data_service;
-		private readonly UserDataModel?     _user_data;
+		private readonly UserDataModel      _user_data;
 
 		public Command OnClickEnable  => new(async () => await this.SetEnabledAndNavigate(true));
 		public Command OnClickDisable => new(async () => await this.SetEnabledAndNavigate(false));
@@ -31,13 +31,9 @@ namespace Covid19Radar.ViewModels
 		{
 			_logger.StartMethod();
 			_logger.Info($"The user selected the notification is {(enabled ? "enabled" : "disabled")}.");
-			if (_user_data is null) {
-				_logger.Warning("The user data is null.");
-			} else {
-				_user_data.IsNotificationEnabled = enabled;
-				await _user_data_service.SetAsync(_user_data);
-				await _ns.NavigateAsync(nameof(TutorialPage6));
-			}
+			_user_data.IsNotificationEnabled = enabled;
+			await _user_data_service.SetAsync(_user_data);
+			await _ns.NavigateAsync(nameof(TutorialPage6));
 			_logger.EndMethod();
 		}
 	}
