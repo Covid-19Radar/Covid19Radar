@@ -599,7 +599,7 @@
     <comment>陽性登録への同意</comment>
   </data>
   <data name="VersionText" xml:space="preserve">
-    <value>Version</value>
+    <value>バージョン</value>
     <comment>バージョン</comment>
   </data>
   <data name="ExposureNotificationServiceMessage4" xml:space="preserve">
@@ -1075,5 +1075,14 @@
   </data>
   <data name="InqueryPageTitle_Menu" xml:space="preserve">
     <value>お問い合わせ</value>
+  </data>
+  <data name="SettingsPageButton_ShowTutorialNextTime" xml:space="preserve">
+    <value>次回起動時にチュートリアルを表示/非表示</value>
+  </data>
+  <data name="SettingsPageDialog_ShowTutorialNextTime_Hide" xml:space="preserve">
+    <value>次回起動時にチュートリアルを非表示にします。</value>
+  </data>
+  <data name="SettingsPageDialog_ShowTutorialNextTime_Show" xml:space="preserve">
+    <value>次回起動時にチュートリアルを表示します。</value>
   </data>
 </root>

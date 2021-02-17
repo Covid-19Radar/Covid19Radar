@@ -1452,6 +1452,18 @@ Storage :</target>
           <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
         </trans-unit>
+        <trans-unit id="SettingsPageButton_ShowTutorialNextTime" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示/非表示</source>
+          <target state="needs-review-translation">Show/hide the tutorial next time.</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Show" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示します。</source>
+          <target state="needs-review-translation">The app will show you the tutorial page on the next launch.</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Hide" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを非表示にします。</source>
+          <target state="needs-review-translation">The app would not show you the tutorial page on the next launch.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

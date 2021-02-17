@@ -1648,6 +1648,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   次回起動時にチュートリアルを表示/非表示 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageButton_ShowTutorialNextTime {
+            get {
+                return ResourceManager.GetString("SettingsPageButton_ShowTutorialNextTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ライセンス… に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SettingsPageButton1 {
@@ -1680,6 +1689,24 @@ namespace Covid19Radar.Resources {
         internal static string SettingsPageDescription3 {
             get {
                 return ResourceManager.GetString("SettingsPageDescription3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   次回起動時にチュートリアルを非表示にします。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialog_ShowTutorialNextTime_Hide {
+            get {
+                return ResourceManager.GetString("SettingsPageDialog_ShowTutorialNextTime_Hide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   次回起動時にチュートリアルを表示します。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageDialog_ShowTutorialNextTime_Show {
+            get {
+                return ResourceManager.GetString("SettingsPageDialog_ShowTutorialNextTime_Show", resourceCulture);
             }
         }
         
@@ -2253,7 +2280,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   Version に類似しているローカライズされた文字列を検索します。
+        ///   バージョン に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string VersionText {
             get {

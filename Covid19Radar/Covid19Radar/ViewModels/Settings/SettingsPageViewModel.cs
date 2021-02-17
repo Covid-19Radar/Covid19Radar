@@ -17,7 +17,7 @@ namespace Covid19Radar.ViewModels
 		private readonly ILogFileService             _log_file;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
-		private          UserDataModel?              _user_data;
+		private          UserDataModel               _user_data;
 		private          string                      _app_version;
 
 		public string AppVer
@@ -26,7 +26,7 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _app_version, value);
 		}
 
-		public UserDataModel? UserData
+		public UserDataModel UserData
 		{
 			get => _user_data;
 			set => this.SetProperty(ref _user_data, value);
@@ -34,14 +34,10 @@ namespace Covid19Radar.ViewModels
 
 		public ICommand OnChangeExposureNotificationState => new Command(async () => {
 			_logger.StartMethod();
-			if (_user_data is null) {
-				_logger.Warning("The user data is null.");
+			if (_user_data.IsExposureNotificationEnabled) {
+				await _ens.StartExposureNotification();
 			} else {
-				if (_user_data.IsExposureNotificationEnabled) {
-					await _ens.StartExposureNotification();
-				} else {
-					await _ens.StopExposureNotification();
-				}
+				await _ens.StopExposureNotification();
 			}
 			_logger.EndMethod();
 		});
@@ -49,10 +45,24 @@ namespace Covid19Radar.ViewModels
 		public ICommand OnChangeNotificationState => new Command(async () =>
 		{
 			_logger.StartMethod();
-			if (_user_data is null) {
-				_logger.Warning("The user data is null.");
+			await _user_data_service.SetAsync(_user_data);
+			_logger.EndMethod();
+		});
+
+		public ICommand OnChangeShowTutorialNextTime => new Command(async () => {
+			_logger.StartMethod();
+			_user_data.SkipTutorial = !_user_data.SkipTutorial;
+			await _user_data_service.SetAsync(_user_data);
+			if (_user_data.SkipTutorial) {
+				await UserDialogs.Instance.AlertAsync(
+					AppResources.SettingsPageDialog_ShowTutorialNextTime_Hide,
+					AppResources.ButtonOk
+				);
 			} else {
-				await _user_data_service.SetAsync(_user_data);
+				await UserDialogs.Instance.AlertAsync(
+					AppResources.SettingsPageDialog_ShowTutorialNextTime_Show,
+					AppResources.ButtonOk
+				);
 			}
 			_logger.EndMethod();
 		});
