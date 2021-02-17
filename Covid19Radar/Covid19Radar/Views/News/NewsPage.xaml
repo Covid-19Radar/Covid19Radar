@@ -48,6 +48,10 @@
 						<StackLayout Style="{StaticResource DefaultStackLayout}">
 							<!-- TODO: ここに統計情報を取得して表示するコードを追加 -->
 							<Label Text="Now developing..." />
+							<!--
+								参考：https://corona.go.jp/dashboard/
+								オープンデータ：https://opendata.corona.go.jp/api/Covid19JapanAll
+							-->
 						</StackLayout>
 					</Frame>
 					<Frame Style="{StaticResource ForegroundFrame}">
