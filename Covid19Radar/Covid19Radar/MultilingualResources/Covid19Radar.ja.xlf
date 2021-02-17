@@ -721,8 +721,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
-          <source>Version</source>
-          <target state="translated">バージョン</target>
+          <source>バージョン</source>
+          <target state="needs-review-translation">バージョン</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">

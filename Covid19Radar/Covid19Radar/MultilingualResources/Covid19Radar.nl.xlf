@@ -815,8 +815,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
         </trans-unit>
         <trans-unit id="VersionText" translate="yes" xml:space="preserve">
-          <source>Version</source>
+          <source>バージョン</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versie</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
           <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
         </trans-unit>
         <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
@@ -1513,6 +1514,18 @@
         <trans-unit id="InqueryPageTitle_Menu" translate="yes" xml:space="preserve">
           <source>お問い合わせ</source>
           <target state="new">お問い合わせ</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton_ShowTutorialNextTime" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示/非表示</source>
+          <target state="new">次回起動時にチュートリアルを表示/非表示</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Hide" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを非表示にします。</source>
+          <target state="new">次回起動時にチュートリアルを非表示にします。</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Show" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示します。</source>
+          <target state="new">次回起動時にチュートリアルを表示します。</target>
         </trans-unit>
       </group>
     </body>
