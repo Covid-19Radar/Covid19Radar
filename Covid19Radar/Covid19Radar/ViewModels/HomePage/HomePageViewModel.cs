@@ -19,6 +19,7 @@ namespace Covid19Radar.ViewModels
 		private readonly UserDataModel               _user_data;
 		private          string?                     _start_date;
 		private          string?                     _past_date;
+		private          bool                        _is_available;
 
 		public string? StartDate
 		{
@@ -30,6 +31,12 @@ namespace Covid19Radar.ViewModels
 		{
 			get => _past_date;
 			set => this.SetProperty(ref _past_date, value);
+		}
+
+		public bool IsAvailable
+		{
+			get => _is_available;
+			set => this.SetProperty(ref _is_available, value);
 		}
 
 		public Command OnClickExposures => new(async () => {

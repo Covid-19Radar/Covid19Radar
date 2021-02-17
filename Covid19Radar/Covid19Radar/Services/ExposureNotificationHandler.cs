@@ -276,7 +276,6 @@ namespace Covid19Radar.Services
 			_logger.EndMethod();
 		}
 
-
 		private async Task<DiagnosisSubmissionParameter> CreateSubmissionAsync(
 			IEnumerable<TemporaryExposureKey> temporaryExposureKeys, PositiveDiagnosisState pendingDiagnosis)
 		{

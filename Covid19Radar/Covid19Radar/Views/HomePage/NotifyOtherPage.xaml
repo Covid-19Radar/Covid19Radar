@@ -1,4 +1,4 @@
-﻿<ContentPage
+<ContentPage
 	x:Class="Covid19Radar.Views.NotifyOtherPage"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -106,7 +106,7 @@
 					Margin="0, 15, 0, 0"
 					Style="{StaticResource DefaultLabel}"
 					Text="{x:Static resources:AppResources.NotifyOtherPageDescription3}" />
-				<Label 
+				<Label
 					Margin="0, 0, 0, 5"
 					HorizontalOptions="Start"
 					Style="{StaticResource DefaultLabelColor}"

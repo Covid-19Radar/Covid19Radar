@@ -178,7 +178,7 @@ namespace Covid19Radar.Services
 			default:
 				break;
 			}
-			
+
 			if (!_user_data.IsOptined) {
 				message.Append(ExposureNotificationStatusMessageNotOptined());
 			}
