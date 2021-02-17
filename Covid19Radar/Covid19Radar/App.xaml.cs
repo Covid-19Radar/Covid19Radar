@@ -62,12 +62,8 @@ namespace Covid19Radar
 
 			// Check user data and skip tutorial
 			var userData = this.Container.Resolve<IUserDataService>().Get();
-			if (userData is null) {
-				_logger.Info("No user data found.");
-				_logger.Info("Navigating to the tutorial page...");
-				result = await this.NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
-			} else {
-				_logger.Info("The user data exists.");
+			if (userData.SkipTutorial) {
+				_logger.Info("The user data was found. Skip the tutorial.");
 				_logger.Info($"Is optined: {userData.IsOptined}");
 				_logger.Info($"Is policy accepted: {userData.IsPolicyAccepted}");
 				if (userData.IsOptined && userData.IsPolicyAccepted) {
@@ -77,6 +73,10 @@ namespace Covid19Radar
 					_logger.Info("Navigating to the tutorial page...");
 					result = await this.NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
 				}
+			} else {
+				_logger.Info("The user data has been created, or the user selected to show the tutorial page.");
+				_logger.Info("Navigating to the tutorial page...");
+				result = await this.NavigationService.NavigateAsync("/" + nameof(TutorialPage1));
 			}
 			if (!result.Success) {
 				_logger.Warning($"Failed to navigate.");

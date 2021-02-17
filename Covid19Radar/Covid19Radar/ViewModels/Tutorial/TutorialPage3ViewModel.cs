@@ -16,7 +16,7 @@ namespace Covid19Radar.ViewModels
 		private readonly INavigationService  _ns;
 		private readonly ITermsUpdateService _terms_update;
 		private readonly IUserDataService    _user_data_service;
-		private          UserDataModel?      _user_data;
+		private          UserDataModel       _user_data;
 		private          string?             _url;
 
 		public string? Url
@@ -28,11 +28,10 @@ namespace Covid19Radar.ViewModels
 		public Command OnClickAgree => new(async () => {
 			_logger.StartMethod();
 			UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
-			if (_user_data is null) {
-				_logger.Warning("The user data is null. Registering user...");
-				_user_data = await _user_data_service.RegisterUserAsync();
-				if (_user_data is null) {
-					_logger.Warning("The user data is still null.");
+			if (!_user_data.IsOptined || _user_data.Secret is null || _user_data.UserUuid is null) {
+				_logger.Info("Registering the user...");
+				if (!await _user_data_service.RegisterUserAsync(_user_data)) {
+					_logger.Warning("Failed to register the user!!!");
 					UserDialogs.Instance.HideLoading();
 					await UserDialogs.Instance.AlertAsync(
 						AppResources.DialogNetworkConnectionError,
@@ -44,7 +43,7 @@ namespace Covid19Radar.ViewModels
 				}
 			}
 			_logger.Info("The user data is not null.");
-			_user_data.IsOptined = true;
+			//_user_data.IsOptined = true; // 上記の IUserDataService.RegisterUserAsync/IHttpDataService.PostRegisterUserAsync で設定される
 			await _user_data_service.SetAsync(_user_data);
 			_logger.Info($"The user data property \'{nameof(_user_data.IsOptined)}\' is set to \'{_user_data.IsOptined}\'.");
 			await _terms_update.SaveLastUpdateDateAsync(TermsType.TermsOfService, DateTime.Now);

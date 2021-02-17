@@ -50,7 +50,7 @@ namespace Covid19Radar.Services
 		}
 
 		// POST /api/Register - Register User
-		public async ValueTask<UserDataModel?> PostRegisterUserAsync()
+		public async ValueTask<bool> PostRegisterUserAsync(UserDataModel userData)
 		{
 			_logger.StartMethod();
 			try {
@@ -59,7 +59,6 @@ namespace Covid19Radar.Services
 				string? result  = await this.PostAsync(url, content);
 				if (!string.IsNullOrEmpty(result)) {
 					var registerResult = JsonConvert.DeserializeObject<RegisterResultModel>(result);
-					var userData       = new UserDataModel();
 					userData.Secret             = registerResult.Secret;
 					userData.UserUuid           = registerResult.UserUuid;
 					userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
@@ -67,14 +66,13 @@ namespace Covid19Radar.Services
 					await SecureStorage.SetAsync(AppConstants.StorageKey.Secret, registerResult.Secret);
 					this.SetSecret();
 					_logger.EndMethod();
-					return userData;
+					return true;
 				}
 			} catch (HttpRequestException e) {
 				_logger.Exception("Failed to register an user.", e);
 			}
-
 			_logger.EndMethod();
-			return null;
+			return false;
 		}
 
 		public async ValueTask<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)

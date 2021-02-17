@@ -39,6 +39,7 @@ namespace Covid19Radar.Model
 		/// </summary>
 		public DateTime LastNotificationTime { get; set; }
 
+		public bool                               SkipTutorial                  { get; set; }
 		public bool                               IsOptined                     { get; set; }
 		public bool                               IsExposureNotificationEnabled { get; set; }
 		public bool                               IsNotificationEnabled         { get; set; }
@@ -54,6 +55,7 @@ namespace Covid19Radar.Model
 
 		public UserDataModel()
 		{
+			this.SkipTutorial                  = false;
 			this.IsOptined                     = false;
 			this.IsExposureNotificationEnabled = false;
 			this.IsNotificationEnabled         = false;

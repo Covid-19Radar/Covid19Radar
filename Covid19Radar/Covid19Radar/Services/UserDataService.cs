@@ -11,8 +11,8 @@ namespace Covid19Radar.Services
 	public interface IUserDataService
 	{
 		public event EventHandler<UserDataModel>? UserDataChanged;
-		public       ValueTask<UserDataModel?>    RegisterUserAsync();
-		public       UserDataModel?               Get();
+		public       ValueTask<bool>              RegisterUserAsync(UserDataModel userData);
+		public       UserDataModel                Get();
 		public       ValueTask                    SetAsync(UserDataModel userData);
 		public       ValueTask                    ResetAllDataAsync();
 	}
@@ -33,28 +33,33 @@ namespace Covid19Radar.Services
 			_http_data = httpDataService;
 		}
 
-		public async ValueTask<UserDataModel?> RegisterUserAsync()
+		public async ValueTask<bool> RegisterUserAsync(UserDataModel userData)
 		{
 			_logger.StartMethod();
-			var userData = await _http_data.PostRegisterUserAsync();
 			if (userData is null) {
-				_logger.Info("The user data is null.");
+				_logger.Warning("The user data is null.");
 				_logger.EndMethod();
-				return null;
+				return false;
 			}
 			_logger.Info("The user data is not null.");
-			userData.StartDateTime                 = DateTime.UtcNow;
-			userData.IsExposureNotificationEnabled = false;
-			userData.IsNotificationEnabled         = false;
-			userData.IsOptined                     = false;
-			userData.IsPolicyAccepted              = false;
-			userData.IsPositived                   = false;
-			await this.SetAsync(userData);
-			_logger.EndMethod();
-			return userData;
+			if (await _http_data.PostRegisterUserAsync(userData)) {
+				userData.StartDateTime                 = DateTime.UtcNow;
+				userData.IsExposureNotificationEnabled = false;
+				userData.IsNotificationEnabled         = false;
+				userData.IsOptined                     = false;
+				userData.IsPolicyAccepted              = false;
+				userData.IsPositived                   = false;
+				await this.SetAsync(userData);
+				_logger.EndMethod();
+				return true;
+			} else {
+				_logger.Warning("Failed to register an user.");
+				_logger.EndMethod();
+				return false;
+			}
 		}
 
-		public UserDataModel? Get()
+		public UserDataModel Get()
 		{
 			_logger.StartMethod();
 			if (_current is null) {
@@ -63,8 +68,8 @@ namespace Covid19Radar.Services
 					_current = JsonConvert.DeserializeObject<UserDataModel>(config.ToString());
 				} else {
 					_logger.Warning("The user data does not exists.");
-					_logger.EndMethod();
-					return null; // TODO: null を返却しない。
+					_logger.Info("Creating a new user data model instance...");
+					_current = new UserDataModel();
 				}
 			}
 			_logger.EndMethod();
