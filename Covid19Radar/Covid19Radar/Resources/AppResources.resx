@@ -1073,4 +1073,7 @@
     <value>陽性情報を登録</value>
     <comment>陽性情報を登録</comment>
   </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
 </root>

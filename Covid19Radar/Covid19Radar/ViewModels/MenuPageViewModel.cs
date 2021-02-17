@@ -52,7 +52,7 @@ namespace Covid19Radar.ViewModels
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0E0",
 				PageName = nameof(InqueryPage),
-				Title    = AppResources.InqueryPageTitle
+				Title    = AppResources.InqueryPageTitle_Menu
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",

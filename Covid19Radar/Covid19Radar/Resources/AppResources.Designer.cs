@@ -890,6 +890,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   お問い合わせ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string InqueryPageTitle_Menu {
+            get {
+                return ResourceManager.GetString("InqueryPageTitle_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string InquiryMailBody {

@@ -54,7 +54,7 @@ namespace Covid19Radar.ViewModels
 				sb.Append(", ");
 				sb.AppendLine(DeviceInfo.VersionString);
 				sb.Append(AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"));
-				await this.ComposeEmailAsync(new EmailMessage(
+				await this.ComposeEmailAsync(new(
 					AppResources.InquiryMailSubject,
 					sb.ToString(),
 					new[] { AppSettings.Instance.SupportEmail }

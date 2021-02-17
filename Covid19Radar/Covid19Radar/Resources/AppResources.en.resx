@@ -329,6 +329,9 @@
     <value>Support</value>
     <comment>アプリに関するお問い合わせ</comment>
   </data>
+  <data name="InqueryPageTitle_Menu" xml:space="preserve">
+    <value>Support</value>
+  </data>
   <data name="HomePageDescription1" xml:space="preserve">
     <value>in use</value>
     <comment>使用中</comment>
