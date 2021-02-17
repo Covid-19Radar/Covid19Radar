@@ -71,6 +71,10 @@
 								Command="{Binding OnClick_ShowStopCOVID19JP}"
 								Style="{StaticResource DefaultButton}"
 								Text="{x:Static resources:AppResources.NewsPageButton_ShowStopCOVID19JP}" />
+							<Button
+								Command="{Binding OnClick_ShowWikipedia}"
+								Style="{StaticResource DefaultButton}"
+								Text="{x:Static resources:AppResources.NewsPageButton_ShowWikipedia}" />
 						</StackLayout>
 					</Frame>
 				</StackLayout>

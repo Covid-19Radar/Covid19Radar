@@ -1052,6 +1052,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   ウィキペディアの情報 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NewsPageButton_ShowWikipedia {
+            get {
+                return ResourceManager.GetString("NewsPageButton_ShowWikipedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   リンク集 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NewsPageLabel_Links {
@@ -2303,6 +2312,15 @@ namespace Covid19Radar.Resources {
         internal static string VersionText {
             get {
                 return ResourceManager.GetString("VersionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string WikipediaUrl {
+            get {
+                return ResourceManager.GetString("WikipediaUrl", resourceCulture);
             }
         }
     }
