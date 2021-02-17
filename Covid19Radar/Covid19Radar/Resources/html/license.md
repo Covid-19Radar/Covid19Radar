@@ -11,7 +11,7 @@ Copyright (C) 2020 COVID-19Radar Contributors
 
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at https://mozilla.org/MPL/2.0/.
+file, You can obtain one at <https://mozilla.org/MPL/2.0/>.
 
 ---
 ## Visual Studio App Center SDK for .NET
@@ -94,7 +94,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ---
-## Json.NET
+## Json&#x2E;NET
 ---
 
 The MIT License (MIT)
@@ -345,7 +345,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -363,7 +363,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+<http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -391,13 +391,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Font Awesome Free is free, open source, and GPL friendly. You can use it for commercial projects, open source projects, or really almost whatever you want.
 
-Icons ùECC BY 4.0 License
+Icons CC BY 4.0 License
 In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
 
-Fonts ùESIL OFL 1.1 License
+Fonts SIL OFL 1.1 License
 In the Font Awesome Free download, the SIL OLF license applies to all icons packaged as web and desktop font files.
 
-Code ùEMIT License
+Code MIT License
 In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
 
 Attribution is required by MIT, SIL OLF, and CC BY licenses. Downloaded Font Awesome Free files already contain embedded comments with sufficient attribution, so you shouldn't need to do anything additional when using these files normally.
@@ -412,7 +412,7 @@ This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
 
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+<http://scripts.sil.org/OFL>
 
 ---
 ## (Font) Roboto
@@ -420,14 +420,48 @@ http://scripts.sil.org/OFL
 
 Apache License
 Version 2.0, January 2004
-http://www.apache.org/licenses/
+<http://www.apache.org/licenses/>
 
 ---
 ## (Font) Material Design Icons
 ---
 
-Copyright (c) 2014, Austin Andrews (http://materialdesignicons.com/), with Reserved Font Name Material Design Icons.
+Copyright (c) 2014, Austin Andrews (<http://materialdesignicons.com/>), with Reserved Font Name Material Design Icons.
 
-Copyright (c) 2014, Google (http://www.google.com/design/) uses the license at https://github.com/google/material-design-icons/blob/master/LICENSE
+Copyright (c) 2014, Google (<http://www.google.com/design/>) uses the license at <https://github.com/google/material-design-icons/blob/master/LICENSE>
 
-This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: <http://scripts.sil.org/OFL>
+
+---
+## Markdown PDF
+---
+
+This license file is converted with Microsoft **Visual Studio Code** and its extension **Markdown PDF**.
+
+### Visual Studio Code
+<https://code.visualstudio.com/License/>
+
+### Markdown PDF
+Copyright (c) yzane
+
+All rights reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
