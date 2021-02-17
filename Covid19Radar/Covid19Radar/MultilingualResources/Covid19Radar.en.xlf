@@ -225,9 +225,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
         </trans-unit>
         <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
-          <source>From app settings, you can stop using the app and delete user data.</source>
-          <target state="translated">From app settings, you can stop using the app and delete user data.</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
+          <source>From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</source>
+          <target state="translated">From app settings, you can enable/disable Bluetooth and notifications, stop using the app and delete close contact history.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定から、Bluetoothの有効／無効、通知の有効／無効、アプリの使用中止と履歴の削除を行うことができます。</note>
         </trans-unit>
         <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
           <source>The app will notify you, if you were in close contact with COVID-19 positive user.</source>
@@ -483,6 +483,16 @@
           <source>Share this app</source>
           <target state="translated">Share this app</target>
           <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription6" translate="yes" xml:space="preserve">
+          <source>Contact confirmation settings are all enabled.</source>
+          <target state="translated">Contact confirmation settings are all enabled.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認の設定はすべて有効です。</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription7" translate="yes" xml:space="preserve">
+          <source>Contact confirmation settings are disabled. Please turn on notifications and recording on the SettingsPage.</source>
+          <target state="translated">Contact confirmation settings are disabled. Please turn on notifications and recording on the SettingsPage.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">機能が無効になっています。設定ページで接触の検出と通知をONにしてください。</note>
         </trans-unit>
         <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
           <source>Home</source>

@@ -45,8 +45,8 @@ namespace Covid19Radar.Model
         {
             return UserUuid == other?.UserUuid
                 && LastNotificationTime == other?.LastNotificationTime
-                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
-                //&& IsNotificationEnabled == other.IsNotificationEnabled;
+                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled
+                && IsNotificationEnabled == other.IsNotificationEnabled;
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Covid19Radar.Model
 
         public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
 
-        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultBatch();
+        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultDefaultBatch();
 
         public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
 

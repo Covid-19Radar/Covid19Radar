@@ -24,6 +24,7 @@ using FFImageLoading;
 using Xamarin.ExposureNotifications;
 using Xamarin.Essentials;
 //using Plugin.LocalNotification;
+using Plugin.LocalNotification;
 
 /*
  * Our mission...is
@@ -37,7 +38,7 @@ namespace Covid19Radar
     public partial class App : PrismApplication
     {
 
-        /* 
+        /*
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
          * This imposes a limitation in which the App class must have a default constructor.
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
@@ -58,7 +59,7 @@ namespace Covid19Radar
             Xamarin.ExposureNotifications.ExposureNotification.Init();
 
             // Local Notification tap event listener
-            //NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
+            NotificationCenter.Current.NotificationTapped += OnNotificationTapped;
             LogUnobservedTaskExceptions();
 
             // Migrate userData
@@ -102,10 +103,10 @@ namespace Covid19Radar
             _ = InitializeBackgroundTasks();
         }
 
-        //protected void OnNotificationTapped(NotificationTappedEventArgs e)
-        //{
-        //    NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
-        //}
+        protected void OnNotificationTapped(NotificationTappedEventArgs e)
+        {
+            NavigationService.NavigateAsync(nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));
+        }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
@@ -151,7 +152,7 @@ namespace Covid19Radar
             containerRegistry.RegisterSingleton<ExposureNotificationService>();
 #if USE_MOCK
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataServiceMock>();
-#else            
+#else
             containerRegistry.RegisterSingleton<IHttpDataService, HttpDataService>();
 #endif
         }

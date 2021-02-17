@@ -1,6 +1,6 @@
 # COVID-19Radar (Japanese)/([English](README.md))
 
-「接触確認アプリは、厚労省の公式バージョンの一つのみ存在します。  
+「接触確認アプリは、厚労省の公式バージョンの一つのみ存在します。
 こちらのGitHubは、厚労省の公式アプリのコードそのものではなく、公式アプリの元になっているオープンソースコードです。こちらのコードはコミュニティによってメンテナンスされており、issueやプルリクが公式アプリに反映されるとは限りません。」
 
 Now, We move to GitHub Org [Project Covid19Radar](https://github.com/Covid-19Radar)
@@ -47,7 +47,7 @@ https://visualstudio.microsoft.com/ja/xamarin/
 
 ![アプリ設定に関して](img/design00.png)
 
-デバイスの以下の機能の利用許可が必須となります。 
+デバイスの以下の機能の利用許可が必須となります。
 
 1. Exposure notification
 2. Bluetooth

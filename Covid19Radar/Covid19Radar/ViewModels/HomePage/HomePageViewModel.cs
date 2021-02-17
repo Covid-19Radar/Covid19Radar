@@ -33,6 +33,13 @@ namespace Covid19Radar.ViewModels
             set { SetProperty(ref _pastDate, value); }
         }
 
+        private bool _IsAvailable;
+        public bool IsAvailable
+        {
+            get => _IsAvailable;
+            set => SetProperty(ref _IsAvailable, value);
+        }
+
         public HomePageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
         {
             Title = AppResources.HomePageTitle;
@@ -42,8 +49,22 @@ namespace Covid19Radar.ViewModels
             userData = this.userDataService.Get();
             StartDate = userData.GetLocalDateString();
 
-            TimeSpan timeSpan = DateTime.UtcNow - userData.StartDateTime;
+            TimeSpan timeSpan = DateTime.Now - userData.StartDateTime;
             PastDate = timeSpan.Days.ToString();
+
+            IsAvailable = userData.IsExposureNotificationEnabled && userData.IsNotificationEnabled;
+            this.userDataService.UserDataChanged += OnUserDataChanged;
+        }
+
+        public override void Destroy()
+        {
+            base.Destroy();
+            userDataService.UserDataChanged -= OnUserDataChanged;
+        }
+
+        private void OnUserDataChanged(object sender, UserDataModel e)
+        {            
+            IsAvailable = e.IsExposureNotificationEnabled && e.IsNotificationEnabled;
         }
 
         public override async void Initialize(INavigationParameters parameters)

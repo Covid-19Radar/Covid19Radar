@@ -16,22 +16,8 @@ namespace Covid19Radar.ViewModels
 {
     public class NotifyOtherPageViewModel : ViewModelBase
     {
-        private string _diagnosisUid;
-        public string DiagnosisUid
-        {
-            get { return _diagnosisUid; }
-            set
-            {
-                SetProperty(ref _diagnosisUid, value);
-                IsEnabled = DiagnosisUid.Length == AppConstants.MaxDiagnosisUidCount;   // validate
-            }
-        }
-        private bool _isEnabled;
-        public bool IsEnabled
-        {
-            get { return _isEnabled; }
-            set { SetProperty(ref _isEnabled, value); }
-        }
+        public bool IsEnabled { get; set; }
+        public string DiagnosisUid { get; set; }
         private int errorCount { get; set; }
 
         private readonly UserDataService userDataService;
@@ -43,7 +29,7 @@ namespace Covid19Radar.ViewModels
             this.userDataService = userDataService;
             userData = this.userDataService.Get();
             errorCount = 0;
-            DiagnosisUid = "";
+            IsEnabled = true;
         }
 
         public Command OnClickRegister => (new Command(async () =>
@@ -82,7 +68,7 @@ namespace Covid19Radar.ViewModels
 
 
             // Init Dialog
-            if (string.IsNullOrEmpty(_diagnosisUid))
+            if (string.IsNullOrEmpty(DiagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag4Message,
@@ -96,7 +82,7 @@ namespace Covid19Radar.ViewModels
             }
 
             Regex regex = new Regex(AppConstants.positiveRegex);
-            if (!regex.IsMatch(_diagnosisUid))
+            if (!regex.IsMatch(DiagnosisUid))
             {
                 await UserDialogs.Instance.AlertAsync(
                     AppResources.NotifyOtherPageDiag5Message,
@@ -128,7 +114,7 @@ namespace Covid19Radar.ViewModels
                 }
 
                 // Set the submitted UID
-                userData.AddDiagnosis(_diagnosisUid, new DateTimeOffset(DateTime.Now));
+                userData.AddDiagnosis(DiagnosisUid, new DateTimeOffset(DateTime.Now));
                 await userDataService.SetAsync(userData);
 
                 // Submit our diagnosis
@@ -162,6 +148,7 @@ namespace Covid19Radar.ViewModels
             finally
             {
                 UserDialogs.Instance.HideLoading();
+                IsEnabled = true;
             }
         }));
     }

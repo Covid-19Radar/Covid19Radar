@@ -57,6 +57,7 @@ namespace Covid19Radar.ViewModels
                     UserDialogs.Instance.HideLoading();
                 }
             }
+            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         });
 
     }
