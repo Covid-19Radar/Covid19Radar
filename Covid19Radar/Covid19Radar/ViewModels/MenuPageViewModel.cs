@@ -84,47 +84,47 @@ namespace Covid19Radar.ViewModels
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NotContactPage),
-				Title    = nameof(NotContactPage)
+				Title    = AppResources.NotContactPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(ContactedNotifyPage),
-				Title    = nameof(ContactedNotifyPage)
+				Title    = AppResources.ContactedNotifyPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage),
-				Title    = nameof(PrivacyPolicyPage)
+				Title    = AppResources.PrivacyPolicyPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage2),
-				Title    = nameof(PrivacyPolicyPage2)
+				Title    = AppResources.PrivacyPolicyPageTitle + " 2"
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage1),
-				Title    = nameof(TutorialPage1)
+				Title    = AppResources.TutorialPage1Title1
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage2),
-				Title    = nameof(TutorialPage2)
+				Title    = AppResources.TutorialPage2Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage3),
-				Title    = nameof(TutorialPage3)
+				Title    = AppResources.TutorialPage3Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage4),
-				Title    = nameof(TutorialPage4)
+				Title    = AppResources.TutorialPage4Title1
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage5),
-				Title    = nameof(TutorialPage5)
+				Title    = AppResources.TutorialPage5Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
@@ -139,22 +139,22 @@ namespace Covid19Radar.ViewModels
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage1),
-				Title    = nameof(HelpPage1)
+				Title    = AppResources.HelpPage1Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage2),
-				Title    = nameof(HelpPage2)
+				Title    = AppResources.HelpPage2Title
 			});
 			this.MenuItems.Add(new()  {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage3),
-				Title    = nameof(HelpPage3)
+				Title    = AppResources.HelpPage3Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage4),
-				Title    = nameof(HelpPage4)
+				Title    = AppResources.HelpPage4Title
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
@@ -164,17 +164,32 @@ namespace Covid19Radar.ViewModels
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NotifyOtherPage),
-				Title    = nameof(NotifyOtherPage)
+				Title    = AppResources.NotifyOtherPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(SubmitConsentPage),
-				Title    = nameof(SubmitConsentPage)
+				Title    = AppResources.SubmitConsentPageTitle1
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(WebViewerPage),
 				Title    = nameof(WebViewerPage)
+			});
+			this.MenuItems.Add(new() {
+				Icon     = "\uF0C0",
+				PageName = nameof(LogsPage),
+				Title    = AppResources.LogsPageTitle
+			});
+			this.MenuItems.Add(new() {
+				Icon     = "\uF0C0",
+				PageName = nameof(SendLogConfirmationPage),
+				Title    = AppResources.SendLogConfirmationPageTitle
+			});
+			this.MenuItems.Add(new() {
+				Icon     = "\uF0C0",
+				PageName = nameof(SendLogCompletePage),
+				Title    = nameof(SendLogCompletePage)
 			});
 #endif
 			_logger.Info("Loaded menu items");
