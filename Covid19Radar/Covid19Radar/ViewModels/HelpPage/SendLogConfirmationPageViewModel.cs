@@ -112,30 +112,30 @@ namespace Covid19Radar.ViewModels
 		{
 			UserDialogs.Instance.ShowLoading(AppResources.Saving);
 			this.TaskRun(() => {
-				bool failed = !_log_file.CopyLogUploadingFileToPublicPath(_zip_filename!);
+				bool succeeded = _log_file.CopyLogUploadingFileToPublicPath(_zip_filename!);
 				this.BeginInvokeOnMainThread(async () => {
 					UserDialogs.Instance.HideLoading();
-					if (failed) {
-						await UserDialogs.Instance.AlertAsync(
-							AppResources.FailedMessageToSaveOperatingInformation,
-							AppResources.Error,
-							AppResources.ButtonOk
-						);
-					} else {
+					if (succeeded) {
 						string message = string.Empty;
 						switch (Device.RuntimePlatform) {
-							case Device.Android:
-								message = AppResources.SuccessMessageToSaveOperatingInformationForAndroid
-								        + _log_path.LogUploadingPublicPath
-								        + AppResources.SuccessMessageToSaveOperatingInformationForAndroid2;
-								break;
-							case Device.iOS:
-								message = AppResources.SuccessMessageToSaveOperatingInformationForIOS;
-								break;
+						case Device.Android:
+							message = AppResources.SuccessMessageToSaveOperatingInformationForAndroid
+							        + _log_path.LogUploadingPublicPath
+							        + AppResources.SuccessMessageToSaveOperatingInformationForAndroid2;
+							break;
+						case Device.iOS:
+							message = AppResources.SuccessMessageToSaveOperatingInformationForIOS;
+							break;
 						}
 						await UserDialogs.Instance.AlertAsync(
 							message,
 							AppResources.SaveCompleted,
+							AppResources.ButtonOk
+						);
+					} else {
+						await UserDialogs.Instance.AlertAsync(
+							AppResources.FailedMessageToSaveOperatingInformation,
+							AppResources.Error,
 							AppResources.ButtonOk
 						);
 					}
