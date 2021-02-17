@@ -12,30 +12,30 @@ namespace Covid19Radar.Model
 	public class UserDataModel : IEquatable<UserDataModel>
 	{
 		/// <summary>
-		/// User UUID / take care misunderstand Becon ID
+		///  User UUID / take care misunderstand Becon ID
 		/// </summary>
 		/// <value>User UUID</value>
 		public string? UserUuid { get; set; }
 
 		/// <summary>
-		/// Secret key
+		///  Secret key
 		/// </summary>
 		/// <value>Secret Key</value>
 		public string? Secret { get; set; }
 
 		/// <summary>
-		/// Jump Consistent Seed
+		///  Jump Consistent Seed
 		/// </summary>
 		/// <value>Jump Consistent Seed</value>
 		public ulong JumpConsistentSeed { get; set; }
 
 		/// <summary>
-		/// StartDate
+		///  StartDate
 		/// </summary>
 		public DateTime StartDateTime { get; set; }
 
 		/// <summary>
-		/// Last notification date and time
+		///  Last notification date and time
 		/// </summary>
 		public DateTime LastNotificationTime { get; set; }
 
@@ -74,7 +74,7 @@ namespace Covid19Radar.Model
 		}
 
 		/// <summary>
-		/// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
+		///  User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
 		/// </summary>
 		/// <value>User Minor</value>
 		[MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -94,13 +94,13 @@ namespace Covid19Radar.Model
 				this.StartDateTime = DateTime.UtcNow;
 			}
 			return this.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentUICulture);
-			/*
+#if false
 			if (CultureInfo.CurrentUICulture.Name.Contains("ar")) {
 				return this.StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
 			} else {
 				return this.StartDateTime.ToLocalTime().ToString("D");
 			}
-			//*/
+#endif
 		}
 
 		public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
@@ -117,8 +117,7 @@ namespace Covid19Radar.Model
 
 			// Remove ones that were not submitted as the new one is better
 			this.PositiveDiagnoses.Clear();
-			this.PositiveDiagnoses.Add(new PositiveDiagnosisState
-			{
+			this.PositiveDiagnoses.Add(new() {
 				DiagnosisUid  = diagnosisUid,
 				DiagnosisDate = submissionDate,
 			});

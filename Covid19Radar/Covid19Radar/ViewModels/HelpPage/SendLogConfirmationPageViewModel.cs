@@ -23,13 +23,13 @@ namespace Covid19Radar.ViewModels
 		public Action<Action>     BeginInvokeOnMainThread { get; set; } = MainThread.BeginInvokeOnMainThread;
 		public Func<Action, Task> TaskRun                 { get; set; } = Task.Run;
 
-		public Command OnClickConfirmLogCommand => new Command(() => {
+		public Command OnClickConfirmLogCommand => new(() => {
 			_logger.StartMethod();
 			this.CopyZipFileToPublicPath();
 			_logger.EndMethod();
 		});
 
-		public Command OnClickSendLogCommand => new Command(async () => {
+		public Command OnClickSendLogCommand => new(async () => {
 			_logger.StartMethod();
 			try {
 				UserDialogs.Instance.ShowLoading(AppResources.Sending);

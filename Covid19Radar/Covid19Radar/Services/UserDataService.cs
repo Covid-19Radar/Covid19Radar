@@ -38,11 +38,11 @@ namespace Covid19Radar.Services
 			_logger.StartMethod();
 			var userData = await _http_data.PostRegisterUserAsync();
 			if (userData is null) {
-				_logger.Info("userData is null");
+				_logger.Info("The user data is null.");
 				_logger.EndMethod();
 				return null;
 			}
-			_logger.Info("userData is not null");
+			_logger.Info("The user data is not null.");
 			userData.StartDateTime                 = DateTime.UtcNow;
 			userData.IsExposureNotificationEnabled = false;
 			userData.IsNotificationEnabled         = false;
@@ -64,7 +64,7 @@ namespace Covid19Radar.Services
 				} else {
 					_logger.Warning("The user data does not exists.");
 					_logger.EndMethod();
-					return null;
+					return null; // TODO: null を返却しない。
 				}
 			}
 			_logger.EndMethod();

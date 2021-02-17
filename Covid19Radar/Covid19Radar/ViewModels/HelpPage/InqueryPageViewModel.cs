@@ -18,7 +18,7 @@ namespace Covid19Radar.ViewModels
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync  { get; set; }
 		public Func<EmailMessage, Task>              ComposeEmailAsync { get; set; }
 
-		public Command OnClickQuestionCommand => new Command(async () => {
+		public Command OnClickQuestionCommand => new(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync(
 				"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html",
@@ -27,19 +27,19 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command OnClickSite2 => new Command(async () => {
+		public Command OnClickSite2 => new(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync("https://github.com/Covid-19Radar/Covid19Radar", BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();
 		});
 
-		public Command OnClickSendLogCommand => new Command(async () => {
+		public Command OnClickSendLogCommand => new(async () => {
 			_logger.StartMethod();
 			await _ns.NavigateAsync(nameof(SendLogConfirmationPage));
 			_logger.EndMethod();
 		});
 
-		public Command OnClickEmailCommand => new Command(async () => {
+		public Command OnClickEmailCommand => new(async () => {
 			try {
 				_logger.StartMethod();
 				var sb = new StringBuilder();
@@ -66,7 +66,7 @@ namespace Covid19Radar.ViewModels
 			}
 		});
 
-		public Command OnClickAboutAppCommand => new Command(async () => {
+		public Command OnClickAboutAppCommand => new(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync("https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html", BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();

@@ -80,7 +80,6 @@ namespace Covid19Radar.Services.Logs
 				for (int i = 0; i < uploadingFiles.Length; ++i) {
 					File.Delete(uploadingFiles[i]);
 				}
-				/* TODO: rewrite
 				switch (uploadingFiles.Length) {
 				case 1:
 					_logger.Info($"Deleted one file.");
@@ -88,12 +87,6 @@ namespace Covid19Radar.Services.Logs
 				case > 0:
 					_logger.Info($"Deleted {uploadingFiles.Length} files.");
 					break;
-				}
-				//*/
-				if (uploadingFiles.Length == 1) {
-					_logger.Info($"Deleted one file.");
-				} else if (uploadingFiles.Length > 0) {
-					_logger.Info($"Deleted {uploadingFiles.Length} files.");
 				}
 				_logger.EndMethod();
 				return true;

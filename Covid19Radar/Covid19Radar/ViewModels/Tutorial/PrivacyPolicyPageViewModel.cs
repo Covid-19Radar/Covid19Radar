@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _url, value);
 		}
 
-		public Command OnClickAgree => new Command(async () => {
+		public Command OnClickAgree => new(async () => {
 			_logger.StartMethod();
 			if (_user_data is null) {
 				_logger.Warning("The user data is null.");

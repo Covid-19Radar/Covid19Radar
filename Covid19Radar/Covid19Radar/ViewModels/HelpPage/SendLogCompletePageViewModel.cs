@@ -17,10 +17,10 @@ namespace Covid19Radar.ViewModels
 
 		public Func<EmailMessage, Task> ComposeEmailAsync { get; set; } = Email.ComposeAsync;
 
-		public Command OnClickSendMailCommand => new Command(async () => {
+		public Command OnClickSendMailCommand => new(async () => {
 			_logger.StartMethod();
 			try {
-				await this.ComposeEmailAsync(new EmailMessage(
+				await this.ComposeEmailAsync(new(
 					AppResources.SendIdMailSubject,
 					AppResources.SendIdMailBody1 + _log_id + AppResources.SendIdMailBody2.Replace("\\r\\n", "\r\n"),
 					new string[] { AppSettings.Instance.SupportEmail }
@@ -32,8 +32,8 @@ namespace Covid19Radar.ViewModels
 			}
 		});
 
-		public Command OnClickHomeCommand         => new Command(this.NavigateToHomeAsync);
-		public Command OnBackButtonPressedCommand => new Command(this.NavigateToHomeAsync);
+		public Command OnClickHomeCommand         => new(this.NavigateToHomeAsync);
+		public Command OnBackButtonPressedCommand => new(this.NavigateToHomeAsync);
 
 		public SendLogCompletePageViewModel(ILoggerService logger, INavigationService navigationService)
 		{

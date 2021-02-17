@@ -26,7 +26,7 @@ namespace Covid19Radar.Services
 
 		public void Error(string errorMessage, Exception ex)
 		{
-			_logger.Report(ex, new Dictionary<string, string>{
+			_logger.Report(ex, new Dictionary<string, string>() {
 				{ "message", errorMessage }
 			});
 		}

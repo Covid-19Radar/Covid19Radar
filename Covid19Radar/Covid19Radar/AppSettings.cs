@@ -29,7 +29,7 @@ namespace Covid19Radar
 		{
 			JObject json;
 			using (var file = Assembly.GetExecutingAssembly().GetManifestResourceStream("Covid19Radar.settings.json"))
-			using (var sr = new StreamReader(file)) {
+			using (var sr   = new StreamReader(file)) {
 				json = JObject.Parse(sr.ReadToEnd());
 			}
 			this.AppVersion               = json.Value<string>("appVersion");

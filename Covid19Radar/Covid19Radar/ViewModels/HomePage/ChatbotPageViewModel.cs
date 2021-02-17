@@ -67,7 +67,7 @@ namespace Covid19Radar.ViewModels
 		private async void SaveUserData()
 		{
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				await _user_data_service.SetAsync(_user_data);
 			}
 			_logger.EndMethod();

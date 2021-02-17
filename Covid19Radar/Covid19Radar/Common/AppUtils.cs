@@ -1,11 +1,10 @@
-﻿using Acr.UserDialogs;
+﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Resources;
 using Covid19Radar.Services.Logs;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Diagnostics;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -24,12 +23,12 @@ namespace Covid19Radar.Common
 		public static async ValueTask PopUpShare()
 		{
 			if (Device.RuntimePlatform == Device.iOS) {
-				await Share.RequestAsync(new ShareTextRequest {
+				await Share.RequestAsync(new ShareTextRequest() {
 					Uri   = AppSettings.Instance.AppStoreUrl,
 					Title = AppResources.AppName
 				});
 			} else if (Device.RuntimePlatform == Device.Android) {
-				await Share.RequestAsync(new ShareTextRequest {
+				await Share.RequestAsync(new ShareTextRequest() {
 					Uri   = AppSettings.Instance.GooglePlayUrl,
 					Title = AppResources.AppName
 				});

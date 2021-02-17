@@ -32,29 +32,29 @@ namespace Covid19Radar.ViewModels
 			_logger.StartMethod();
 			_logger.Info("Loading menu items...");
 			this.Title = AppResources.HelpMenuPageTitle;
-			this.MenuItems = new ObservableCollection<MainMenuModel>();
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems = new();
+			this.MenuItems.Add(new() {
 				Icon     = "\uF105",
 				PageName = nameof(HelpPage1),
 				Title    = AppResources.HelpMenuPageLabel1
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF105",
 				PageName = nameof(HelpPage2),
 				Title    = AppResources.HelpMenuPageLabel2
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF105",
 				PageName = nameof(HelpPage3),
 				Title    = AppResources.HelpMenuPageLabel3
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF105",
 				PageName = nameof(HelpPage4),
 				Title    = AppResources.HelpMenuPageLabel4
 			});
 			_logger.Info("Loaded menu items");
-			this.NavigateCommand = new DelegateCommand(this.Navigate);
+			this.NavigateCommand = new(this.Navigate);
 			_logger.EndMethod();
 		}
 

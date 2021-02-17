@@ -16,8 +16,8 @@ namespace Covid19Radar.ViewModels
 		private readonly IUserDataService   _user_data_service;
 		private readonly UserDataModel?     _user_data;
 
-		public Command OnClickEnable  => new Command(async () => await this.SetEnabledAndNavigate(true));
-		public Command OnClickDisable => new Command(async () => await this.SetEnabledAndNavigate(false));
+		public Command OnClickEnable  => new(async () => await this.SetEnabledAndNavigate(true));
+		public Command OnClickDisable => new(async () => await this.SetEnabledAndNavigate(false));
 
 		public TutorialPage5ViewModel(ILoggerService logger, INavigationService navigationService, IUserDataService userDataService)
 		{

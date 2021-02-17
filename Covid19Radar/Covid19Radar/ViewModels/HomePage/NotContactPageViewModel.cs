@@ -10,7 +10,7 @@ namespace Covid19Radar.ViewModels
 	{
 		private readonly ILoggerService _logger;
 
-		public Command OnClickShareApp => new Command(async () => {
+		public Command OnClickShareApp => new(async () => {
 			_logger.StartMethod();
 			await AppUtils.PopUpShare();
 			_logger.EndMethod();

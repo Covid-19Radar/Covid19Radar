@@ -28,13 +28,13 @@ namespace Covid19Radar.ViewModels
 
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync { get; set; }
 
-		public Command OpenWebView => new Command(async () => {
+		public Command OpenWebView => new(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync(AppResources.UrlTermOfUse, BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();
 		});
 
-		public Command OnClickReAgreeCommand => new Command(async () => {
+		public Command OnClickReAgreeCommand => new(async () => {
 			_logger.StartMethod();
 			if (_update_info is null) {
 				_logger.Warning("The view model is not initialized yet.");

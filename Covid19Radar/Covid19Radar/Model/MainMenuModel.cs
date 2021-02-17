@@ -46,7 +46,7 @@ namespace Covid19Radar.Model
 
 		protected virtual void OnPropertyChanged(string propertyName)
 		{
-			this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+			this.PropertyChanged?.Invoke(this, new(propertyName));
 		}
 	}
 }

@@ -18,7 +18,7 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _exposure_count, value ?? string.Empty);
 		}
 
-		public Command OnClickByForm => new Command(async () => {
+		public Command OnClickByForm => new(async () => {
 			_logger.StartMethod();
 			await Browser.OpenAsync(AppResources.UrlContactedForm, BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();

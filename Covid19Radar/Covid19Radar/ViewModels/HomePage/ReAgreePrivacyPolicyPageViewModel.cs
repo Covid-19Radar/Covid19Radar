@@ -27,13 +27,13 @@ namespace Covid19Radar.ViewModels
 
 		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync { get; set; }
 
-		public Command OpenWebView => new Command(async () => {
+		public Command OpenWebView => new(async () => {
 			_logger.StartMethod();
 			await this.OpenBrowserAsync(AppResources.UrlPrivacyPolicy, BrowserLaunchMode.SystemPreferred);
 			_logger.EndMethod();
 		});
 
-		public Command OnClickReAgreeCommand => new Command(async () => {
+		public Command OnClickReAgreeCommand => new(async () => {
 			_logger.StartMethod();
 			await _terms_update.SaveLastUpdateDateAsync(TermsType.PrivacyPolicy, _update_dt);
 			await _ns.NavigateAsync("/" + nameof(MenuPage) + "/" + nameof(NavigationPage) + "/" + nameof(HomePage));

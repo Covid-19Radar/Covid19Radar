@@ -27,7 +27,7 @@ namespace Covid19Radar.ViewModels
 			this.Title         = AppResources.MainExposures;
 			if (!(_user_data is null)) {
 				foreach (var item in from x in _user_data.ExposureInformation group x by x.Timestamp) {
-					_exposures.Add(new ExposureSummary() {
+					_exposures.Add(new() {
 						ExposureDate  = item.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
 						ExposureCount = item.Count().ToString()
 					});

@@ -3,24 +3,24 @@
 namespace Covid19Radar.Model
 {
 	/// <summary>
-	/// export file information model
+	///  export file information model
 	/// </summary>
 	public class TemporaryExposureKeyExportFileModel
 	{
 		/// <summary>
-		/// region
+		///  region
 		/// </summary>
 		[JsonProperty("region")]
 		public string? Region { get; set; }
 
 		/// <summary>
-		/// download url
+		///  download url
 		/// </summary>
 		[JsonProperty("url")]
 		public string? Url { get; set; }
 
 		/// <summary>
-		/// created unix time secs
+		///  created unix time secs
 		/// </summary>
 		[JsonProperty("created")]
 		public long Created { get; set; }

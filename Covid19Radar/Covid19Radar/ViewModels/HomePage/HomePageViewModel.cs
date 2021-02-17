@@ -32,7 +32,7 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _past_date, value);
 		}
 
-		public Command OnClickExposures => new Command(async () => {
+		public Command OnClickExposures => new(async () => {
 			_logger.StartMethod();
 			int count = _ens.GetExposureCount();
 			_logger.Info($"The exposure count: {count}");
@@ -44,7 +44,7 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command OnClickShareApp => new Command(async () => {
+		public Command OnClickShareApp => new(async () => {
 			_logger.StartMethod();
 			await AppUtils.PopUpShare();
 			_logger.EndMethod();

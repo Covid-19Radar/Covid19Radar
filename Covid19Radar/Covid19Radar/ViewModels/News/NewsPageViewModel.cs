@@ -19,12 +19,12 @@ namespace Covid19Radar.ViewModels
 			set => this.SetProperty(ref _g_search, value);
 		}
 
-		public Command OnSearch => new Command(() => this.ShowPage(
+		public Command OnSearch => new(() => this.ShowPage(
 			$"{AppResources.GoogleSearchUrl}+{Uri.EscapeDataString(_g_search ?? string.Empty)}"
 		));
-		public Command OnClick_ShowGoogle        => new Command(() => this.ShowPage(AppResources.GoogleSearchUrl));
-		public Command OnClick_ShowCoronaGoJP    => new Command(() => this.ShowPage(AppResources.CoronaGoJPUrl));
-		public Command OnClick_ShowStopCOVID19JP => new Command(() => this.ShowPage(AppResources.NewsPageButton_ShowStopCOVID19JP));
+		public Command OnClick_ShowGoogle        => new(() => this.ShowPage(AppResources.GoogleSearchUrl));
+		public Command OnClick_ShowCoronaGoJP    => new(() => this.ShowPage(AppResources.CoronaGoJPUrl));
+		public Command OnClick_ShowStopCOVID19JP => new(() => this.ShowPage(AppResources.NewsPageButton_ShowStopCOVID19JP));
 
 		public NewsPageViewModel(ILoggerService logger, INavigationService navigationService)
 		{

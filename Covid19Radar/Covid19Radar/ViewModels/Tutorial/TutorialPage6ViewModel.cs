@@ -8,9 +8,9 @@ namespace Covid19Radar.ViewModels
 {
 	public class TutorialPage6ViewModel : ViewModelBase
 	{
-		private readonly ILoggerService     _logger;
-		private readonly IUserDataService   _user_data_service;
-		private readonly UserDataModel?     _user_data;
+		private readonly ILoggerService   _logger;
+		private readonly IUserDataService _user_data_service;
+		private readonly UserDataModel?   _user_data;
 
 		public TutorialPage6ViewModel(ILoggerService logger, IUserDataService userDataService)
 		{

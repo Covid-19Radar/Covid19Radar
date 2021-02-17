@@ -21,7 +21,7 @@ namespace Covid19Radar.Services
 		private readonly ILoggerService     _logger;
 		private readonly IHttpClientService _http_client;
 		private readonly IUserDataService   _user_data_service;
-		private          UserDataModel?     _user_data_model;
+		private          UserDataModel?     _user_data;
 
 		public string CurrentStatusMessage       { get; set; }
 		public Status ExposureNotificationStatus { get; set; }
@@ -39,7 +39,7 @@ namespace Covid19Radar.Services
 			this.CurrentStatusMessage = AppResources.ExposureNotificationStatusMessageUnknown;
 
 			_ = this.GetExposureNotificationConfig();
-			_user_data_model = userData.Get();
+			_user_data = userData.Get();
 			userData.UserDataChanged += this.OnUserDataChanged;
 		}
 
@@ -64,13 +64,17 @@ namespace Covid19Radar.Services
 
 		private async void OnUserDataChanged(object sender, UserDataModel? userData)
 		{
-			Debug.WriteLine("User Data has Changed!!!");
-			_user_data_model = _user_data_service.Get();
-			if (_user_data_model != userData) {
-				_logger.Warning("The specified user data is invalid.");
+			_logger.StartMethod();
+
+			_user_data = _user_data_service.Get();
+			_logger.Info("The user data has changed.");
+			_logger.Debug("The current user data: " + JsonConvert.SerializeObject(_user_data));
+			if (_user_data != userData) {
+				_logger.Warning("The specified user data is invalid: " + JsonConvert.SerializeObject(userData));
 			}
-			Debug.WriteLine(JsonConvert.SerializeObject(userData));
 			await this.UpdateStatusMessageAsync();
+
+			_logger.EndMethod();
 		}
 
 		public async Task FetchExposureKeyAsync()
@@ -83,36 +87,38 @@ namespace Covid19Radar.Services
 		public int GetExposureCount()
 		{
 			_logger.StartMethod();
+			int result = _user_data?.ExposureInformation?.Count() ?? -1;
 			_logger.EndMethod();
-			return _user_data_model?.ExposureInformation?.Count() ?? -1;
+			return result;
 		}
 
 		public async Task<string> UpdateStatusMessageAsync()
 		{
 			_logger.StartMethod();
 			this.ExposureNotificationStatus = await ExposureNotification.GetStatusAsync();
+			string result = await this.GetStatusMessageAsync();
 			_logger.EndMethod();
-			return await this.GetStatusMessageAsync();
+			return result;
 		}
 
 		private async ValueTask DisabledAsync()
 		{
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
 				return;
 			}
-			_user_data_model.IsExposureNotificationEnabled = false;
-			await _user_data_service.SetAsync(_user_data_model);
+			_user_data.IsExposureNotificationEnabled = false;
+			await _user_data_service.SetAsync(_user_data);
 		}
 
 		private async ValueTask EnabledAsync()
 		{
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
 				return;
 			}
-			_user_data_model.IsExposureNotificationEnabled = true;
-			await _user_data_service.SetAsync(_user_data_model);
+			_user_data.IsExposureNotificationEnabled = true;
+			await _user_data_service.SetAsync(_user_data);
 		}
 
 		public async Task<bool> StartExposureNotification()
@@ -180,9 +186,9 @@ namespace Covid19Radar.Services
 				break;
 			}
 
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
-			} else if (!_user_data_model.IsOptined) {
+			} else if (!_user_data.IsOptined) {
 				// TODO: 下記のリソース名を ExposureNotificationStatusMessageNotOptined に変更する
 				message.Append(AppResources.ExposureNotificationStatusMessageIsOptined);
 			}

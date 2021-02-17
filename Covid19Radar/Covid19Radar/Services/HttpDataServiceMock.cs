@@ -15,13 +15,13 @@ namespace Covid19Radar.Services
 		public ValueTask<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKey)}");
-			return new ValueTask<Stream>(new MemoryStream());
+			return new(new MemoryStream());
 		}
 
 		public ValueTask<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKeyList)}");
-			return new ValueTask<List<TemporaryExposureKeyExportFileModel>>(new List<TemporaryExposureKeyExportFileModel>());
+			return new(new List<TemporaryExposureKeyExportFileModel>());
 		}
 
 		public async ValueTask<UserDataModel?> PostRegisterUserAsync()
@@ -40,15 +40,15 @@ namespace Covid19Radar.Services
 		public ValueTask<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
-			return new ValueTask<HttpStatusCode>(HttpStatusCode.OK);
+			return new(HttpStatusCode.OK);
 		}
 
 		public ValueTask<ApiResponse<LogStorageSas?>> GetLogStorageSas()
 		{
 			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
-			return new ValueTask<ApiResponse<LogStorageSas?>>(new ApiResponse<LogStorageSas?>(
+			return new(new ApiResponse<LogStorageSas?>(
 				HttpStatusCode.OK,
-				new LogStorageSas { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" }
+				new() { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" }
 			));
 		}
 	}

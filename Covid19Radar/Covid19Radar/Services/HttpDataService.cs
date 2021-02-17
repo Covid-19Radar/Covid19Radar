@@ -69,8 +69,8 @@ namespace Covid19Radar.Services
 					_logger.EndMethod();
 					return userData;
 				}
-			} catch (HttpRequestException ex) {
-				_logger.Exception("Failed to register user.", ex);
+			} catch (HttpRequestException e) {
+				_logger.Exception("Failed to register an user.", e);
 			}
 
 			_logger.EndMethod();
@@ -95,7 +95,7 @@ namespace Covid19Radar.Services
 			string  url       = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
 			string? result    = await this.GetCdnAsync(url, async c => await c.ReadAsStringAsync(), cancellationToken);
 			if (result is null) {
-				_logger.Error("Fail to download");
+				_logger.Error("Failed to download");
 				_logger.EndMethod();
 				return new List<TemporaryExposureKeyExportFileModel>();
 			} else {
@@ -140,7 +140,6 @@ namespace Covid19Radar.Services
 		}
 
 		private async ValueTask<T?> GetCdnAsync<T>(string url, Func<HttpContent, ValueTask<T?>> read, CancellationToken cancellationToken)
-			where T: class // TODO: remove this line
 		{
 			_logger.StartMethod();
 			var response = await _download.GetAsync(url, cancellationToken);
@@ -152,7 +151,7 @@ namespace Covid19Radar.Services
 			} else {
 				_logger.Error("Failed to download.");
 				_logger.EndMethod();
-				return null;
+				return default;
 			}
 		}
 

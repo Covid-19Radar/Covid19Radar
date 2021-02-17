@@ -12,7 +12,7 @@ namespace Covid19Radar.ViewModels
 		private readonly ILoggerService     _logger;
 		private readonly INavigationService _ns;
 
-		public Command OnClickNext => new Command(async () => {
+		public Command OnClickNext => new(async () => {
 			_logger.StartMethod();
 			await _ns.NavigateAsync(nameof(HelpPage4));
 			_logger.EndMethod();

@@ -32,145 +32,145 @@ namespace Covid19Radar.ViewModels
 			_ns     = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 			_logger.StartMethod();
 			_logger.Info("Loading menu items...");
-			_selected_menu_item = new MainMenuModel() {
+			_selected_menu_item = new() {
 				Icon     = "\uF965",
 				PageName = nameof(HomePage),
 				Title    = AppResources.HomePageTitle
 			};
-			this.MenuItems = new ObservableCollection<MainMenuModel>();
+			this.MenuItems = new();
 			this.MenuItems.Add(_selected_menu_item);
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NewsPage),
 				Title    = AppResources.NewsPageTitle
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF013",
 				PageName = nameof(SettingsPage),
 				Title    = AppResources.SettingsPageTitle
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0E0",
 				PageName = nameof(InqueryPage),
 				Title    = AppResources.InqueryPageTitle
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(TermsofservicePage),
 				Title    = AppResources.TermsofservicePageTitle
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage2),
 				Title    = AppResources.PrivacyPolicyPageTitle
 			});
 #if DEBUG
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(DebugPage),
 				Title    = nameof(DebugPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(LicenseAgreementPage),
 				Title    = AppResources.TitleLicenseAgreement
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(ThankYouNotifyOtherPage),
 				Title    = nameof(ThankYouNotifyOtherPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NotContactPage),
 				Title    = nameof(NotContactPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(ContactedNotifyPage),
 				Title    = nameof(ContactedNotifyPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage),
 				Title    = nameof(PrivacyPolicyPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage2),
 				Title    = nameof(PrivacyPolicyPage2)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage1),
 				Title    = nameof(TutorialPage1)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage2),
 				Title    = nameof(TutorialPage2)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage3),
 				Title    = nameof(TutorialPage3)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage4),
 				Title    = nameof(TutorialPage4)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage5),
 				Title    = nameof(TutorialPage5)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(TutorialPage6),
 				Title    = nameof(TutorialPage6)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpMenuPage),
 				Title    = nameof(HelpMenuPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage1),
 				Title    = nameof(HelpPage1)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage2),
 				Title    = nameof(HelpPage2)
 			});
-			this.MenuItems.Add(new MainMenuModel()  {
+			this.MenuItems.Add(new()  {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage3),
 				Title    = nameof(HelpPage3)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(HelpPage4),
 				Title    = nameof(HelpPage4)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(ChatbotPage),
 				Title    = nameof(ChatbotPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NotifyOtherPage),
 				Title    = nameof(NotifyOtherPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(SubmitConsentPage),
 				Title    = nameof(SubmitConsentPage)
 			});
-			this.MenuItems.Add(new MainMenuModel() {
+			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(WebViewerPage),
 				Title    = nameof(WebViewerPage)
@@ -178,7 +178,7 @@ namespace Covid19Radar.ViewModels
 #endif
 			_logger.Info("Loaded menu items");
 			this.ClearMenuItemsColors();
-			this.NavigateCommand = new DelegateCommand(this.Navigate);
+			this.NavigateCommand = new(this.Navigate);
 			_logger.StartMethod();
 		}
 

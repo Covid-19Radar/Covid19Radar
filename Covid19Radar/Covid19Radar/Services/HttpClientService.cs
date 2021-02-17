@@ -13,7 +13,7 @@ namespace Covid19Radar.Services
 
 		public HttpClient Create()
 		{
-			return new HttpClient();
+			return new();
 		}
 	}
 }

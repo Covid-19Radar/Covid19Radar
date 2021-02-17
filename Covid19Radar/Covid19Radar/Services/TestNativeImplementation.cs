@@ -52,7 +52,7 @@ namespace Covid19Radar.Services
 		{
 			return Task.FromResult<(ExposureDetectionSummary, Func<Task<IEnumerable<ExposureInfo>>>)>((
 				new ExposureDetectionSummary(10, 2, 5),
-				() => Task.FromResult<IEnumerable<ExposureInfo>>(new List<ExposureInfo> {
+				() => Task.FromResult<IEnumerable<ExposureInfo>>(new List<ExposureInfo>() {
 					new ExposureInfo(DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
 					new ExposureInfo(DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5),  40, 3, RiskLevel.Low),
 				})
@@ -63,7 +63,7 @@ namespace Covid19Radar.Services
 		{
 			byte[] buffer = new byte[16];
 			_random.NextBytes(buffer);
-			return new TemporaryExposureKey(
+			return new(
 				buffer,
 				DateTimeOffset.UtcNow.AddDays(-1 * daysAgo),
 				TimeSpan.FromMinutes(_random.Next(5, 120)),

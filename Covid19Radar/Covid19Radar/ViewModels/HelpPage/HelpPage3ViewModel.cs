@@ -12,7 +12,7 @@ namespace Covid19Radar.ViewModels
 		private readonly ILoggerService     _logger;
 		private readonly INavigationService _ns;
 
-		public Command OnClickNotifyOtherPage => new Command(async () => {
+		public Command OnClickNotifyOtherPage => new(async () => {
 			_logger.StartMethod();
 			await _ns.NavigateAsync(nameof(SubmitConsentPage));
 			_logger.EndMethod();

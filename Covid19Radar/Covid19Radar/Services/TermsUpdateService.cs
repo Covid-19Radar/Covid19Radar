@@ -51,7 +51,7 @@ namespace Covid19Radar.Services
 				} catch (Exception e) {
 					_logger.Exception("Failed to get a terms update info.", e);
 					_logger.EndMethod();
-					return new TermsUpdateInfoModel();
+					return new();
 				}
 			}
 		}

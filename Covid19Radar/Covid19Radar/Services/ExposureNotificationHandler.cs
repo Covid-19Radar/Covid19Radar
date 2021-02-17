@@ -25,8 +25,8 @@ namespace Covid19Radar.Services
 		private readonly ILoggerService              _logger;
 		private readonly IHttpDataService            _http_data;
 		private readonly IUserDataService            _user_data_service;
-		private readonly ExposureNotificationService _exns;
-		private          UserDataModel?              _user_data_model;
+		private readonly ExposureNotificationService _ens;
+		private          UserDataModel?              _user_data;
 
 		// this string should be localized
 		public string UserExplanation => AppResources.LocalNotificationDescription;
@@ -36,14 +36,14 @@ namespace Covid19Radar.Services
 			_logger            = DependencyService.Resolve<ILoggerService>();
 			_http_data         = DependencyService.Resolve<IHttpDataService>();
 			_user_data_service = DependencyService.Resolve<IUserDataService>();
-			_exns              = DependencyService.Resolve<ExposureNotificationService>();
+			_ens               = DependencyService.Resolve<ExposureNotificationService>();
 
-			_user_data_model = _user_data_service.Get();
+			_user_data = _user_data_service.Get();
 			_user_data_service.UserDataChanged += (s, e) => {
-				_user_data_model = _user_data_service.Get();
+				_user_data = _user_data_service.Get();
 				_logger.Info("Updated the user data.");
 			};
-			_logger.Info($"the user data is {(_user_data_model == null ? "null" : "set")}.");
+			_logger.Info($"the user data is {(_user_data is null ? "null" : "set")}.");
 		}
 
 		// this configuration should be obtained from a server and it should be cached locally/in memory as it may be called multiple times
@@ -51,8 +51,8 @@ namespace Covid19Radar.Services
 		{
 			_logger.StartMethod();
 
-			if (Application.Current.Properties.TryGetValue(AppConstants.StorageKey.ExNConfig, out object exnConfig)) {
-				string json = exnConfig.ToString();
+			if (Application.Current.Properties.TryGetValue(AppConstants.StorageKey.ExNConfig, out object jsonObj)) {
+				string json = jsonObj.ToString();
 				_logger.Info($"Got the configuration: {json}");
 				_logger.EndMethod();
 				return Task.FromResult(JsonConvert.DeserializeObject<Configuration>(json));
@@ -81,18 +81,18 @@ namespace Covid19Radar.Services
 		{
 			_logger.StartMethod();
 
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("the user data was null!");
 				_logger.EndMethod();
 				return;
 			}
 
-			_user_data_model.ExposureSummary = summary;
-			_logger.Info($"{nameof(_user_data_model.ExposureSummary)}.{nameof(summary.MatchedKeyCount      )}: {summary.MatchedKeyCount}");
-			_logger.Info($"{nameof(_user_data_model.ExposureSummary)}.{nameof(summary.DaysSinceLastExposure)}: {summary.DaysSinceLastExposure}");
-			_logger.Info($"{nameof(_user_data_model.ExposureSummary)}.{nameof(summary.HighestRiskScore     )}: {summary.HighestRiskScore}");
-			_logger.Info($"{nameof(_user_data_model.ExposureSummary)}.{nameof(summary.AttenuationDurations )}: {string.Join(",", summary.AttenuationDurations)}");
-			_logger.Info($"{nameof(_user_data_model.ExposureSummary)}.{nameof(summary.SummationRiskScore   )}: {summary.SummationRiskScore}");
+			_user_data.ExposureSummary = summary;
+			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.MatchedKeyCount      )}: {summary.MatchedKeyCount}");
+			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.DaysSinceLastExposure)}: {summary.DaysSinceLastExposure}");
+			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.HighestRiskScore     )}: {summary.HighestRiskScore}");
+			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.AttenuationDurations )}: {string.Join(",", summary.AttenuationDurations)}");
+			_logger.Info($"{nameof(_user_data.ExposureSummary)}.{nameof(summary.SummationRiskScore   )}: {summary.SummationRiskScore}");
 
 			var config = await this.GetConfigurationAsync();
 			if (summary.HighestRiskScore >= config.MinimumRiskScore) {
@@ -108,14 +108,14 @@ namespace Covid19Radar.Services
 						_logger.Info($"{nameof(item)}.{nameof(item.TotalRiskScore       )}: {item.TotalRiskScore}");
 						_logger.Info($"{nameof(item)}.{nameof(item.TransmissionRiskLevel)}: {item.TransmissionRiskLevel}");
 						_logger.Info("========");
-						_user_data_model.ExposureInformation.Add(item);
+						_user_data.ExposureInformation.Add(item);
 					}
 				});
 			}
 
-			_logger.Info($"Saving mached key count: {_user_data_model.ExposureSummary.MatchedKeyCount}");
-			_logger.Info($"Saving exposure information count: {_user_data_model.ExposureInformation.Count}");
-			await _user_data_service.SetAsync(_user_data_model);
+			_logger.Info($"Saving mached key count: {_user_data.ExposureSummary.MatchedKeyCount}");
+			_logger.Info($"Saving exposure information count: {_user_data.ExposureInformation.Count}");
+			await _user_data_service.SetAsync(_user_data);
 
 			_logger.EndMethod();
 		}
@@ -163,7 +163,7 @@ namespace Covid19Radar.Services
 			var    downloadedFiles = new List<string>();
 			string tmpDir          = Path.Combine(FileSystem.CacheDirectory, region);
 
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
 				_logger.EndMethod();
 				return (batchNumber, downloadedFiles);
@@ -187,7 +187,7 @@ namespace Covid19Radar.Services
 			}
 			Debug.WriteLine("C19R Fetch Exposure Key");
 
-			var lastTekTimestamp = _user_data_model.LastProcessTekTimestamp;
+			var lastTekTimestamp = _user_data.LastProcessTekTimestamp;
 
 			foreach (var tekItem in tekList)
 			{
@@ -224,9 +224,9 @@ namespace Covid19Radar.Services
 			}
 
 			_logger.Info($"The batch number: {batchNumber}, Downloaded files: {downloadedFiles.Count}");
-			_user_data_model.LastProcessTekTimestamp = lastTekTimestamp;
-			await _user_data_service.SetAsync(_user_data_model);
-			_logger.Info($"The region: {region}, the last process TEK timestamp: {_user_data_model.LastProcessTekTimestamp[region]}");
+			_user_data.LastProcessTekTimestamp = lastTekTimestamp;
+			await _user_data_service.SetAsync(_user_data);
+			_logger.Info($"The region: {region}, the last process TEK timestamp: {_user_data.LastProcessTekTimestamp[region]}");
 
 			_logger.EndMethod();
 			return (batchNumber, downloadedFiles);
@@ -245,13 +245,13 @@ namespace Covid19Radar.Services
 				_logger.Info("========");
 			}
 
-			if (_user_data_model is null) {
+			if (_user_data is null) {
 				_logger.Warning("The user data was null.");
 				_logger.EndMethod();
 				return;
 			}
 
-			var latestDiagnosis = _user_data_model.LatestDiagnosis;
+			var latestDiagnosis = _user_data.LatestDiagnosis;
 			if (latestDiagnosis is null || string.IsNullOrEmpty(latestDiagnosis.DiagnosisUid))
 			{
 				_logger.Error("The diagnostic number is null or empty.");
@@ -292,7 +292,7 @@ namespace Covid19Radar.Services
 				throw new InvalidOperationException("There is a problem with the record data.");
 			}
 
-			await _user_data_service.SetAsync(_user_data_model);
+			await _user_data_service.SetAsync(_user_data);
 			_logger.EndMethod();
 		}
 
@@ -303,7 +303,7 @@ namespace Covid19Radar.Services
 			_logger.StartMethod();
 
 			// Filter Temporary exposure keys
-			var filteredTemporaryExposureKeys = _exns.FliterTemporaryExposureKeys(temporaryExposureKeys);
+			var filteredTemporaryExposureKeys = _ens.FliterTemporaryExposureKeys(temporaryExposureKeys);
 
 			// Create the network keys
 			var keys = filteredTemporaryExposureKeys.Select(k => new DiagnosisSubmissionParameter.Key() {
@@ -327,11 +327,11 @@ namespace Covid19Radar.Services
 			// Generate Padding
 			string padding = this.GetPadding();
 
-			_logger.Info($"The user data is {(_user_data_model is null ? "null" : "set")}.");
+			_logger.Info($"The user data is {(_user_data is null ? "null" : "set")}.");
 
 			// Create the submission
 			var submission = new DiagnosisSubmissionParameter() {
-				UserUuid                  = _user_data_model?.UserUuid,
+				UserUuid                  = _user_data?.UserUuid,
 				Keys                      = keys.ToArray(),
 				Regions                   = AppSettings.Instance.SupportedRegions,
 				Platform                  = DeviceInfo.Platform.ToString().ToLowerInvariant(),

@@ -44,9 +44,9 @@ namespace Covid19Radar.ViewModels
 			}
 		}
 
-		public Command ResetSelfDiagnosis => new Command(async () => {
+		public Command ResetSelfDiagnosis => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				_user_data.ClearDiagnosis();
 				await _user_data_service.SetAsync(_user_data);
 				await UserDialogs.Instance.AlertAsync("Cleared self-diagnosis!");
@@ -54,9 +54,9 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command ResetExposures => new Command(async () => {
+		public Command ResetExposures => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				await Device.InvokeOnMainThreadAsync(() => _user_data.ExposureInformation.Clear());
 				_user_data.ExposureSummary = null;
 				await _user_data_service.SetAsync(_user_data);
@@ -65,9 +65,9 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command AddExposures => new Command(async () => {
+		public Command AddExposures => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				await Device.InvokeOnMainThreadAsync(async () => {
 					_user_data.ExposureInformation.Add(new ExposureInfo(DateTime.UtcNow.AddDays(-14), TimeSpan.FromMinutes(5),  10, 6, RiskLevel.Lowest));
 					_user_data.ExposureInformation.Add(new ExposureInfo(DateTime.UtcNow.AddDays(-13), TimeSpan.FromMinutes(10), 20, 6, RiskLevel.Low));
@@ -89,34 +89,34 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command UpdateStatus => new Command(async () => {
+		public Command UpdateStatus => new(async () => {
 			_logger.StartMethod();
 			_user_data = _user_data_service.Get();
 			await this.FetchEnMessage();
 			_logger.EndMethod();
 		});
 
-		public Command ToggleWelcome => new Command(async () => {
+		public Command ToggleWelcome => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				_user_data.IsOptined = !_user_data.IsOptined;
 				await _user_data_service.SetAsync(_user_data);
 			}
 			_logger.EndMethod();
 		});
 
-		public Command ToggleEn => new Command(async () => {
+		public Command ToggleEn => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				_user_data.IsExposureNotificationEnabled = !_user_data.IsExposureNotificationEnabled;
 				await _user_data_service.SetAsync(_user_data);
 			}
 			_logger.EndMethod();
 		});
 
-		public Command ResetEnabled => new Command(async () => {
+		public Command ResetEnabled => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				using (UserDialogs.Instance.Loading(string.Empty)) {
 					if (await ExposureNotification.IsEnabledAsync()) {
 						await ExposureNotification.StopAsync();
@@ -128,9 +128,9 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command ResetBatchFileIndex => new Command(async () => {
+		public Command ResetBatchFileIndex => new(async () => {
 			_logger.StartMethod();
-			if (!(_user_data is null)) {
+			if (_user_data is not null) {
 				_user_data.ServerBatchNumbers = AppSettings.Instance.GetDefaultBatch();
 				await _user_data_service.SetAsync(_user_data);
 				this.RaisePropertyChanged(nameof(this.CurrentBatchFileIndex));
@@ -139,7 +139,7 @@ namespace Covid19Radar.ViewModels
 			_logger.EndMethod();
 		});
 
-		public Command ManualTriggerKeyFetch => new Command(async () => {
+		public Command ManualTriggerKeyFetch => new(async () => {
 			_logger.StartMethod();
 			using (UserDialogs.Instance.Loading("Fetching...")) {
 				await _ens.FetchExposureKeyAsync();
