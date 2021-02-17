@@ -982,4 +982,10 @@ Storage :</value>
   <data name="SettingsPageDialog_ShowTutorialNextTime_Hide" xml:space="preserve">
     <value>The app would not show you the tutorial page on the next launch.</value>
   </data>
+  <data name="NewsPageButton_ShowWikipedia" xml:space="preserve">
+    <value>See Wikipedia</value>
+  </data>
+  <data name="WikipediaUrl" xml:space="preserve">
+    <value>https://en.wikipedia.org/wiki/COVID-19_pandemic</value>
+  </data>
 </root>

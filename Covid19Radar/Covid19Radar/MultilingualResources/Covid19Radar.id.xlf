@@ -1476,6 +1476,14 @@
           <source>接触通知が無効になっています。設定ページで接触通知をオンにしてください。</source>
           <target state="new">接触通知が無効になっています。設定ページで接触通知をオンにしてください。</target>
         </trans-unit>
+        <trans-unit id="NewsPageButton_ShowWikipedia" translate="yes" xml:space="preserve">
+          <source>ウィキペディアの情報</source>
+          <target state="new">ウィキペディアの情報</target>
+        </trans-unit>
+        <trans-unit id="WikipediaUrl" translate="yes" xml:space="preserve">
+          <source>https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</source>
+          <target state="new">https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -26,8 +26,13 @@ namespace Covid19Radar.ViewModels
 		{
 			_logger.StartMethod();
 			base.Initialize(parameters);
-			this.Url = parameters["url"].ToString();
-			_logger.Info($"The URL: {_url}");
+			if (parameters.TryGetValue("url", out object? url)) {
+				this.Url = url?.ToString() ?? "about:newtab";
+				_logger.Info($"The URL: {_url}");
+			} else {
+				this.Url = "about:newtab";
+				_logger.Warning("The URL was null.");
+			}
 			_logger.EndMethod();
 		}
 	}
