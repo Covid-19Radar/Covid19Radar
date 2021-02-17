@@ -6,50 +6,71 @@ using System.Threading;
 using System.Threading.Tasks;
 using Covid19Radar.Common;
 using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
 using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
 	internal class HttpDataServiceMock : IHttpDataService
 	{
+		private readonly ILoggerService _logger;
+
+		public HttpDataServiceMock(ILoggerService logger)
+		{
+			_logger = logger;
+		}
+
 		public ValueTask<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
 		{
-			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKey)}");
-			return new(new MemoryStream());
+			_logger.StartMethod();
+			_logger.Debug($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKey)}");
+			var result = new ValueTask<Stream>(new MemoryStream());
+			_logger.EndMethod();
+			return result;
 		}
 
 		public ValueTask<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
 		{
-			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKeyList)}");
-			return new(new List<TemporaryExposureKeyExportFileModel>());
+			_logger.StartMethod();
+			_logger.Debug($"called {nameof(HttpDataServiceMock)}::{nameof(this.GetTemporaryExposureKeyList)}");
+			var result = new ValueTask<List<TemporaryExposureKeyExportFileModel>>(new List<TemporaryExposureKeyExportFileModel>());
+			_logger.EndMethod();
+			return result;
 		}
 
-		public async ValueTask<UserDataModel?> PostRegisterUserAsync()
+		public async ValueTask<bool> PostRegisterUserAsync(UserDataModel userData)
 		{
-			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PostRegisterUserAsync)}");
-			var userData = new UserDataModel();
+			_logger.StartMethod();
+			_logger.Debug($"called {nameof(HttpDataServiceMock)}::{nameof(this.PostRegisterUserAsync)}");
 			userData.Secret             = "dummy secret";
 			userData.UserUuid           = "dummy uuid";
 			userData.JumpConsistentSeed = 999;
 			userData.IsOptined          = true;
 			Application.Current.Properties[AppConstants.StorageKey.Secret] = userData.Secret;
 			await Application.Current.SavePropertiesAsync();
-			return userData;
+			_logger.EndMethod();
+			return true;
 		}
 
 		public ValueTask<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
 		{
-			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
-			return new(HttpStatusCode.OK);
+			_logger.StartMethod();
+			_logger.Debug($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
+			var result = new ValueTask<HttpStatusCode>(HttpStatusCode.OK);
+			_logger.EndMethod();
+			return result;
 		}
 
 		public ValueTask<ApiResponse<LogStorageSas?>> GetLogStorageSas()
 		{
-			Debug.WriteLine($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
-			return new(new ApiResponse<LogStorageSas?>(
+			_logger.StartMethod();
+			_logger.Debug($"called {nameof(HttpDataServiceMock)}::{nameof(this.PutSelfExposureKeysAsync)}");
+			var result = new ValueTask<ApiResponse<LogStorageSas?>>(new ApiResponse<LogStorageSas?>(
 				HttpStatusCode.OK,
 				new() { SasToken = "sv=2012-02-12&se=2015-07-08T00%3A12%3A08Z&sr=c&sp=wl&sig=t%2BbzU9%2B7ry4okULN9S0wst%2F8MCUhTjrHyV9rDNLSe8g%3Dsss" }
 			));
+			_logger.EndMethod();
+			return result;
 		}
 	}
 }

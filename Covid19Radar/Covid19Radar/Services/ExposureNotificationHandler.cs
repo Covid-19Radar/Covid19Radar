@@ -171,7 +171,7 @@ namespace Covid19Radar.Services
 				_logger.EndMethod();
 				return (batchNumber, downloadedFiles);
 			}
-			Debug.WriteLine("C19R Fetch Exposure Key");
+			_logger.Debug("C19R Fetch Exposure Key");
 
 			var lastTekTimestamp = _user_data.LastProcessTekTimestamp;
 
@@ -186,8 +186,8 @@ namespace Covid19Radar.Services
 				_logger.Info($"{nameof(tekItem)}.{nameof(tekItem.Created)}: {tekItem.Created}");
 				if (tekItem.Created > lastCreated || lastCreated == 0) {
 					string tmpFile = Path.Combine(tmpDir, Guid.NewGuid().ToString() + ".zip");
-					Debug.WriteLine(JsonConvert.SerializeObject(tekItem));
-					Debug.WriteLine(tmpFile);
+					_logger.Debug("The TEK item: " + JsonConvert.SerializeObject(tekItem));
+					_logger.Debug("The temporary file: " + tmpFile);
 					if (string.IsNullOrEmpty(tekItem.Url)) {
 						_logger.Warning("The URL for a TEK item was empty.");
 						continue;
@@ -204,7 +204,7 @@ namespace Covid19Radar.Services
 					}
 					lastTekTimestamp[region] = tekItem.Created;
 					downloadedFiles.Add(tmpFile);
-					Debug.WriteLine($"C19R FETCH DIAGKEY {tmpFile}");
+					_logger.Debug($"C19R FETCH DIAGKEY {tmpFile}");
 					++batchNumber;
 				}
 			}
@@ -295,8 +295,8 @@ namespace Covid19Radar.Services
 
 			string beforeKey = JsonConvert.SerializeObject(temporaryExposureKeys.ToList());
 			string afterKey  = JsonConvert.SerializeObject(keys.ToList());
-			Debug.WriteLine($"C19R {beforeKey}");
-			Debug.WriteLine($"C19R {afterKey}");
+			_logger.Debug($"C19R before: {beforeKey}");
+			_logger.Debug($"C19R after : {afterKey}");
 
 			if (keys.Count() == 0) {
 				_logger.Error("Temporary exposure keys are empty.");
