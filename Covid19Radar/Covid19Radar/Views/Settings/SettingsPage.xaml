@@ -62,11 +62,12 @@
 					VerticalOptions="Center" />
 			</Frame>
 			<BoxView Style="{StaticResource DefaultLineStyle}" />
-			<Frame Padding="15" HasShadow="False">
+			<Frame Padding="10" HasShadow="False">
 				<Button
 					Style="{StaticResource DefaultButton}"
 					Text="{x:Static resources:AppResources.SettingsPageButton_ShowTutorialNextTime}"
-					Command="{Binding OnChangeShowTutorialNextTime}" />
+					Command="{Binding OnChangeShowTutorialNextTime}"
+					FontSize="Small" />
 			</Frame>
 			<BoxView Style="{StaticResource DefaultLineStyle}" />
 			<Frame Padding="15" HasShadow="False">

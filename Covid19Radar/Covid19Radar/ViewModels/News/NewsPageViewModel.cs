@@ -24,7 +24,7 @@ namespace Covid19Radar.ViewModels
 		));
 		public Command OnClick_ShowGoogle        => new(() => this.ShowPage(AppResources.GoogleSearchUrl));
 		public Command OnClick_ShowCoronaGoJP    => new(() => this.ShowPage(AppResources.CoronaGoJPUrl));
-		public Command OnClick_ShowStopCOVID19JP => new(() => this.ShowPage(AppResources.NewsPageButton_ShowStopCOVID19JP));
+		public Command OnClick_ShowStopCOVID19JP => new(() => this.ShowPage(AppResources.StopCOVID19JPUrl));
 
 		public NewsPageViewModel(ILoggerService logger, INavigationService navigationService)
 		{

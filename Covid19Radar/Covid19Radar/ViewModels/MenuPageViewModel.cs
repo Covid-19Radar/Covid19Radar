@@ -65,6 +65,7 @@ namespace Covid19Radar.ViewModels
 				Title    = AppResources.PrivacyPolicyPageTitle
 			});
 #if DEBUG
+			this.MenuItems.Add(new()); // 区切り用
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(DebugPage),
