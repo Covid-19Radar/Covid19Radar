@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 
 namespace Covid19Radar.Services.Logs
 {
 	public class LogPathService : ILogPathService
 	{
-		private  const    string                    PREFIX                       = "cocoa_log_";
-		private  const    string                    EXTENSION                    = "csv";
-		internal const    string                    PREFIX_UPLOADING             = PREFIX;
-		internal const    string                    EXTENSION_UPLOADING          = "zip";
+		private  const    string                    PREFIX                       =  "cocoa_log_";
+		private  const    string                    EXTENSION                    =  "csv";
+		internal const    string                    PREFIX_UPLOADING             =  PREFIX;
+		internal const    string                    EXTENSION_UPLOADING          =  "zip";
 		public            string                    LogsDirPath                  => _log_path_dep.LogsDirPath;
 		public            string                    LogFileWildcardName          => PREFIX + "*." + EXTENSION;
 		public            string                    LogUploadingTmpPath          => _log_path_dep.LogUploadingTmpPath;
@@ -24,6 +25,17 @@ namespace Covid19Radar.Services.Logs
 		public string LogFilePath(DateTime jstDateTime)
 		{
 			return Path.Combine(this.LogsDirPath, $"{PREFIX}{jstDateTime:yyyyMMdd}.{EXTENSION}");
+		}
+
+		public DateTime? GetDate(string filename)
+		{
+			filename = Path.GetFileName(filename);
+			if (filename.StartsWith(PREFIX) && filename.EndsWith(EXTENSION) &&
+				DateTime.TryParseExact(filename[PREFIX.Length..^(EXTENSION.Length + 1)], "yyyyMMdd", null, DateTimeStyles.None, out var dt)) {
+				return dt;
+			} else {
+				return null;
+			}
 		}
 	}
 }

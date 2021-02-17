@@ -52,8 +52,8 @@ namespace Covid19Radar.Droid.Services.Logs
 		{
 			var essentials = new EssentialsService();
 			var logPath    = new LogPathService(new LogPathServiceAndroid());
-			var writer     = new LogWriter();
-			_logger        = new LoggerService(logPath, essentials, writer);
+			var writer     = new LogReaderWriter(logPath, essentials);
+			_logger        = new LoggerService(writer);
 			_log_file      = new LogFileService(_logger, logPath);
 		}
 
