@@ -30,10 +30,10 @@ namespace Covid19Radar.Services
 		private readonly ILoggerService              _logger;
 		private readonly IApplicationPropertyService _app_prop;
 
-		public TermsUpdateService(ILoggerService loggerService, IApplicationPropertyService applicationPropertyService)
+		public TermsUpdateService(ILoggerService logger, IApplicationPropertyService applicationProperty)
 		{
-			_logger   = loggerService;
-			_app_prop = applicationPropertyService;
+			_logger   = logger;
+			_app_prop = applicationProperty;
 		}
 
 		public async ValueTask<TermsUpdateInfoModel> GetTermsUpdateInfo()
