@@ -1,0 +1,49 @@
+﻿<ContentView
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources"
+	x:Class="Covid19Radar.Controls.LogDataView">
+	<ContentView.Resources>
+		<ResourceDictionary>
+			<Color x:Key="Verbose">#1E1E1E</Color>
+			<Color x:Key="Debug"  >#000000</Color>
+			<Color x:Key="Info"   >#22BB22</Color>
+			<Color x:Key="Warning">#BBCC44</Color>
+			<Color x:Key="Error"  >#CC2266</Color>
+			<Color x:Key="Invalid">#808080</Color>
+		</ResourceDictionary>
+	</ContentView.Resources>
+	<ContentView.Content>
+		<StackLayout>
+			<Frame Padding="15" HasShadow="False">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Label Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_OutputDate}" />
+					<Label Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="outputDate" />
+					<BoxView Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DefaultBlueLineStyle}" />
+					<Label Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_LogLevel}" />
+					<Label Grid.Column="1"                                            x:Name="logLevel" />
+					<BoxView Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DefaultBlueLineStyle}" />
+					<Label Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_Method}" />
+					<Label Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="method" />
+					<BoxView Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DefaultBlueLineStyle}" />
+					<Label Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_FilePath}" />
+					<Label Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="filePath" />
+					<BoxView Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DefaultBlueLineStyle}" />
+					<Label Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_LineNumber}" />
+					<Label Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="lineNumber" />
+					<BoxView Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DefaultBlueLineStyle}" />
+				</Grid>
+			</Frame>
+			<Frame Padding="10" HasShadow="False">
+				<Label
+					x:Name="message"
+					TextColor="{StaticResource PrimaryDark}"/>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>

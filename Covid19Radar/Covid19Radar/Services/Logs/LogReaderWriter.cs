@@ -110,7 +110,9 @@ namespace Covid19Radar.Services.Logs
 			using (var sr = new StreamReader(filename, _enc, true)) {
 				string? line;
 				while ((line = sr.ReadLine()) is not null) {
-					result.Add(ParseRow(line));
+					if (ParseRow(line) is not null and var row) {
+						result.Add(row);
+					}
 				}
 			}
 			return result.AsReadOnly();
@@ -206,7 +208,7 @@ namespace Covid19Radar.Services.Logs
 			return sb.ToString();
 		}
 
-		private static LogData ParseRow(string line)
+		private static LogData? ParseRow(string line)
 		{
 			var  cols = new List<string>(12);
 			var  sb   = new StringBuilder();
@@ -261,7 +263,11 @@ namespace Covid19Radar.Services.Logs
 				}
 			}
 			cols.Add(sb.ToString());
-			return new(cols, _dt_format);
+			if (cols.Count > 0 && cols[0] != "output_date") {
+				return new(cols, _dt_format);
+			} else {
+				return null;
+			}
 		}
 	}
 }

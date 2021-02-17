@@ -998,6 +998,141 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   ファイル： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_FilePath {
+            get {
+                return ResourceManager.GetString("LogDataView_FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   行： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LineNumber {
+            get {
+                return ResourceManager.GetString("LogDataView_LineNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   レベル： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   デバッグ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Debug {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   エラー に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Error {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   情報 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Info {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   (無効) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Invalid {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Invalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   詳細 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Verbose {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Verbose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   警告 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_LogLevel_Warning {
+            get {
+                return ResourceManager.GetString("LogDataView_LogLevel_Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   関数： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_Method {
+            get {
+                return ResourceManager.GetString("LogDataView_Method", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   日時： に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_OutputDate {
+            get {
+                return ResourceManager.GetString("LogDataView_OutputDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   不明 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogDataView_OutputDate_Unknown {
+            get {
+                return ResourceManager.GetString("LogDataView_OutputDate_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ログファイルを選択してください に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogsPage_Picker {
+            get {
+                return ResourceManager.GetString("LogsPage_Picker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   不明なファイル「{0}」 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogsPage_UnknownFile {
+            get {
+                return ResourceManager.GetString("LogsPage_UnknownFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ログ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogsPageTitle {
+            get {
+                return ResourceManager.GetString("LogsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Exposure に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MainExposures {
@@ -1671,6 +1806,15 @@ namespace Covid19Radar.Resources {
         internal static string SendLogConfirmationPageTitle {
             get {
                 return ResourceManager.GetString("SendLogConfirmationPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   動作情報を表示 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SettingsPageButton_ShowLogsPage {
+            get {
+                return ResourceManager.GetString("SettingsPageButton_ShowLogsPage", resourceCulture);
             }
         }
         

@@ -1097,4 +1097,52 @@
   <data name="WikipediaUrl" xml:space="preserve">
     <value>https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</value>
   </data>
+  <data name="LogDataView_FilePath" xml:space="preserve">
+    <value>ファイル：</value>
+  </data>
+  <data name="LogDataView_LineNumber" xml:space="preserve">
+    <value>行：</value>
+  </data>
+  <data name="LogDataView_LogLevel" xml:space="preserve">
+    <value>レベル：</value>
+  </data>
+  <data name="LogDataView_LogLevel_Debug" xml:space="preserve">
+    <value>デバッグ</value>
+  </data>
+  <data name="LogDataView_LogLevel_Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="LogDataView_LogLevel_Info" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="LogDataView_LogLevel_Invalid" xml:space="preserve">
+    <value>(無効)</value>
+  </data>
+  <data name="LogDataView_LogLevel_Verbose" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="LogDataView_LogLevel_Warning" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="LogDataView_Method" xml:space="preserve">
+    <value>関数：</value>
+  </data>
+  <data name="LogDataView_OutputDate" xml:space="preserve">
+    <value>日時：</value>
+  </data>
+  <data name="LogDataView_OutputDate_Unknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="LogsPageTitle" xml:space="preserve">
+    <value>ログ</value>
+  </data>
+  <data name="LogsPage_Picker" xml:space="preserve">
+    <value>ログファイルを選択してください</value>
+  </data>
+  <data name="LogsPage_UnknownFile" xml:space="preserve">
+    <value>不明なファイル「{0}」</value>
+  </data>
+  <data name="SettingsPageButton_ShowLogsPage" xml:space="preserve">
+    <value>動作情報を表示</value>
+  </data>
 </root>

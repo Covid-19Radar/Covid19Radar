@@ -5,6 +5,8 @@ using Covid19Radar.Model;
 using Covid19Radar.Resources;
 using Covid19Radar.Services;
 using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
+using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.ExposureNotifications;
 using Xamarin.Forms;
@@ -15,6 +17,7 @@ namespace Covid19Radar.ViewModels
 	{
 		private readonly ILoggerService              _logger;
 		private readonly ILogFileService             _log_file;
+		private readonly INavigationService          _ns;
 		private readonly ExposureNotificationService _ens;
 		private readonly IUserDataService            _user_data_service;
 		private          UserDataModel               _user_data;
@@ -46,6 +49,12 @@ namespace Covid19Radar.ViewModels
 		{
 			_logger.StartMethod();
 			await _user_data_service.SetAsync(_user_data);
+			_logger.EndMethod();
+		});
+
+		public ICommand ShowLogsPage => new Command(async () => {
+			_logger.StartMethod();
+			await _ns.NavigateAsync(nameof(LogsPage));
 			_logger.EndMethod();
 		});
 
@@ -98,11 +107,13 @@ namespace Covid19Radar.ViewModels
 		public SettingsPageViewModel(
 			ILoggerService              logger,
 			ILogFileService             logFile,
+			INavigationService          navigationService,
 			ExposureNotificationService exposureNotificationService,
 			IUserDataService            userDataService)
 		{
 			_logger            = logger                      ?? throw new ArgumentNullException(nameof(logger));
 			_log_file          = logFile                     ?? throw new ArgumentNullException(nameof(logFile));
+			_ns                = navigationService           ?? throw new ArgumentNullException(nameof(navigationService));
 			_ens               = exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService));
 			_user_data_service = userDataService             ?? throw new ArgumentNullException(nameof(userDataService));
 			_user_data         = userDataService.Get();

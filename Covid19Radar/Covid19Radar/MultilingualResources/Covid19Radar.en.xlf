@@ -1481,6 +1481,70 @@ Storage :</target>
           <source>https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</source>
           <target state="needs-review-translation">https://en.wikipedia.org/wiki/COVID-19_pandemic</target>
         </trans-unit>
+        <trans-unit id="LogsPageTitle" translate="yes" xml:space="preserve">
+          <source>ログ</source>
+          <target state="needs-review-translation">Logs</target>
+        </trans-unit>
+        <trans-unit id="LogsPage_Picker" translate="yes" xml:space="preserve">
+          <source>ログファイルを選択してください</source>
+          <target state="needs-review-translation">Select a log file</target>
+        </trans-unit>
+        <trans-unit id="LogsPage_UnknownFile" translate="yes" xml:space="preserve">
+          <source>不明なファイル「{0}」</source>
+          <target state="needs-review-translation">Unknown file "{0}"</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton_ShowLogsPage" translate="yes" xml:space="preserve">
+          <source>動作情報を表示</source>
+          <target state="needs-review-translation">Show the logs</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_FilePath" translate="yes" xml:space="preserve">
+          <source>ファイル：</source>
+          <target state="needs-review-translation">The file: </target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LineNumber" translate="yes" xml:space="preserve">
+          <source>行：</source>
+          <target state="needs-review-translation">The line: </target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel" translate="yes" xml:space="preserve">
+          <source>レベル：</source>
+          <target state="needs-review-translation">The level: </target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Debug" translate="yes" xml:space="preserve">
+          <source>デバッグ</source>
+          <target state="needs-review-translation">Debug</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Error" translate="yes" xml:space="preserve">
+          <source>エラー</source>
+          <target state="needs-review-translation">Error</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Info" translate="yes" xml:space="preserve">
+          <source>情報</source>
+          <target state="needs-review-translation">Information</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Invalid" translate="yes" xml:space="preserve">
+          <source>(無効)</source>
+          <target state="needs-review-translation">(invalid)</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Verbose" translate="yes" xml:space="preserve">
+          <source>詳細</source>
+          <target state="needs-review-translation">Verbose log</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Warning" translate="yes" xml:space="preserve">
+          <source>警告</source>
+          <target state="needs-review-translation">Warning</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_Method" translate="yes" xml:space="preserve">
+          <source>関数：</source>
+          <target state="needs-review-translation">The function: </target>
+        </trans-unit>
+        <trans-unit id="LogDataView_OutputDate" translate="yes" xml:space="preserve">
+          <source>日時：</source>
+          <target state="needs-review-translation">The date/time: </target>
+        </trans-unit>
+        <trans-unit id="LogDataView_OutputDate_Unknown" translate="yes" xml:space="preserve">
+          <source>不明</source>
+          <target state="needs-review-translation">Unknown</target>
+        </trans-unit>
       </group>
     </body>
   </file>

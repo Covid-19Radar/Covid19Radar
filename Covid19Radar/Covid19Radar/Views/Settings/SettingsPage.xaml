@@ -65,6 +65,12 @@
 			<Frame Padding="10" HasShadow="False">
 				<Button
 					Style="{StaticResource DefaultButton}"
+					Text="{x:Static resources:AppResources.SettingsPageButton_ShowLogsPage}"
+					Command="{Binding ShowLogsPage}" />
+			</Frame>
+			<Frame Padding="10" HasShadow="False">
+				<Button
+					Style="{StaticResource DefaultButton}"
 					Text="{x:Static resources:AppResources.SettingsPageButton_ShowTutorialNextTime}"
 					Command="{Binding OnChangeShowTutorialNextTime}"
 					FontSize="Small" />

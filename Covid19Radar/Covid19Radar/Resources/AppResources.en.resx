@@ -988,4 +988,52 @@ Storage :</value>
   <data name="WikipediaUrl" xml:space="preserve">
     <value>https://en.wikipedia.org/wiki/COVID-19_pandemic</value>
   </data>
+  <data name="LogsPageTitle" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="LogsPage_Picker" xml:space="preserve">
+    <value>Select a log file</value>
+  </data>
+  <data name="LogsPage_UnknownFile" xml:space="preserve">
+    <value>Unknown file "{0}"</value>
+  </data>
+  <data name="SettingsPageButton_ShowLogsPage" xml:space="preserve">
+    <value>Show the logs</value>
+  </data>
+  <data name="LogDataView_FilePath" xml:space="preserve">
+    <value>The file: </value>
+  </data>
+  <data name="LogDataView_LineNumber" xml:space="preserve">
+    <value>The line: </value>
+  </data>
+  <data name="LogDataView_LogLevel" xml:space="preserve">
+    <value>The level: </value>
+  </data>
+  <data name="LogDataView_LogLevel_Debug" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="LogDataView_LogLevel_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="LogDataView_LogLevel_Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="LogDataView_LogLevel_Invalid" xml:space="preserve">
+    <value>(invalid)</value>
+  </data>
+  <data name="LogDataView_LogLevel_Verbose" xml:space="preserve">
+    <value>Verbose log</value>
+  </data>
+  <data name="LogDataView_LogLevel_Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="LogDataView_Method" xml:space="preserve">
+    <value>The function: </value>
+  </data>
+  <data name="LogDataView_OutputDate" xml:space="preserve">
+    <value>The date/time: </value>
+  </data>
+  <data name="LogDataView_OutputDate_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
 </root>
