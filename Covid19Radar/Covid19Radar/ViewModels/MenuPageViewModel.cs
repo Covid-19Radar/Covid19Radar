@@ -84,17 +84,17 @@ namespace Covid19Radar.ViewModels
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(NotContactPage),
-				Title    = AppResources.NotContactPageTitle
+				Title    = "=0 " + AppResources.NotContactPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF0C0",
 				PageName = nameof(ContactedNotifyPage),
-				Title    = AppResources.ContactedNotifyPageTitle
+				Title    = ">0 " + AppResources.ContactedNotifyPageTitle
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
 				PageName = nameof(PrivacyPolicyPage),
-				Title    = AppResources.PrivacyPolicyPageTitle
+				Title    = AppResources.PrivacyPolicyPageTitle + " 1"
 			});
 			this.MenuItems.Add(new() {
 				Icon     = "\uF70E",
