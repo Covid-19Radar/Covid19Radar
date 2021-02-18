@@ -41,13 +41,12 @@ namespace Covid19Radar.Views
 		private async ValueTask ShowLogData(IReadOnlyList<LogData> logs)
 		{
 			_logger.StartMethod();
-			UserDialogs.Instance.ShowLoading(AppResources.LogsPage_Loading);
 			logDataViews.Children.Clear();
 			int count = logs.Count;
 			for (int i = 0; i < count; ++i) {
 				var logData = logs[i];
 				logDataViews.Children.Add(await Task.Run(() => new LogDataView() { LogData = logData }));
-				_logger.Verbose($"{i}/{count}...");
+				UserDialogs.Instance.ShowLoading($"{AppResources.LogsPage_Loading}\r\n{i}/{count}");
 			}
 			UserDialogs.Instance.HideLoading();
 			_logger.EndMethod();
