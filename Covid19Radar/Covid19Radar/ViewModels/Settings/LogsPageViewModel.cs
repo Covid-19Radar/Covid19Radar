@@ -81,7 +81,7 @@ namespace Covid19Radar.ViewModels
 			{
 				var dt = _owner._log_path.GetDate(_fname);
 				if (dt.HasValue) {
-					return dt.Value.ToLongDateString();
+					return $"{dt.Value.ToLongDateString()} - {dt.Value.Hour:D02}";
 				} else {
 					return string.Format(AppResources.LogsPage_UnknownFile, Path.GetFileName(_fname));
 				}
