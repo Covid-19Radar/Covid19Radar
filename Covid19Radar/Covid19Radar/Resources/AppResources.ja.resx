@@ -1005,13 +1005,13 @@
     <value>動作情報を表示</value>
   </data>
   <data name="LogDataView_FilePath" xml:space="preserve">
-    <value>ファイル：</value>
+    <value>ファイル</value>
   </data>
   <data name="LogDataView_LineNumber" xml:space="preserve">
-    <value>行：</value>
+    <value>行</value>
   </data>
   <data name="LogDataView_LogLevel" xml:space="preserve">
-    <value>レベル：</value>
+    <value>レベル</value>
   </data>
   <data name="LogDataView_LogLevel_Debug" xml:space="preserve">
     <value>デバッグ</value>
@@ -1032,10 +1032,10 @@
     <value>警告</value>
   </data>
   <data name="LogDataView_Method" xml:space="preserve">
-    <value>関数：</value>
+    <value>関数</value>
   </data>
   <data name="LogDataView_OutputDate" xml:space="preserve">
-    <value>日時：</value>
+    <value>日時</value>
   </data>
   <data name="LogDataView_OutputDate_Unknown" xml:space="preserve">
     <value>不明</value>

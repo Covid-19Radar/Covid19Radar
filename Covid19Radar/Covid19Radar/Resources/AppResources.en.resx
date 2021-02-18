@@ -1001,13 +1001,13 @@ Storage :</value>
     <value>Show the logs</value>
   </data>
   <data name="LogDataView_FilePath" xml:space="preserve">
-    <value>The file: </value>
+    <value>The file</value>
   </data>
   <data name="LogDataView_LineNumber" xml:space="preserve">
-    <value>The line: </value>
+    <value>The line</value>
   </data>
   <data name="LogDataView_LogLevel" xml:space="preserve">
-    <value>The level: </value>
+    <value>The level</value>
   </data>
   <data name="LogDataView_LogLevel_Debug" xml:space="preserve">
     <value>Debug</value>
@@ -1028,10 +1028,10 @@ Storage :</value>
     <value>Warning</value>
   </data>
   <data name="LogDataView_Method" xml:space="preserve">
-    <value>The function: </value>
+    <value>The function</value>
   </data>
   <data name="LogDataView_OutputDate" xml:space="preserve">
-    <value>The date/time: </value>
+    <value>The date/time</value>
   </data>
   <data name="LogDataView_OutputDate_Unknown" xml:space="preserve">
     <value>Unknown</value>

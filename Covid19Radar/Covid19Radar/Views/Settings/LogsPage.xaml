@@ -13,17 +13,19 @@
 		<StackLayout>
 			<BoxView Style="{StaticResource DefaultLineStyle}" />
 			<Frame Padding="15" HasShadow="False">
-				<Picker
-					x:Name="filePicker"
-					Title="{Binding PickerTitle}"
-					ItemsSource="{Binding Files}"
-					VerticalOptions="Start"
-					SelectedIndexChanged="filePicker_SelectedIndexChanged"/>
+				<StackLayout>
+					<Picker
+						x:Name="filePicker"
+						Title="{Binding PickerTitle}"
+						ItemsSource="{Binding Files}"
+						VerticalOptions="Start"
+						SelectedIndexChanged="filePicker_SelectedIndexChanged"/>
+					<Label
+						x:Name="progress"
+						IsVisible="false"
+						Style="{StaticResource DefaultLabelMicro}" />
+				</StackLayout>
 			</Frame>
-			<Label
-				x:Name="progress"
-				IsVisible="false"
-				Style="{StaticResource DefaultLabelMicro}" />
 			<BoxView Style="{StaticResource DefaultLineStyle}" />
 			<ScrollView>
 				<StackLayout x:Name="logDataViews" />

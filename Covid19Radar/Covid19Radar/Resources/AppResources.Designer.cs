@@ -998,7 +998,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   ファイル： に類似しているローカライズされた文字列を検索します。
+        ///   ファイル に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogDataView_FilePath {
             get {
@@ -1007,7 +1007,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   行： に類似しているローカライズされた文字列を検索します。
+        ///   行 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogDataView_LineNumber {
             get {
@@ -1016,7 +1016,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   レベル： に類似しているローカライズされた文字列を検索します。
+        ///   レベル に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogDataView_LogLevel {
             get {
@@ -1079,7 +1079,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   関数： に類似しているローカライズされた文字列を検索します。
+        ///   関数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogDataView_Method {
             get {
@@ -1088,7 +1088,7 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
-        ///   日時： に類似しているローカライズされた文字列を検索します。
+        ///   日時 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogDataView_OutputDate {
             get {

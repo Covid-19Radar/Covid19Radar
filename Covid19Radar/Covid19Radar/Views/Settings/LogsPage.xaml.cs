@@ -48,7 +48,7 @@ namespace Covid19Radar.Views
 			for (int i = 0; i < count; ++i) {
 				var logData = logs[i];
 				logDataViews.Children.Add(await Task.Run(() => new LogDataView() { LogData = logData }));
-				progress.Text = $"{i,6}/{count,6}={i/count_d:000.00}%";
+				progress.Text = $"{i/count_d:000.00}% = {i} / {count}";
 			}
 			progress.IsVisible = false;
 			UserDialogs.Instance.HideLoading();

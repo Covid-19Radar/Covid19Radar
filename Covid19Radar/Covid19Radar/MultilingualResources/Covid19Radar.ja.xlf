@@ -1499,16 +1499,19 @@
           <target state="needs-review-translation">動作情報を表示</target>
         </trans-unit>
         <trans-unit id="LogDataView_FilePath" translate="yes" xml:space="preserve">
-          <source>ファイル：</source>
-          <target state="needs-review-translation">ファイル：</target>
+          <source>ファイル</source>
+          <target state="needs-review-translation">ファイル</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LogDataView_LineNumber" translate="yes" xml:space="preserve">
-          <source>行：</source>
-          <target state="needs-review-translation">行：</target>
+          <source>行</source>
+          <target state="needs-review-translation">行</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LogDataView_LogLevel" translate="yes" xml:space="preserve">
-          <source>レベル：</source>
-          <target state="needs-review-translation">レベル：</target>
+          <source>レベル</source>
+          <target state="needs-review-translation">レベル</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LogDataView_LogLevel_Debug" translate="yes" xml:space="preserve">
           <source>デバッグ</source>
@@ -1535,12 +1538,14 @@
           <target state="needs-review-translation">警告</target>
         </trans-unit>
         <trans-unit id="LogDataView_Method" translate="yes" xml:space="preserve">
-          <source>関数：</source>
-          <target state="needs-review-translation">関数：</target>
+          <source>関数</source>
+          <target state="needs-review-translation">関数</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LogDataView_OutputDate" translate="yes" xml:space="preserve">
-          <source>日時：</source>
-          <target state="needs-review-translation">日時：</target>
+          <source>日時</source>
+          <target state="needs-review-translation">日時</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="LogDataView_OutputDate_Unknown" translate="yes" xml:space="preserve">
           <source>不明</source>
