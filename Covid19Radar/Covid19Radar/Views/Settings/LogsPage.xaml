@@ -20,6 +20,10 @@
 					VerticalOptions="Start"
 					SelectedIndexChanged="filePicker_SelectedIndexChanged"/>
 			</Frame>
+			<Label
+				x:Name="progress"
+				IsVisible="false"
+				Style="{StaticResource DefaultLabelMicro}" />
 			<BoxView Style="{StaticResource DefaultLineStyle}" />
 			<ScrollView>
 				<StackLayout x:Name="logDataViews" />
