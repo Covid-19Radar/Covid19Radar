@@ -43,6 +43,7 @@ namespace Covid19Radar.ViewModels
 				}
 			}
 			_logger.Info("The user data is not null.");
+			_user_data.IsOptined    = true;
 			_user_data.SkipTutorial = true;
 			await _user_data_service.SetAsync(_user_data);
 			_logger.Info($"The user data property \'{nameof(_user_data.IsOptined)}\' is set to \'{_user_data.IsOptined}\'.");

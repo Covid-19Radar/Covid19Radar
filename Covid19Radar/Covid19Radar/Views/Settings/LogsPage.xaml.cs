@@ -1,7 +1,10 @@
 ﻿using System;
-using System.Threading;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Covid19Radar.Controls;
+using Covid19Radar.Resources;
+using Covid19Radar.Services.Logs;
 using Covid19Radar.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -12,48 +15,42 @@ namespace Covid19Radar.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LogsPage : ContentPage
 	{
-		private CancellationTokenSource? _cts;
+		private readonly ILoggerService _logger;
 
-		public LogsPage()
+		public LogsPage(ILoggerService logger)
 		{
+			_logger = logger ?? throw new ArgumentNullException(nameof(logger));
 			this.InitializeComponent();
 		}
 
 		private async void filePicker_SelectedIndexChanged(object sender, EventArgs e)
 		{
+			_logger.StartMethod();
 			if (filePicker.SelectedItem is LogsPageViewModel.LogFileInfo lfi) {
-				lock (this) {
-					if (_cts is not null) {
-						_cts.Cancel();
-					}
+				_logger.Info("The selected item is a log file.");
+				var logs = await Task.Run(() => lfi.GetLogData());
+				if (logs is not null) {
+					await this.ShowLogData(logs);
 				}
-				using (var cts = new CancellationTokenSource()) {
-					lock (this) {
-						_cts = cts;
-					}
-					var token = cts.Token;
-					await Task.Run(async () => {
-						token.ThrowIfCancellationRequested();
-						var logs = lfi.GetLogData();
-						if (logs is not null) {
-							MainThread.BeginInvokeOnMainThread(() => {
-								logDataViews.Children.Clear();
-							});
-							int count = logs.Count;
-							for (int i = 0; i < count && !token.IsCancellationRequested; ++i) {
-								var logData = logs[i];
-								MainThread.BeginInvokeOnMainThread(() => {
-									logDataViews.Children.Add(new LogDataView() { LogData = logData });
-								});
-								await Task.Delay(10);
-							}
-						}
-					}, token);
-					lock (this) {
-						_cts = null;
-					}
-				}
+			} else {
+				_logger.Warning("The selected item is not a log file.");
 			}
+			_logger.EndMethod();
+		}
+
+		private async ValueTask ShowLogData(IReadOnlyList<LogData> logs)
+		{
+			_logger.StartMethod();
+			UserDialogs.Instance.ShowLoading(AppResources.LogsPage_Loading);
+			logDataViews.Children.Clear();
+			int count = logs.Count;
+			for (int i = 0; i < count; ++i) {
+				var logData = logs[i];
+				logDataViews.Children.Add(await Task.Run(() => new LogDataView() { LogData = logData }));
+				_logger.Verbose($"{i}/{count}...");
+			}
+			UserDialogs.Instance.HideLoading();
+			_logger.EndMethod();
 		}
 	}
 }

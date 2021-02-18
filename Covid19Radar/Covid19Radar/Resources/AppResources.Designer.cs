@@ -1106,6 +1106,15 @@ namespace Covid19Radar.Resources {
         }
         
         /// <summary>
+        ///   読み込み中... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LogsPage_Loading {
+            get {
+                return ResourceManager.GetString("LogsPage_Loading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ログファイルを選択してください に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LogsPage_Picker {

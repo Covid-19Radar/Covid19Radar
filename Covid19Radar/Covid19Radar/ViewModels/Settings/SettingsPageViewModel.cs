@@ -65,12 +65,12 @@ namespace Covid19Radar.ViewModels
 			if (_user_data.SkipTutorial) {
 				await UserDialogs.Instance.AlertAsync(
 					AppResources.SettingsPageDialog_ShowTutorialNextTime_Hide,
-					AppResources.ButtonOk
+					okText: AppResources.ButtonOk
 				);
 			} else {
 				await UserDialogs.Instance.AlertAsync(
 					AppResources.SettingsPageDialog_ShowTutorialNextTime_Show,
-					AppResources.ButtonOk
+					okText: AppResources.ButtonOk
 				);
 			}
 			_logger.EndMethod();

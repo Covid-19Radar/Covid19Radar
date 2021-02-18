@@ -1036,4 +1036,7 @@ Storage :</value>
   <data name="LogDataView_OutputDate_Unknown" xml:space="preserve">
     <value>Unknown</value>
   </data>
+  <data name="LogsPage_Loading" xml:space="preserve">
+    <value>Now loading...</value>
+  </data>
 </root>

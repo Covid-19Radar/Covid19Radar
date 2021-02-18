@@ -1543,6 +1543,10 @@
           <source>不明</source>
           <target state="new">不明</target>
         </trans-unit>
+        <trans-unit id="LogsPage_Loading" translate="yes" xml:space="preserve">
+          <source>読み込み中...</source>
+          <target state="new">読み込み中...</target>
+        </trans-unit>
       </group>
     </body>
   </file>
