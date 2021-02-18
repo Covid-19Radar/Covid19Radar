@@ -68,6 +68,7 @@
 					Text="{x:Static resources:AppResources.SettingsPageButton_ShowLogsPage}"
 					Command="{Binding ShowLogsPage}" />
 			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
 			<Frame Padding="10" HasShadow="False">
 				<Button
 					Style="{StaticResource DefaultButton}"

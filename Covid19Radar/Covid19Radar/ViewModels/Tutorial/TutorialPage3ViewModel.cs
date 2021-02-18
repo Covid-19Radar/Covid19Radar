@@ -28,7 +28,7 @@ namespace Covid19Radar.ViewModels
 		public Command OnClickAgree => new(async () => {
 			_logger.StartMethod();
 			UserDialogs.Instance.ShowLoading(AppResources.LoadingTextRegistering);
-			if (!_user_data.IsOptined || _user_data.Secret is null || _user_data.UserUuid is null) {
+			if ((!_user_data.IsOptined) || _user_data.Secret is null || _user_data.UserUuid is null) {
 				_logger.Info("Registering the user...");
 				if (!await _user_data_service.RegisterUserAsync(_user_data)) {
 					_logger.Warning("Failed to register the user!!!");

@@ -71,6 +71,8 @@ namespace Covid19Radar.ViewModels
 			this.Title         = AppResources.HomePageTitle;
 			this.StartDate     = _user_data.GetLocalDateString();
 			this.PastDate      = (DateTime.UtcNow - _user_data.StartDateTime).Days.ToString();
+
+			_user_data_service.UserDataChanged += this._user_data_service_UserDataChanged;
 		}
 
 		public override async void Initialize(INavigationParameters parameters)
@@ -84,12 +86,28 @@ namespace Covid19Radar.ViewModels
 				await _ens.FetchExposureKeyAsync();
 				_logger.Info($"The exposure notification status: {await _ens.UpdateStatusMessageAsync()}");
 				base.Initialize(parameters);
+				this.UpdateIsAvailable();
 			} catch (Exception e) {
 				_logger.Error("Could not get an exposure notification status.");
 				_logger.Exception("Failed to initialize.", e);
 			} finally {
 				_logger.EndMethod();
 			}
+		}
+
+		private void _user_data_service_UserDataChanged(object sender, UserDataModel e)
+		{
+			_logger.StartMethod();
+			this.UpdateIsAvailable();
+			_logger.EndMethod();
+		}
+
+		private void UpdateIsAvailable()
+		{
+			_logger.StartMethod();
+			this.IsAvailable = _user_data.IsExposureNotificationEnabled && _user_data.IsNotificationEnabled;
+			_logger.Info("Is the notification available? " + _is_available);
+			_logger.EndMethod();
 		}
 	}
 }
