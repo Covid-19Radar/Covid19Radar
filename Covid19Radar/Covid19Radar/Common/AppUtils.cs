@@ -1,4 +1,7 @@
-﻿using Acr.UserDialogs;
+﻿#if !DEBUG
+#define NDEBUG
+#endif
+using Acr.UserDialogs;
 using Covid19Radar.Resources;
 using Newtonsoft.Json.Linq;
 using System;
@@ -26,7 +29,7 @@ namespace Covid19Radar.Common
                 await Share.RequestAsync(new ShareTextRequest
                 {
                     Uri = AppSettings.Instance.AppStoreUrl,
-                    Title = Resources.AppResources.AppName
+                    Title = AppResources.AppName
                 });
             }
             else if (Device.RuntimePlatform == Device.Android)
@@ -34,12 +37,13 @@ namespace Covid19Radar.Common
                 await Share.RequestAsync(new ShareTextRequest
                 {
                     Uri = AppSettings.Instance.GooglePlayUrl,
-                    Title = Resources.AppResources.AppName
+                    Title = AppResources.AppName
                 });
             }
 
         }
 
+        [Conditional("NDEBUG")]
         public static async void CheckVersion()
         {
             var uri = AppResources.UrlVersion;
@@ -49,11 +53,12 @@ namespace Covid19Radar.Common
                 {
                     var json = await client.GetStringAsync(uri);
                     var versionString = JObject.Parse(json).Value<string>("version");
-
                     if (versionString != AppInfo.VersionString)
                     {
-                        await UserDialogs.Instance.AlertAsync(AppResources.AppUtilsGetNewVersionDescription, AppResources.AppUtilsGetNewVersionTitle, Resources.AppResources.ButtonOk);
-
+                        await UserDialogs.Instance.AlertAsync(
+                            AppResources.AppUtilsGetNewVersionDescription,
+                            AppResources.AppUtilsGetNewVersionTitle,
+                            AppResources.ButtonOk);
                         if (Device.RuntimePlatform == Device.iOS)
                         {
                             await Browser.OpenAsync(AppSettings.Instance.AppStoreUrl, BrowserLaunchMode.External);
@@ -62,16 +67,11 @@ namespace Covid19Radar.Common
                         {
                             await Browser.OpenAsync(AppSettings.Instance.GooglePlayUrl, BrowserLaunchMode.External);
                         }
-
                     }
-
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.ToString());
-                }
-                finally
-                {
                 }
             }
         }

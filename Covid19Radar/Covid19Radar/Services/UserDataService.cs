@@ -1,10 +1,8 @@
 ﻿using Covid19Radar.Common;
 using Covid19Radar.Model;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace Covid19Radar.Services
 {
@@ -70,6 +68,7 @@ namespace Covid19Radar.Services
             current = null;
             SecureStorage.Remove(AppConstants.StorageKey.UserData);
             SecureStorage.Remove(AppConstants.StorageKey.Secret);
+            await Task.CompletedTask;
         }
     }
 

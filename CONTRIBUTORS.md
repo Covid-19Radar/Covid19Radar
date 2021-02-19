@@ -81,6 +81,7 @@
 - Yuto Takano
 - Jean-Noël Ribelles (French/English Translation)
 - Niccori 250k (Xamarin)
+- Takym (News Page)
 - Strice ([Portuguese Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=xx-thedoctor-xx))
 - Neko7sora
 
