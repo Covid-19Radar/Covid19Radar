@@ -4,55 +4,54 @@ using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 
-
 namespace Covid19Radar
 {
-    public class AppSettings
-    {
-        static AppSettings instance;
+	public sealed class AppSettings
+	{
+		public static AppSettings Instance                 { get; } = new AppSettings();
+		public        string      AppVersion               { get; }
+		public        string      ApiSecret                { get; }
+		public        string      ApiKey                   { get; }
+		public        string      ApiUrlBase               { get; }
+		public        string[]    SupportedRegions         { get; }
+		public        string      BlobStorageContainerName { get; }
+		public        string      AndroidSafetyNetApiKey   { get; }
+		public        string      CdnUrlBase               { get; }
+		public        string      AppStoreUrl              { get; }
+		public        string      GooglePlayUrl            { get; }
+		public        string      SupportEmail             { get; }
+		public        string      LicenseUrl               { get; }
+		public        string      LogStorageEndpoint       { get; }
+		public        string      LogStorageContainerName  { get; }
+		public        string      LogStorageAccountName    { get; }
 
-        public static AppSettings Instance
-            => instance ??= new AppSettings();
+		private AppSettings()
+		{
+			JObject json;
+			using (var file = Assembly.GetExecutingAssembly().GetManifestResourceStream("Covid19Radar.settings.json"))
+			using (var sr   = new StreamReader(file)) {
+				json = JObject.Parse(sr.ReadToEnd());
+			}
+			this.AppVersion               = json.Value<string>("appVersion");
+			this.ApiSecret                = json.Value<string>("apiSecret");
+			this.ApiKey                   = json.Value<string>("apiKey");
+			this.ApiUrlBase               = json.Value<string>("apiUrlBase");
+			this.SupportedRegions         = json.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
+			this.BlobStorageContainerName = json.Value<string>("blobStorageContainerName");
+			this.AndroidSafetyNetApiKey   = json.Value<string>("androidSafetyNetApiKey");
+			this.CdnUrlBase               = json.Value<string>("cdnUrlBase");
+			this.LicenseUrl               = json.Value<string>("licenseUrl");
+			this.AppStoreUrl              = json.Value<string>("appStoreUrl");
+			this.GooglePlayUrl            = json.Value<string>("googlePlayUrl");
+			this.SupportEmail             = json.Value<string>("supportEmail");
+			this.LogStorageEndpoint       = json.Value<string>("logStorageEndpoint");
+			this.LogStorageContainerName  = json.Value<string>("logStorageContainerName");
+			this.LogStorageAccountName    = json.Value<string>("logStorageAccountName");
+		}
 
-        public AppSettings()
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-
-            using var file = assembly.GetManifestResourceStream("Covid19Radar.settings.json");
-            using var sr = new StreamReader(file);
-            var json = sr.ReadToEnd();
-            var j = JObject.Parse(json);
-
-            AppVersion = j.Value<string>("appVersion");
-            LicenseUrl = j.Value<string>("licenseUrl");
-            AppStoreUrl = j.Value<string>("appStoreUrl");
-            GooglePlayUrl = j.Value<string>("googlePlayUrl");
-            ApiUrlBase = j.Value<string>("apiUrlBase");
-            ApiSecret = j.Value<string>("apiSecret");
-            CdnUrlBase = j.Value<string>("cdnUrlBase");
-            BlobStorageContainerName = j.Value<string>("blobStorageContainerName");
-            SupportedRegions = j.Value<string>("supportedRegions").ToUpperInvariant().Split(';', ',', ':');
-            AndroidSafetyNetApiKey = j.Value<string>("androidSafetyNetApiKey");
-            SupportEmail = j.Value<string>("supportEmail");
-
-        }
-        public string SupportEmail { get; }
-        public string AppVersion { get; }
-        public string LicenseUrl { get; }
-        public string ApiUrlBase { get; }
-        public string ApiSecret { get; }
-        public string AppStoreUrl { get; }
-        public string GooglePlayUrl { get; }
-        public string CdnUrlBase { get; }
-
-
-        public string[] SupportedRegions { get; }
-
-        public string BlobStorageContainerName { get; }
-
-        public string AndroidSafetyNetApiKey { get; }
-
-        internal Dictionary<string, ulong> GetDefaultBatch() =>
-            Instance.SupportedRegions.ToDictionary(r => r, r => (ulong)0);
-    }
+		internal Dictionary<string, ulong> GetDefaultBatch()
+		{
+			return this.SupportedRegions.ToDictionary(r => r, _ => 0UL);
+		}
+	}
 }

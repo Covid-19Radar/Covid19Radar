@@ -1,190 +1,171 @@
-﻿using Covid19Radar.Common;
-using Covid19Radar.Model;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using System.Collections.Generic;
-using System.IO;
 using System.Threading;
-using System.Net;
+using System.Threading.Tasks;
+using Covid19Radar.Common;
+using Covid19Radar.Model;
+using Covid19Radar.Services.Logs;
+using Newtonsoft.Json;
 using Xamarin.Essentials;
 
 namespace Covid19Radar.Services
 {
-    public class HttpDataService : IHttpDataService
-    {
-        private readonly HttpClient httpClient;
-        private readonly HttpClient downloadClient;
-        private string secret;
-        public HttpDataService()
-        {
-            this.httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
-            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
-            SetSecret();
-            this.downloadClient = new HttpClient();
-        }
+	public class HttpDataService : IHttpDataService
+	{
+		private readonly ILoggerService _logger;
+		private readonly HttpClient     _api;  // API key based client.
+		private readonly HttpClient     _http; // Secret based client.
+		private readonly HttpClient     _download;
 
-        private void SetSecret()
-        {
-            var storedSecret = SecureStorage.GetAsync(AppConstants.StorageKey.Secret).Result;
-            if (storedSecret != null)
-            {
-                secret = storedSecret;
-            }
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", secret);
-        }
+		public HttpDataService(ILoggerService logger, IHttpClientService httpClientService)
+		{
+			_logger = logger;
 
-        // POST /api/Register - Register User
-        public async Task<UserDataModel> PostRegisterUserAsync()
-        {
-            try
-            {
-                string url = AppSettings.Instance.ApiUrlBase + "/register";
-                var content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
-                var result = await PostAsync(url, content);
-                if (result != null)
-                {
-                    var registerResult = Utils.DeserializeFromJson<RegisterResultModel>(result);
+			// Create API key based client.
+			_api = httpClientService.Create();
+			_api.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
+			_api.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+			_api.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
+			_api.DefaultRequestHeaders.Add("x-api-key", AppSettings.Instance.ApiKey);
 
-                    UserDataModel userData = new UserDataModel();
-                    userData.Secret = registerResult.Secret;
-                    userData.UserUuid = registerResult.UserUuid;
-                    userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
-                    userData.IsOptined = true;
-                    await SecureStorage.SetAsync(AppConstants.StorageKey.Secret, registerResult.Secret);
-                    SetSecret();
-                    return userData;
-                }
-            }
-            catch (HttpRequestException) { }
+			// Create Secret based client.
+			_http = httpClientService.Create();
+			_http.BaseAddress = new Uri(AppSettings.Instance.ApiUrlBase);
+			_http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+			_http.DefaultRequestHeaders.Add("x-functions-key", AppSettings.Instance.ApiSecret);
+			this.SetSecret();
 
-            return null;
-        }
+			// Create download client.
+			_download = httpClientService.Create();
+		}
 
-        public async Task<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
-        {
-            var url = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
-            var content = new StringContent(Utils.SerializeToJson(request), Encoding.UTF8, "application/json");
-            HttpStatusCode status = await PutAsync(url, content);
-            return status;
-        }
+		private void SetSecret()
+		{
+			_http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", SecureStorage.GetAsync(AppConstants.StorageKey.Secret).Result);
+		}
 
-        public async Task<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
-        {
-            string container = AppSettings.Instance.BlobStorageContainerName;
-            string url = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
-            var result = await GetCdnAsync(url, cancellationToken);
-            if (result != null)
-            {
-                return Utils.DeserializeFromJson<List<TemporaryExposureKeyExportFileModel>>(result);
-            }
-            return new List<TemporaryExposureKeyExportFileModel>();
-        }
+		// POST /api/Register - Register User
+		public async ValueTask<bool> PostRegisterUserAsync(UserDataModel userData)
+		{
+			_logger.StartMethod();
+			try {
+				string  url     = AppSettings.Instance.ApiUrlBase + "/register";
+				var     content = new StringContent(string.Empty, Encoding.UTF8, "application/json");
+				string? result  = await this.PostAsync(url, content);
+				if (!string.IsNullOrEmpty(result)) {
+					var registerResult = JsonConvert.DeserializeObject<RegisterResultModel>(result);
+					userData.Secret             = registerResult.Secret;
+					userData.UserUuid           = registerResult.UserUuid;
+					userData.JumpConsistentSeed = registerResult.JumpConsistentSeed;
+					userData.IsOptined          = true;
+					await SecureStorage.SetAsync(AppConstants.StorageKey.Secret, registerResult.Secret);
+					this.SetSecret();
+					_logger.EndMethod();
+					return true;
+				}
+			} catch (HttpRequestException e) {
+				_logger.Exception("Failed to register an user.", e);
+			}
+			_logger.EndMethod();
+			return false;
+		}
 
-        public async Task<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
-        {
-            return await GetCdnStreamAsync(url, cancellationToken);
-        }
+		public async ValueTask<HttpStatusCode> PutSelfExposureKeysAsync(DiagnosisSubmissionParameter request)
+		{
+			_logger.StartMethod();
+			string url      = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/diagnosis";
+			var    content  = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+			var    response = await _http.PutAsync(url, content);
+			await response.Content.ReadAsStringAsync();
+			_logger.EndMethod();
+			return response.StatusCode;
+		}
 
-        private async Task<string> GetAsync(string url)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
+		public async ValueTask<List<TemporaryExposureKeyExportFileModel>> GetTemporaryExposureKeyList(string region, CancellationToken cancellationToken)
+		{
+			_logger.StartMethod();
+			string  container = AppSettings.Instance.BlobStorageContainerName;
+			string  url       = AppSettings.Instance.CdnUrlBase + $"{container}/{region}/list.json";
+			string? result    = await this.GetCdnAsync(url, async c => await c.ReadAsStringAsync(), cancellationToken);
+			if (result is null) {
+				_logger.Error("Failed to download");
+				_logger.EndMethod();
+				return new List<TemporaryExposureKeyExportFileModel>();
+			} else {
+				_logger.Info("Success to download");
+				_logger.EndMethod();
+				return JsonConvert.DeserializeObject<List<TemporaryExposureKeyExportFileModel>>(result);
+			}
+		}
 
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
+		public async ValueTask<Stream> GetTemporaryExposureKey(string url, CancellationToken cancellationToken)
+		{
+			var result = await this.GetCdnAsync(url, async c => await c.ReadAsStreamAsync(), cancellationToken);
+			if (result is null) {
+				throw new NullReferenceException("The download result was null.");
+			} else {
+				return result;
+			}
+		}
 
-        private async Task<string> GetAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = httpClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
+		public async ValueTask<ApiResponse<LogStorageSas?>> GetLogStorageSas()
+		{
+			_logger.StartMethod();
+			HttpStatusCode statusCode;
+			LogStorageSas? logStorageSas;
+			try {
+				string requestUrl = $"{AppSettings.Instance.ApiUrlBase.TrimEnd('/')}/inquirylog";
+				var    response   = await _api.GetAsync(requestUrl);
+				statusCode = response.StatusCode;
+				_logger.Info($"Response status: {statusCode} ({(int)(statusCode)})");
+				if (response.StatusCode == HttpStatusCode.OK) {
+					logStorageSas = JsonConvert.DeserializeObject<LogStorageSas>(await response.Content.ReadAsStringAsync());
+				} else {
+					logStorageSas = null;
+				}
+			} catch (Exception e) {
+				_logger.Exception("Failed get log storage SAS.", e);
+				statusCode    = 0;
+				logStorageSas = null;
+			}
+			_logger.EndMethod();
+			return new ApiResponse<LogStorageSas?>(statusCode, logStorageSas);
+		}
 
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-        private async Task<string> GetCdnAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
+		private async ValueTask<T?> GetCdnAsync<T>(string url, Func<HttpContent, ValueTask<T?>> read, CancellationToken cancellationToken)
+		{
+			_logger.StartMethod();
+			var response = await _download.GetAsync(url, cancellationToken);
+			var result   = await read(response.Content);
+			if (response.StatusCode == HttpStatusCode.OK) {
+				_logger.Info("Succeed to download.");
+				_logger.EndMethod();
+				return result;
+			} else {
+				_logger.Error("Failed to download.");
+				_logger.EndMethod();
+				return default;
+			}
+		}
 
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-        private async Task<string> GetCdnAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStringAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<Stream> GetCdnStreamAsync(string url)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStreamAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStreamAsync();
-            }
-            return null;
-        }
-
-        private async Task<Stream> GetCdnStreamAsync(string url, CancellationToken cancellationToken)
-        {
-            Task<HttpResponseMessage> response = downloadClient.GetAsync(url, cancellationToken);
-            HttpResponseMessage result = await response;
-            await result.Content.ReadAsStreamAsync();
-
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStreamAsync();
-            }
-            return null;
-        }
-
-
-        private async Task<string> PostAsync(string url, HttpContent body)
-        {
-            HttpResponseMessage result = await httpClient.PostAsync(url, body);
-            await result.Content.ReadAsStringAsync();
-            if (result.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return await result.Content.ReadAsStringAsync();
-            }
-            return null;
-        }
-
-        private async Task<HttpStatusCode> PutAsync(string url, HttpContent body)
-        {
-            var result = await httpClient.PutAsync(url, body);
-            await result.Content.ReadAsStringAsync();
-            return result.StatusCode;
-        }
-
-    }
+		private async ValueTask<string?> PostAsync(string url, HttpContent body)
+		{
+			_logger.StartMethod();
+			var     response = await _http.PostAsync(url, body);
+			string? result   = await response.Content.ReadAsStringAsync();
+			if (response.StatusCode == HttpStatusCode.OK) {
+				_logger.Info("Succeed to post data.");
+				_logger.EndMethod();
+				return result;
+			} else {
+				_logger.Error("Failed to post data.");
+				return null;
+			}
+		}
+	}
 }

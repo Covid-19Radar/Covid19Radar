@@ -27,8 +27,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
-    <CodesignProvision>Covid19radar</CodesignProvision>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <LangVersion>latest</LangVersion>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
@@ -59,12 +58,11 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>Apple Development: Hirose Kazumi (B5NUWQDLW4)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
     <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
-    <CodesignProvision>Covid19radar</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type --weak-framework=ExposureNotification</MtouchExtraArgs>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
@@ -205,6 +203,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\CustomDatePickerRenderer.cs" />
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\DeviceCheckService.cs" />
     <Compile Include="Services\SkipBackup.cs" />
@@ -278,6 +277,9 @@
     <Compile Include="Extensions\AlignmentExtensions.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\FormattedStringExtensions.cs" />
+    <Compile Include="Services\Logs\LogFileServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPathServiceIos.cs" />
+    <Compile Include="Services\Logs\LogPeriodicDeleteServiceIos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
@@ -289,12 +291,43 @@
     <BundleResource Include="Resources\Logo.png" />
     <BundleResource Include="Resources\Logo%402x.png" />
     <BundleResource Include="Resources\Logo%403x.png" />
+    <BundleResource Include="Resources\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\en.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%403x.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01%402x.png" />
+    <BundleResource Include="Resources\zh.lproj\privacypolicy_img01.png" />
+    <BundleResource Include="Resources\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\arrow_icon.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\Base.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\en.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\ja.lproj\arrow_icon.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon%403x.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon%402x.png" />
+    <BundleResource Include="Resources\zh.lproj\arrow_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.IO.Compression.FileSystem" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
@@ -302,6 +335,9 @@
     </PackageReference>
     <PackageReference Include="Google.Protobuf">
       <Version>3.12.3</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.LocalNotification">
+      <Version>5.0.4</Version>
     </PackageReference>
     <PackageReference Include="Prism.Autofac.Forms">
       <Version>7.1.0.431</Version>
@@ -608,6 +644,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\IconHamburger%403x.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

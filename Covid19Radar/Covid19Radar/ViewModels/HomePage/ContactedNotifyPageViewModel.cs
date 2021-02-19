@@ -1,63 +1,36 @@
-﻿using Covid19Radar.Services;
-using Prism.Navigation;
-using Xamarin.Forms;
-using Xamarin.Essentials;
+﻿using System;
 using Covid19Radar.Resources;
-using Newtonsoft.Json.Linq;
-using System.Net.Http;
-using System;
-using ImTools;
-using Acr.UserDialogs;
-using System.Diagnostics;
+using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ContactedNotifyPageViewModel : ViewModelBase
-    {
-        private string _exposureCount;
-        public string ExposureCount
-        {
-            get { return _exposureCount; }
-            set { SetProperty(ref _exposureCount, value); }
-        }
+	public class ContactedNotifyPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService _logger;
+		private          string         _exposure_count;
 
-        private readonly ExposureNotificationService exposureNotificationService;
+		public string ExposureCount
+		{
+			get => _exposure_count;
+			set => this.SetProperty(ref _exposure_count, value ?? string.Empty);
+		}
 
+		public Command OnClickByForm => new(async () => {
+			_logger.StartMethod();
+			await Browser.OpenAsync(AppResources.UrlContactedForm, BrowserLaunchMode.SystemPreferred);
+			_logger.EndMethod();
+		});
 
-        public ContactedNotifyPageViewModel(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService) : base(navigationService, userDataService, exposureNotificationService)
-        {
-            Title = Resources.AppResources.TitleUserStatusSettings;
-            this.exposureNotificationService = exposureNotificationService;
-            ExposureCount = exposureNotificationService.GetExposureCount().ToString();
-        }
-        public Command OnClickByForm => new Command(async () =>
-        {
-            var uri = AppResources.UrlContactedForm;
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-        });
-        public Command OnClickByPhone => new Command(async () =>
-        {
-            var uri = AppResources.UrlContactedPhone;
-            using (var client = new HttpClient())
-            {
-                UserDialogs.Instance.ShowLoading();
-                try
-                {
-                    var json = await client.GetStringAsync(uri);
-                    var phoneNumber = JObject.Parse(json).Value<string>("phone");
-                    Debug.WriteLine($"Contacted phone call number = {phoneNumber}");
-                    PhoneDialer.Open(phoneNumber);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.ToString());
-                }
-                finally
-                {
-                    UserDialogs.Instance.HideLoading();
-                }
-            }
-        });
-
-    }
+		public ContactedNotifyPageViewModel(ILoggerService logger, ExposureNotificationService exposureNotificationService)
+		{
+			_logger            =  logger                      ?? throw new ArgumentNullException(nameof(logger));
+			_exposure_count    = (exposureNotificationService ?? throw new ArgumentNullException(nameof(exposureNotificationService)))
+			                   .GetExposureCount().ToString();
+			this.Title         = AppResources.TitleUserStatusSettings;
+			this.RaisePropertyChanged(nameof(this.ExposureCount));
+		}
+	}
 }

@@ -1,135 +1,133 @@
-﻿using Covid19Radar.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using Xamarin.ExposureNotifications;
-using Covid19Radar.Model;
-using System.Threading;
 using System.Globalization;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using Covid19Radar.Common;
+using Xamarin.ExposureNotifications;
 
 namespace Covid19Radar.Model
 {
-    public class UserDataModel : IEquatable<UserDataModel>
-    {
+	public class UserDataModel : IEquatable<UserDataModel>
+	{
+		/// <summary>
+		///  User UUID / take care misunderstand Becon ID
+		/// </summary>
+		/// <value>User UUID</value>
+		public string? UserUuid { get; set; }
 
-        /// <summary>
-        /// User UUID / take care misunderstand Becon ID
-        /// </summary>
-        /// <value>User UUID</value>
-        public string UserUuid { get; set; }
+		/// <summary>
+		///  Secret key
+		/// </summary>
+		/// <value>Secret Key</value>
+		public string? Secret { get; set; }
 
-        /// <summary>
-        /// Secret key
-        /// </summary>
-        /// <value>Secret Key</value>
-        public string Secret { get; set; }
+		/// <summary>
+		///  Jump Consistent Seed
+		/// </summary>
+		/// <value>Jump Consistent Seed</value>
+		public ulong JumpConsistentSeed { get; set; }
 
-        /// <summary>
-        /// Jump Consistent Seed
-        /// </summary>
-        /// <value>Jump Consistent Seed</value>
-        public ulong JumpConsistentSeed { get; set; }
+		/// <summary>
+		///  StartDate
+		/// </summary>
+		public DateTime StartDateTime { get; set; }
 
-        /// <summary>
-        /// StartDate
-        /// </summary>
-        public DateTime StartDateTime { get; set; }
+		/// <summary>
+		///  Last notification date and time
+		/// </summary>
+		public DateTime LastNotificationTime { get; set; }
 
-        /// <summary>
-        /// Last notification date and time
-        /// </summary>
-        public DateTime LastNotificationTime { get; set; }
+		public bool                               SkipTutorial                  { get; set; }
+		public bool                               IsOptined                     { get; set; }
+		public bool                               IsExposureNotificationEnabled { get; set; }
+		public bool                               IsNotificationEnabled         { get; set; }
+		public bool                               IsPositived                   { get; set; }
+		public bool                               IsPolicyAccepted              { get; set; }
+		public Dictionary<string, long>           LastProcessTekTimestamp       { get; set; }
+		public Dictionary<string, ulong>          ServerBatchNumbers            { get; set; }
+		public ObservableCollection<ExposureInfo> ExposureInformation           { get; set; }
+		public ExposureDetectionSummary?          ExposureSummary               { get; set; }
+		public List<PositiveDiagnosisState>       PositiveDiagnoses             { get; set; }
 
-        public bool Equals(UserDataModel other)
-        {
-            return UserUuid == other?.UserUuid
-                && LastNotificationTime == other?.LastNotificationTime
-                && IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
-                //&& IsNotificationEnabled == other.IsNotificationEnabled;
-        }
+		public PositiveDiagnosisState LatestDiagnosis => this.PositiveDiagnoses.OrderByDescending(p => p.DiagnosisDate).FirstOrDefault();
 
-        /// <summary>
-        /// User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
-        /// </summary>
-        /// <value>User Minor</value>
-        public string GetId()
-        {
-            return UserUuid;
-        }
+		public UserDataModel()
+		{
+			this.SkipTutorial                  = false;
+			this.IsOptined                     = false;
+			this.IsExposureNotificationEnabled = false;
+			this.IsNotificationEnabled         = false;
+			this.IsPositived                   = false;
+			this.IsPolicyAccepted              = false;
+			this.LastProcessTekTimestamp       = new Dictionary<string, long>();
+			this.ServerBatchNumbers            = AppSettings.Instance.GetDefaultBatch();
+			this.ExposureInformation           = new ObservableCollection<ExposureInfo>();
+			this.PositiveDiagnoses             = new List<PositiveDiagnosisState>(); // for mock
+		}
 
-        public int GetJumpHashTime()
-        {
-            return JumpHash.JumpConsistentHash(JumpConsistentSeed, 86400);
-        }
+		public bool Equals(UserDataModel other)
+		{
+			return this.UserUuid                      == other?.UserUuid
+				&& this.LastNotificationTime          == other?.LastNotificationTime
+				&& this.IsExposureNotificationEnabled == other.IsExposureNotificationEnabled;
+				// && this.IsNotificationEnabled         == other.IsNotificationEnabled;
+		}
 
-        public string GetLocalDateString()
-        {
-            if (StartDateTime == DateTime.MinValue)
-            {
-                StartDateTime = DateTime.UtcNow;
-            }
+		/// <summary>
+		///  User Unique ID format UserUUID.(Padding Zero Major).(Padding Zero Minor)
+		/// </summary>
+		/// <value>User Minor</value>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public string? GetId()
+		{
+			return this.UserUuid;
+		}
 
-            string cultureName = CultureInfo.CurrentUICulture.ToString();
-            if (cultureName.Contains("ar"))
-            {
-                return StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
-            }
-            else
-            {
-                return StartDateTime.ToLocalTime().ToString("D");
-            }
-        }
+		public int GetJumpHashTime()
+		{
+			return JumpHash.JumpConsistentHash(this.JumpConsistentSeed, 86400);
+		}
 
-        public bool IsOptined { get; set; } = false;
+		public string GetLocalDateString()
+		{
+			if (this.StartDateTime == DateTime.MinValue) {
+				this.StartDateTime = DateTime.UtcNow;
+			}
+			return this.StartDateTime.ToLocalTime().ToString("D", CultureInfo.CurrentUICulture);
+#if false
+			if (CultureInfo.CurrentUICulture.Name.Contains("ar")) {
+				return this.StartDateTime.ToLocalTime().ToString("D", new CultureInfo("ar-AE"));
+			} else {
+				return this.StartDateTime.ToLocalTime().ToString("D");
+			}
+#endif
+		}
 
-        public bool IsExposureNotificationEnabled { get; set; } = false;
+		public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
+		{
+			if (diagnosisUid is null) {
+				throw new ArgumentNullException(nameof(diagnosisUid));
+			}
+			if (diagnosisUid.Length == 0) {
+				throw new ArgumentException($"The parameter \'{nameof(diagnosisUid)}\' cannot be an empty string.", nameof(diagnosisUid));
+			}
+			if (this.PositiveDiagnoses.Any(d => d.DiagnosisUid?.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase) ?? false)) {
+				return;
+			}
 
-        public bool IsNotificationEnabled { get; set; } = false;
+			// Remove ones that were not submitted as the new one is better
+			this.PositiveDiagnoses.Clear();
+			this.PositiveDiagnoses.Add(new() {
+				DiagnosisUid  = diagnosisUid,
+				DiagnosisDate = submissionDate,
+			});
+		}
 
-        public bool IsPositived { get; set; } = false;
-
-        public bool IsPolicyAccepted { get; set; } = false;
-
-        public Dictionary<string, long> LastProcessTekTimestamp { get; set; } = new Dictionary<string, long>();
-
-        public Dictionary<string, ulong> ServerBatchNumbers { get; set; } = AppSettings.Instance.GetDefaultBatch();
-
-        public ObservableCollection<UserExposureInfo> ExposureInformation { get; set; } = new ObservableCollection<UserExposureInfo>();
-
-        public UserExposureSummary ExposureSummary { get; set; }
-
-        // for mock
-        public List<PositiveDiagnosisState> PositiveDiagnoses { get; set; } = new List<PositiveDiagnosisState>();
-
-        public void AddDiagnosis(string diagnosisUid, DateTimeOffset submissionDate)
-        {
-            if (String.IsNullOrEmpty(diagnosisUid))
-            {
-                throw new ArgumentNullException();
-            }
-
-            var existing = PositiveDiagnoses.Any(d => d.DiagnosisUid.Equals(diagnosisUid, StringComparison.OrdinalIgnoreCase));
-            if (existing)
-                return;
-
-            // Remove ones that were not submitted as the new one is better
-            PositiveDiagnoses.Clear();
-
-            PositiveDiagnoses.Add(new PositiveDiagnosisState
-            {
-                DiagnosisDate = submissionDate,
-                DiagnosisUid = diagnosisUid,
-            });
-        }
-
-        public void ClearDiagnosis()
-            => PositiveDiagnoses.Clear();
-
-        public PositiveDiagnosisState LatestDiagnosis
-            => PositiveDiagnoses
-                .OrderByDescending(p => p.DiagnosisDate)
-                .FirstOrDefault();
-
-    }
+		public void ClearDiagnosis()
+		{
+			this.PositiveDiagnoses.Clear();
+		}
+	}
 }

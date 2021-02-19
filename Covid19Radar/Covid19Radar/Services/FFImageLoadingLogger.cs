@@ -5,30 +5,30 @@ using System.Collections.Generic;
 
 namespace Covid19Radar.Services
 {
-    public class FFImageLoadingLogger : IMiniLogger
-    {
-        private ILogger _logger { get; }
+	public class FFImageLoadingLogger : IMiniLogger
+	{
+		private readonly ILogger _logger;
 
-        public FFImageLoadingLogger(ILogger logger)
-        {
-            _logger = logger;
-        }
+		public FFImageLoadingLogger(ILogger logger)
+		{
+			_logger = logger;
+		}
 
-        public void Debug(string message)
-        {
-            _logger.Debug(message);
-        }
+		public void Debug(string message)
+		{
+			_logger.Debug(message);
+		}
 
-        public void Error(string errorMessage)
-        {
-            _logger.Warn(errorMessage);
-        }
+		public void Error(string errorMessage)
+		{
+			_logger.Warn(errorMessage);
+		}
 
-        public void Error(string errorMessage, Exception ex)
-        {
-            _logger.Report(ex, new Dictionary<string, string>{
-                { "message", errorMessage }
-            });
-        }
-    }
+		public void Error(string errorMessage, Exception ex)
+		{
+			_logger.Report(ex, new Dictionary<string, string>() {
+				{ "message", errorMessage }
+			});
+		}
+	}
 }

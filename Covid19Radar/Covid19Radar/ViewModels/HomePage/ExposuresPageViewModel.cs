@@ -1,44 +1,42 @@
-﻿using Covid19Radar.Model;
-using Covid19Radar.Services;
-using Prism.Navigation;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using Covid19Radar.Model;
+using Covid19Radar.Resources;
+using Covid19Radar.Services;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ExposuresPageViewModel : ViewModelBase
-    {
-        private readonly UserDataService userDataService;
-        private UserDataModel userData;
-        public ObservableCollection<ExposureSummary> _exposures;
-        public ObservableCollection<ExposureSummary> Exposures
-        {
-            get { return _exposures; }
-            set { SetProperty(ref _exposures, value); }
-        }
+	public class ExposuresPageViewModel : ViewModelBase
+	{
+		private readonly IUserDataService                      _user_data_service;
+		public           ObservableCollection<ExposureSummary> _exposures;
 
-        public ExposuresPageViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
-        {
-            Title = Resources.AppResources.MainExposures;
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-            _exposures = new ObservableCollection<ExposureSummary>();
+		public ObservableCollection<ExposureSummary> Exposures
+		{
+			get => _exposures;
+			set => this.SetProperty(ref _exposures, value);
+		}
 
-            foreach (var en in userData.ExposureInformation.GroupBy(eni => eni.Timestamp))
-            {
-                var ens = new ExposureSummary();
-                ens.ExposureDate =  en.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture);
-                ens.ExposureCount = en.Count().ToString();
-                _exposures.Add(ens);
-            }
-        }
-    }
+		public ExposuresPageViewModel(IUserDataService userDataService)
+		{
+			_user_data_service = userDataService;
+			_exposures         = new ObservableCollection<ExposureSummary>();
+			this.Title         = AppResources.MainExposures;
 
-    public class ExposureSummary
-    {
-        public string ExposureDate { get; set; }
-        public string ExposureCount { get; set; }
+			var userData = _user_data_service.Get();
+			foreach (var item in from x in userData.ExposureInformation group x by x.Timestamp) {
+				_exposures.Add(new() {
+					ExposureDate  = item.Key.ToLocalTime().ToString("D", CultureInfo.CurrentCulture),
+					ExposureCount = item.Count().ToString()
+				});
+			}
+		}
+	}
 
-    }
+	public class ExposureSummary
+	{
+		public string? ExposureDate  { get; set; }
+		public string? ExposureCount { get; set; }
+	}
 }

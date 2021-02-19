@@ -1,44 +1,40 @@
-﻿using Covid19Radar.Model;
-using Covid19Radar.Resources;
+﻿using System;
+using System.Threading.Tasks;
+using Covid19Radar.Model;
 using Covid19Radar.Services;
+using Covid19Radar.Services.Logs;
 using Covid19Radar.Views;
-//using Plugin.LocalNotification;
 using Prism.Navigation;
 using Xamarin.Forms;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage5ViewModel : ViewModelBase
-    {
-        private readonly UserDataService userDataService;
-        private UserDataModel userData;
+	public class TutorialPage5ViewModel : ViewModelBase
+	{
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
+		private readonly IUserDataService   _user_data_service;
+		private readonly UserDataModel      _user_data;
 
-        public TutorialPage5ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
-        {
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
+		public Command OnClickEnable  => new(async () => await this.SetEnabledAndNavigate(true));
+		public Command OnClickDisable => new(async () => await this.SetEnabledAndNavigate(false));
 
-        }
+		public TutorialPage5ViewModel(ILoggerService logger, INavigationService navigationService, IUserDataService userDataService)
+		{
+			_logger            = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns                = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			_user_data_service = userDataService   ?? throw new ArgumentNullException(nameof(userDataService));
+			_user_data         = userDataService.Get();
+		}
 
-        public Command OnClickEnable => new Command(async () =>
-        {
-            //var notification = new NotificationRequest
-            //{
-            //    NotificationId = 100,
-            //    Title = AppResources.LocalNotificationPermittedTitle,
-            //    Description = AppResources.LocalNotificationPermittedDescription
-            //};
-            //NotificationCenter.Current.Show(notification);
-            userData.IsNotificationEnabled = true;
-            await userDataService.SetAsync(userData);
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
-        });
-        public Command OnClickDisable => new Command(async () =>
-        {
-            userData.IsNotificationEnabled = false;
-            await userDataService.SetAsync(userData);
-            await NavigationService.NavigateAsync(nameof(TutorialPage6));
-        });
-
-    }
+		private async ValueTask SetEnabledAndNavigate(bool enabled)
+		{
+			_logger.StartMethod();
+			_logger.Info($"The user selected the notification is {(enabled ? "enabled" : "disabled")}.");
+			_user_data.IsNotificationEnabled = enabled;
+			await _user_data_service.SetAsync(_user_data);
+			await _ns.NavigateAsync(nameof(TutorialPage6));
+			_logger.EndMethod();
+		}
+	}
 }

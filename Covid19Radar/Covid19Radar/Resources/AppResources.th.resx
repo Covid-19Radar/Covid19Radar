@@ -29,7 +29,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/sample_pp.html</value>
-    <comment>Policy</comment>
+    <comment>プライバシーポリシーURL</comment>
   </data>
   <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>การตั้งค่าสถานะ</value>
@@ -223,15 +223,15 @@
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
     <value>อุปกรณ์ที่มีประวัติพบปะใกล้ชิด (ภายในระยะ 1 เมตร นานกว่า 15 นาที) กับอุปกรณ์ของคุณใน 14 วันที่ผ่านมาจะได้รับการแจ้งเตือน</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+    <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
     <value>เฉพาะรหัสประจำตัวที่สร้างจากแอปเท่านั้นที่จะถูกใช้ในการส่งการแจ้งเตือน ไม่มีการส่งข้อมูลส่วนตัว หรือข้อมูลสถานที่ใด ๆ</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+    <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>กรุณาทำการลงทะเบียนที่นี่เมื่อมีผลตรวจว่าเป็นบวก (ติดเชื้อ)</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+    <comment>陽性情報を登録</comment>
   </data>
   <data name="SettingsPageButton1" xml:space="preserve">
     <value>ข้อตกลงสิทธิ์การใช้งาน</value>
@@ -331,11 +331,7 @@
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
     <value>กรอกอาการของคุณ</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>บอกอกการของคุณกับศูนย์ให้คำปรึกษาผ่านทางโทรศัพท์</value>
-    <comment>帰国者・接触者外来に電話</comment>
+    <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>ครั้ง</value>
@@ -343,11 +339,8 @@
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>กรุณาบอกอาการของคุณให้เราได้ทราบด้วยการกรอกแบบฟอร์มนี้ หรือผ่านทางโทรศัพท์ จากการพิจารณาจากอาการคุณอาจได้รับคำแนะนำให้ตรวจหาเชื้อ COVID-19</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>กรุณาถ่ายภาพหน้าจอของหน้าจอนี้เก็บไว้ คุณอาจถูกขอให้แสดงหน้าจอนี้ระหว่างการตรวจสอบ</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>ประวัติการพบปะใกล้ชิดกับผู้ติดเชื้อ COVID-19 ที่ได้รับการยืนยันแล้ว</value>
@@ -359,11 +352,11 @@
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
     <value>9:00-17:30 (ยกเว้นวันหยุดสุดสัปดาห์ และวันหยุดนักขัตฤกษ์)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+    <comment>アプリの改善にご協力ください</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>แหล่งข้อมูลเกี่ยวกับ COVID-19</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>ติดต่อเกี่ยวกับแอปพลิเคชัน</value>
@@ -451,11 +444,11 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>กรุณากรอกรหัสการดำเนินการที่ได้รับจากระบบแบ่งปัญข้อมูล COVID-19 แบบเรียลไทม์ของศูนย์สุขภาพ (HER-SYS)</value>
-    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
+    <comment>次のような症状がありますか？</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>การแจ้งเตือนจะถูกส่งไปยังผู้ที่มีการพบปะใกล้ชิดกับคุณในระยะเวลา 14 วันที่ผ่านมา การลงทะเบียนนี้ไม่มีการระบุตัวตนใด ๆ ทั้งสิ้น คุณไม่จำเป็นต้องกรอกข้อมูลส่วนตัวใด ๆ และไม่มีการบันทึกข้อมูลสถานที่ที่มีการพบปะใกล้ชิด</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+    <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>วิธีการรับรหัสการดำเนินการ</value>
@@ -523,27 +516,27 @@
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
     <value>รหัสารดำเนินการจะถูกส่งไปยังเบอร์โทรศัพท์ หรืออีเมลของคุณที่มีการลงทะเบียนเอาไว้ในฐานข้อมูลผู้ติดเชื้อที่พบใหม่ (หลังจะนี้จะขอเรียกว่าระบบการจัดการ)</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+    <comment>陽性登録の前にお読みください</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
     <value>เมื่อคุณกรอกรหัสการดำเนินการนี้เข้าไปในแอปพลิเคชัน แอปพลิเคชันจะส่งคำร้องผ่านระบบการแจ้งเตือนไปยังระบบการจัดการให้ทราบว่ารหัสการดำเนินการนี้เป็นของคุณ</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
     <value>ระบบการจัดการจะตอบกลับมายังระบบการแจ้งเตือนเพื่อให้ยืนยันว่ารหัสการดำเนินการนี้เป็นของคุณจริง ๆ</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
     <value>หากคุณยืนยันว่ารหัสการดำเนินการนี้เป็นของคุณ ระบบจะได้รับรหัสประจำวันที่ยันทึกอยู่ในอุปกรณ์ของคุณ</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
     <value>หากผู้อื่นมีประวัติการพบปะใกล้ชิดกับคุณในช่วงเวลา 14 วันที่ผ่านมา ขอให้มั่นใจว่าบุคคลนั้นจะไม่ได้รับขอมูลใด ๆ เกี่ยวกับคุณ และไม่สามารถระบุตัวตนของคุณได้อย่างแน่นอน</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+    <comment>詳しくは以下をお読みください</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
     <value>ยอมรับ และลงทะเบียน</value>
-    <comment>同意して陽性登録する</comment>
+    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>ยินยอมการลงทะเบียนผลตรวจ</value>
@@ -571,7 +564,7 @@
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/sample_tu.html</value>
-    <comment>Term of Use</comment>
+    <comment>利用規約URL</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/index.html</value>
@@ -595,17 +588,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>ข้อมูลเกี่ยวกับแอปพลิเคชันนี้</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>คำถามที่พบบ่อย</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>ชื่อ: \r\n Contact: \r\n เรื่องที่ต้องการติดต่อ (กรุณาเลือกจากหมวดหมู่ต่อไปนี้): 1. แอปพลิเคชันทำงานอย่างไร, 2. การตั้งค่าแอปพลิเคชัน, 3. การใช้งานแอปพลิเคชัน (เช่น การแจ้งเตือน), 4. อื่น ๆ \r\n ข้อความ: \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>สอบถามเกี่ยวกับแอปการยืนยันการติดต่อ</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>วัน</value>

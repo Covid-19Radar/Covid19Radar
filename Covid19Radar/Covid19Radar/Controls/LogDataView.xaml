@@ -1,0 +1,68 @@
+﻿<ContentView
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources"
+	x:Class="Covid19Radar.Controls.LogDataView">
+	<ContentView.Resources>
+		<ResourceDictionary>
+			<Color x:Key="Verbose">#1E1E1E</Color>
+			<Color x:Key="Debug"  >#000000</Color>
+			<Color x:Key="Info"   >#22BB22</Color>
+			<Color x:Key="Warning">#BBCC44</Color>
+			<Color x:Key="Error"  >#CC2266</Color>
+			<Color x:Key="Invalid">#808080</Color>
+			<Style x:Key="BorderStyle" TargetType="BoxView">
+				<Setter Property="HeightRequest" Value="1" />
+				<Setter Property="Margin"        Value="0,0,0,0" />
+				<Setter Property="Color"         Value="#2211DD" />
+			</Style>
+		</ResourceDictionary>
+	</ContentView.Resources>
+	<ContentView.Content>
+		<StackLayout>
+			<Frame Padding="15" HasShadow="False">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="1" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label Grid.Row="1" Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_OutputDate}" />
+					<Label Grid.Row="1" Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="outputDate" />
+					<BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label Grid.Row="3" Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_LogLevel}" />
+					<Label Grid.Row="3" Grid.Column="1"                                            x:Name="logLevel" />
+					<BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label Grid.Row="5" Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_Method}" />
+					<Label Grid.Row="5" Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="method" />
+					<BoxView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label Grid.Row="7" Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_FilePath}" />
+					<Label Grid.Row="7" Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="filePath" />
+					<BoxView Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label Grid.Row="9" Grid.Column="0" TextColor="{StaticResource SecondaryText}" Text="{x:Static resources:AppResources.LogDataView_LineNumber}" />
+					<Label Grid.Row="9" Grid.Column="1" TextColor="{StaticResource PrimaryText}"   x:Name="lineNumber" />
+					<BoxView Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" />
+					<Label
+						Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"
+						x:Name="message"
+						TextColor="{StaticResource PrimaryDark}"/>
+				</Grid>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>

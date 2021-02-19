@@ -3,12 +3,12 @@ using Xamarin.Forms.Xaml;
 
 namespace Covid19Radar.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HelpPage3 : ContentPage
-    {
-        public HelpPage3()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class HelpPage3 : ContentPage
+	{
+		public HelpPage3()
+		{
+			this.InitializeComponent();
+		}
+	}
 }

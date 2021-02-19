@@ -1,40 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="Covid19Radar.Views.HelpPage1"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
-    Title="{x:Static resources:AppResources.HelpPage1Title}"
-    ios:Page.UseSafeArea="true"
-    prism:ViewModelLocator.AutowireViewModel="True"
-    NavigationPage.HasNavigationBar="True"
-    Style="{StaticResource DefaultPageStyle}"
-    Visual="Material">
-    <ScrollView>
-        <Grid Style="{StaticResource HelpPageGridLayout}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <StackLayout Spacing="15" Grid.Row="0">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage20.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
-            </StackLayout>
-            <StackLayout Spacing="15" Grid.Row="1">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
-            </StackLayout>
-            <StackLayout Spacing="15" Grid.Row="2">
-                <Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
-                <ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage21.png" />
-                <Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
-            </StackLayout>
-        </Grid>
-    </ScrollView>
+﻿<ContentPage
+	x:Class="Covid19Radar.Views.HelpPage1"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+	xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+	xmlns:prism="http://prismlibrary.com"
+	xmlns:resources="clr-namespace:Covid19Radar.Resources;assembly=Covid19Radar"
+	Title="{x:Static resources:AppResources.HelpPage1Title}"
+	ios:Page.UseSafeArea="true"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	NavigationPage.HasNavigationBar="True"
+	Style="{StaticResource DefaultPageStyle}"
+	Visual="Material">
+	<ScrollView>
+		<Grid Style="{StaticResource HelpPageGridLayout}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<StackLayout Spacing="15" Grid.Row="0">
+				<Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1MainTitle}" />
+				<ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage20.png" />
+				<Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description1Text}" />
+			</StackLayout>
+			<StackLayout Spacing="15" Grid.Row="1">
+				<Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Title}" />
+				<ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage22.png" />
+				<Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description2Text}" />
+			</StackLayout>
+			<StackLayout Spacing="15" Grid.Row="2">
+				<Label Style="{StaticResource DefaultTitleLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Title}" />
+				<ffimageloading:CachedImage Aspect="AspectFit" Source="HelpPage21.png" />
+				<Label Style="{StaticResource DefaultLabel}" Text="{x:Static resources:AppResources.HelpPage1Description3Text}" />
+			</StackLayout>
+		</Grid>
+	</ScrollView>
 </ContentPage>

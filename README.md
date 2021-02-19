@@ -1,84 +1,25 @@
-# COVID-19Radar (English)/([Japanese](README.ja.md))
+# Covid19Radar/COCOA
 
-“There is only one version of contact confirming app in app stores - the official version by the Ministry of Health, Labor and Welfare. This GitHub contains code that became the base for the official app, but it is not the same as the code for the official app itself.
-This code is maintained by the community and there is no guarantee that issues or pull requests will be reflected in the official app."
+このリポジトリでは接触感染アプリを大幅に改造しています。
 
-We are looking for translator reviewers, Please see [How to Translate application](HOW_TO_TRANSLATE_CONTRIBUTE.md) page.
+## License
+[MPLv2](LICENSE.txt)
 
-If you use it for your own country, you may want to refer to the following. Please see [HOW_TO_USE_YOUR_COUNTRY](doc/HOW_TO_USE_YOUR_COUNTRY.md) page and  [SERVER_SIDE_ARCHITECTURE](doc/SERVER_SIDE_ARCHITECTURE.md) page
+## 行った主な変更：
+* 大規模な結合 (競合の解決)
+	* [Covid19Radar](https://github.com/Covid-19Radar/Covid19Radar) と [COCOA](https://github.com/cocoa-mhlw/cocoa) を結合。
+	* プルリクエスト
+		* [Update to my new github username #792](https://github.com/Covid-19Radar/Covid19Radar/pull/792)
+		* [利用状況表示のUIが直感的でない #534 の実装 #705](https://github.com/Covid-19Radar/Covid19Radar/pull/705)
+* 言語リソースを整理。
+* ソースコードの大幅な整理。
+	* null許容と非許容の区別。
+* ユーザーデータに関する不具合を修正。
+	* null検証を軽減した。
+	* これに関連して、設定ページにチュートリアルを表示するボタンを追加。
+* 最新情報ページに Wikipedia へのリンクを追加。
+* ログを表示するUIを追加。
 
-iOS Build Master Branch status [![iOS Build status](https://build.appcenter.ms/v0.1/apps/9c268337-4db9-4bf4-be09-efaf16672c15/branches/master/badge)](https://appcenter.ms)
-
-Android Build Master Branch status [![Android Build status](https://build.appcenter.ms/v0.1/apps/3dcdf5b5-da95-4d03-96a6-e6ed42de7e16/branches/master/badge)](https://appcenter.ms)
-
-This app uses Exposure Notification / Bluetooth LE to get the contact logs of each other.  
-![App Description](img/explanation_en.png)
-
-## Thank you for Your Contribution !!! [Contributors List](CONTRIBUTORS.md)
-We welcome contributions and pull requests.
-Please check the contribution rules.
-[Contribute Rule](CONTRIBUTING.md)
-
-## How to install the app for tester
-
-Please install the app for the test from the below link. Currently, it is not possible to test until the SDK by Google / Apple is released to each beta version.
-
-### Android
-
-https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarAndroid/releases
-
-Device configuration guide for a tester:  
-https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-android
-
-### iOS
-
-https://install.appcenter.ms/orgs/Covid19Radar/apps/Covid19RadarIOS/releases
-
-Device configuration guide for a tester:  
-https://docs.microsoft.com/ja-jp/appcenter/distribution/testers/testing-ios
-
-## Development environment
-
-This application uses Xamarin Forms (iOS and Android) with C# and Prism (MVVM DryIoC).
-You can develop with Visual Studio for Windows or Visual Studio for Mac.
-
-https://visualstudio.microsoft.com/ja/xamarin/
-
-![App settings](img/design00.png)
-
-Permission to use the following functions of the device is required.
-
-1. Exposure notification
-2. Bluetooth
-3. Local Notification
-
-After the setup is complete, the contact log between the people who have installed this app is automatically recorded.
-
-For more information on setting up a development environment, please refer to [this document](doc/Developer-Note.md).
-
-# About the design
-
-We use [Adobe XD](https://www.adobe.com/jp/products/xd.html) to create our designs.
-
-![Full screen view](img/design01.jpg)
-
-If you want to check your design files, install Adobe XD. (available for free).
-
-## App Prototypes
-
-You can check the screen transition by accessing the following URL.
-
-[Prototype mock (Japanese version only)](https://xd.adobe.com/view/8c6440d7-63a3-4622-b88f-dfed80ec175b-d937/grid)
-
-## Licensing
-
-COVID-19Radar is licensed under the Mozilla Public License Version 2.0. See
-[LICENSE](LICENSE.md) for the full license text.
-
-The following are additional items in this license depending on the intention of the original author.
-In Addition to MPL, this project not permit exercise of moral rights of co-authors.
-Dispute or litigation by each author is not allowed.
-
-## About 3rd Party Software
-
-This file incorporates components from the projects listed [document](COPYRIGHT_THIRD_PARTY_SOFTWARE_NOTICES.md).
+## これから行う変更：
+* 最新情報ページに統計情報を表示。
+* 言語リソースをもう少し整理。

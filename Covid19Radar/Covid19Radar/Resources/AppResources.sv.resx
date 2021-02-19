@@ -37,7 +37,7 @@
   </data>
   <data name="UrlPrivacyPolicy" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/sample_pp.html</value>
-    <comment>Policy</comment>
+    <comment>プライバシーポリシーURL</comment>
   </data>
   <data name="TitleUserStatusSettings" xml:space="preserve">
     <value>Statusinställningar</value>
@@ -271,15 +271,15 @@
   </data>
   <data name="HelpPage3Description4" xml:space="preserve">
     <value>Smartphones som varit i nära kontakt med din smartphone under de senaste 14 dagarna kommer att få meddelanden.</value>
-    <comment>あなたと14日以内に接触した人のスマホアプリに通知が届きます。（1m以内、15分以上）</comment>
+    <comment>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</comment>
   </data>
   <data name="HelpPage3Description5" xml:space="preserve">
     <value>Endast slumpmässigt genererade koder från enheten används när meddelanden skickas. Ingen personlig information används.</value>
-    <comment>通知される情報は端末の接触符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
+    <comment>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</comment>
   </data>
   <data name="HelpPage3Description6" xml:space="preserve">
     <value>Registrera dig här när du testar positivt</value>
-    <comment>陽性情報の登録と他者への匿名通知へ</comment>
+    <comment>陽性情報を登録</comment>
   </data>
   <data name="NotContactPageTitle" xml:space="preserve">
     <value>Stäng kontakter de senaste 14 dagarna</value>
@@ -335,11 +335,7 @@
   </data>
   <data name="ContactedNotifyPageButton2" xml:space="preserve">
     <value>Fyll i dina symtom</value>
-    <comment>症状を入力</comment>
-  </data>
-  <data name="ContactedNotifyPageButton3" xml:space="preserve">
-    <value>Berätta dina symtom via telefon Consultation Center</value>
-    <comment>帰国者・接触者外来に電話</comment>
+    <comment>検査等の相談先を探す</comment>
   </data>
   <data name="ContactedNotifyPageCountText" xml:space="preserve">
     <value>gånger</value>
@@ -347,11 +343,8 @@
   </data>
   <data name="ContactedNotifyPageDescription1" xml:space="preserve">
     <value>Om du har eventuella COVID-19 symtom, kontakta hälso-och sjukvårdsorganisationer med hjälp av formuläret nedan eller per telefon. Beroende på symtomen kommer du att uppmanas att ta ett COVID-19-test.</value>
-    <comment>現在の症状などを、入力フォームまたはお電話にて、ご連絡ください。内容に応じて、帰国者・接触者外来等への受診を案内します。</comment>
-  </data>
-  <data name="ContactedNotifyPageDescription2" xml:space="preserve">
-    <value>Ta en skärmdump av denna skärm. Du kan bli ombedd att ge det under diagnos.</value>
-    <comment>受診の際などに必要となる場合があるため、本画面のスクリーンショットの保存をお願いいたします。</comment>
+    <comment>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</comment>
   </data>
   <data name="ContactedNotifyPageMainText" xml:space="preserve">
     <value>Antal bekräftade nära kontakter med COVID-19 positiva användare</value>
@@ -363,11 +356,11 @@
   </data>
   <data name="InqueryPageDescription1" xml:space="preserve">
     <value>9:00-17:30 (utom helger och helgdagar)</value>
-    <comment>9:00～17:30（土・日・祝日・年末年始を除く）</comment>
+    <comment>アプリの改善にご協力ください</comment>
   </data>
   <data name="InqueryPageDescription2" xml:space="preserve">
     <value>COVID-19 Information och resurser</value>
-    <comment>新型コロナウイルス感染症対策サイト</comment>
+    <comment>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</comment>
   </data>
   <data name="InqueryPageTitle" xml:space="preserve">
     <value>Stöd</value>
@@ -455,11 +448,11 @@
   </data>
   <data name="NotifyOtherPageDescription1" xml:space="preserve">
     <value>Ange en processkod som utfärdats till dig av "Health Center Real-time Information sharing System on COVID-19 (HER-SYS)".</value>
-    <comment>Healthcare Authority Validation Codeを入力してください。</comment>
+    <comment>次のような症状がありますか？</comment>
   </data>
   <data name="NotifyOtherPageDescription2" xml:space="preserve">
     <value>Användare som varit i nära kontakt med dig inom de senaste 14 dagarna kommer att meddelas. Registreringen är anonym. Du behöver inte ange ditt namn eller någon annan personlig information. Ingen information om platsen för nära kontakt registreras.</value>
-    <comment>過去14日間に本アプリであなたと接触した履歴のある人に通知が行きます。登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</comment>
+    <comment>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</comment>
   </data>
   <data name="NotifyOtherPageLabel" xml:space="preserve">
     <value>Så här får du en processkod</value>
@@ -527,27 +520,27 @@
   </data>
   <data name="SubmitConsentPageDescription1" xml:space="preserve">
     <value>Behandlingsnumret kommer att meddelas till ditt mobiltelefonnummer eller e-postadress som är registrerad i det nya informations- och hanteringssystemet för kranvirus (nedan kallat ledningssystem).</value>
-    <comment>新型コロナウイルス感染症等情報把握・管理システム（以下「管理システム」）に登録されたあなたの携帯電話番号又はメールアドレスに、処理番号が通知されます。</comment>
+    <comment>陽性登録の前にお読みください</comment>
   </data>
   <data name="SubmitConsentPageDescription2" xml:space="preserve">
     <value>När du anger det här bearbetningsnumret i terminalen kommer terminalen att göra en förfrågan via meddelandeservern till hanteringssystemet om huruvida bearbetningsnumret har utfärdats till dig.</value>
-    <comment>あなたがこの処理番号を端末に入力することにより、端末から通知サーバーを経由して管理システムに対し、処理番号があなたに対して発行されたものか否かの照会が行われます。</comment>
+    <comment>・陽性登録すると、あなたと接触した人に通知が届きます</comment>
   </data>
   <data name="SubmitConsentPageDescription3" xml:space="preserve">
     <value>Hanteringssystemet svarar på meddelandeservern om transaktionsnumret som det refererade till har utfärdats till dig.</value>
-    <comment>管理システムは、通知サーバーに対し、照会された処理番号があなたに対して発行されたものか否かについて回答します。</comment>
+    <comment>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</comment>
   </data>
   <data name="SubmitConsentPageDescription4" xml:space="preserve">
     <value>Om du svarar att transaktionsnumret har utfärdats till dig kommer andra användares terminaler att förses med den dagliga nyckeln som registrerats på din terminal.</value>
-    <comment>処理番号があなたに対して発行されたものである旨の回答が行われた場合は、他の利用者の端末に、あなたの端末に記録された日次鍵が提供されます。</comment>
+    <comment>・感染拡大防止のため、登録にご協力をお願いします</comment>
   </data>
   <data name="SubmitConsentPageDescription5" xml:space="preserve">
     <value>Om du har varit i kontakt med dig inom 14 dagar, kommer du att veta att du kan ha kontaktats utan någon information som kan identifiera dig personligen.</value>
-    <comment>14日以内にあなたと接触の状態となったことのある方は、あなた個人を識別可能な情報がない状態で、接触した可能性がある旨を知ることができます。</comment>
+    <comment>詳しくは以下をお読みください</comment>
   </data>
   <data name="SubmitConsentPageDescription6" xml:space="preserve">
     <value>Kom överens och registrera dig</value>
-    <comment>同意して陽性登録する</comment>
+    <comment>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</comment>
   </data>
   <data name="SubmitConsentPageTitle1" xml:space="preserve">
     <value>Samtycke till positiv registrering</value>
@@ -571,7 +564,7 @@
   </data>
   <data name="UrlTermOfUse" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/sample_tu.html</value>
-    <comment>Term of Use</comment>
+    <comment>利用規約URL</comment>
   </data>
   <data name="UrlContactedForm" xml:space="preserve">
     <value>https://covid19radar.z11.web.core.windows.net/index.html</value>
@@ -595,17 +588,7 @@
   </data>
   <data name="InqueryPageDescription3" xml:space="preserve">
     <value>Information om den här appen</value>
-  </data>
-  <data name="InqueryPageDescription4" xml:space="preserve">
-    <value>Q och A för användare</value>
-  </data>
-  <data name="InqueryMailBody" xml:space="preserve">
-    <value>Namn: \r\n Kontakt: \r\n Förfrågningsinnehåll (Välj en kategori från följande): 1. Hur appen fungerar, 2. Appinställningar, 3. Användning av appen (meddelande etc.) ), 4. Andra \r\n Förfrågningstext: \r\n</value>
-    <comment>お名前：\r\nご連絡先：\r\nお問い合わせ内容(カテゴリを次の中からお選びください)：1.アプリの仕組み、2.アプリの設定、 3.アプリの利用(通知など)、 4.その他\r\nお問い合わせ本文：\r\n</comment>
-  </data>
-  <data name="InqueryMailSubject" xml:space="preserve">
-    <value>Frågor om kontaktbekräftelseapp</value>
-    <comment>接触確認アプリに関するお問い合わせ</comment>
+    <comment>接触確認アプリに関する情報</comment>
   </data>
   <data name="HomePagePastDays" xml:space="preserve">
     <value>Dagar</value>

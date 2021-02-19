@@ -1,30 +1,32 @@
-﻿using Covid19Radar.Model;
-using Prism.Navigation;
+﻿using System;
+using Covid19Radar.Model;
 using Covid19Radar.Services;
-using System.Threading.Tasks;
+using Covid19Radar.Services.Logs;
+using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class TutorialPage6ViewModel : ViewModelBase
-    {
-        private readonly UserDataService userDataService;
-        private UserDataModel userData;
+	public class TutorialPage6ViewModel : ViewModelBase
+	{
+		private readonly ILoggerService   _logger;
+		private readonly IUserDataService _user_data_service;
+		private readonly UserDataModel    _user_data;
 
-        public TutorialPage6ViewModel(INavigationService navigationService, UserDataService userDataService) : base(navigationService, userDataService)
-        {
-            this.userDataService = userDataService;
-            userData = this.userDataService.Get();
-        }
+		public TutorialPage6ViewModel(ILoggerService logger, IUserDataService userDataService)
+		{
+			_logger            = logger          ?? throw new ArgumentNullException(nameof(logger));
+			_user_data_service = userDataService ?? throw new ArgumentNullException(nameof(userDataService));
+			_user_data         = userDataService.Get();
+		}
 
-        public override async void Initialize(INavigationParameters parameters)
-        {
-            await TutorialCompleteAsync();
-            base.Initialize(parameters);
-        }
-        private async Task TutorialCompleteAsync()
-        {
-            userData.IsPolicyAccepted = true;
-            await userDataService.SetAsync(userData);
-        }
-    }
+		public override async void Initialize(INavigationParameters parameters)
+		{
+			_logger.StartMethod();
+			base.Initialize(parameters);
+			_user_data.IsPolicyAccepted = true;
+			await _user_data_service.SetAsync(_user_data);
+			_logger.Info($"Is the policy accepted? {_user_data.IsPolicyAccepted}");
+			_logger.EndMethod();
+		}
+	}
 }

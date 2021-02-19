@@ -8,71 +8,67 @@ namespace Covid19Radar.Services
 {
 	public class TestNativeImplementation : INativeImplementation
 	{
-		static readonly Random random = new Random();
+		private static readonly Random _random = new Random();
 
-		Task WaitRandom()
-			=> Task.Delay(random.Next(100, 2500));
+		private Task WaitRandom()
+		{
+			return Task.Delay(_random.Next(100, 2500));
+		}
 
 		public async Task StartAsync()
 		{
-			await WaitRandom();
+			await this.WaitRandom();
 			Preferences.Set("fake_enabled", true);
 		}
 
 		public async Task StopAsync()
 		{
-			await WaitRandom();
+			await this.WaitRandom();
 			Preferences.Set("fake_enabled", true);
 		}
 
 		public async Task<bool> IsEnabledAsync()
 		{
-			await WaitRandom();
+			await this.WaitRandom();
 			return Preferences.Get("fake_enabled", true);
 		}
 
 		public async Task<IEnumerable<TemporaryExposureKey>> GetSelfTemporaryExposureKeysAsync()
 		{
 			var keys = new List<TemporaryExposureKey>();
-
-			for (var i = 1; i < 14; i++)
+			for (int i = 1; i < 14; ++i) {
 				keys.Add(GenerateRandomKey(i));
-
-			await WaitRandom();
-
+			}
+			await this.WaitRandom();
 			return keys;
 		}
 
 		public Task<Status> GetStatusAsync()
-			=> Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
+		{
+			return Task.FromResult(Preferences.Get("fake_enabled", true) ? Status.Active : Status.Disabled);
+		}
 
 		public Task<(ExposureDetectionSummary summary, Func<Task<IEnumerable<ExposureInfo>>> getInfo)> DetectExposuresAsync(IEnumerable<string> files)
 		{
-			var summary = new ExposureDetectionSummary(10, 2, 5);
-
-			Task<IEnumerable<ExposureInfo>> GetInfo()
-			{
-				var info = new List<ExposureInfo>
-				{
-					new ExposureInfo (DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
-					new ExposureInfo (DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5), 40, 3, RiskLevel.Low),
-				};
-				return Task.FromResult<IEnumerable<ExposureInfo>>(info);
-			}
-
-			return Task.FromResult<(ExposureDetectionSummary, Func<Task<IEnumerable<ExposureInfo>>>)>((summary, GetInfo));
+			return Task.FromResult<(ExposureDetectionSummary, Func<Task<IEnumerable<ExposureInfo>>>)>((
+				new ExposureDetectionSummary(10, 2, 5),
+				() => Task.FromResult<IEnumerable<ExposureInfo>>(new List<ExposureInfo>() {
+					new ExposureInfo(DateTime.UtcNow.AddDays(-10), TimeSpan.FromMinutes(15), 65, 5, RiskLevel.Medium),
+					new ExposureInfo(DateTime.UtcNow.AddDays(-11), TimeSpan.FromMinutes(5),  40, 3, RiskLevel.Low),
+				})
+			));
 		}
 
-		static TemporaryExposureKey GenerateRandomKey(int daysAgo)
+		private static TemporaryExposureKey GenerateRandomKey(int daysAgo)
 		{
-			var buffer = new byte[16];
-			random.NextBytes(buffer);
-
-			return new TemporaryExposureKey(
+			byte[] buffer = new byte[16];
+			_random.NextBytes(buffer);
+			return new(
 				buffer,
 				DateTimeOffset.UtcNow.AddDays(-1 * daysAgo),
-				TimeSpan.FromMinutes(random.Next(5, 120)),
-				(RiskLevel)random.Next(1, 8));
+				TimeSpan.FromMinutes(_random.Next(5, 120)),
+				((RiskLevel)(_random.Next(1, 8)))
+			);
 		}
 	}
 }

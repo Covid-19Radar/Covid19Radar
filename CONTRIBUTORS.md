@@ -81,8 +81,10 @@
 - Yuto Takano
 - Jean-Noël Ribelles (French/English Translation)
 - Niccori 250k (Xamarin)
-- Strice ([Portuguese Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=xx-thedoctor-xx))
+- Takym (News Page)
+- GuilhermeStrice ([Portuguese Translation](https://github.com/Covid-19Radar/Covid19Radar/commits?author=GuilhermeStrice))
 - Neko7sora
+- muak (<https://github.com/Covid-19Radar/Covid19Radar/pull/705>)
 
 # Original Covid19Radar Beta Testers
 - Nagahata Kenji

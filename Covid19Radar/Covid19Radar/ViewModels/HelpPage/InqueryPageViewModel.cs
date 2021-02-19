@@ -1,77 +1,83 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using System.Text;
+using System.Threading.Tasks;
 using Covid19Radar.Resources;
+using Covid19Radar.Services.Logs;
+using Covid19Radar.Views;
+using Prism.Navigation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Essentials;
 
 namespace Covid19Radar.ViewModels
 {
-    public class InqueryPageViewModel : ViewModelBase
-    {
+	public class InqueryPageViewModel : ViewModelBase
+	{
+		private readonly ILoggerService     _logger;
+		private readonly INavigationService _ns;
 
-        public InqueryPageViewModel() : base()
-        {
-        }
+		public Func<string, BrowserLaunchMode, Task> OpenBrowserAsync  { get; set; }
+		public Func<EmailMessage, Task>              ComposeEmailAsync { get; set; }
 
-        public Command OnClickSite1 => new Command(async () =>
-        {
-            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-        });
+		public Command OnClickQuestionCommand => new(async () => {
+			_logger.StartMethod();
+			await this.OpenBrowserAsync(
+				"https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/covid19_qa_kanrenkigyou_00009.html",
+				BrowserLaunchMode.SystemPreferred
+			);
+			_logger.EndMethod();
+		});
 
-        public Command OnClickSite2 => new Command(async () =>
-        {
-            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-        });
+		public Command OnClickSite2 => new(async () => {
+			_logger.StartMethod();
+			await this.OpenBrowserAsync("https://github.com/Covid-19Radar/Covid19Radar", BrowserLaunchMode.SystemPreferred);
+			_logger.EndMethod();
+		});
 
-        public Command OnClickSite3 => new Command(async () =>
-        {
-            var uri = "https://github.com/Covid-19Radar/Covid19Radar";
-            await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-        });
+		public Command OnClickSendLogCommand => new(async () => {
+			_logger.StartMethod();
+			await _ns.NavigateAsync(nameof(SendLogConfirmationPage));
+			_logger.EndMethod();
+		});
 
-        public Command OnClickEmail => new Command(async () =>
-        {
-            // Device Model (SMG-950U, iPhone10,6)
-            var device = DeviceInfo.Model;
+		public Command OnClickEmailCommand => new(async () => {
+			try {
+				_logger.StartMethod();
+				var sb = new StringBuilder();
+				sb.Append("DEVICE_INFO : ");
+				sb.Append(AppSettings.Instance.AppVersion);
+				sb.Append(", ");
+				sb.Append(DeviceInfo.Model);
+				sb.Append(" (");
+				sb.Append(DeviceInfo.Manufacturer);
+				sb.Append("), ");
+				sb.Append(DeviceInfo.Platform);
+				sb.Append(", ");
+				sb.AppendLine(DeviceInfo.VersionString);
+				sb.Append(AppResources.InquiryMailBody.Replace("\\r\\n", "\r\n"));
+				await this.ComposeEmailAsync(new(
+					AppResources.InquiryMailSubject,
+					sb.ToString(),
+					new[] { AppSettings.Instance.SupportEmail }
+				));
+			} catch (Exception e) {
+				_logger.Exception("Failed to send an email.", e);
+			} finally {
+				_logger.EndMethod();
+			}
+		});
 
-            // Manufacturer (Samsung)
-            var manufacturer = DeviceInfo.Manufacturer;
+		public Command OnClickAboutAppCommand => new(async () => {
+			_logger.StartMethod();
+			await this.OpenBrowserAsync("https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/cocoa_00138.html", BrowserLaunchMode.SystemPreferred);
+			_logger.EndMethod();
+		});
 
-            // Operating System Version Number (7.0)
-            var version = DeviceInfo.VersionString;
-
-            // Platform (Android)
-            var platform = DeviceInfo.Platform;
-
-            var device_info = "DEVICE_INFO : " + AppSettings.Instance.AppVersion + "," + device + "("+ manufacturer + ")," + platform + "," + version;
-            Debug.WriteLine("DEVICE_INFO : " + device_info);
-
-            try
-            {
-                List<string> recipients = new List<string>();
-                recipients.Add(AppSettings.Instance.SupportEmail);
-                var message = new EmailMessage
-                {
-                    Subject = AppResources.InqueryMailSubject,
-                    Body = device_info + "\r\n" + AppResources.InqueryMailBody.Replace("\\r\\n", "\r\n"),
-                    To = recipients
-                };
-                await Email.ComposeAsync(message);
-            }
-            catch (FeatureNotSupportedException fbsEx)
-            {
-                // Email is not supported on this device
-            }
-            catch (Exception ex)
-            {
-                // Some other exception occurred
-            }
-        });
-
-
-    }
+		public InqueryPageViewModel(ILoggerService logger, INavigationService navigationService)
+		{
+			_logger    = logger            ?? throw new ArgumentNullException(nameof(logger));
+			_ns        = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+			this.OpenBrowserAsync  = Browser.OpenAsync;
+			this.ComposeEmailAsync = Email.ComposeAsync;
+		}
+	}
 }

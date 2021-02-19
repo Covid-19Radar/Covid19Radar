@@ -4,64 +4,24 @@ using Prism.Navigation;
 
 namespace Covid19Radar.ViewModels
 {
-    public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
-    {
+	public class ViewModelBase : BindableBase, IInitialize, INavigationAware, IDestructible
+	{
+		private string _title;
 
-        // Navigation
-        protected INavigationService NavigationService { get; private set; }
-        protected UserDataService UserDataService { get; private set; }
-        protected ExposureNotificationService ExposureNotificationService { get; private set; }
+		public string Title
+		{
+			get => _title;
+			set => this.SetProperty(ref _title, value ?? string.Empty);
+		}
 
-        // PageTite
-        private string _title;
+		public ViewModelBase()
+		{
+			_title = string.Empty;
+		}
 
-        public string Title
-        {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
-        }
-
-        public ViewModelBase()
-        {
-        }
-
-        public ViewModelBase(INavigationService navigationService)
-        {
-            NavigationService = navigationService;
-        }
-
-        public ViewModelBase(INavigationService navigationService, UserDataService userDataService)
-        {
-            NavigationService = navigationService;
-            UserDataService = userDataService;
-        }
-
-        public ViewModelBase(INavigationService navigationService, UserDataService userDataService, ExposureNotificationService exposureNotificationService)
-        {
-            NavigationService = navigationService;
-            UserDataService = userDataService;
-            ExposureNotificationService = exposureNotificationService;
-        }
-
-
-        public virtual void Initialize(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedFrom(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatedTo(INavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void Destroy()
-        {
-
-        }
-    }
+		public virtual void Initialize     (INavigationParameters parameters) { }
+		public virtual void OnNavigatedFrom(INavigationParameters parameters) { }
+		public virtual void OnNavigatedTo  (INavigationParameters parameters) { }
+		public virtual void Destroy        ()                                 { }
+	}
 }

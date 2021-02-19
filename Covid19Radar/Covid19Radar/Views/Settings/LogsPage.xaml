@@ -1,0 +1,35 @@
+﻿<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+	xmlns:prism="http://prismlibrary.com"
+	x:Class="Covid19Radar.Views.LogsPage"
+	Title="{Binding Title}"
+	ios:Page.UseSafeArea="true"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	Style="{StaticResource DefaultPageStyle}"
+	Visual="Material">
+	<ContentPage.Content>
+		<StackLayout>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+			<Frame Padding="15" HasShadow="False">
+				<StackLayout>
+					<Picker
+						x:Name="filePicker"
+						Title="{Binding PickerTitle}"
+						ItemsSource="{Binding Files}"
+						VerticalOptions="Start"
+						SelectedIndexChanged="filePicker_SelectedIndexChanged"/>
+					<Label
+						x:Name="progress"
+						IsVisible="false"
+						Style="{StaticResource DefaultLabelMicro}" />
+				</StackLayout>
+			</Frame>
+			<BoxView Style="{StaticResource DefaultLineStyle}" />
+			<ScrollView>
+				<StackLayout x:Name="logDataViews" />
+			</ScrollView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,1617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="ja" target-language="zh-CN" original="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6915.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="COVID19RADAR/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="ButtonAgree" translate="yes" xml:space="preserve">
+          <source>同意する</source>
+          <target state="needs-review-translation">同意</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="HomePageTitle" translate="yes" xml:space="preserve">
+          <source>ホーム</source>
+          <target state="needs-review-translation">主页</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Home Title</note>
+        </trans-unit>
+        <trans-unit id="AppName" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルス接触確認アプリ</source>
+          <target state="needs-review-translation">新型肺炎密切接触者查询APP</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">App Name</note>
+        </trans-unit>
+        <trans-unit id="TitleLicenseAgreement" translate="yes" xml:space="preserve">
+          <source>ライセンス</source>
+          <target state="needs-review-translation">授权</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス</note>
+        </trans-unit>
+        <trans-unit id="UrlPrivacyPolicy" translate="yes" xml:space="preserve">
+          <source>https://www.mhlw.go.jp/cocoa/privacypolicy_japanese.html</source>
+          <target state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/sample_pp.html</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーポリシーURL</note>
+        </trans-unit>
+        <trans-unit id="TitleUserStatusSettings" translate="yes" xml:space="preserve">
+          <source>ステータス設定</source>
+          <target state="needs-review-translation">状态设置</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">User Status Page Title</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionError" translate="yes" xml:space="preserve">
+          <source>電波状況の良い場所でもう一度お試しください。</source>
+          <target state="needs-review-translation">请检查您的网络连接。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電波状況の良い場所でもう一度お試しください。</note>
+        </trans-unit>
+        <trans-unit id="ButtonOk" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="translated">确定</target>
+        </trans-unit>
+        <trans-unit id="ButtonNotNow" translate="yes" xml:space="preserve">
+          <source>あとで設定する</source>
+          <target state="needs-review-translation">暂不</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="MainExposures" translate="yes" xml:space="preserve">
+          <source>Exposure</source>
+          <target state="needs-review-translation">暴露</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab Button</note>
+        </trans-unit>
+        <trans-unit id="NotifyOthersLearnMoreUrl" translate="yes" xml:space="preserve">
+          <source>https://github.com/Covid-19Radar/Covid19Radar</source>
+          <target state="translated">https://github.com/Covid-19Radar/Covid19Radar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Health care jurisdiction page</note>
+        </trans-unit>
+        <trans-unit id="MainTutorial" translate="yes" xml:space="preserve">
+          <source>使い方</source>
+          <target state="needs-review-translation">指南</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab How to use</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposures" translate="yes" xml:space="preserve">
+          <source>既知の接触はありません</source>
+          <target state="needs-review-translation">无已知暴露数据</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">If not found exposures data</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageNoExposuresInfo" translate="yes" xml:space="preserve">
+          <source>COVID-19陽性を報告した人と接触していた場合は、通知されます。</source>
+          <target state="needs-review-translation">如果您接触过确诊为 COVID-19 阳性结果的人，您将收到通知。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">exposures comment</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionText" translate="yes" xml:space="preserve">
+          <source>後でもう一度試してください。</source>
+          <target state="needs-review-translation">请稍后重试。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ButtonFailed" translate="yes" xml:space="preserve">
+          <source>失敗</source>
+          <target state="needs-review-translation">失败</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogSubmittedText" translate="yes" xml:space="preserve">
+          <source>診断結果の提出</source>
+          <target state="needs-review-translation">诊断已提交</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ButtonComplete" translate="yes" xml:space="preserve">
+          <source>完了しました</source>
+          <target state="needs-review-translation">完成</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextSubmittingDiagnosis" translate="yes" xml:space="preserve">
+          <source>診断を提出します。</source>
+          <target state="needs-review-translation">正在提交诊断结果...</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageTitle" translate="yes" xml:space="preserve">
+          <source>アプリの設定</source>
+          <target state="needs-review-translation">设置</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定</note>
+        </trans-unit>
+        <trans-unit id="ButtonCancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">取消</target>
+        </trans-unit>
+        <trans-unit id="LoadingTextDeleting" translate="yes" xml:space="preserve">
+          <source>削除しています</source>
+          <target state="needs-review-translation">正在删除</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Title" translate="yes" xml:space="preserve">
+          <source>本アプリを広めましょう</source>
+          <target state="needs-review-translation">分享此应用给家人和朋友</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリを広めましょう</note>
+        </trans-unit>
+        <trans-unit id="ButtonShare" translate="yes" xml:space="preserve">
+          <source>共有する</source>
+          <target state="needs-review-translation">共享</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ButtonNotifyOtherPage" translate="yes" xml:space="preserve">
+          <source>陽性情報の登録と他者への匿名通知へ</source>
+          <target state="needs-review-translation">分享感染信息，并向他人发送匿名通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Button NotifyOtherPage</note>
+        </trans-unit>
+        <trans-unit id="ButtonReset" translate="yes" xml:space="preserve">
+          <source>使用中止</source>
+          <target state="needs-review-translation">停止使用</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中止</note>
+        </trans-unit>
+        <trans-unit id="PrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>プライバシーポリシー</source>
+          <target state="needs-review-translation">隐私政策</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="LoadingTextRegistering" translate="yes" xml:space="preserve">
+          <source>登録中</source>
+          <target state="needs-review-translation">正在等待注册</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetText" translate="yes" xml:space="preserve">
+          <source>すべてのデータをリセットしますか?</source>
+          <target state="needs-review-translation">是否确实要重置所有数据？</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetTitle" translate="yes" xml:space="preserve">
+          <source>すべてのデータを削除する</source>
+          <target state="needs-review-translation">删除所有数据</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialogResetCompletedText" translate="yes" xml:space="preserve">
+          <source>すべての設定とデータが削除されました。アプリケーションを再起動してください。</source>
+          <target state="needs-review-translation">所有设置和数据都已删除。请重新启动应用程序。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="ButtonReturnToRegistration" translate="yes" xml:space="preserve">
+          <source>登録に戻る</source>
+          <target state="needs-review-translation">返回注册</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationText" translate="yes" xml:space="preserve">
+          <source>陽性登録</source>
+          <target state="needs-review-translation">正注册</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="PositiveRegistrationConfirmText" translate="yes" xml:space="preserve">
+          <source>後で陽性の登録をしますか？</source>
+          <target state="needs-review-translation">以后要积极注册吗？</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader2Description" translate="yes" xml:space="preserve">
+          <source>周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</source>
+          <target state="needs-review-translation">为确保您周围的人的健康，请登记感染情况（匿名）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">周りの人達を守るために匿名での陽性登録へのご協力をお願いいたします。</note>
+        </trans-unit>
+        <trans-unit id="HomePageHeader3Description" translate="yes" xml:space="preserve">
+          <source>本アプリは多くの方にお使いいただくほど効果を発揮します。</source>
+          <target state="needs-review-translation">使用此应用的人越多，则效果越好。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリは多くの方にお使いいただくほど効果を発揮します。</note>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageTitle" translate="yes" xml:space="preserve">
+          <source>使い方</source>
+          <target state="needs-review-translation">使用方法</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使い方</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Title" translate="yes" xml:space="preserve">
+          <source>接触の記録方法</source>
+          <target state="needs-review-translation">接触的记录方法</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録方法</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Title" translate="yes" xml:space="preserve">
+          <source>接触の確認方法</source>
+          <target state="needs-review-translation">跟阳性患者的密切接触的查询方式</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の確認方法</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Title" translate="yes" xml:space="preserve">
+          <source>感染していると判定されたら</source>
+          <target state="needs-review-translation">如果确诊为阳性</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">感染していると判定されたら</note>
+        </trans-unit>
+        <trans-unit id="HelpPage4Title" translate="yes" xml:space="preserve">
+          <source>記録の停止／削除</source>
+          <target state="needs-review-translation">停止记录/删除</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録の停止／削除</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description1Text" translate="yes" xml:space="preserve">
+          <source>アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</source>
+          <target state="needs-review-translation">使用此APP时，每个手机都会生成一个随机代码，不会收集个人信息和GPS位置信息。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを実行した際に、各スマートフォンで接触符号を生成して持ちます。氏名・電話番号などの個人情報やGPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Title" translate="yes" xml:space="preserve">
+          <source>記録される接触の条件</source>
+          <target state="needs-review-translation">记录密切接触的条件</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">記録される接触の条件</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description2Text" translate="yes" xml:space="preserve">
+          <source>1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</source>
+          <target state="needs-review-translation">在1米范围内持续15分钟以上的接触，会记录为“密切接触”</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">1メートル以内、15分以上の他のアプリユーザーとの接触は「接触」として記録されます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Title" translate="yes" xml:space="preserve">
+          <source>接触情報の記録</source>
+          <target state="needs-review-translation">记录密切接触信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触情報の記録 </note>
+        </trans-unit>
+        <trans-unit id="HelpPage1Description3Text" translate="yes" xml:space="preserve">
+          <source>このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</source>
+          <target state="needs-review-translation">此时把接触方的随机代码记录到APP里，在任何用户向此APP登记阳性测试结果之前，不会使用此信息，14天后信息会自动删除。*为了保护您的隐私，代码会定期更改。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">このとき、接触した相手の接触符号の記録をアプリに行います。どちらかの利用者が陽性の登録を行うまでは接触の情報は利用されません。接触の履歴は14日後に消去されます。 ※接触符号は定期的に変わります。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage4ButtonText" translate="yes" xml:space="preserve">
+          <source>アプリの設定へ</source>
+          <target state="needs-review-translation">前往设置</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定へ</note>
+        </trans-unit>
+        <trans-unit id="HelpPage4Description" translate="yes" xml:space="preserve">
+          <source>アプリの設定から、アプリの使用中止と利用者情報の削除を行うことができます。</source>
+          <target state="needs-review-translation">您可以在应用设置中选择停止使用该应用并删除用户数据。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの設定からアプリの使用中止とユーザー情報の削除を行うことができます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Description1" translate="yes" xml:space="preserve">
+          <source>接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</source>
+          <target state="needs-review-translation">如果您接触的人中有人登记了阳性信息，应用会向您发出通知。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触した人の中に新型コロナウイルスの陽性登録された人がいた場合、スマートフォンにプッシュ通知が届きます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Description2" translate="yes" xml:space="preserve">
+          <source>最近の接触件数の確認へはホーム画面からも移動することができます。</source>
+          <target state="needs-review-translation">您可以在首页查看您的接触次数。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最近の接触件数の確認へはホーム画面からも移動することができます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Description3" translate="yes" xml:space="preserve">
+          <source>接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</source>
+          <target state="needs-review-translation">您可以查看密切接触日期的一览。并可获得如有症状时的具体应对指南。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触があった日付の一覧を確認できます。また適切な連絡先をお知らせします。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label1" translate="yes" xml:space="preserve">
+          <source>通知</source>
+          <target state="needs-review-translation">新消息通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label2" translate="yes" xml:space="preserve">
+          <source>ホーム画面</source>
+          <target state="needs-review-translation">首页</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面</note>
+        </trans-unit>
+        <trans-unit id="HelpPage2Label3" translate="yes" xml:space="preserve">
+          <source>陽性者との接触があった場合</source>
+          <target state="needs-review-translation">如果您与登记阳性的人有过密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触があった場合</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description1" translate="yes" xml:space="preserve">
+          <source>検査により新型コロナウイルスの感染が確認された場合。</source>
+          <target state="needs-review-translation">如果做检测之后确诊为阳性</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">検査により新型コロナウイルスの感染が確認された場合。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description2" translate="yes" xml:space="preserve">
+          <source>保健所等公的機関から登録用の「処理番号」が発行されます。</source>
+          <target state="needs-review-translation">保健所等官方机构会给您开具“数字码”。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">保健所等公的機関から登録用の「処理番号」が発行されます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description3" translate="yes" xml:space="preserve">
+          <source>本アプリを用いて処理番号の登録を行います。</source>
+          <target state="needs-review-translation">使用该应用登记您的数字码。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリを用いて処理番号の登録を行います。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description4" translate="yes" xml:space="preserve">
+          <source>発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</source>
+          <target state="needs-review-translation">14天以内与您有过接触的人的手机会收到通知（在1米范围内持续15分钟以上的接触）。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">発症日または検査日の２日前以降にあなたと接触した人に通知が届きます。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description5" translate="yes" xml:space="preserve">
+          <source>通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</source>
+          <target state="needs-review-translation">通知只提供接触对方的随机接触代码，不会显示姓名等的个人信息和地点信息。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知される情報はランダムな符号のみです。それ以外の、氏名など個人情報や位置情報が送られることはありません。</note>
+        </trans-unit>
+        <trans-unit id="HelpPage3Description6" translate="yes" xml:space="preserve">
+          <source>陽性情報を登録</source>
+          <target state="needs-review-translation">如果确诊为阳性，请登记您的阳性信息并进行通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton1" translate="yes" xml:space="preserve">
+          <source>ライセンス…</source>
+          <target state="needs-review-translation">授权</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ライセンス…</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel1" translate="yes" xml:space="preserve">
+          <source>接触の検出</source>
+          <target state="needs-review-translation">查出密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の検出</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription1" translate="yes" xml:space="preserve">
+          <source>Bluetoothによる接触の検知</source>
+          <target state="needs-review-translation">基于蓝牙功能的接触者检测</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Bluetoothによる接触の検知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel2" translate="yes" xml:space="preserve">
+          <source>通知</source>
+          <target state="needs-review-translation">通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription2" translate="yes" xml:space="preserve">
+          <source>陽性者との接触通知</source>
+          <target state="needs-review-translation">跟阳性患者的密切接触消息通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触通知</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageLabel3" translate="yes" xml:space="preserve">
+          <source>アプリの使用中止</source>
+          <target state="needs-review-translation">停止使用APP</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの使用中止</note>
+        </trans-unit>
+        <trans-unit id="SettingsPageDescription3" translate="yes" xml:space="preserve">
+          <source>使用を中止して過去14日間の接触履歴を消去</source>
+          <target state="needs-review-translation">停止使用APP并删除14天以内的密切接触记录</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用を中止して過去14日間の接触履歴を消去</note>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageLabel1" translate="yes" xml:space="preserve">
+          <source>どのようにして接触を記録していますか？</source>
+          <target state="needs-review-translation">如何记录密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">どのようにして接触を記録していますか？</note>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageLabel2" translate="yes" xml:space="preserve">
+          <source>接触の有無はどのように知ることができますか？</source>
+          <target state="needs-review-translation">如何获知是否有密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の有無はどのように知ることができますか？</note>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageLabel3" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルスに感染していると判定されたら</source>
+          <target state="needs-review-translation">如果确诊为新型冠状病毒感染为阳性</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルスに感染していると判定されたら</note>
+        </trans-unit>
+        <trans-unit id="HelpMenuPageLabel4" translate="yes" xml:space="preserve">
+          <source>接触の記録を停止／情報を削除するには</source>
+          <target state="needs-review-translation">如何停止记录/删除密切接触记录</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録を停止／情報を削除するには</note>
+        </trans-unit>
+        <trans-unit id="NotContactPageTitle" translate="yes" xml:space="preserve">
+          <source>過去14日間の接触</source>
+          <target state="needs-review-translation">查询过去14天内里的接触情况</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
+        </trans-unit>
+        <trans-unit id="NotContactPageLabel1" translate="yes" xml:space="preserve">
+          <source>陽性者との接触は確認されませんでした</source>
+          <target state="needs-review-translation">您没有查出跟阳性患者的密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触は確認されませんでした</note>
+        </trans-unit>
+        <trans-unit id="NotContactPageDescription1" translate="yes" xml:space="preserve">
+          <source>引き続き「新しい生活様式」の実践をよろしくお願いいたします。</source>
+          <target state="needs-review-translation">为了进一步地防范疫情的扩散，请遵循日本政府提倡的“新生活模式”。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">引き続き「新しい生活様式」の実践をよろしくお願いいたします。</note>
+        </trans-unit>
+        <trans-unit id="NotContactPageButtonText" translate="yes" xml:space="preserve">
+          <source>アプリを周りの人に知らせる</source>
+          <target state="needs-review-translation">分享此APP</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
+        </trans-unit>
+        <trans-unit id="ThankYouNotifyOtherPageLabel1" translate="yes" xml:space="preserve">
+          <source>陽性のご登録をいただきありがとうございました</source>
+          <target state="needs-review-translation">感谢提供检查结果</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性のご登録をいただきありがとうございました</note>
+        </trans-unit>
+        <trans-unit id="ThankYouNotifyOtherPageDescription1" translate="yes" xml:space="preserve">
+          <source>登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</source>
+          <target state="needs-review-translation">本次注册为匿名注册，您不必输入姓名或任何其他个人信息。另外，该应用不会记录并通知密切接触的地点信息。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録は匿名で行われ、氏名や連絡先など個人が特定される情報を登録する必要はありません。また、接触した場所の位置情報が記録や通知されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage3Title" translate="yes" xml:space="preserve">
+          <source>利用規約</source>
+          <target state="needs-review-translation">使用条款</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage3ButtonText" translate="yes" xml:space="preserve">
+          <source>規約に同意して次へ</source>
+          <target state="needs-review-translation">我同意使用条款</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">規約に同意して次へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage6Label1" translate="yes" xml:space="preserve">
+          <source>ご登録いただきありがとうございました</source>
+          <target state="needs-review-translation">感谢您的注册</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ご登録いただきありがとうございました</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage6ButtonText1" translate="yes" xml:space="preserve">
+          <source>ホーム画面へ</source>
+          <target state="needs-review-translation">首页</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム画面へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage6ButtonText2" translate="yes" xml:space="preserve">
+          <source>使い方を学ぶ</source>
+          <target state="needs-review-translation">使用方法引导（如何使用本APP）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使い方を学ぶ</note>
+        </trans-unit>
+        <trans-unit id="HelpPage1MainTitle" translate="yes" xml:space="preserve">
+          <source>端末の識別</source>
+          <target state="needs-review-translation">设备识别</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">端末の識別</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton1" translate="yes" xml:space="preserve">
+          <source>陽性者との接触一覧</source>
+          <target state="needs-review-translation">和阳性患者的密切接触一览</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触一覧</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageButton2" translate="yes" xml:space="preserve">
+          <source>検査等の相談先を探す</source>
+          <target state="needs-review-translation">填写症状</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">検査等の相談先を探す</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageCountText" translate="yes" xml:space="preserve">
+          <source>件</source>
+          <target state="needs-review-translation">times</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">件</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageDescription1" translate="yes" xml:space="preserve">
+          <source>・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</source>
+          <target state="needs-review-translation">如果您有新冠病毒的一些症状，请填写表单或者向回国者、接触者咨询中心构电话咨询，我们会根据你提供的信息判断是否进行检查。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・発熱等の症状や基礎疾患がある、新型コロナウイルス感染症の陽性者と接触した心当たりがあるなど、検査等の相談を希望される場合は、アプリの案内に従って相談先をご確認ください。
+・受診の際に必要となる場合があるため、以下より陽性者との接触一覧のスクリーンショットを保存してください。</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageMainText" translate="yes" xml:space="preserve">
+          <source>陽性者との接触確認</source>
+          <target state="needs-review-translation">查询跟阳性患者的密切接触情况</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触確認</note>
+        </trans-unit>
+        <trans-unit id="ContactedNotifyPageTitle" translate="yes" xml:space="preserve">
+          <source>過去14日間の接触</source>
+          <target state="needs-review-translation">查询过去14天内里的接触情况</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription1" translate="yes" xml:space="preserve">
+          <source>アプリの改善にご協力ください</source>
+          <target state="needs-review-translation">9:00～17:30（节假日除外）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリの改善にご協力ください</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription2" translate="yes" xml:space="preserve">
+          <source>お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</source>
+          <target state="needs-review-translation">新型冠状病毒肺炎对策网站</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ後、動作情報を送信していただくことにより、COCOAの改善に役立ちます。</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle" translate="yes" xml:space="preserve">
+          <source>アプリに関するお問い合わせ</source>
+          <target state="needs-review-translation">帮助与反馈</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリに関するお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription1" translate="yes" xml:space="preserve">
+          <source>使用中</source>
+          <target state="needs-review-translation">使用</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">使用中</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription2" translate="yes" xml:space="preserve">
+          <source>陽性者との接触を確認する</source>
+          <target state="needs-review-translation">确认是否与阳性患者接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性者との接触を確認する(14日間)</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription3" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルス陽性と診断されたら</source>
+          <target state="needs-review-translation">确诊新型冠状病毒呈阳性</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルス陽性と診断されたら</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription4" translate="yes" xml:space="preserve">
+          <source>陽性情報の登録</source>
+          <target state="needs-review-translation">登记阳性信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription5" translate="yes" xml:space="preserve">
+          <source>アプリを周りの人に知らせる</source>
+          <target state="needs-review-translation">分享此APP</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリを周りの人に知らせる</note>
+        </trans-unit>
+        <trans-unit id="HomePageTitle1" translate="yes" xml:space="preserve">
+          <source>ホーム</source>
+          <target state="needs-review-translation">主页</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ホーム</note>
+        </trans-unit>
+        <trans-unit id="TermsofservicePageTitle" translate="yes" xml:space="preserve">
+          <source>利用規約</source>
+          <target state="needs-review-translation">使用条款</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description1" translate="yes" xml:space="preserve">
+          <source>プライバシーについて</source>
+          <target state="needs-review-translation">关于隐私保护</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description2" translate="yes" xml:space="preserve">
+          <source>氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</source>
+          <target state="needs-review-translation">本应用不会使用和记录姓名，电话等个人信息，也不会收集GPS等手机位置信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">氏名・電話番号などの個人情報や、GPSなどスマートフォンの位置情報を使うことはなく、記録されることもありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description3" translate="yes" xml:space="preserve">
+          <source>接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</source>
+          <target state="needs-review-translation">所有数据都会加密并保存在手机本地存储，所有数据14天后会自动删除。政府机构或第三方机构不会以任何方式跟踪监视您的手机</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録は、暗号化され、あなたのスマートフォンの中にのみ記録され、14日後に自動的に削除されます。行政機関や第三者が暗号化された情報を利用して接触歴を把握することはありません。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description4" translate="yes" xml:space="preserve">
+          <source>接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</source>
+          <target state="needs-review-translation">您可以随时停止APP的记录，在设置内设为关闭，或者删掉APP</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触の記録はいつでも止めることができます。アプリ内の設定を無効にするか、アプリを削除してください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Description5" translate="yes" xml:space="preserve">
+          <source>利用規約へ</source>
+          <target state="needs-review-translation">阅读使用条款</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage2Title" translate="yes" xml:space="preserve">
+          <source>プライバシーについて</source>
+          <target state="needs-review-translation">关于隐私保护</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーについて</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description1" translate="yes" xml:space="preserve">
+          <source>通知をご利用いただくために</source>
+          <target state="needs-review-translation">开启接收通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description2" translate="yes" xml:space="preserve">
+          <source>本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</source>
+          <target state="needs-review-translation">为了即时收到密切接触信息，请开启新消息通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触の通知をご利用いただくために、本アプリのプッシュ通知を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description3" translate="yes" xml:space="preserve">
+          <source>有効にする</source>
+          <target state="needs-review-translation">开启</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Description4" translate="yes" xml:space="preserve">
+          <source>あとで設定する</source>
+          <target state="needs-review-translation">稍后设置</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage5Title" translate="yes" xml:space="preserve">
+          <source>通知をご利用いただくために</source>
+          <target state="needs-review-translation">To use notifications</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="MenuPageTitle" translate="yes" xml:space="preserve">
+          <source>メニュー</source>
+          <target state="needs-review-translation">菜单</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">メニュー</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageButton" translate="yes" xml:space="preserve">
+          <source>登録する</source>
+          <target state="needs-review-translation">登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録する</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription1" translate="yes" xml:space="preserve">
+          <source>次のような症状がありますか？</source>
+          <target state="needs-review-translation">请输入新型冠状病毒感染肺炎防疫专利信息共享平台（HER-SYS）开具的数字码</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">次のような症状がありますか？</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription2" translate="yes" xml:space="preserve">
+          <source>発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</source>
+          <target state="needs-review-translation">给14天以内与您有密切接触的用户通知。您登记的时候不需要公开您的个人信息，不必输入您的姓名或任何其他个人信息。另外，不会记录并通知密切接触的地点信息。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">発熱、咳、呼吸困難、全身倦怠感、咽頭痛、鼻汁・鼻閉、頭痛、関節・筋肉痛、下痢、嘔気・嘔吐など</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel" translate="yes" xml:space="preserve">
+          <source>処理番号の取得方法</source>
+          <target state="needs-review-translation">如何获得数字码</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号の取得方法</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageTitle" translate="yes" xml:space="preserve">
+          <source>陽性情報の登録</source>
+          <target state="needs-review-translation">登记阳性信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報の登録</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Button" translate="yes" xml:space="preserve">
+          <source>次へ</source>
+          <target state="needs-review-translation">下一页</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">次へ</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description1" translate="yes" xml:space="preserve">
+          <source>本アプリをスマートフォンに設定した人どうしの接触を記録します。</source>
+          <target state="needs-review-translation">该APP可以识别运行此APP的手机之间的密切接触</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリをスマートフォンに設定した人どうしの接触を記録します。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description2" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</source>
+          <target state="needs-review-translation">如果您确诊新型冠状病毒肺炎，您可以匿名登记信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナウイルスに陽性と判定されたら本アプリに匿名で登録することができます。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Description3" translate="yes" xml:space="preserve">
+          <source>最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</source>
+          <target state="needs-review-translation">如果您与登记阳性的人有过密切接触，本APP会通知你潜在的感染，并提供保护你健康的指导</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最近接触した人の中に陽性登録した人がいたら、通知と適切な行動をお知らせします。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Title1" translate="yes" xml:space="preserve">
+          <source>このアプリでできること</source>
+          <target state="needs-review-translation">APP功能介绍</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage1Title2" translate="yes" xml:space="preserve">
+          <source>このアプリでできること</source>
+          <target state="needs-review-translation">APP功能介绍</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">このアプリでできること</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Button1" translate="yes" xml:space="preserve">
+          <source>有効にする</source>
+          <target state="needs-review-translation">开启</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">有効にする</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Button2" translate="yes" xml:space="preserve">
+          <source>あとで設定する</source>
+          <target state="needs-review-translation">稍后设置</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あとで設定する</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Description" translate="yes" xml:space="preserve">
+          <source>本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</source>
+          <target state="needs-review-translation">为了即时收到密切接触信息，请开启手机的蓝牙模式</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">本アプリで接触検知をご利用いただくために、スマートフォンのBluetooth通信を有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Label" translate="yes" xml:space="preserve">
+          <source>技術的な詳細について</source>
+          <target state="needs-review-translation">更多相关技术的详细信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">技術的な詳細について</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title1" translate="yes" xml:space="preserve">
+          <source>接触検知をご利用いただくために</source>
+          <target state="needs-review-translation">开启蓝牙</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="TutorialPage4Title2" translate="yes" xml:space="preserve">
+          <source>接触検知をご利用いただくために</source>
+          <target state="needs-review-translation">开启蓝牙</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触検知をご利用いただくために</note>
+        </trans-unit>
+        <trans-unit id="HomePageDescription0" translate="yes" xml:space="preserve">
+          <source>から</source>
+          <target state="needs-review-translation">开始</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">から</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageLabel2" translate="yes" xml:space="preserve">
+          <source>8桁の処理番号を入力してください</source>
+          <target state="needs-review-translation">请输入八位数字码</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">8桁の処理番号を入力してください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription1" translate="yes" xml:space="preserve">
+          <source>陽性登録の前にお読みください</source>
+          <target state="needs-review-translation">数字码将会发送到您在新型冠状病毒肺炎信息管理系统（以下简称“管理系统”）中登记的手机号码或电子邮箱中。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録の前にお読みください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription2" translate="yes" xml:space="preserve">
+          <source>・陽性登録すると、あなたと接触した人に通知が届きます</source>
+          <target state="needs-review-translation">当您在设备中输入该数字码时，设备将通过通知服务器向管理系统核对该号码是否为向您发送的数字码。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・陽性登録すると、あなたと接触した人に通知が届きます</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription3" translate="yes" xml:space="preserve">
+          <source>・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</source>
+          <target state="needs-review-translation">管理系统将会答复通知服务器所核对的数字码是否为向您发出的号码。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・その通知が届いた人に、あなた個人が特定される情報が知られることはありません</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription4" translate="yes" xml:space="preserve">
+          <source>・感染拡大防止のため、登録にご協力をお願いします</source>
+          <target state="needs-review-translation">如能确认号码为向您发送的号码，则会向其他用户的设备上提供记录在您设备上的单日密钥。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・感染拡大防止のため、登録にご協力をお願いします</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription5" translate="yes" xml:space="preserve">
+          <source>詳しくは以下をお読みください</source>
+          <target state="needs-review-translation">在14天内与您有过接触的用户能够在无法确认您的个人信息的情况下获知与您可能有过接触。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">詳しくは以下をお読みください</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription6" translate="yes" xml:space="preserve">
+          <source>あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</source>
+          <target state="needs-review-translation">同意并进行阳性登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが保健所や医療機関に伝えた（※）携帯電話番号またはメールアドレスが「新型コロナウイルス感染症等情報把握・管理支援システム」という全国的システム（以下「管理システム」という）に登録されています</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageTitle1" translate="yes" xml:space="preserve">
+          <source>陽性登録への同意</source>
+          <target state="needs-review-translation">同意进行阳性登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageTitle2" translate="yes" xml:space="preserve">
+          <source>陽性登録への同意</source>
+          <target state="needs-review-translation">同意进行阳性登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性登録への同意</note>
+        </trans-unit>
+        <trans-unit id="VersionText" translate="yes" xml:space="preserve">
+          <source>バージョン</source>
+          <target state="needs-review-translation">版本</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">バージョン</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationServiceMessage4" translate="yes" xml:space="preserve">
+          <source>BluetoothがOffになっています。Bluetoothを有効にしてください。</source>
+          <target state="needs-review-translation">蓝牙已关闭。请启用设备的蓝牙。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageTitle" translate="yes" xml:space="preserve">
+          <source>過去14日間の接触一覧</source>
+          <target state="needs-review-translation">密切接触一览（14天内）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">過去14日間の接触一覧</note>
+        </trans-unit>
+        <trans-unit id="ExposuresPageLabel1" translate="yes" xml:space="preserve">
+          <source>以下の日に陽性者との接触が確認されました。</source>
+          <target state="needs-review-translation">以下日期确认到您与阳性患者存在密切接触。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">以下の日に陽性者との接触が確認されました。</note>
+        </trans-unit>
+        <trans-unit id="UrlTermOfUse" translate="yes" xml:space="preserve">
+          <source>https://www.mhlw.go.jp/cocoa/kiyaku_japanese.html</source>
+          <target state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/sample_tu.html</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約URL</note>
+        </trans-unit>
+        <trans-unit id="UrlContactedForm" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/ja/chatbot2.html</source>
+          <target state="needs-review-translation">https://covid19radar.z11.web.core.windows.net/index.html</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="UrlContactedPhone" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/phone.json</source>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/phone.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationDescription" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルス陽性登録者と接触した可能性があります。詳細はこちら</source>
+          <target state="needs-review-translation">您有可能与潜在的 COVID-19 阳性患者有近距离接触。点击了解详情。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">It is possible you have been in close proximity to a user who tested positive for COVID-19.  Tap for more details.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationTitle" translate="yes" xml:space="preserve">
+          <source>新型コロナウイルス陽性登録者との接触の可能性</source>
+          <target state="needs-review-translation">可能的 COVID-19 暴露</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Possible COVID-19 Exposure</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedDescription" translate="yes" xml:space="preserve">
+          <source>通知を無効にしたい場合は、アプリの設定から変更できます</source>
+          <target state="needs-review-translation">如您想关闭，请在应用设置中进行变更</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="LocalNotificationPermittedTitle" translate="yes" xml:space="preserve">
+          <source>通知を有効にしました</source>
+          <target state="needs-review-translation">启用通知</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageDescription3" translate="yes" xml:space="preserve">
+          <source>接触確認アプリに関する情報</source>
+          <target state="needs-review-translation">有关该应用的信息</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関する情報</note>
+        </trans-unit>
+        <trans-unit id="HomePagePastDays" translate="yes" xml:space="preserve">
+          <source>日間</source>
+          <target state="needs-review-translation">天</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">X日間</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageActive" translate="yes" xml:space="preserve">
+          <source>Notification機能は許諾の状態です。</source>
+          <target state="needs-review-translation">暴露通知已启用。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は許諾の状態です。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageBluetoothOff" translate="yes" xml:space="preserve">
+          <source>BluetoothがOffになっています。Bluetoothを有効にしてください。</source>
+          <target state="needs-review-translation">蓝牙已关闭。请打开蓝牙。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">BluetoothがOffになっています。Bluetoothを有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageDisabled" translate="yes" xml:space="preserve">
+          <source>Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</source>
+          <target state="needs-review-translation">暴露通知已禁用。请打开设备设置并启用暴露通知。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は無効の状態です。端末の設定を開いて、Exposure NotificationをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageIsOptined" translate="yes" xml:space="preserve">
+          <source>利用規約に同意する必要があります。</source>
+          <target state="needs-review-translation">您必须同意使用条款。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約に同意する必要があります。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageRestricted" translate="yes" xml:space="preserve">
+          <source>COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</source>
+          <target state="needs-review-translation">COVID-19 暴露通知受到限制。请于系统设置中允许通知，或重新安装应用后再次选择允许通知。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触通知機能が承認されていません。各OSから承認するか、またはアプリの再インストール後に、再承認してください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationStatusMessageUnknown" translate="yes" xml:space="preserve">
+          <source>Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@yourhealthcaredivmailaddress.orgまでお問い合わせください。</source>
+          <target state="needs-review-translation">不支持暴露通知。请将系统更新到最新版本。如果仍有问题，请通过appsupport@yourhealthcaredivmailaddress.org与我们联系。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification機能は非対応の状態です。OSを最新版にアップデートしてください。それでも改善しなければ、appsupport@yourhealthcaredivmailaddress.orgまでお問い合わせください。</note>
+        </trans-unit>
+        <trans-unit id="DialogNetworkConnectionErrorTitle" translate="yes" xml:space="preserve">
+          <source>通信に失敗しました。</source>
+          <target state="needs-review-translation">网络连接错误</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">通信に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupErrorTitle" translate="yes" xml:space="preserve">
+          <source>Exposure Notification起動エラー</source>
+          <target state="needs-review-translation">暴露通知启动错误</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notification起動エラー</note>
+        </trans-unit>
+        <trans-unit id="DialogExposureNotificationStartupError" translate="yes" xml:space="preserve">
+          <source>Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</source>
+          <target state="needs-review-translation">暴露通知无法启动。请打开设置，开启暴露通知后打开蓝牙。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Exposure Notificationを起動できませんでした。端末の設定を開いて、Exposure NotificationをONにするとともに、BluetoothをONにしてください。</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler1ErrorMessage" translate="yes" xml:space="preserve">
+          <source>アプリで入力された処理番号が違います</source>
+          <target state="needs-review-translation">输入的数字码不正确</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">アプリで入力された処理番号が違います</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler2ErrorMessage" translate="yes" xml:space="preserve">
+          <source>センターに接続できません</source>
+          <target state="needs-review-translation">无法连接到登记服务中心</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">センターに接続できません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Message" translate="yes" xml:space="preserve">
+          <source>陽性情報を登録しますか?</source>
+          <target state="needs-review-translation">是否登记阳性信息？</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性情報を登録しますか?</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag1Title" translate="yes" xml:space="preserve">
+          <source>登録</source>
+          <target state="needs-review-translation">登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag2Message" translate="yes" xml:space="preserve">
+          <source>キャンセルしました</source>
+          <target state="needs-review-translation">已取消</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">キャンセルしました</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Message" translate="yes" xml:space="preserve">
+          <source>登録開始までしばらくそのままでお待ちください</source>
+          <target state="needs-review-translation">在开始登记前请稍等片刻</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録開始までしばらくそのままでお待ちください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag3Title" translate="yes" xml:space="preserve">
+          <source>登録待ち</source>
+          <target state="needs-review-translation">等待登记</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録待ち</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag4Message" translate="yes" xml:space="preserve">
+          <source>処理番号が入力されていません</source>
+          <target state="needs-review-translation">未输入数字码</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が入力されていません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag5Message" translate="yes" xml:space="preserve">
+          <source>処理番号のフォーマットが一致していません</source>
+          <target state="needs-review-translation">数字码格式不匹配</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号のフォーマットが一致していません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Message" translate="yes" xml:space="preserve">
+          <source>陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</source>
+          <target state="needs-review-translation">必须启用 COVID-19 接触日志才可进行阳性登记，请在应用或系统设置中启用设定。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">陽性記録の登録を行う為にCOVID-19接触のログ記録を有効にする必要があります、アプリかOSの設定から有効にしてください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiag6Title" translate="yes" xml:space="preserve">
+          <source>COVID-19接触のログ記録を有効にしてください</source>
+          <target state="needs-review-translation">请启用 COVID-19 接触日志</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">COVID-19接触のログ記録を有効にしてください</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagAppClose" translate="yes" xml:space="preserve">
+          <source>登録回数上限になりました。アプリケーションを終了します</source>
+          <target state="needs-review-translation">登记次数已达上限。退出应用程序</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録回数上限になりました。アプリケーションを終了します</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDiagErrorTitle" translate="yes" xml:space="preserve">
+          <source>登録エラー</source>
+          <target state="needs-review-translation">登记出现错误</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録エラー</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFound" translate="yes" xml:space="preserve">
+          <source>提出に該当する接触記録が確認できませんでした。提出の必要はありません。</source>
+          <target state="needs-review-translation">无法确认与本次提交对应的接触记录。无需提交。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">提出に該当する接触記録が確認できませんでした。提出の必要はありません。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDialogExceptionTargetDiagKeyNotFoundTitle" translate="yes" xml:space="preserve">
+          <source>該当接触なし</source>
+          <target state="needs-review-translation">无此类接触记录</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">該当接触なし</note>
+        </trans-unit>
+        <trans-unit id="UrlVersion" translate="yes" xml:space="preserve">
+          <source>https://covid19radar.z11.web.core.windows.net/version.json</source>
+          <target state="translated">https://covid19radar.z11.web.core.windows.net/version.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionDescription" translate="yes" xml:space="preserve">
+          <source>新しいバージョンのアプリが利用可能です。最新バージョンにアップデートしてください。</source>
+          <target state="needs-review-translation">有可适用的最新版本。请更新到最新版本。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新しいバージョンのアプリが提供されています。最新版へ更新をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="AppUtilsGetNewVersionTitle" translate="yes" xml:space="preserve">
+          <source>最新バージョンに更新</source>
+          <target state="needs-review-translation">更新到最新版本</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新版への更新</note>
+        </trans-unit>
+        <trans-unit id="ExposureNotificationHandler3ErrorMessage" translate="yes" xml:space="preserve">
+          <source>接触記録データに問題があります</source>
+          <target state="needs-review-translation">接触记录数据存在异常</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触記録データに問題があります</note>
+        </trans-unit>
+        <trans-unit id="ExposureCountUnit" translate="yes" xml:space="preserve">
+          <source>件</source>
+          <target state="new">件</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">件</note>
+        </trans-unit>
+        <trans-unit id="NewsPageTitle" translate="yes" xml:space="preserve">
+          <source>最新情報ページ</source>
+          <target state="new">最新情報ページ</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報ページ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_Links" translate="yes" xml:space="preserve">
+          <source>リンク集</source>
+          <target state="new">リンク集</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">リンク集</note>
+        </trans-unit>
+        <trans-unit id="NewsPageLabel_LinksDescription" translate="yes" xml:space="preserve">
+          <source>新型コロナに関する情報を調べる事ができます。</source>
+          <target state="new">新型コロナに関する情報を調べる事ができます。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">新型コロナに関する情報を調べる事ができます。</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowGoogle" translate="yes" xml:space="preserve">
+          <source>最新情報をGoogleで検索</source>
+          <target state="new">最新情報をGoogleで検索</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">最新情報をGoogleで検索</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowCoronaGoJP" translate="yes" xml:space="preserve">
+          <source>内閣官房のデータ</source>
+          <target state="new">内閣官房のデータ</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">内閣官房のデータ</note>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowStopCOVID19JP" translate="yes" xml:space="preserve">
+          <source>対策ダッシュボード</source>
+          <target state="new">対策ダッシュボード</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">対策ダッシュボード</note>
+        </trans-unit>
+        <trans-unit id="GoogleSearchUrl" translate="yes" xml:space="preserve">
+          <source>https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</source>
+          <target state="new">https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">https://www.google.co.jp/search?hl=ja&amp;q=2019年新型コロナウイルス感染症</note>
+        </trans-unit>
+        <trans-unit id="CoronaGoJPUrl" translate="yes" xml:space="preserve">
+          <source>https://corona.go.jp/dashboard/</source>
+          <target state="new">https://corona.go.jp/dashboard/</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">https://corona.go.jp/dashboard/</note>
+        </trans-unit>
+        <trans-unit id="StopCOVID19JPUrl" translate="yes" xml:space="preserve">
+          <source>https://www.stopcovid19.jp/#ja</source>
+          <target state="new">https://www.stopcovid19.jp/#ja</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">https://www.stopcovid19.jp/#ja</note>
+        </trans-unit>
+        <trans-unit id="ReAgreeCheckButton" translate="yes" xml:space="preserve">
+          <source>確認しました</source>
+          <target state="new">確認しました</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">確認しました</note>
+        </trans-unit>
+        <trans-unit id="ReAgreePrivacyPolicyPageTitle" translate="yes" xml:space="preserve">
+          <source>プライバシーポリシーの改定</source>
+          <target state="new">プライバシーポリシーの改定</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーポリシーの改定</note>
+        </trans-unit>
+        <trans-unit id="ReAgreePrivacyPolicyTextLink" translate="yes" xml:space="preserve">
+          <source>プライバシーポリシーを確認する</source>
+          <target state="new">プライバシーポリシーを確認する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">プライバシーポリシーを確認する</note>
+        </trans-unit>
+        <trans-unit id="ReAgreeTermsOfServiceTextLink" translate="yes" xml:space="preserve">
+          <source>利用規約を確認する</source>
+          <target state="new">利用規約を確認する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約を確認する</note>
+        </trans-unit>
+        <trans-unit id="ReAgreeTermsOfServiceTitle" translate="yes" xml:space="preserve">
+          <source>利用規約の改定</source>
+          <target state="new">利用規約の改定</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">利用規約の改定</note>
+        </trans-unit>
+        <trans-unit id="UrlTermsUpdate" translate="yes" xml:space="preserve">
+          <source>https://covid19radarjpnprod.z11.web.core.windows.net/ja/terms_update.json</source>
+          <target state="new">https://covid19radarjpnprod.z11.web.core.windows.net/ja/terms_update.json</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageButton1" translate="yes" xml:space="preserve">
+          <source>よくある質問</source>
+          <target state="new">よくある質問</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">よくある質問</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageButton2" translate="yes" xml:space="preserve">
+          <source>メールでお問い合わせ</source>
+          <target state="new">メールでお問い合わせ</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">メールでお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageButton3" translate="yes" xml:space="preserve">
+          <source>動作情報を送信</source>
+          <target state="new">動作情報を送信</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報を送信</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageButton1" translate="yes" xml:space="preserve">
+          <source>同意して送信する</source>
+          <target state="new">同意して送信する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">同意して送信する</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription1" translate="yes" xml:space="preserve">
+          <source>動作情報の送信により、COCOAの改善にご協力をお願いします。</source>
+          <target state="new">動作情報の送信により、COCOAの改善にご協力をお願いします。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の送信により、COCOAの改善にご協力をお願いします。</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription2" translate="yes" xml:space="preserve">
+          <source>送信される情報</source>
+          <target state="new">送信される情報</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">送信される情報</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription3" translate="yes" xml:space="preserve">
+          <source>不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</source>
+          <target state="new">不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">不具合の原因調査に役立つCOCOAの動作情報と利用環境情報（COCOAのバージョン、OS、OSバージョン、端末機種）</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription4" translate="yes" xml:space="preserve">
+          <source>送信されない情報</source>
+          <target state="new">送信されない情報</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">送信されない情報</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription5" translate="yes" xml:space="preserve">
+          <source>電話番号やメールアドレスなどの個人識別可能な情報や位置情報</source>
+          <target state="new">電話番号やメールアドレスなどの個人識別可能な情報や位置情報</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">電話番号やメールアドレスなどの個人識別可能な情報や位置情報</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription6" translate="yes" xml:space="preserve">
+          <source>・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</source>
+          <target state="new">・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・送信が完了した後に、[メールで動作情報IDを送信する]に進んでいただくことにより、動作情報ID（直前に送信された情報に対して振り出されたIDです）とともに、あなたが感じた不具合の内容をメールでお問い合わせいただくことができます。この場合には、送信された情報をお問い合わせ内容と紐付けてCOCOAの改善に活かします。</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription7" translate="yes" xml:space="preserve">
+          <source>・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</source>
+          <target state="new">・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・送信された情報は、厚生労働省と、厚生労働省からCOCOAの保守運用の委託を受けた事業者のみが取扱い、COCOAの改善のためだけに使用し、不具合情報の調査終了後、速やかに削除します。利用者の同意なしに第三者に提供することはありません。</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageDescription8" translate="yes" xml:space="preserve">
+          <source>・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</source>
+          <target state="new">・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">・[動作情報を確認する]をタップいただくことにより、含まれる情報をご確認いただくことができます。</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageTextLink1" translate="yes" xml:space="preserve">
+          <source>動作情報を確認する</source>
+          <target state="new">動作情報を確認する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報を確認する</note>
+        </trans-unit>
+        <trans-unit id="SendLogConfirmationPageTitle" translate="yes" xml:space="preserve">
+          <source>動作情報の送信について</source>
+          <target state="new">動作情報の送信について</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の送信について</note>
+        </trans-unit>
+        <trans-unit id="SendLogCompletePageButton1" translate="yes" xml:space="preserve">
+          <source>メールで動作情報IDを送信する</source>
+          <target state="new">メールで動作情報IDを送信する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">メールで動作情報IDを送信する</note>
+        </trans-unit>
+        <trans-unit id="SendLogCompletePageButton2" translate="yes" xml:space="preserve">
+          <source>終了してホームに戻る</source>
+          <target state="new">終了してホームに戻る</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">終了してホームに戻る</note>
+        </trans-unit>
+        <trans-unit id="SendLogCompletePageDescription1" translate="yes" xml:space="preserve">
+          <source>動作情報を送信しました
+続いてメールで動作情報IDを送信してください</source>
+          <target state="new">動作情報を送信しました
+続いてメールで動作情報IDを送信してください</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報を送信しました
+続いてメールで動作情報IDを送信してください</note>
+        </trans-unit>
+        <trans-unit id="SendLogCompletePageDescription2" translate="yes" xml:space="preserve">
+          <source>あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</source>
+          <target state="new">あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あらかじめメールでお問い合わせいただいた内容と、お送りいただいた動作情報とを紐付けることで、解決策のご案内やCOCOAの改善に活かすことができます。</note>
+        </trans-unit>
+        <trans-unit id="Error" translate="yes" xml:space="preserve">
+          <source>エラー</source>
+          <target state="new">エラー</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">エラー</note>
+        </trans-unit>
+        <trans-unit id="FailedMessageToGetOperatingInformation" translate="yes" xml:space="preserve">
+          <source>動作情報の取得に失敗しました。もう一度やり直してください。</source>
+          <target state="new">動作情報の取得に失敗しました。もう一度やり直してください。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の取得に失敗しました。もう一度やり直してください。</note>
+        </trans-unit>
+        <trans-unit id="FailedMessageToSaveOperatingInformation" translate="yes" xml:space="preserve">
+          <source>動作情報の確認用ファイルの保存に失敗しました。</source>
+          <target state="new">動作情報の確認用ファイルの保存に失敗しました。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の確認用ファイルの保存に失敗しました。</note>
+        </trans-unit>
+        <trans-unit id="FailedMessageToSendOperatingInformation" translate="yes" xml:space="preserve">
+          <source>動作情報の送信に失敗しました</source>
+          <target state="new">動作情報の送信に失敗しました</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の送信に失敗しました</note>
+        </trans-unit>
+        <trans-unit id="Processing" translate="yes" xml:space="preserve">
+          <source>処理中</source>
+          <target state="new">処理中</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理中</note>
+        </trans-unit>
+        <trans-unit id="SaveCompleted" translate="yes" xml:space="preserve">
+          <source>保存完了</source>
+          <target state="new">保存完了</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">保存完了</note>
+        </trans-unit>
+        <trans-unit id="Saving" translate="yes" xml:space="preserve">
+          <source>保存中</source>
+          <target state="new">保存中</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">保存中</note>
+        </trans-unit>
+        <trans-unit id="Sending" translate="yes" xml:space="preserve">
+          <source>送信中</source>
+          <target state="new">送信中</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">送信中</note>
+        </trans-unit>
+        <trans-unit id="SendingError" translate="yes" xml:space="preserve">
+          <source>送信エラー</source>
+          <target state="new">送信エラー</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">送信エラー</note>
+        </trans-unit>
+        <trans-unit id="SuccessMessageToSaveOperatingInformationForAndroid" translate="yes" xml:space="preserve">
+          <source>OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</source>
+          <target state="new">OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">OSの「設定」→「ストレージ」→「ファイル」、またはファイル管理アプリを利用して以下フォルダをご確認ください。
+保存場所：</note>
+        </trans-unit>
+        <trans-unit id="SuccessMessageToSaveOperatingInformationForIOS" translate="yes" xml:space="preserve">
+          <source>動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</source>
+          <target state="new">動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報の確認用ファイルを保存しました。ファイルアプリの「このiPhone内」から確認できます。</note>
+        </trans-unit>
+        <trans-unit id="InquiryMailBody" translate="yes" xml:space="preserve">
+          <source>お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</source>
+          <target state="new">お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">お問い合わせ本文：​\r\n\r\n\r\n\r\n※氏名、電話番号などの個人情報を記入する必要はありません。\r\n</note>
+        </trans-unit>
+        <trans-unit id="InquiryMailSubject" translate="yes" xml:space="preserve">
+          <source>接触確認アプリに関するお問い合わせ</source>
+          <target state="new">接触確認アプリに関するお問い合わせ</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">接触確認アプリに関するお問い合わせ</note>
+        </trans-unit>
+        <trans-unit id="SendIdMailBody1" translate="yes" xml:space="preserve">
+          <source>動作情報ID：</source>
+          <target state="new">動作情報ID：</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">動作情報ID：</note>
+        </trans-unit>
+        <trans-unit id="SendIdMailBody2" translate="yes" xml:space="preserve">
+          <source>\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</source>
+          <target state="new">\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">\r\n\r\n\r\n※氏名、電話番号など個人情報を記入する必要はありません。\r\n\r\n※動作情報IDは消さずにこのまま送信してください。\r\n</note>
+        </trans-unit>
+        <trans-unit id="SendIdMailSubject" translate="yes" xml:space="preserve">
+          <source>COCOA 動作情報IDの送信</source>
+          <target state="new">COCOA 動作情報IDの送信</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">COCOA 動作情報IDの送信</note>
+        </trans-unit>
+        <trans-unit id="SuccessMessageToSaveOperatingInformationForAndroid2" translate="yes" xml:space="preserve">
+          <source>
+※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</source>
+          <target state="new">
+※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">※「/Android」より前の部分は、お使いの環境によって「内部ストレージ」など表記が異なります</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription3" translate="yes" xml:space="preserve">
+          <source>SMSまたはメールで届いた処理番号を入力してください。</source>
+          <target state="new">SMSまたはメールで届いた処理番号を入力してください。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">SMSまたはメールで届いた処理番号を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription5" translate="yes" xml:space="preserve">
+          <source>症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</source>
+          <target state="new">症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人に通知が行きます</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription4" translate="yes" xml:space="preserve">
+          <source>登録すると</source>
+          <target state="new">登録すると</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">登録すると</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageDescription6" translate="yes" xml:space="preserve">
+          <source>※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
+※接触した場所がどこなのか記録されたり、他の人に知られることもありません</source>
+          <target state="new">※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
+※接触した場所がどこなのか記録されたり、他の人に知られることもありません</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">※登録は匿名で行われ、氏名や連絡先など個人が特定される情報が他の人に知られることはありません
+※接触した場所がどこなのか記録されたり、他の人に知られることもありません</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageNoSymptomsDescription1" translate="yes" xml:space="preserve">
+          <source>直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</source>
+          <target state="new">直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">直近の新型コロナウイルス感染症の検査を受けた日を入力してください。</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageRadioButtonNo" translate="yes" xml:space="preserve">
+          <source>ない</source>
+          <target state="new">ない</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ない</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageRadioButtonYes" translate="yes" xml:space="preserve">
+          <source>ある</source>
+          <target state="new">ある</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">ある</note>
+        </trans-unit>
+        <trans-unit id="NotifyOtherPageWithSymptomsDescription1" translate="yes" xml:space="preserve">
+          <source>症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</source>
+          <target state="new">症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">症状が始まった最初の日を入力してください。（覚えている範囲で一番古い日付を入力してください。入力した日付が誰かに知られることはありません。）</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageButton" translate="yes" xml:space="preserve">
+          <source>同意して陽性登録する</source>
+          <target state="new">同意して陽性登録する</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">同意して陽性登録する</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription10" translate="yes" xml:space="preserve">
+          <source>処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</source>
+          <target state="new">処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">処理番号が正しい場合には、症状が始まった日または検査を受けた日の2日前以降にあなたと接触した人（概ね1メートル以内で15分以上近接した可能性のあるアプリ使用者）に、通知が届きます。その通知が届いた人に、あなた個人が特定される情報が知られることはありません</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription7" translate="yes" xml:space="preserve">
+          <source>（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</source>
+          <target state="new">（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">（※）新型コロナウイルスの検査で陽性となった時などに連絡先として伝えたもの</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription8" translate="yes" xml:space="preserve">
+          <source>あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</source>
+          <target state="new">あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが保健所にCOCOAへの陽性登録を申し出ると、その携帯電話番号またはメールアドレスに、管理システムから「処理番号」が通知されます</note>
+        </trans-unit>
+        <trans-unit id="SubmitConsentPageDescription9" translate="yes" xml:space="preserve">
+          <source>あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</source>
+          <target state="new">あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">あなたが処理番号をCOCOAに入力すると、あなたの携帯電話から管理システムに対し、正しい処理番号であるかどうかの照会が行われます</note>
+        </trans-unit>
+        <trans-unit id="InqueryPageTitle_Menu" translate="yes" xml:space="preserve">
+          <source>お問い合わせ</source>
+          <target state="new">お問い合わせ</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton_ShowTutorialNextTime" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示/非表示</source>
+          <target state="new">次回起動時にチュートリアルを表示/非表示</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Hide" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを非表示にします。</source>
+          <target state="new">次回起動時にチュートリアルを非表示にします。</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageDialog_ShowTutorialNextTime_Show" translate="yes" xml:space="preserve">
+          <source>次回起動時にチュートリアルを表示します。</source>
+          <target state="new">次回起動時にチュートリアルを表示します。</target>
+        </trans-unit>
+        <trans-unit id="HomePageDescription6" translate="yes" xml:space="preserve">
+          <source>接触通知は全て有効です。</source>
+          <target state="new">接触通知は全て有効です。</target>
+        </trans-unit>
+        <trans-unit id="HomePageDescription7" translate="yes" xml:space="preserve">
+          <source>接触通知が無効になっています。設定ページで接触通知をオンにしてください。</source>
+          <target state="new">接触通知が無効になっています。設定ページで接触通知をオンにしてください。</target>
+        </trans-unit>
+        <trans-unit id="NewsPageButton_ShowWikipedia" translate="yes" xml:space="preserve">
+          <source>ウィキペディアの情報</source>
+          <target state="new">ウィキペディアの情報</target>
+        </trans-unit>
+        <trans-unit id="WikipediaUrl" translate="yes" xml:space="preserve">
+          <source>https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</source>
+          <target state="new">https://ja.wikipedia.org/wiki/%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%84%9F%E6%9F%93%E7%97%87%E3%81%AE%E4%B8%96%E7%95%8C%E7%9A%84%E6%B5%81%E8%A1%8C</target>
+        </trans-unit>
+        <trans-unit id="LogsPageTitle" translate="yes" xml:space="preserve">
+          <source>ログ</source>
+          <target state="new">ログ</target>
+        </trans-unit>
+        <trans-unit id="LogsPage_Picker" translate="yes" xml:space="preserve">
+          <source>ログファイルを選択してください</source>
+          <target state="new">ログファイルを選択してください</target>
+        </trans-unit>
+        <trans-unit id="LogsPage_UnknownFile" translate="yes" xml:space="preserve">
+          <source>不明なファイル「{0}」</source>
+          <target state="new">不明なファイル「{0}」</target>
+        </trans-unit>
+        <trans-unit id="SettingsPageButton_ShowLogsPage" translate="yes" xml:space="preserve">
+          <source>動作情報を表示</source>
+          <target state="new">動作情報を表示</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_FilePath" translate="yes" xml:space="preserve">
+          <source>ファイル</source>
+          <target state="new">ファイル</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LineNumber" translate="yes" xml:space="preserve">
+          <source>行</source>
+          <target state="new">行</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel" translate="yes" xml:space="preserve">
+          <source>レベル</source>
+          <target state="new">レベル</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Debug" translate="yes" xml:space="preserve">
+          <source>デバッグ</source>
+          <target state="new">デバッグ</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Error" translate="yes" xml:space="preserve">
+          <source>エラー</source>
+          <target state="new">エラー</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Info" translate="yes" xml:space="preserve">
+          <source>情報</source>
+          <target state="new">情報</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Invalid" translate="yes" xml:space="preserve">
+          <source>(無効)</source>
+          <target state="new">(無効)</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Verbose" translate="yes" xml:space="preserve">
+          <source>詳細</source>
+          <target state="new">詳細</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_LogLevel_Warning" translate="yes" xml:space="preserve">
+          <source>警告</source>
+          <target state="new">警告</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_Method" translate="yes" xml:space="preserve">
+          <source>関数</source>
+          <target state="new">関数</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_OutputDate" translate="yes" xml:space="preserve">
+          <source>日時</source>
+          <target state="new">日時</target>
+        </trans-unit>
+        <trans-unit id="LogDataView_OutputDate_Unknown" translate="yes" xml:space="preserve">
+          <source>不明</source>
+          <target state="new">不明</target>
+        </trans-unit>
+        <trans-unit id="LogsPage_Loading" translate="yes" xml:space="preserve">
+          <source>読み込み中...</source>
+          <target state="new">読み込み中...</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
